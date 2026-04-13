@@ -1,0 +1,30 @@
+
+<div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+  @for (item of metricsData; track $index) {
+    <div class="card">
+      <div class="card-body">
+        <div class="flex items-center justify-between mb-3">
+          <p class="text-default-500">{{ item.title }}</p>
+          <div class="hs-tooltip [--placement:top]">
+            <button type="button" class="hs-tooltip-toggle">
+              <div class="size-4 text-default-500 mt-2">
+                <ng-icon name="lucideInfo"></ng-icon>
+              </div>
+              <span
+                class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-30 py-1 px-2 bg-default-900 text-xs font-medium text-default-100 rounded-md shadow-2xs"
+                role="tooltip"
+                >{{ item.tooltip }}</span
+              >
+            </button>
+          </div>
+        </div>
+
+        <h5 class="mb-4 text-default-800 text-lg font-semibold">
+          <span class="" [attr.data-target]="item.value">{{ item.value }}</span>%
+        </h5>
+
+        <app-apexchart [getOptions]="$any(this)[item.options]" class="w-87 h-20" />
+      </div>
+    </div>
+  }
+</div>

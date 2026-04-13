@@ -1,0 +1,23 @@
+@page "/layouts-dark-mode"
+@model Tailwick.Pages.Layouts.DarkModeModel
+
+@{
+    ViewBag.Title = "Dark Mode";
+    ViewBag.Subtitle = "Layouts";
+    ViewBag.HTMLAttributes = "data-theme=dark";
+}
+
+@section styles
+{
+
+}
+
+@await Html.PartialAsync("~/Pages/Shared/Partials/_PageTitle.cshtml")
+
+<div class="card h-40">
+</div>
+
+@section scripts
+{
+
+}

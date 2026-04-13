@@ -1,0 +1,48 @@
+<div class="card">
+    <div class="card-header">
+        <h6 class="card-title">Recent Payroll</h6>
+
+        <div class="hs-dropdown relative inline-flex">
+            <button type="button" class="hs-dropdown-toggle btn size-7.5 hover:bg-default-150" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                <div class="size-4 text-default-500"><ng-icon name="lucideEllipsisVertical"></ng-icon></div>
+            </button>
+
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 bg-card shadow-md rounded-lg z-30 mt-2 p-2" role="menu">
+                <div class="text-sm">
+                    <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-default-600 hover:bg-default-150 rounded" [routerLink]="[]">
+                        Today
+                    </a>
+                    <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-default-600 hover:bg-default-150 rounded" [routerLink]="[]">
+                        Yesterday
+                    </a>
+                    <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-default-600 hover:bg-default-150 rounded" [routerLink]="[]">
+                        Thursday
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ngx-simplebar class="h-60">
+        <div class="card-body">
+            <div class="flex flex-col gap-3.5">
+
+                @for (item of transactions; track $index) {
+                <div class="flex flex-wrap items-center gap-3 text-sm">
+                    <div class="{{ item.iconClass }} size-4">
+                        <ng-icon [name]="item.icon"></ng-icon>
+                    </div>
+                    <h6 class="text-default-800 font-semibold grow">{{ item.name }}</h6>
+                    <h6 class="text-default-900">{{ item.amount }}</h6>
+                    <div>
+                        <span class="py-0.5 px-2.5 rounded text-xs font-medium" [class]="item.status.class">
+                            {{ item.status.label }}
+                        </span>
+                    </div>
+                </div>
+                }
+
+            </div>
+        </div>
+    </ngx-simplebar>
+</div>

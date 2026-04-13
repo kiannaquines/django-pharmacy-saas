@@ -1,0 +1,111 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Pie / Donut Charts" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Pie / Donut Charts" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Simple Pie</h6>
+                                <div id="simplePie" class="apex-charts" data-chart-colors='["bg-primary", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Simple Donut</h6>
+                                <div id="simpleDonut" class="apex-charts" data-chart-colors='["bg-primary", "bg-orange-500", "bg-green-500", "bg-sky-500", "bg-yellow-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Donut Update</h6>
+                                <div>
+                                    <div id="updatingDonutChart" class="apex-charts" data-chart-colors='["bg-blue-400", "bg-orange-400", "bg-green-400", "bg-yellow-400"]' class="apex-charts" dir="ltr"></div>
+
+                                    <div class="flex flex-wrap items-start justify-center gap-2 mt-4">
+                                        <button id="add" class="btn btn-sm !border-dashed !border-primary text-primary">
+                                            + ADD
+                                        </button>
+
+                                        <button id="remove" class="btn btn-sm !border-dashed !border-primary text-primary">
+                                            - REMOVE
+                                        </button>
+
+                                        <button id="randomize" class="btn btn-sm !border-dashed !border-primary text-primary">
+                                            RANDOMIZE
+                                        </button>
+
+                                        <button id="reset" class="btn btn-sm !border-dashed !border-primary text-primary">
+                                            RESET
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Monochrome Pie</h6>
+                                <div id="monochromePieChart" class="apex-charts" data-chart-colors='["bg-primary"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Gradient Donut</h6>
+                                <div id="gradientDonut" class="apex-charts" data-chart-colors='["bg-primary", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Semi Donut</h6>
+                                <div id="semiDonut" class="apex-charts" data-chart-colors='["bg-primary", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Donut with Pattern</h6>
+                                <div id="donutWithPattern" class="apex-charts" data-chart-colors='["bg-primary", "bg-orange-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Apex Chart Bubble Demo js -->
+    <script src="assets/js/pages/chart-apex-pie.js" type="module"></script>
+
+</body>
+
+</html>

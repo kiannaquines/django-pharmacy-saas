@@ -1,0 +1,85 @@
+/*
+Template Name: Tailwick - Admin & Dashboard Template
+Author: Themesdesign
+Website: https://themesdesign.in/
+Contact: themesdesign.in@gmail.com
+*/
+
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "flatpickr/dist/flatpickr.min.css";
+@import 'quill/dist/quill.bubble.css';
+@import 'quill/dist/quill.core.css';
+@import 'quill/dist/quill.snow.css';
+@import '@simonwep/pickr/dist/themes/classic.min.css';
+@import '@simonwep/pickr/dist/themes/monolith.min.css';
+@import '@simonwep/pickr/dist/themes/nano.min.css';
+@import "dropzone/dist/dropzone.css";
+@import "gridjs/dist/theme/mermaid.css";
+
+@import 'datatables.net-dt/css/dataTables.dataTables.css';
+@import 'datatables.net-responsive-dt/css/responsive.dataTables.css';
+@import 'datatables.net-fixedcolumns-dt/css/fixedColumns.dataTables.css';
+@import 'datatables.net-fixedheader-dt/css/fixedHeader.dataTables.css';
+@import 'datatables.net-select-dt/css/select.dataTables.css';
+@import 'choices.js/public/assets/styles/choices.min.css';
+@import 'glightbox/dist/css/glightbox.min.css';
+
+/* ========= Tailwind CSS ========= */
+@import "tailwindcss";
+
+
+/* ========= Themes Config ========= */
+@import "./themes.css";
+
+
+/* ========= Preline UI ========= */
+@source "preline/dist/*.js";
+@import "preline/variants.css";
+
+
+
+/* ========= Iconify Icons Plugins ========= */
+
+/* Iconify Icons Plugins */
+@plugin "@iconify/tailwind4" {
+    prefixes: tabler, lucide, logos, ri, flat-color-icons;
+}
+
+
+/* ========= Tailwind Plugin ========= */
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+
+
+/* ========= Cutsome CSS ========= */
+
+
+@import "./structure/_general.css";
+@import "./structure/_sidenav.css";
+@import "./structure/_topbar.css";
+
+
+/* Custome Components */
+@import "./custom/_reboot.css";
+@import "./custom/_helper.css";
+@import "./custom/_buttons.css";
+@import "./custom/_card.css";
+@import "./custom/_dropdown.css";
+@import "./custom/_forms.css";
+@import "./custom/_print.css";
+@import "./custom/_chart.css";
+@import "./custom/_quill-editor.css";
+@import "./custom/_choices.css";
+@import "./custom/_sweetalert2.css";
+@import "./custom/_gridjs.css";
+
+/* Simplebar */
+@import "./custom/_simplebar.css";
+
+/* Calendar */
+@import "./custom/_calendar.css";

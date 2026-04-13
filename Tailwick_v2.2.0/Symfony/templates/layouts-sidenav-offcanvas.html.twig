@@ -1,0 +1,16 @@
+{% extends 'layouts/vertical.html.twig' %}
+
+{% block html_attributes %}data-sidenav-size="offcanvas"{% endblock %}
+
+{% set title = 'Offcavas Sidenav (Mobile View)' %}
+
+{% block styles %}{% endblock %}
+
+{% block content %}
+
+	{{ include('partials/page-title.html.twig', {'subtitle': 'Layouts'}, {'title': 'Offcavas Sidenav (Mobile View)'}) }}
+
+	<div class="card h-40"></div>
+{% endblock %}
+
+{% block scripts %}{% endblock %}

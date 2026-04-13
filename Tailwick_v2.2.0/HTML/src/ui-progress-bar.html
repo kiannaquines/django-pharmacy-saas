@@ -1,0 +1,219 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Progressbar" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Progressbar" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                        <div class="lg:col-span-2 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Default & Color Variants</h6>
+
+                                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
+                                        <div>
+                                            <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                                <div class="bg-primary h-2.5 rounded-full" style="width: 25%"></div>
+                                            </div>
+
+                                            <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                                <div class="bg-success h-2.5 rounded-full" style="width: 50%"></div>
+                                            </div>
+
+                                            <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                                <div class="bg-warning h-2.5 rounded-full" style="width: 75%"></div>
+                                            </div>
+
+                                            <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5">
+                                                <div class="bg-info h-2.5 rounded-full" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                                <div class="bg-warning h-2.5 rounded-full" style="width: 25%"></div>
+                                            </div>
+
+                                            <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                                <div class="bg-danger h-2.5 rounded-full" style="width: 50%"></div>
+                                            </div>
+
+                                            <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                                <div class="bg-secondary h-2.5 rounded-full" style="width: 75%"></div>
+                                            </div>
+
+                                            <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5">
+                                                <div class="bg-default-500 h-2.5 rounded-full" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Progress with Label</h6>
+
+                                <div class="pt-2">
+                                    <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-7">
+                                        <div class="bg-primary h-2.5 rounded-full animate-progress relative" style="width: 25%">
+                                            <div class="absolute end-0 inline-block px-2 py-0.5 text-[10px] text-white bg-primary rounded -top-6 after:absolute after:border-4 after:end-1/2 after:-bottom-2 after:border-transparent after:border-t-primary">15%</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-7">
+                                        <div class="bg-success h-2.5 rounded-full animate-progress relative" style="width: 70%">
+                                            <div class="absolute end-0 inline-block px-2 py-0.5 text-[10px] text-white bg-success rounded -top-6 after:absolute after:border-4 after:end-1/2 after:-bottom-2 after:border-transparent after:border-t-success">70%</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-0">
+                                        <div class="bg-warning h-2.5 rounded-full animate-progress relative" style="width: 40%">
+                                            <div class="absolute end-0 inline-block px-2 py-0.5 text-[10px] text-white bg-warning rounded -top-6 after:absolute after:border-4 after:end-1/2 after:-bottom-2 after:border-transparent after:border-t-warning">40%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Animated Progress</h6>
+
+                                <div>
+                                    <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                        <div class="bg-warning h-2.5 rounded-full animate-progress" style="width: 25%"></div>
+                                    </div>
+
+                                    <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                        <div class="bg-danger h-2.5 rounded-full animate-progress" style="width: 50%"></div>
+                                    </div>
+
+                                    <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                        <div class="bg-secondary h-2.5 rounded-full animate-progress" style="width: 75%"></div>
+                                    </div>
+
+                                    <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5">
+                                        <div class="bg-default-500 h-2.5 rounded-full animate-progress" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-2 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Progress Sizes</h6>
+
+                                    <div>
+                                        <div class="w-full h-1.5 mb-4 rounded-full bg-default-200 dark:bg-default-300">
+                                            <div class="h-1.5 rounded-full bg-primary" style="width: 25%"></div>
+                                        </div>
+
+                                        <div class="w-full h-2 mb-4 rounded-full bg-default-200 dark:bg-default-300">
+                                            <div class="h-2 rounded-full bg-primary" style="width: 25%"></div>
+                                        </div>
+
+                                        <div class="w-full h-3 mb-4 rounded-full bg-default-200 dark:bg-default-300">
+                                            <div class="h-3 rounded-full bg-primary" style="width: 25%"></div>
+                                        </div>
+
+                                        <div class="w-full h-3.5 mb-4 rounded-full bg-default-200 dark:bg-default-300">
+                                            <div class="h-3.5 rounded-full bg-primary" style="width: 25%"></div>
+                                        </div>
+
+                                        <div class="w-full h-5 mb-4 rounded-full bg-default-200 dark:bg-default-300">
+                                            <div class="h-5 rounded-full bg-primary" style="width: 25%"></div>
+                                        </div>
+
+                                        <div class="w-full h-6 rounded-full bg-default-200 dark:bg-default-300">
+                                            <div class="h-6 rounded-full bg-primary" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-2 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Progress with Content</h6>
+
+                                    <div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <h6>Tailwick - Admin &amp; Dashboard</h6>
+                                            <h6 class="text-primary">24%</h6>
+                                        </div>
+
+                                        <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                            <div class="bg-primary h-2.5 rounded-full" style="width: 24%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex items-center justify-between mb-2">
+                                            <h6>Nazox - Admin &amp; Dashboard</h6>
+                                            <h6 class="text-success">66%</h6>
+                                        </div>
+
+                                        <div class="w-full bg-default-200 dark:bg-default-300 rounded-full h-2.5 mb-4">
+                                            <div class="bg-success h-2.5 rounded-full" style="width: 66%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-2 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">With Label Inside</h6>
+
+                                    <div class="w-full h-3 mb-4 rounded-full bg-default-200 dark:bg-default-300">
+                                        <div class="bg-primary h-3 rounded-full text-[8px] text-white text-center" style="width: 24%">24%</div>
+                                    </div>
+
+                                    <div class="w-full h-3.5 mb-4 rounded-full bg-default-200 dark:bg-default-300">
+                                        <div class="h-3.5 rounded-full bg-primary text-[10px] text-center text-white" style="width: 25%">25%</div>
+                                    </div>
+
+                                    <div class="w-full h-5 rounded-full bg-default-200 dark:bg-default-300">
+                                        <div class="h-5 text-xs text-center text-white rounded-full bg-primary" style="width: 25%">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

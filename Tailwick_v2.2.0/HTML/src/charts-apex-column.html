@@ -1,0 +1,122 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Column Charts" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Column Charts" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic</h6>
+                                <div id="basicColumnChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-yellow-500", "bg-purple-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Column with Data Labels</h6>
+                                <div id="columnWithDatalabelChart" class="apex-charts" data-chart-colors='["bg-primary"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Stacked Columns</h6>
+                                <div id="stackedColumnChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-orange-500", "bg-green-500", "bg-yellow-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Stacked Columns 100</h6>
+                                <div id="stackedColumn100Chart" class="apex-charts" data-chart-colors='["bg-sky-500", "bg-orange-500", "bg-yellow-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Grouped Stacked Columns</h6>
+                                <div id="groupedStackedColumnChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-green-500", "bg-blue-300", "bg-green-300"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Dumbbell Chart</h6>
+                                <div id="dumbbellChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-green-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Column with Markers</h6>
+                                <div id="columnMarkersChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-purple-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Column with Group Label</h6>
+                                <div id="columnGroupLabelChart" class="apex-charts" data-chart-colors='["bg-primary"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Column with Rotated Labels</h6>
+                                <div id="columnRotatedLabelChart" class="apex-charts" data-chart-colors='["bg-red-500", "bg-primary"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Column with Negative Values</h6>
+                                <div id="columnNegativeValueChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-yellow-500", "bg-orange-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Distributed Columns</h6>
+                                <div id="columnDistributedChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-yellow-500", "bg-green-500", "bg-orange-500", "bg-sky-500", "bg-purple-500", "bg-red-500", "bg-emerald-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Apex Chart Column Demo js -->
+    <script src="assets/js/pages/chart-apex-column.js" type="module"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.0/plugin/quarterOfYear.min.js"></script>
+
+</body>
+
+</html>

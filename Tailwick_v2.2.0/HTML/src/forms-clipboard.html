@@ -1,0 +1,65 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Clipboard" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Clipboard" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Copy from Input Group</h6>
+                                <div class="flex">
+                                    <input type="text" class="form-input !rounded-e-none" id="copyLink" value="Welcome to Tailwick😊" />
+                                    <button class="btn btn-icon rounded-s-none bg-default-200 dark:bg-default-300" id="copyButton" data-clipboard-action="copy" type="button" data-clipboard-target="#copyLink">
+                                        <i data-lucide="copy" class="size-3"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Copy Discount Code</h6>
+                                <div class="flex">
+                                    <input type="text" id="discountCode" class="form-input !rounded-e-none" value="Welcome to Tailwick😊" />
+                                    <button class="btn btn-icon rounded-s-none bg-default-200 dark:bg-default-300" type="button" id="cutButton" data-clipboard-action="cut" data-clipboard-target="#discountCode">
+                                        <i data-lucide="copy" class="size-3"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <script src="assets/js/pages/clipbord.init.js" type="module"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<div class="p-10 rounded-md mt-20 bg-default-900 dark:bg-default-900">
+  <div class="grid lg:grid-cols-5 md:grid-cols-2 gap-6">
+    @for (item of counterItems; track $index) {
+    <div class="text-center">
+      <h3 class="mb-2 text-white text-2xl font-semibold">
+        <span [attr.data-target]="item.value" class="me-1">{{ item.value }}</span>+
+      </h3>
+      <p class="text-base text-default-500">{{ item.label }}</p>
+    </div>
+    }
+  </div>
+</div>

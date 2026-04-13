@@ -1,0 +1,421 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Buttons" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Buttons" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic Buttons</h6>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <button type="button" class="btn bg-primary text-white">Primary Button</button>
+                                    <button type="button" class="btn bg-primary/10 text-primary hover:bg-primary hover:text-white">Soft Button</button>
+                                    <button type="button" class="btn border-dashed border-primary text-primary hover:bg-primary/10">Dashed Buttons</button>
+                                    <button type="button" class="btn border border-primary text-primary hover:bg-primary hover:text-white">Outline Button</button>
+                                    <button type="button" class="btn text-primary hover:bg-primary/10">Ghost Button</button>
+                                    <a href="#!" class="btn text-primary">Btn Link</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic Buttons</h6>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <button type="button" class="btn bg-primary text-white">Primary</button>
+                                    <button type="button" class="btn bg-success text-white">Success</button>
+                                    <button type="button" class="btn bg-warning text-white">Warning</button>
+                                    <button type="button" class="btn bg-info text-white">Info</button>
+                                    <button type="button" class="btn bg-danger text-white">Danger</button>
+                                    <button type="button" class="btn bg-secondary text-white">Secondary</button>
+                                    <button type="button" class="btn bg-default-500 text-white">Dark</button>
+                                    <button type="button" class="btn bg-default-100 dark:bg-default-200">Light</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Soft Buttons</h6>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <button type="button" class="btn bg-primary/10 text-primary hover:bg-primary hover:text-white">Primary</button>
+                                    <button type="button" class="btn bg-success/10 text-success hover:bg-success hover:text-white">Success</button>
+                                    <button type="button" class="btn bg-warning/10 text-warning hover:bg-warning hover:text-white">Warning</button>
+                                    <button type="button" class="btn bg-info/10 text-info hover:bg-info hover:text-white">Info</button>
+                                    <button type="button" class="btn bg-danger/10 text-danger hover:bg-danger hover:text-white">Danger</button>
+                                    <button type="button" class="btn bg-secondary/10 text-secondary hover:bg-secondary hover:text-white">Secondary</button>
+                                    <button type="button" class="btn bg-default-500/10 hover:bg-default-500 hover:text-white">Dark</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Dashed Buttons</h6>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <button type="button" class="btn border-dashed border-primary text-primary hover:bg-primary/10">Primary</button>
+                                    <button type="button" class="btn border-dashed border-success text-success hover:bg-success/10">Success</button>
+                                    <button type="button" class="btn border-dashed border-warning text-warning hover:bg-warning/10">Warning</button>
+                                    <button type="button" class="btn border-dashed border-info text-info hover:bg-info/10">Info</button>
+                                    <button type="button" class="btn border-dashed border-danger text-danger hover:bg-danger/10">Danger</button>
+                                    <button type="button" class="btn border-dashed border-secondary text-secondary hover:bg-secondary/10">Secondary</button>
+                                    <button type="button" class="btn border-dashed border-default-500 hover:bg-default-500/10">Dark</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Outline Buttons</h6>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <button type="button" class="btn border border-primary text-primary hover:bg-primary/10">Primary</button>
+                                    <button type="button" class="btn border border-success text-success hover:bg-success/10">Success</button>
+                                    <button type="button" class="btn border border-warning text-warning hover:bg-warning/10">Warning</button>
+                                    <button type="button" class="btn border border-info text-info hover:bg-info/10">Info</button>
+                                    <button type="button" class="btn border border-danger text-danger hover:bg-danger/10">Danger</button>
+                                    <button type="button" class="btn border border-secondary text-secondary hover:bg-secondary/10">Secondary</button>
+                                    <button type="button" class="btn border border-default-500 hover:bg-default-500/10">Dark</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Ghost Buttons</h6>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <button type="button" class="btn text-primary hover:bg-primary/10">Primary</button>
+                                    <button type="button" class="btn text-success hover:bg-success/10">Success</button>
+                                    <button type="button" class="btn text-warning hover:bg-warning/10">Warning</button>
+                                    <button type="button" class="btn text-info hover:bg-info/10">Info</button>
+                                    <button type="button" class="btn text-danger hover:bg-danger/10">Danger</button>
+                                    <button type="button" class="btn text-secondary hover:bg-secondary/10">Secondary</button>
+                                    <button type="button" class="btn text-default-500 hover:bg-default-500/10">Dark</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Animation Buttons</h6>
+
+                                <div class="flex flex-wrap gap-3">
+                                    <button type="button" class="btn btn-icon border border-transparent bg-primary text-white focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none">
+                                        <span class="animate-spin inline-block size-4.25 border-2 border-current border-t-transparent text-white rounded-full" role="status" aria-label="loading">
+                                            <span class="sr-only">Loading...</span>
+                                        </span>
+                                    </button>
+
+                                    <button type="button" class="btn border border-transparent bg-primary text-white focus:outline-hidden disabled:opacity-50 disabled:pointer-events-none">
+                                        <span class="animate-spin inline-block size-4.25 border-2 border-current border-t-transparent text-white rounded-full" role="status" aria-label="loading">
+                                            <span class="sr-only">Loading...</span>
+                                        </span>
+                                        Processing...
+                                    </button>
+
+                                    <button type="button" class="relative bg-card border-dashed text-primary btn border-primary hover:text-primary hover:bg-primary/10 focus:bg-primary/10 active:bg-primary/10">
+                                        <span class="absolute flex size-2 -top-1 -end-1">
+                                            <span class="absolute inline-flex w-full h-full rounded-full opacity-75 animate-ping bg-primary/60"></span>
+                                            <span class="relative inline-flex rounded-full size-2 bg-primary/80"></span>
+                                        </span>
+                                        Dashed Buttons
+                                    </button>
+
+                                    <button type="button" class="flex animate-bounce items-center justify-center size-9.25 rounded-full p-0 text-success bg-card border-success btn hover:text-white hover:bg-success hover:border-success">
+                                        <i data-lucide="download" class="size-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Icon Buttonss</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex gap-3">
+                                        <button type="button" class="btn btn-icon bg-primary text-white size-9.5">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon border border-success text-success size-9.5 hover:bg-success hover:text-white">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon border-dashed border-warning text-warning size-9.5 hover:bg-warning hover:text-white">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon bg-primary/10 text-primary size-9.5 hover:bg-primary hover:text-white">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon text-danger size-9.5 hover:bg-danger/10 hover:text-danger">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="flex gap-3">
+                                        <button type="button" class="btn btn-icon bg-primary text-white size-9.5">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon bg-success text-white size-9.5">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon bg-warning text-white size-9.5">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon bg-info text-white size-9.5">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon bg-danger text-white size-9.5">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon bg-secondary text-white size-9.5">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon bg-default-500 text-white size-9.5">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Buttons Sizes</h6>
+
+                                <div class="flex flex-wrap items-center text-sm gap-2">
+                                    <div>
+                                        <button type="button" class="btn btn-sm py-1 px-1.5 bg-primary text-white">Primary Button</button>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn btn-sm py-1.5 px-2 bg-primary text-white">Primary Button</button>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn btn-sm py-2 px-2.5 bg-primary text-white">Primary Button</button>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn bg-primary text-white">Primary Button</button>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn btn-lg bg-primary text-white">Primary Button</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Rounded Buttons</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-wrap gap-2">
+                                        <button type="button" class="btn bg-primary rounded-full text-white">Primary Button</button>
+                                        <button type="button" class="btn bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white">Soft Button</button>
+                                        <button type="button" class="btn border-dashed border-primary rounded-full text-primary hover:bg-primary/10">Dashed Buttons</button>
+                                        <button type="button" class="btn border border-primary rounded-full text-primary hover:bg-primary hover:text-white">Outline Button</button>
+                                        <button type="button" class="btn text-primary rounded-full hover:bg-primary/10">Ghost Button</button>
+                                    </div>
+
+                                    <div class="flex gap-3">
+                                        <button type="button" class="btn btn-icon bg-primary rounded-full text-white size-9.5">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon border border-success rounded-full text-success size-9.5 hover:bg-success hover:text-white">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon border-dashed border-warning rounded-full text-warning size-9.5 hover:bg-warning hover:text-white">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon bg-primary/10 text-primary rounded-full size-9.5 hover:bg-primary hover:text-white">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-icon text-danger size-9.5 rounded-full hover:bg-danger/10 hover:text-danger">
+                                            <i data-lucide="download" class="size-3.5"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Label Buttons</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <div>
+                                            <button class="flex items-center text-xs bg-primary/90 text-white rounded focus:ring-2 focus:ring-primary/30 transition">
+                                                <span class="bg-primary flex items-center justify-center size-6.5 rounded-s">
+                                                    <i data-lucide="download" class="size-3"></i>
+                                                </span>
+                                                <span class="py-1 px-1.5">Download</span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <button class="flex items-center text-xs bg-primary/90 text-white rounded focus:ring-2 focus:ring-primary/30 transition">
+                                                <span class="bg-primary flex items-center justify-center size-7.5 rounded-s">
+                                                    <i data-lucide="download" class="size-3"></i>
+                                                </span>
+                                                <span class="py-1.5 px-2">Download</span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <button class="flex items-center text-xs bg-primary/90 text-white rounded focus:ring-2 focus:ring-primary/30 transition">
+                                                <span class="bg-primary flex items-center justify-center size-8.5 rounded-s">
+                                                    <i data-lucide="download" class="size-3"></i>
+                                                </span>
+                                                <span class="py-2 px-2.5">Download</span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <button class="flex items-center text-[13px] bg-primary/90 text-white rounded focus:ring-2 focus:ring-primary/30 transition">
+                                                <span class="bg-primary flex items-center justify-center size-9.5 rounded-s">
+                                                    <i data-lucide="download" class="size-3"></i>
+                                                </span>
+                                                <span class="py-2 px-4">Download</span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <button class="flex items-center text-[15px] bg-primary/90 text-white rounded focus:ring-2 focus:ring-primary/30 transition">
+                                                <span class="bg-primary flex items-center justify-center size-11 rounded-s">
+                                                    <i data-lucide="download" class="size-3"></i>
+                                                </span>
+                                                <span class="py-2.5 px-4">Download</span>
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <div>
+                                            <button class="flex items-center text-xs bg-primary/90 text-white rounded focus:ring-2 focus:ring-primary/30 transition">
+                                                <span class="py-1 px-1.5">Download</span>
+                                                <span class="bg-primary flex items-center justify-center size-6.5 rounded-e">
+                                                    <i data-lucide="download" class="size-3"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <button class="flex items-center text-xs bg-primary/90 text-white rounded focus:ring-2 focus:ring-primary/30 transition">
+                                                <span class="py-1.5 px-2">Download</span>
+                                                <span class="bg-primary flex items-center justify-center size-7.5 rounded-e">
+                                                    <i data-lucide="download" class="size-3"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <button class="flex items-center text-xs bg-primary/90 text-white rounded focus:ring-2 focus:ring-primary/30 transition">
+                                                <span class="py-2 px-2.5">Download</span>
+                                                <span class="bg-primary flex items-center justify-center size-8.5 rounded-e">
+                                                    <i data-lucide="download" class="size-3"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <button class="flex items-center text-[13px] bg-primary/90 text-white rounded focus:ring-2 focus:ring-primary/30 transition">
+                                                <span class="py-2 px-4">Download</span>
+                                                <span class="bg-primary flex items-center justify-center size-9.5 rounded-e">
+                                                    <i data-lucide="download" class="size-3"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                        <div>
+                                            <button class="flex items-center text-[15px] bg-primary/90 text-white rounded focus:ring-2 focus:ring-primary/30 transition">
+                                                <span class="py-2.5 px-4">Download</span>
+                                                <span class="bg-primary flex items-center justify-center size-11 rounded-e">
+                                                    <i data-lucide="download" class="size-3"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Icon with Buttons</h6>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <button type="button" class="btn bg-primary text-white">
+                                        <i data-lucide="download" class="size-3"></i>
+                                        Download
+                                    </button>
+
+                                    <button type="button" class="btn bg-danger/10 text-danger hover:bg-danger hover:text-white">
+                                        Close
+                                        <i data-lucide="x" class="size-3"></i>
+                                    </button>
+
+                                    <button type="button" class="btn border-dashed border-primary text-primary hover:bg-primary/10">
+                                        <i data-lucide="refresh-ccw" class="size-3"></i>
+                                        Download
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<main>
+ 
+    <app-page-title title="List View" subtitle="Users" />
+
+
+    <div class="card">
+        <div class="card-header">
+            <h6 class="card-title">Users List</h6>
+            <button class="btn btn-sm bg-primary text-white">
+                <div class="size-4 me-1"><ng-icon name="lucidePlus"></ng-icon></div> Add user
+            </button>
+        </div>
+
+        <div class="card-header">
+            <div class="md:flex items-center md:space-y-0 space-y-4 gap-3">
+                <div class="relative">
+                    <input type="email" class="form-input form-input-sm ps-9" placeholder="Search for name,email">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3">
+                        <div class="size-3.5 flex items-center text-default-500 fill-default-100"> <ng-icon name="lucideSearch"></ng-icon></div>
+                    </div>
+                </div>
+
+                <select class="form-input form-input-sm">
+                    <option selected="">select status</option>
+                    <option>Hidden</option>
+                    <option>Rejected</option>
+                    <option>Verified</option>
+                    <option>Waiting</option>
+                </select>
+            </div>
+
+            <div class="flex gap-2 items-center flex-wrap">
+                <button type="button" class="btn btn-sm bg-transparent border border-dashed border-primary  text-primary hover:bg-primary/10">
+                    <div class="size-4"><ng-icon name="lucideDownload"></ng-icon></div>
+                    Import
+                </button>
+
+                <button type="button" class="btn btn-sm size-7.5 bg-default-100 text-default-500 hover:bg-default-1500  hover:text-white">
+                    <div class="size-4"><ng-icon name="lucideSlidersHorizontal"></ng-icon></div>
+                </button>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <div class="overflow-x-auto">
+                <div class="min-w-full inline-block align-middle">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full divide-y divide-default-200">
+                            <thead class="bg-default-150">
+                                <tr class="text-sm font-normal text-default-700 whitespace-nowrap">
+                                    <th class="ps-4 text-start">
+                                        <input id="checkbox-all" type="checkbox" class="form-checkbox">
+                                    </th>
+                                    <th scope="col" class="px-3.5 py-3 text-start">User ID</th>
+                                    <th scope="col" class="px-3.5 py-3 text-start">Name</th>
+                                    <th scope="col" class="px-3.5 py-3 text-start">Location</th>
+                                    <th scope="col" class="px-3.5 py-3 text-start">Email</th>
+                                    <th scope="col" class="px-3.5 py-3 text-start">Phone Number</th>
+                                    <th scope="col" class="px-3.5 py-3 text-start">Joining Date</th>
+                                    <th scope="col" class="px-3.5 py-3 text-start">Status</th>
+                                    <th scope="col" class="px-3.5 py-3 text-start">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @for(user of userTableData; track $index){
+                                <tr class="text-default-800 font-normal text-sm whitespace-nowrap">
+                                    <td class="py-3 ps-4">
+                                        <input type="checkbox" class="form-checkbox">
+                                    </td>
+                                    <td class="px-3.5 py-3 text-primary">{{ user.id }}</td>
+                                    <td class="flex py-3 px-3.5 items-center gap-3">
+
+                                        @if(user.avatar){
+                                        <div class="size-10 rounded-full bg-default-200">
+                                            <img [src]="user.avatar" alt="" class="h-10 rounded-full" />
+                                        </div>
+                                        }
+                                        @else{
+                                        <div class="w-9 h-9 flex items-center justify-center rounded-full bg-default-200 font-semibold">
+                                            {{ getInitials(user.name) }}
+                                        </div>
+                                        }
+
+                                        <div>
+                                            <h6 class="mb-1.5 font-semibold">
+                                                <a [routerLink]="[]" class="text-default-800">{{ user.name }}</a>
+                                            </h6>
+                                            <p class="text-default-500">{{ user.role }}</p>
+                                        </div>
+                                    </td>
+                                    <td class="py-3 px-3.5">{{ user.country }}</td>
+                                    <td class="py-3 px-3.5">{{ user.email }}</td>
+                                    <td class="py-3 px-3.5">{{ user.phone }}</td>
+                                    <td class="py-3 px-3.5">{{ user.date }}</td>
+                                    <td class="px-3.5 py-3">
+                                        <span class="py-0.5 px-2.5 inline-flex items-center gap-x-1 text-xs font-medium rounded" [class]="[user.status.bgClass, user.status.textClass]">
+                                            <div class="size-3"><ng-icon [name]="user.status.icon"></ng-icon></div>
+                                            {{ user.status.label }}
+                                        </span>
+                                    </td>
+                                    <td class="px-3.5 py-3">
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle btn size-7.5 bg-default-200 hover:bg-default-600 text-default-500" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                                <div class="size-4"><ng-icon name="lucideEllipsis"></ng-icon></div>
+                                            </button>
+                                            <div class="hs-dropdown-menu" role="menu">
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                                    <div class="size-3"><ng-icon name="lucideEye"></ng-icon></div>
+                                                    Overview
+                                                </a>
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                                    <div class="size-3"><ng-icon name="lucideFilePen"></ng-icon></div>
+                                                    Edit
+                                                </a>
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                                    <div class="size-3"><ng-icon name="lucideTrash2"></ng-icon></div>
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <p class="text-default-500 text-sm">Showing <b>10</b> of <b>58</b> Results</p>
+                <app-pagination />
+            </div>
+        </div>
+
+    </div>
+
+</main>

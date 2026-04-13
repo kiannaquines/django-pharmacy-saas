@@ -1,0 +1,404 @@
+<?php include('./partials/main.php'); ?>
+
+<head>
+    <?php $title = "Add New";
+    include('./partials/title-meta.php') ?>
+
+    <?php include('./partials/head-css.php'); ?>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <?php include('./partials/sidenav.php'); ?>
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            <?php include('./partials/topbar.php'); ?>
+
+            <main>
+
+                <?php $subtitle = "Menu";
+                $title = "Add New";
+                include './partials/page-title.php' ?>
+
+                <div class="lg:flex justify-between items-center mb-5">
+                    <div>
+                        <h6 class="mb-1 card-title">New Invoice</h6>
+                    </div>
+
+                    <div class="flex flex-wrap items-center md:justify-end gap-2 md:mt-0 mt-4">
+                        <button class="bg-default-200 text-default-500 text-nowrap btn border-0 hover:bg-default-300"><i data-lucide="eye" class="size-4  me-1"></i>Preview</button>
+
+                        <button class="bg-info/90 text-white btn text-nowrap border-0 hover:bg-info" onclick="window.print()">Save Draft</button>
+
+                        <button class="btn bg-primary text-white text-nowrap border-0"><i data-lucide="save" class="size-4 text-white me-1"></i>Save & Download</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="mb-4 text-default-800 underline text-base font-semibold">Generale Info:</h6>
+                        <div class="grid lg:grid-cols-4 grid-cols-1 gap-5 mb-6">
+                            <div class="col-span-1">
+                                <label for="First Name" class="inline-block mb-2 text-sm text-default-800 font-medium">Invoice
+                                    No.
+                                </label>
+                                <input type="text" id="First Name" class="form-input" placeholder="Enter invoice no.." value="#TW15090251" readonly />
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="invoiceNo" class="inline-block mb-2 text-sm text-default-800 font-medium">Invoice
+                                    Date</label>
+                                <input type="date" id="invoiceNo" class="form-input" placeholder="Invoice Date" data-provider="flatpickr" data-date-format="d M, Y" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="InvoiceDue" class="inline-block mb-2 text-sm text-default-800 font-medium">Invoice
+                                    Due</label>
+                                <input type="date" id="InvoiceDue" class="form-input" placeholder="Invoice Due" required="">
+                            </div>
+                            <div class="col-span-1">
+                                <label for="legalRegistrationNo" class="inline-block mb-2 text-sm text-default-800 font-medium">Legal Registration No.</label>
+                                <input type="number" id="legalRegistrationNo" class="form-input" placeholder="Legal Registration No" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="emailInvoiceInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Email
+                                </label>
+                                <input type="email" id="emailInvoiceInput" class="form-input" placeholder="tailwick@themesdesign.in" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="websiteInput" class="inline-block mb-2 text-default-800 text-sm font-medium">Website</label>
+                                <input type="text" id="websiteInput" class="form-input" placeholder="www.themesdesign.in" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="contactInput" class="inline-block mb-2 text-default-800 text-sm font-medium">Contact
+                                    US</label>
+                                <input type="number" id="contactInput" class="form-input" placeholder="(241) 1234 567 8900" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="paymentStatus" class="inline-block mb-2 text-sm text-default-800 font-medium">Payment
+                                    Status</label>
+                                <select class="form-input" placeholder="Select a country...">
+                                    <option value="Paid">Paid</option>
+                                    <option value="Unpaid">Unpaid</option>
+                                    <option value="Cancel">Cancel</option>
+                                    <option value="Refund">Refund</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h6 class="mb-4 text-default-800 text-base underline font-semibold">Shipping Info:</h6>
+
+                        <div class="grid lg:grid-cols-4 grid-cols-1 gap-5">
+                            <div class="col-span-1">
+                                <label for="fullNameShippingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Full Name</label>
+                                <input type="text" id="fullNameShippingInput" class="form-input" placeholder="Full Name" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="phoneNoShippingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Phone No.</label>
+                                <input type="number" id="phoneNoShippingInput" class="form-input" placeholder="(00) 1234 567 8956" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="alternativeNoShippingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Alternative No.</label>
+                                <input type="number" id="alternativeNoShippingInput" class="form-input" placeholder="(00) 1234 567 8956" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="taxShippingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">TAX
+                                    No.</label>
+                                <input type="number" id="taxShippingInput" class="form-input" placeholder="12-34567974" required="">
+                            </div>
+
+                            <div class="lg:col-span-4 col-span-1">
+                                <label for="addressShippingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Address</label>
+                                <textarea class="form-input" placeholder="Address" id="addressShippingInput" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="flex items-center gap-2">
+                                <input type="checkbox" id="switchAddress" class="form-switch">
+                                <label for="switchAddress" class="text-sm text-default-600 ">Will your Shipping & Billing address same?</label>
+                            </div>
+                        </div>
+
+                        <h6 class="my-5 text-default-800 text-base underline font-semibold">Billing Info:</h6>
+
+                        <div class="grid lg:grid-cols-4 grid-cols-1 gap-5">
+                            <div class="col-span-1">
+                                <label for="fullNameBillingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Full Name</label>
+                                <input type="text" id="fullNameBillingInput" class="form-input" placeholder="Full Name" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="phoneNoBillingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Phone No.</label>
+                                <input type="number" id="phoneNoBillingInput" class="form-input" placeholder="(00) 1234 567 8956" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="alternativeNoBillingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Alternative No.</label>
+                                <input type="number" id="alternativeNoBillingInput" class="form-input" placeholder="(00) 1234 567 8956" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="taxBillingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">TAX
+                                    No.</label>
+                                <input type="number" id="taxBillingInput" class="form-input" placeholder="12-34567974" required="">
+                            </div>
+
+                            <div class="lg:col-span-4 grid-cols-1">
+                                <label for="addressBillingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Address</label>
+                                <textarea class="form-input" placeholder="Address" id="addressBillingInput" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <h6 class="my-4 text-default-800 text-base underline font-semibold">Products Info:</h6>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full whitespace-nowrap">
+                                <thead>
+                                    <tr class="border border-default-200 text-default-500 text-center font-medium  uppercase">
+                                        <th class="px-3.5 py-2.5">Item Name</th>
+                                        <th class="px-3.5 py-2.5">Quantity</th>
+                                        <th class="px-3.5 py-2.5">Price</th>
+                                        <th class="px-3.5 py-2.5">Discount</th>
+                                        <th class="px-3.5 py-2.5">TAX</th>
+                                        <th class="px-3.5 py-2.5 w-44">Total</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="item-list">
+                                    <tr class="border border-default-200">
+                                        <td class="">
+                                            <input type="text" id="itemName1" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="Item Name" required="">
+                                        </td>
+
+                                        <td class="w-40 border rounded-xl border-default-200 ">
+                                            <div class="flex p-2 justify-center">
+                                                <button type="button" class="size-9 minusBtn border rounded-tr-0 rounded-br-0 border-default-200 flex justify-center items-center">
+                                                    <i data-lucide="minus" class="size-4 text-default-500"></i>
+                                                </button>
+                                                <input type="number" class="text-center ps-2 w-12 h-9 border-t border-b border-e-0 bg-transparent border-l-0 border-default-200 ring-0 product-quantity focus:shadow-none" value="2" min="0" max="100" readonly>
+                                                <button type="button" class="size-9 plusBtn rounded-tl-0 rounded-bl-0 border  border-default-200 flex justify-center items-center">
+                                                    <i data-lucide="plus" class="size-4 text-default-500"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+
+                                        <td class="w-40 border border-default-200">
+                                            <input type="text" id="itemName1" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="$00.00" required="">
+                                        </td>
+
+                                        <td class="w-40 border border-default-200">
+                                            <input type="text" id="itemName1" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="0%" required="">
+                                        </td>
+
+                                        <td class="w-40 border border-default-200">
+                                            <input type="text" id="itemName1" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="0%" required="">
+                                        </td>
+
+                                        <td class="border border-default-200 " rowspan="2">
+                                            <div class="mb-1">
+                                                <input type="text" id="ItemTotal" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="$00.00" required="" readonly="">
+                                            </div>
+
+                                            <input type="text" id="itemDiscountsInput" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="-$00.00" required="" readonly="">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="border border-default-200">
+                                            <input type="text" id="itemdescription1" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="Enter Description (Optional)" required="">
+                                        </td>
+
+                                        <td colspan="3" class="border border-default-200 "></td>
+                                    </tr>
+                                </tbody>
+
+                                <tbody class="before:block before:h-3 item-list">
+                                    <tr class="item">
+                                        <td class="border border-default-200">
+                                            <input type="text" id="itemName1" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="Item Name" required="">
+                                        </td>
+
+                                        <td class="w-40 border rounded-xl border-default-200 ">
+                                            <div class="flex p-2 justify-center">
+                                                <button type="button" class="size-9 minusBtn border rounded-tr-0 rounded-br-0 border-default-200 flex justify-center items-center">
+                                                    <i data-lucide="minus" class="size-4 text-default-500"></i>
+                                                </button>
+                                                <input type="number" class="text-center ps-2 w-12 h-9 border-t bg-transparent border-b border-e-0 border-l-0 border-default-200 ring-0 product-quantity focus:shadow-none" value="2" min="0" max="100" readonly>
+                                                <button type="button" class="size-9 plusBtn rounded-tl-0 rounded-bl-0 border  border-default-200 flex justify-center items-center">
+                                                    <i data-lucide="plus" class="size-4 text-default-500"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+
+                                        <td class="w-40 border border-default-200 ">
+                                            <input type="number" id="itemName1" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="$00.00" required="">
+                                        </td>
+
+                                        <td class="w-40 border border-default-200 ">
+                                            <input type="text" id="itemName1" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="0%" required="">
+                                        </td>
+
+                                        <td class="w-40 border border-default-200 ">
+                                            <input type="text" id="itemName1" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="0%" required="">
+                                        </td>
+
+                                        <td class="border border-default-200 " rowspan="2">
+                                            <div class="mb-1">
+                                                <input type="text" id="ItemTotal" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="$00.00" readonly="">
+                                            </div>
+                                            <input type="text" id="itemDiscountsInput" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="-$00.00" readonly="">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="border border-default-200 ">
+                                            <input type="text" id="itemdescription1" class="bg-transparent block w-full border-0 rounded-md text-sm text-default-500 placeholder:text-default-400 ring-0" placeholder="Enter Description (Optional)" required="">
+                                        </td>
+
+                                        <td colspan="3" class="border border-default-200 "></td>
+                                    </tr>
+                                </tbody>
+
+                                <tbody class="before:block before:h-4" id="invoiceTable">
+                                    <tr>
+                                        <td colspan="6">
+                                            <a href="javascript:void(0)" id="addBtn">
+                                                <button class="btn border border-primary w-auto bg-transparent  text-primary border-dashed hover:bg-primary/10">
+                                                    <i data-lucide="plus" class="size-3 me-2"></i>
+                                                    Add Item
+                                                </button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <tbody class="before:block before:h-3" id="totalAmount">
+                                    <tr class="text-default-800">
+                                        <td colspan="4"></td>
+                                        <td class="border-b border-default-200 text-default-500 text-sm">
+                                            Sub Total
+                                        </td>
+                                        <td class="font-medium border-b border-default-200 ">
+                                            <input type="text" id="subTotale" class=" bg-transparent block w-full border-0 rounded-md text-sm text-default-800 placeholder:text-default-800 ring-0" placeholder="$00.00" readonly="">
+                                        </td>
+                                    </tr>
+
+                                    <tr class="text-default-800">
+                                        <td colspan="4"></td>
+                                        <td class="border-b border-default-200  text-default-600 text-sm">
+                                            Estimated Tax (18%)
+                                        </td>
+                                        <td class="font-medium border-b border-default-200 text-default-600 text-sm">
+                                            <input type="text" id="subTotale" class=" bg-transparent block w-full border-0 rounded-md text-sm text-default-800 placeholder:text-default-800 ring-0" placeholder="$00.00" readonly="">
+                                        </td>
+                                    </tr>
+
+                                    <tr class="text-default-800">
+                                        <td colspan="4"></td>
+                                        <td class="border-b border-default-200 text-default-600 text-sm">
+                                            Item Discounts
+                                        </td>
+                                        <td class="font-medium border-b border-default-200 ">
+                                            <input type="text" id="subTotale" class=" bg-transparent block w-full border-0 rounded-md text-sm text-default-800 placeholder:text-default-800 ring-0" placeholder="$00.00" readonly="">
+                                        </td>
+                                    </tr>
+
+                                    <tr class="text-default-800">
+                                        <td colspan="4"></td>
+                                        <td class="border-b border-default-200  text-default-600 text-sm">
+                                            Shipping Charge
+                                        </td>
+                                        <td class="font-medium border-b border-default-200 ">
+                                            <input type="text" id="subTotale" class=" bg-transparent block w-full border-0 rounded-md text-sm text-default-800 placeholder:text-default-800 ring-0" placeholder="$00.00" readonly="">
+                                        </td>
+                                    </tr>
+
+                                    <tr class="text-default-800">
+                                        <td colspan="4"></td>
+                                        <td class="border-b border-default-200 text-default-600 text-sm">
+                                            Total Amount
+                                        </td>
+                                        <td class="font-medium border-b border-default-200 ">
+                                            <input type="text" id="subTotale" class=" bg-transparent block w-full border-0 rounded-md text-sm text-default-800 placeholder:text-default-800 ring-0" placeholder="$00.00" readonly="">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h6 class="mb-4 text-text-default-800 underline text-sm font-semibold">Payments Details:</h6>
+
+                        <div class="grid lg:grid-cols-4 grid-cols-1 gap-5">
+                            <div class="col-span-1">
+                                <label for="paymentMethod" class="inline-block mb-2 text-sm text-default-800 font-medium">Full Name</label>
+                                <select class="form-input" data-kt-select name="paymentMethod" id="paymentMethod">
+                                    <option value="">Select Method</option>
+                                    <option value="Credit Card">Credit Card</option>
+                                    <option value="Paypal">Paypal</option>
+                                    <option value="Paypal">Paypal</option>
+                                    <option value="American Express">American Express</option>
+                                </select>
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="cardHolderName" class="inline-block mb-2 text-sm text-default-800 font-medium">Card
+                                    Holder Name</label>
+                                <input type="number" id="cardHolderName" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" class="form-input" placeholder="Full Name" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="cardNumber" class="inline-block mb-2 text-sm text-default-800 font-medium">Card
+                                    Number</label>
+                                <input type="text" id="cardNumber" class="form-input" placeholder="xxxx xxxx xxxx xxxx" required="">
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="totalPayment" class="inline-block mb-2 text-sm text-default-800 font-medium ">Total
+                                    Payment</label>
+                                <input type="text" id="totalPayment" class=" form-input" placeholder="$00.00" required="">
+                            </div>
+
+                            <div class="lg:col-span-4 col-span-1">
+                                <label for="taxBillingInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Notes</label>
+                                <textarea class="form-input" placeholder="Enter notes pertaining to the customer or payment" id="taxBillingInput" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end items-center mt-5">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <button class="bg-default-200 text-default-500 text-nowrap border-0 btn hover:bg-default-300"> <i data-lucide="refresh-ccw" class="size-4 me-1"></i>Reset</button>
+
+                                <button class="text-white border-0 btn text-nowrap bg-primary"> <i data-lucide="save" class="size-4 me-1"></i>Save</button>
+
+                                <button class="bg-teal-600 border-0 text-nowrap text-white btn hover:bg-tral-700"> <i data-lucide="download" class="size-4 me-1"></i>Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <?php include('./partials/footer.php'); ?>
+        </div>
+        <!-- End Page content -->
+
+    </div>
+
+    <?php include('./partials/customizer.php'); ?>
+
+    <script src="/src/scripts/components/input-spin.js" type="module"></script>
+
+</body>
+
+</html>

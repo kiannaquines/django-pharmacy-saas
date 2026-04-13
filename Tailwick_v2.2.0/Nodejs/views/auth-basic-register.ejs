@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('./partials/title-meta') %>
+
+   <%- include ('./partials/head-css') %>
+</head>
+
+<body>
+
+    <div class="relative min-h-screen w-full flex justify-center items-center py-16 md:py-10">
+
+        <div class="card md:w-lg w-screen z-10">
+            <div class="text-center px-10 py-12">
+                <!-- Logo -->
+                <a href="/" class="flex justify-center">
+                    <img src="assets/images/logo-dark.png" alt="logo dark" class="h-6 flex dark:hidden">
+                    <img src="assets/images/logo-light.png" alt="logo light" class="h-6 hidden dark:flex" alt="">
+                </a>
+
+                <div class="mt-8 text-center">
+                    <h4 class="mb-2.5 text-xl font-semibold text-primary">Create your free account</h4>
+                    <p class="text-base text-default-500">Get your free Tailwick account now</p>
+                </div>
+
+                <!-- form -->
+                <form action="/" class="text-left w-full mt-10">
+                    <div class="mb-4">
+                        <label for="email" class="block  font-medium text-default-900 text-sm mb-2">Enter email</label>
+                        <input type="text" id="email" class="form-input" placeholder="Enter Username or email" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="Username" class="block  font-medium text-default-900 text-sm mb-2">Username</label>
+                        <input type="text" id="Username" class="form-input" placeholder="Enter Username" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="Password" class="block  font-medium text-default-900 text-sm mb-2">Password</label>
+                        <input type="text" id="Password" class="form-input" placeholder="Enter Password" />
+                    </div>
+
+                    <p class="italic text-sm font-medium text-default-500">By registering you agree to the Tailwick <a href="#" class="underline">Terms of Use</a></p>
+
+
+                    <div class="mt-10 text-center">
+                        <button type="submit" class="btn bg-primary text-white w-full">Sign Up</button>
+                    </div>
+
+                    <div class="my-9 relative text-center  before:absolute before:top-2.5 before:left-0 before:border-t before:border-t-default-200 before:w-full before:h-0.5 before:right-0 before:-z-0">
+                        <h4 class="relative z-1 py-0.5 px-2 inline-block font-medium bg-card text-default-600">Create Account with</h4>
+                    </div>
+
+                    <div class="flex w-full justify-center items-center gap-2">
+                        <a href="#" class="btn border border-default-200 flex-grow hover:bg-default-150 shadow-sm hover:text-default-800">
+                            <i class="iconify-color logos--google-icon"></i>
+                            Use Google
+                        </a>
+
+                        <a href="#" class="btn border border-default-200 flex-grow hover:bg-default-150 shadow-sm hover:text-default-800">
+                            <i class="iconify logos--apple text-mono"></i>
+                            Use Apple
+                        </a>
+                    </div>
+
+                    <div class="mt-10 text-center">
+                        <p class="text-base text-default-500">Already have an account ?
+                            <a href="/auth-basic-login" class="font-semibold underline hover:text-primary transition duration-200">Login</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="absolute inset-0 overflow-hidden">
+            <svg aria-hidden="true" class="absolute inset-0 size-full fill-black/2 stroke-black/5 dark:fill-white/2.5 dark:stroke-white/2.5">
+                <defs>
+                    <pattern id="authPattern" width="56" height="56" patternUnits="userSpaceOnUse" x="50%" y="16">
+                        <path d="M.5 56V.5H72" fill="none"></path>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#authPattern)"></rect>
+            </svg>
+        </div>
+    </div>
+
+</body>
+
+</html>

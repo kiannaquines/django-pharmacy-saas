@@ -1,0 +1,66 @@
+<main>
+    <div class="card">
+        <div class="card-header">
+            <h6 class="card-title">Departments</h6>
+
+            <button class="btn btn-sm bg-primary text-white">
+                <div class="size-4 me-1"><ng-icon name="lucidePlus"></ng-icon></div> Add Department
+            </button>
+        </div>
+
+        <div class="flex flex-col">
+            <div class="overflow-x-auto">
+                <div class="min-w-full inline-block align-middle">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full divide-y divide-default-200">
+                            <thead class="font-semibold whitespace-nowrap">
+                                <tr class="text-sm  text-default-800 divide-x divide-default-200">
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">#</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Department Name</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Head of Dep.</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Phone Number</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Email</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Employee</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="divide-y divide-default-200">
+                                @for (row of tableRows; track $index) {
+                                <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+                                    <td class="px-3.5 py-3 text-sm">{{ row.id }}</td>
+                                    <td class="px-3.5 py-3 text-sm">{{ row.department }}</td>
+                                    <td class="px-3.5 py-3 text-sm">{{ row.manager }}</td>
+                                    <td class="px-3.5 py-3 text-sm">{{ row.phone }}</td>
+                                    <td class="px-3.5 py-3 text-sm">{{ row.email }}</td>
+                                    <td class="px-3.5 py-3 text-sm">{{ row.employees }}</td>
+                                    <td class="px-3.5 py-3">
+                                        <div class="flex items-center gap-2">
+                                            <a [routerLink]="[]" class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600" aria-haspopup="dialog" aria-expanded="false" aria-controls="department-edit-modal" data-hs-overlay="#department-edit-modal">
+                                                <div class="size-4"><ng-icon name="lucidePencil"></ng-icon></div>
+                                            </a>
+
+                                            <a [routerLink]="[]" class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600" aria-haspopup="dialog" aria-expanded="false" aria-controls="department-delete-modal" data-hs-overlay="#department-delete-modal">
+                                                <div class="size-4"><ng-icon name="lucideTrash2"></ng-icon></div>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <p class="text-default-500 text-sm">Showing <b>5</b> of <b>8</b> Results</p>
+                <app-pagination />
+            </div>
+        </div>
+    </div>
+
+</main>
+<app-edit-modal/>
+<app-delete-modal/>

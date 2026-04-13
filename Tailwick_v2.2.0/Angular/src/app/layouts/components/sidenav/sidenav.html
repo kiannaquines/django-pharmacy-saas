@@ -1,0 +1,33 @@
+<!-- Start Sidebar -->
+<aside id="app-menu" >
+
+    <!-- Sidenav Menu Brand Logo -->
+    <a routerLink="/" class="logo-box sticky top-0 flex min-h-topbar-height items-center justify-start px-6 backdrop-blur-xs">
+        <!-- Light Brand Logo -->
+        <div class="logo-light">
+            <img src="assets/images/logo-light.png" class="logo-lg h-6" alt="Light logo">
+            <img src="assets/images/logo-sm.png" class="logo-sm h-6" alt="Small logo">
+        </div>
+
+        <!-- Dark Brand Logo -->
+        <div class="logo-dark">
+            <img src="assets/images/logo-dark.png" class="logo-lg h-6" alt="Dark logo">
+            <img src="assets/images/logo-sm.png" class="logo-sm h-6" alt="Small logo">
+        </div>
+    </a>
+
+    <!-- Sidenav Menu Toggle Button -->
+    <div class="absolute top-0 end-5 flex h-topbar items-center justify">
+        <button (click)="hoverSidebar()"  id="button-hover-toggle" class="">
+           <div class="size-5"><ng-icon name="tablerCircle" ></ng-icon></div>
+        </button>
+    </div>
+
+    <!-- Sidenav Menu Item Link -->
+    <div class="relative min-h-0 flex-grow">
+        <ngx-simplebar class="h-[calc(100vh-var(--spacing-topbar-height))]">
+           <app-sidebar-menu />
+        </ngx-simplebar>
+    </div>
+
+</aside>

@@ -1,0 +1,91 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Leaflet" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Leaflet" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic Map</h6>
+                                <div class="leaflet-map h-80" id="basicMap"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Marker Circle & Polygon</h6>
+                                <div class="leaflet-map h-80" id="shapeMap"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Draggable Marker With Popup</h6>
+                                <div class="leaflet-map h-80" id="dragMap"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">User Location</h6>
+                                <div class="leaflet-map h-80" id="userLocation"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Custom Icons</h6>
+                                <div class="leaflet-map h-80" id="customIcons"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Layer Control</h6>
+                                <div class="leaflet-map h-80" id="layerControl"></div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Interactive Choropleth Map</h6>
+                                <div class="leaflet-map h-80" id="geoJson"></div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+
+    <script src="assets/js/pages/maps-leaflet.js" type="module"></script>
+
+</body>
+
+</html>

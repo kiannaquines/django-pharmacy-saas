@@ -1,0 +1,112 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Grid JS" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Grid JS"}}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic Table</h6>
+                                <div id="basic_tables"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-default-800 text-[15px]">Pagination</h6>
+                                <p class="mb-4 text-default-400">Pagination can be enabled by setting <code class="text-xs select-all">pagination: true</code>.</p>
+                                <div id="pagination_tables"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-default-800 text-[15px]">Search</h6>
+                                <p class="mb-4 text-default-400">Grid.js supports global search on all rows and columns. Set <code class="text-xs select-all">search: true</code> to enable the search plugin:</p>
+                                <div id="search_tables"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-default-800 text-[15px]">Sorting</h6>
+                                <p class="mb-4 text-default-400">To enable sorting, simply add <code class="text-xs select-all">sort: true</code> to your config:</p>
+                                <div id="table_sorting"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-default-800 text-[15px]">Resizable Columns</h6>
+                                <p class="mb-4 text-default-400">Simply add <code class="text-xs select-all">resizable: true</code> to your config to enable resizable columns:</p>
+                                <div id="resizable_columns"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-default-800 text-[15px]">Loading State</h6>
+                                <p class="mb-4 text-default-400">Grid.js renders a loading bar automatically while it waits for the data to be fetched. Here we are using an async function to demonstrate this behaviour (e.g. an async function can be a XHR call to a server backend)</p>
+                                <div id="table_loading_state"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-default-800 text-[15px]">Fixed Header</h6>
+                                <p class="mb-4 text-default-400">Simply add <code class="text-xs select-all">height</code> and <code class="text-xs select-all">fixedHeader</code> to your Grid.js config object to enable fixed header feature:</p>
+                                <div id="table_fixed_header"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-default-800 text-[15px]">Hidden Columns</h6>
+                                <p class="mb-4 text-default-400">Add <code class="text-xs select-all">hidden: true</code> to the columns definition to hide them.</p>
+                                <div id="table_hidden_column"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-default-800 text-[15px]">Cell formatting</h6>
+                                <p class="mb-4 text-default-400">You can customize cells and format them at runtime using <code class="text-xs select-all">formatter</code> property:</p>
+                                <div id="cell_formatting"></div>
+                            </div>
+                        </div><!--end card-->
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <script src="assets/js/pages/tables-grid.init.js" type="module"></script>
+
+</body>
+
+</html>

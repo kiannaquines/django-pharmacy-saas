@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Two Steps | Tailwick - Tailwind CSS 3 Admin Layout & UI Kit Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+    <meta content="Themesdesign" name="author">
+    
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/favicon-CK1QI2Xs.ico">
+
+    <script>
+        (function () {
+            const html = document.documentElement;
+            const storageKey = "__TAILWICK_CONFIG__";
+            const savedConfig = sessionStorage.getItem(storageKey);
+    
+            // Default config
+            const defaultConfig = {
+                dir: "ltr",
+                theme: "light",
+                sidenav: {
+                    color: "light",
+                    size: "default",
+                },
+            };
+    
+            // Build config from HTML attributes
+            function getSystemTheme() {
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+            }
+    
+            // Build config from HTML attributes
+            const htmlConfig = {
+                dir: html.getAttribute("dir") || defaultConfig.dir,
+    
+                theme: html.getAttribute("data-theme") === 'system'
+                    ? getSystemTheme()
+                    : html.getAttribute("data-theme") || (defaultConfig.theme === 'system' ? getSystemTheme() : defaultConfig.theme),
+                sidenav: {
+                    color: html.getAttribute("data-sidenav-color") || defaultConfig.sidenav.color,
+                    size: html.getAttribute("data-sidenav-size") || defaultConfig.sidenav.size,
+                },
+            };
+    
+            // Save merged config as defaults globally
+            window.defaultConfig = structuredClone(htmlConfig);
+    
+            // Load from session if exists
+            let config = savedConfig ? JSON.parse(savedConfig) : htmlConfig;
+            window.config = config;
+    
+            // Apply layout attributes immediately
+            html.setAttribute("dir", config.dir);
+            html.setAttribute("data-theme", config.theme);
+            html.setAttribute("data-sidenav-color", config.sidenav.color);
+    
+            if (config.sidenav.size) {
+                let size = config.sidenav.size;
+    
+                if (window.innerWidth <= 1140) {
+                    size = "offcanvas";
+                }
+    
+                html.setAttribute("data-sidenav-size", size);
+            }
+        })();
+    </script>
+    
+      <script type="module" crossorigin src="/assets/app-BxTRRtUp.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/app-0ZOPNGSF.css">
+</head>
+
+<body>
+
+    <div class="bg-cover bg-no-repeat bg-[url(../images/auth-bg.jpg)] dark:bg-[url('../images/auth-bg-dark.jpg')] h-screen w-full flex justify-center items-center">
+        <div class="relative">
+            <div class="bg-default-50 rounded-lg w-lg relative">
+                <div class="text-center px-10 py-12">
+                    <a href="index.html" class="flex justify-center">
+                        <img src="/assets/logo-dark-BRT9tiBX.png" alt="logo dark" class="h-6 block dark:hidden">
+                        <img src="/assets/logo-light-CCjoJosn.png" alt="logo light" class="h-6 hidden dark:block" alt="">
+                    </a>
+
+                    <div class="mt-8">
+                        <h4 class="mb-2 text-primary text-xl font-semibold">Verify Email</h4>
+                        <p class="text-base mb-8 text-default-500">Please enter the 4 digit code sent to tailwick@themesdesign.in</p>
+                    </div>
+
+                    <form action="index.html">
+                        <div class="grid grid-cols-4 gap-2">
+                            <input type="text" class="form-input text-center" placeholder="•" maxlength="1" />
+                            <input type="text" class="form-input text-center" placeholder="•" maxlength="1" />
+                            <input type="text" class="form-input text-center" placeholder="•" maxlength="1" />
+                            <input type="text" class="form-input text-center" placeholder="•" maxlength="1" />
+                        </div>
+
+                        <div class="mt-10">
+                            <button type="button" class="btn bg-primary text-white w-full">Confirm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

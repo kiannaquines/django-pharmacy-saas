@@ -1,0 +1,63 @@
+<table class="min-w-full  divide-y divide-default-200">
+    <thead class="bg-default-150">
+        <tr class="text-sm font-normal text-default-500">
+            <th scope="col" class="px-3.5 py-3 text-start">Employee ID</th>
+            <th scope="col" class="px-3.5 py-3 text-start">Joining Date</th>
+            <th scope="col" class="px-3.5 py-3 text-start">Name</th>
+            <th scope="col" class="px-3.5 py-3 text-start">Designation</th>
+            <th scope="col" class="px-3.5 py-3 text-start">Email Id</th>
+            <th scope="col" class="px-3.5 py-3 text-start">Phone Number</th>
+            <th scope="col" class="px-3.5 py-3 text-start">Salary</th>
+            <th scope="col" class="px-3.5 py-3 text-start">Bonus</th>
+            <th scope="col" class="px-3.5 py-3 text-start">Action</th>
+        </tr>
+    </thead>
+
+    <tbody class="divide-y divide-default-200">
+        @for (row of payrollData; track $index) {
+        <tr class="text-default-800 font-normal">
+            <td class="px-3.5 py-2.5 whitespace-nowrap text-sm text-primary">
+                <a [routerLink]="[]">{{ row.id }}</a>
+            </td>
+            <td class="px-3.5 py-2.5 whitespace-nowrap text-sm">{{ row.date }}</td>
+            <td class="px-3.5 py-2.5 whitespace-nowrap text-sm">
+                <a [routerLink]="[]" class="flex items-center gap-3">
+                    <div class="rounded-full size-6 shrink-0 bg-default-100">
+                        <img [src]="row.employee.image" alt="" class="h-6 rounded-full">
+                    </div>
+                    <h6 class="text-sm text-default-800">{{ row.employee.name }}</h6>
+                </a>
+            </td>
+            <td class="px-3.5 py-2.5 whitespace-nowrap text-sm">{{ row.role }}</td>
+            <td class="px-3.5 py-2.5 whitespace-nowrap text-sm">{{ row.employee.email }}</td>
+            <td class="px-3.5 py-2.5 whitespace-nowrap text-sm">{{ row.phone }}</td>
+            <td class="px-3.5 py-2.5 whitespace-nowrap text-sm">{{ row.salary }}</td>
+            <td class="px-3.5 py-2.5 whitespace-nowrap text-sm">{{ row.bonus }}</td>
+            <td class="px-3.5 py-2.5 whitespace-nowrap text-sm flex items-center gap-2">
+                <a routerLink="/hr/payroll/create-payslip" class="text-xs text-white bg-sky-500 transition-all duration-300 hover:bg-sky-600 rounded py-1.5 px-2">Generate Slip</a>
+
+                <div class="hs-dropdown relative inline-flex">
+                    <button type="button" class="hs-dropdown-toggle btn size-7.5 bg-default-200 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                        <div class="size-4"> <ng-icon name="lucideEllipsis"></ng-icon></div>
+                    </button>
+                    <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 card z-30 mt-2 p-2" role="menu">
+                        <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-sm text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                            <div class="size-3"> <ng-icon name="lucideEye"></ng-icon></div>
+                            Overview
+                        </a>
+                        <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-sm text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                            <div class="size-3"><ng-icon name="lucideFilePen"></ng-icon></div>
+                            Edit
+                        </a>
+                        <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-sm text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                            <div class="size-3"><ng-icon name="lucideTrash2"></ng-icon></div>
+                            Delete
+                        </a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>

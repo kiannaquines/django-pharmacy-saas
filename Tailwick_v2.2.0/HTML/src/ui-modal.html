@@ -1,0 +1,361 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Modal" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Modal" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Default</h6>
+
+                                <div class="flex gap-2 flex-wrap">
+                                    <div>
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="defaultModal" data-hs-overlay="#defaultModal">
+                                            Default Modal
+                                        </button>
+
+                                        <div id="defaultModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="defaultModal-label">
+                                            <div class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-56px)] flex items-center">
+                                                <div class="w-full flex flex-col bg-card border border-default-200 dark:border-white/14 shadow-2xs rounded-md pointer-events-auto">
+                                                    <div class="flex justify-between items-center p-4 border-b border-default-200 dark:border-white/14">
+                                                        <h3 id="defaultModal-label" class="font-bold text-default-800 text-base">
+                                                            Modal Heading
+                                                        </h3>
+
+                                                        <button type="button" aria-label="Close" data-hs-overlay="#defaultModal">
+                                                            <span class="sr-only">Close</span>
+                                                            <i data-lucide="x" class="size-4"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="p-4 overflow-y-auto">
+                                                        <h5 class="mb-3 text-base">Modal Content</h5>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-between p-4 mt-auto border-t border-default-200 dark:border-white/14">
+                                                        <h5 class="text-base">Modal Footer</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="toptModal" data-hs-overlay="#toptModal">
+                                            Top Modal
+                                        </button>
+
+                                        <div id="toptModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="toptModal-label">
+                                            <div class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-56px)] flex items-start">
+                                                <div class="w-full flex flex-col bg-card border border-default-200 dark:border-white/14 shadow-2xs rounded-md pointer-events-auto">
+                                                    <div class="flex justify-between items-center p-4 border-b border-default-200 dark:border-white/14">
+                                                        <h3 id="toptModal-label" class="font-bold text-default-800 text-base">
+                                                            Modal Heading
+                                                        </h3>
+
+                                                        <button type="button" aria-label="Close" data-hs-overlay="#toptModal">
+                                                            <span class="sr-only">Close</span>
+                                                            <i data-lucide="x" class="size-4"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="p-4 overflow-y-auto max-h-[calc(theme('height.screen')_-_180px)]">
+                                                        <h5 class="mb-3 text-base">Modal Content</h5>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-between p-4 mt-auto border-t border-default-200 dark:border-white/14">
+                                                        <h5 class="text-base">Modal Footer</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="bottomtModal" data-hs-overlay="#bottomtModal">
+                                            Bottom Modal
+                                        </button>
+
+                                        <div id="bottomtModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="bottomtModal-label">
+                                            <div class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-56px)] flex items-end">
+                                                <div class="w-full flex flex-col bg-card border border-default-200 dark:border-white/14 shadow-2xs rounded-md pointer-events-auto">
+                                                    <div class="flex justify-between items-center p-4 border-b border-default-200 dark:border-white/14">
+                                                        <h3 id="bottomtModal-label" class="font-bold text-default-800 text-base">
+                                                            Modal Heading
+                                                        </h3>
+
+                                                        <button type="button" aria-label="Close" data-hs-overlay="#bottomtModal">
+                                                            <span class="sr-only">Close</span>
+                                                            <i data-lucide="x" class="size-4"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="p-4 overflow-y-auto">
+                                                        <h5 class="mb-3 text-base">Modal Content</h5>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-between p-4 mt-auto border-t border-default-200 dark:border-white/14">
+                                                        <h5 class="text-base">Modal Footer</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Modal Sizes</h6>
+
+                                <div class="flex gap-2 flex-wrap">
+                                    <div>
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="extraSmallModal" data-hs-overlay="#extraSmallModal">
+                                            Extra Small Modal
+                                        </button>
+
+                                        <div id="extraSmallModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="extraSmallModal-label">
+                                            <div class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-80 sm:w-full m-3 sm:mx-auto min-h-[calc(100%-56px)] flex items-center">
+                                                <div class="w-full flex flex-col bg-card border border-default-200 dark:border-white/14 shadow-2xs rounded-md pointer-events-auto">
+                                                    <div class="flex justify-between items-center p-4 border-b border-default-200 dark:border-white/14">
+                                                        <h3 id="extraSmallModal-label" class="font-bold text-default-800 text-base">
+                                                            Modal Heading
+                                                        </h3>
+
+                                                        <button type="button" aria-label="Close" data-hs-overlay="#extraSmallModal">
+                                                            <span class="sr-only">Close</span>
+                                                            <i data-lucide="x" class="size-4"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="p-4 overflow-y-auto">
+                                                        <h5 class="mb-3 text-base">Modal Content</h5>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-between p-4 mt-auto border-t border-default-200 dark:border-white/14">
+                                                        <h5 class="text-base">Modal Footer</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="smallModal" data-hs-overlay="#smallModal">
+                                            Small Modal
+                                        </button>
+
+                                        <div id="smallModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="smallModal-label">
+                                            <div class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-sm sm:w-full m-3 sm:mx-auto min-h-[calc(100%-56px)] flex items-center">
+                                                <div class="w-full flex flex-col bg-card border border-default-200 dark:border-white/14 shadow-2xs rounded-md pointer-events-auto">
+                                                    <div class="flex justify-between items-center p-4 border-b border-default-200 dark:border-white/14">
+                                                        <h3 id="smallModal-label" class="font-bold text-default-800 text-base">
+                                                            Modal Heading
+                                                        </h3>
+
+                                                        <button type="button" aria-label="Close" data-hs-overlay="#smallModal">
+                                                            <span class="sr-only">Close</span>
+                                                            <i data-lucide="x" class="size-4"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="p-4 overflow-y-auto">
+                                                        <h5 class="mb-3 text-base">Modal Content</h5>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-between p-4 mt-auto border-t border-default-200 dark:border-white/14">
+                                                        <h5 class="text-base">Modal Footer</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="defaultModal2" data-hs-overlay="#defaultModal2">
+                                            Default Modal
+                                        </button>
+
+                                        <div id="defaultModal2" class="hs-overlay hidden size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="defaultModal2-label">
+                                            <div class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-56px)] flex items-center">
+                                                <div class="w-full flex flex-col bg-card border border-default-200 dark:border-white/14 shadow-2xs rounded-md pointer-events-auto">
+                                                    <div class="flex justify-between items-center p-4 border-b border-default-200 dark:border-white/14">
+                                                        <h3 id="defaultModal2-label" class="font-bold text-default-800 text-base">
+                                                            Modal Heading
+                                                        </h3>
+
+                                                        <button type="button" aria-label="Close" data-hs-overlay="#defaultModal2">
+                                                            <span class="sr-only">Close</span>
+                                                            <i data-lucide="x" class="size-4"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="p-4 overflow-y-auto">
+                                                        <h5 class="mb-3 text-base">Modal Content</h5>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-between p-4 mt-auto border-t border-default-200 dark:border-white/14">
+                                                        <h5 class="text-base">Modal Footer</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="LargeModal" data-hs-overlay="#LargeModal">
+                                            Large Modal
+                                        </button>
+
+                                        <div id="LargeModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="LargeModal-label">
+                                            <div class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-56px)] flex items-center">
+                                                <div class="w-full flex flex-col bg-card border border-default-200 dark:border-white/14 shadow-2xs rounded-md pointer-events-auto">
+                                                    <div class="flex justify-between items-center p-4 border-b border-default-200 dark:border-white/14">
+                                                        <h3 id="LargeModal-label" class="font-bold text-default-800 text-base">
+                                                            Modal Heading
+                                                        </h3>
+
+                                                        <button type="button" aria-label="Close" data-hs-overlay="#LargeModal">
+                                                            <span class="sr-only">Close</span>
+                                                            <i data-lucide="x" class="size-4"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="p-4 overflow-y-auto">
+                                                        <h5 class="mb-3 text-base">Modal Content</h5>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-between p-4 mt-auto border-t border-default-200 dark:border-white/14">
+                                                        <h5 class="text-base">Modal Footer</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="extraLargeModal" data-hs-overlay="#extraLargeModal">
+                                            Extra Large Modal
+                                        </button>
+
+                                        <div id="extraLargeModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="extraLargeModal-label">
+                                            <div class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-2xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-56px)] flex items-center">
+                                                <div class="w-full flex flex-col bg-card border border-default-200 dark:border-white/14 shadow-2xs rounded-md pointer-events-auto">
+                                                    <div class="flex justify-between items-center p-4 border-b border-default-200 dark:border-white/14">
+                                                        <h3 id="extraLargeModal-label" class="font-bold text-default-800 text-base">
+                                                            Modal Heading
+                                                        </h3>
+
+                                                        <button type="button" aria-label="Close" data-hs-overlay="#extraLargeModal">
+                                                            <span class="sr-only">Close</span>
+                                                            <i data-lucide="x" class="size-4"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="p-4 overflow-y-auto">
+                                                        <h5 class="mb-3 text-base">Modal Content</h5>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-between p-4 mt-auto border-t border-default-200 dark:border-white/14">
+                                                        <h5 class="text-base">Modal Footer</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="fullScreenModal" data-hs-overlay="#fullScreenModal">
+                                            Extra Large Modal
+                                        </button>
+
+                                        <div id="fullScreenModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="fullScreenModal-label">
+                                            <div class="hs-overlay-animation-target hs-overlay-open:opacity-100 opacity-0 transition-all duration-300 ease-in-out w-full h-full flex items-stretch">
+                                                <div class="w-full flex flex-col bg-card border border-default-200 dark:border-white/14 shadow-2xs rounded-md pointer-events-auto">
+                                                    <div class="flex justify-between items-center p-4 border-b border-default-200 dark:border-white/14">
+                                                        <h3 id="fullScreenModal-label" class="font-bold text-default-800 text-base">
+                                                            Modal Heading
+                                                        </h3>
+
+                                                        <button type="button" aria-label="Close" data-hs-overlay="#fullScreenModal">
+                                                            <span class="sr-only">Close</span>
+                                                            <i data-lucide="x" class="size-4"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="p-4 overflow-y-auto">
+                                                        <h5 class="mb-3 text-base">Modal Content</h5>
+                                                        <p class="text-default-500">They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic.</p>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-between p-4 mt-auto border-t border-default-200 dark:border-white/14">
+                                                        <h5 class="text-base">Modal Footer</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

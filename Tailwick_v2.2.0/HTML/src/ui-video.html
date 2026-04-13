@@ -1,0 +1,93 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Video" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Video" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-2 gap-5">
+
+                        <div class="flex flex-col gap-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Basic</h6>
+                                    <iframe class="w-full rounded-md aspect-video" src="https://www.youtube.com/embed/1y_kfWUCFDQ"></iframe>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Square</h6>
+                                    <iframe class="w-full rounded-md aspect-square" src="https://www.youtube.com/embed/1y_kfWUCFDQ"></iframe>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Video - 1/1</h6>
+                                    <iframe class="w-full rounded-md aspect-[1/1]" src="https://www.youtube.com/embed/1y_kfWUCFDQ"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Auto</h6>
+                                    <iframe class="w-full rounded-md aspect-auto" src="https://www.youtube.com/embed/1y_kfWUCFDQ"></iframe>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Video - 4/3</h6>
+                                    <iframe class="w-full rounded-md aspect-[4/3]" src="https://www.youtube.com/embed/1y_kfWUCFDQ"></iframe>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Video - 16/9</h6>
+                                    <iframe class="w-full rounded-md aspect-[16/9]" src="https://www.youtube.com/embed/1y_kfWUCFDQ"></iframe>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Video - [16/9]</h6>
+                                    <iframe class="w-full rounded-md aspect-[21/9]" src="https://www.youtube.com/embed/1y_kfWUCFDQ"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

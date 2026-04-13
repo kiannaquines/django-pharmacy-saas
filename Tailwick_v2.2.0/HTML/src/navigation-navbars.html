@@ -1,0 +1,291 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Navbar" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Navbar" }}
+
+                <div class="container-fluid">
+                    <div>
+                        <h6 class="text-[15px] font-semibold mb-4">Basic Navbar</h6>
+
+                        <nav class="bg-card rounded-md py-2 px-4 shadow flex justify-between h-16 items-center">
+                            <a href="">
+                                <img src="assets/images/logo-dark.png" alt="" class="h-5 block dark:hidden">
+                                <img src="assets/images/logo-light.png" alt="" class="h-5 dark:block hidden">
+                            </a>
+
+                            <ul class="absolute inset-x-0 top-full z-20 hidden md:flex md:relative md:inset-auto md:top-auto md:py-0 bg-card shadow-lg rounded-b-md md:shadow-none">
+                                <li>
+                                    <a href="#home" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary active">
+                                        Home
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#about" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                        About Us
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#service" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                        Service
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#blog" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                        Blog
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#contact" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div>
+                        <h6 class="text-[15px] font-semibold mb-4 mt-7">Hamburger menu</h6>
+                        <nav class="relative flex items-center justify-between h-16 px-4 py-2 bg-card rounded-md shadow-md">
+                            <a href="">
+                                <img src="assets/images/logo-dark.png" alt="" class="h-5 block dark:hidden">
+                                <img src="assets/images/logo-light.png" alt="" class="h-5 dark:block hidden">
+                            </a>
+
+                            <div class="relative group">
+                                <button type="button" class="btn btn-icon bg-primary text-white">
+                                    <i data-lucide="menu"></i>
+                                </button>
+
+                                <ul class="absolute end-0 z-50 lg:w-352 md:w-175 w-75 top-full mt-2 hidden flex-col bg-card shadow-lg rounded-md py-3 group-focus-within:flex transition-all duration-300">
+                                    <li>
+                                        <a href="#!" class="block px-4 py-2.5 text-[15px] font-medium text-default-800 hover:text-primary transition-all">Home</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#!" class="block px-4 py-2.5 text-[15px] font-medium text-default-800 hover:text-primary transition-all">About Us</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#!" class="block px-4 py-2.5 text-[15px] font-medium text-primary transition-all">Service</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#!" class="block px-4 py-2.5 text-[15px] font-medium text-default-800 hover:text-primary transition-all">Blog</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#!" class="block px-4 py-2.5 text-[15px] font-medium text-default-800 hover:text-primary transition-all">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div>
+                        <h6 class="text-[15px] font-semibold mb-4 mt-7">Navbar with button</h6>
+
+                        <nav class="bg-card rounded-md py-2 px-4 shadow flex justify-between h-16 items-center">
+                            <a href="">
+                                <img src="assets/images/logo-dark.png" alt="" class="h-5 block dark:hidden">
+                                <img src="assets/images/logo-light.png" alt="" class="h-5 dark:block hidden">
+                            </a>
+
+                            <ul class="absolute inset-x-0 top-full z-20 hidden md:flex md:relative md:inset-auto md:top-auto md:py-0 bg-card shadow-lg rounded-b-md md:shadow-none">
+                                <li>
+                                    <a href="#home" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary active">
+                                        Home
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#about" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                        About Us
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#service" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                        Service
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#blog" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                        Blog
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#contact" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="flex items-center">
+                                <li class="size-10 flex justify-center items-center">
+                                    <a href="#"><i data-lucide="shopping-bag" class="hover:text-primary size-4"></i></a>
+                                </li>
+
+                                <li class="size-10 flex justify-center items-center">
+                                    <a href="#"><i data-lucide="bell" class="hover:text-primary size-4"></i></a>
+                                </li>
+
+                                <li class="size-10 flex justify-center items-center">
+                                    <a href="#"><i data-lucide="user-circle" class="hover:text-primary size-4"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div>
+                        <h6 class="text-[15px] font-semibold mb-4 mt-7">Navbar with Search</h6>
+
+                        <nav class="bg-card rounded-md py-2 px-4 shadow flex justify-between h-16 items-center">
+                            <div class="flex items-center">
+                                <a href="">
+                                    <img src="assets/images/logo-dark.png" alt="" class="h-5 block dark:hidden">
+                                    <img src="assets/images/logo-light.png" alt="" class="h-5 dark:block hidden">
+                                </a>
+                                <div class="lg:block hidden">
+                                    <input type="text" class="form-input !w-46 mx-4" placeholder="Search..." />
+                                </div>
+
+                                <ul class="absolute inset-x-0 top-full z-20 hidden md:flex md:relative md:inset-auto md:top-auto md:py-0 bg-card shadow-lg rounded-b-md md:shadow-none">
+                                    <li>
+                                        <a href="#home" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary active">
+                                            Home
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#about" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                            About Us
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#service" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                            Service
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#blog" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                            Blog
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#contact" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-800 hover:text-primary focus:text-primary active:text-primary">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <ul class="flex items-center">
+                                <li class="size-10 flex justify-center items-center">
+                                    <a href="#"><i data-lucide="shopping-bag" class="hover:text-primary size-4"></i></a>
+                                </li>
+
+                                <li class="size-10 flex justify-center items-center">
+                                    <a href="#"><i data-lucide="bell" class="hover:text-primary size-4"></i></a>
+                                </li>
+
+                                <li class="size-10 flex justify-center items-center">
+                                    <a href="#"><i data-lucide="user-circle" class="hover:text-primary size-4"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div>
+                        <h6 class="text-[15px] font-semibold mb-4 mt-7">Dark Navbar</h6>
+                        <nav class="bg-default-200 rounded-md py-2 px-4 shadow flex justify-between h-16 items-center" data-theme="dark">
+                            <a href="">
+                                <img src="assets/images/logo-light.png" alt="" class="h-5">
+                            </a>
+
+                            <ul class="absolute inset-x-0 top-full z-20 hidden md:flex md:relative md:inset-auto md:top-auto md:py-0 shadow-lg rounded-b-md md:shadow-none bg-transparent">
+                                <li>
+                                    <a href="#home" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-900 hover:text-primary focus:text-primary active:text-primary active">
+                                        Home
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#about" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-900 hover:text-primary focus:text-primary active:text-primary">
+                                        About Us
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#service" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-900 hover:text-primary focus:text-primary active:text-primary">
+                                        Service
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#blog" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-900 hover:text-primary focus:text-primary active:text-primary">
+                                        Blog
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#contact" class="block md:inline-block px-4 md:px-3 py-2.5 md:py-0.5 text-[15px] font-medium text-default-900 hover:text-primary focus:text-primary active:text-primary">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="flex items-center">
+                                <li class="size-10 flex justify-center items-center">
+                                    <a href="#"><i data-lucide="shopping-bag" class="text-default-900 hover:text-primary size-4"></i></a>
+                                </li>
+
+                                <li class="size-10 flex justify-center items-center">
+                                    <a href="#"><i data-lucide="bell" class="text-default-900 hover:text-primary size-4"></i></a>
+                                </li>
+
+                                <li class="size-10 flex justify-center items-center">
+                                    <a href="#"><i data-lucide="user-circle" class="text-default-900 hover:text-primary size-4"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

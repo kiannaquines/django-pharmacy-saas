@@ -1,0 +1,33 @@
+/*  */
+
+.fill-yellow-500 {
+  fill: var(--color-yellow-500) !important;
+}
+
+.wrapper {
+  @apply flex size-full;
+}
+
+.page-content {
+  @apply flex flex-col flex-grow overflow-auto w-full h-screen transition-[width,margin] ease-in-out duration-300;
+}
+
+main {
+  @apply flex-grow w-full px-6 py-6;
+}
+
+.border-dashed {
+  --tw-border-style: dashed;
+  border-style: dashed;
+}
+.dropzone {
+  min-height: 17px;
+  border: 1px dashed rgba(187, 187, 187, 0.8) !important;
+  border-radius: 5px;
+  padding: 20px 20px;
+}
+
+.dropzone .dz-message {
+  text-align: center;
+  margin: 0 !important;
+}

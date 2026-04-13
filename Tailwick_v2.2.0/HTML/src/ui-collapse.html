@@ -1,0 +1,103 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Collapse" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Collapse" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Default</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div>
+                                        <button type="button" class="hs-collapse-toggle btn bg-primary text-white disabled:opacity-50 disabled:pointer-events-none" id="left-collapse" aria-expanded="false" aria-controls="left-collapse-heading" data-hs-collapse="#left-collapse-heading">
+                                            Collapsible Button
+                                            <i data-lucide="chevron-up" class="hs-collapse-open:rotate-180 shrink-0 size-4 text-white"></i>
+                                        </button>
+
+                                        <div id="left-collapse-heading" class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300 shadow" aria-labelledby="left-collapse">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <p>
+                                                        For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live. You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="hs-collapse-toggle btn bg-primary text-white disabled:opacity-50 disabled:pointer-events-none" id="right-collapse" aria-expanded="false" aria-controls="right-collapse-heading" data-hs-collapse="#right-collapse-heading">
+                                            Collapsible Button
+                                            <i data-lucide="chevron-up" class="hs-collapse-open:rotate-180 shrink-0 size-4 text-white"></i>
+                                        </button>
+
+                                        <div id="right-collapse-heading" class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300 shadow" aria-labelledby="right-collapse">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <p>
+                                                        For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live. You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Link Collapse</h6>
+
+                                <div>
+                                    <a href="#!" class="hs-collapse-toggle text-primary btn disabled:opacity-50 disabled:pointer-events-none" id="link-collapse" aria-expanded="false" aria-controls="link-collapse-heading" data-hs-collapse="#link-collapse-heading">
+                                        Collapsible Button
+                                    </a>
+
+                                    <div id="link-collapse-heading" class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300 shadow mt-2" aria-labelledby="link-collapse">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <p>
+                                                    For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live. You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<?php include('./partials/main.php'); ?>
+
+<head>
+    <?php $title = "Create Payslip";
+    include('./partials/title-meta.php') ?>
+
+    <?php include('./partials/head-css.php'); ?>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <?php include('./partials/sidenav.php'); ?>
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            <?php include('./partials/topbar.php'); ?>
+
+            <main>
+
+                <?php $subtitle = "Menu";
+                $title = "Create Payslip";
+                include './partials/page-title.php' ?>
+
+                <div class="lg:w-5xl w-full mx-auto">
+                    <div class="card relative">
+                        <div class="card-body">
+                            <div class="absolute top-0 end-0 opacity-30">
+                                <img src="/images/logo-sm.png" alt="">
+                            </div>
+                            <div class="text-center">
+                                <h5 class="inline-block relative text-lg text-default-800 font-semibold">
+                                    Salary Slip
+                                    <span class="absolute start-0 end-0 -bottom-2 h-0.25 bg-gradient-to-r from-white via-primary to-white"></span>
+                                </h5>
+                            </div>
+                    
+                            <div class="mt-16 lg:max-w-md w-full">
+                                <div class="mb-4">
+                                    <label for="employeeID" class="inline-block mb-2 text-sm text-default-800 font-medium">Employee ID</label>
+                                    <input type="text" id="employeeID" class="form-input bg-default-100" value="#TWE1001524" disabled="">
+                                </div>
+                    
+                                <div class="mb-4">
+                                    <label for="employeeSelect" class="inline-block mb-2 text-sm text-default-800 font-medium">Employee Name</label>
+                                    <select class="form-input">
+                                        <option value="">Select Employee</option>
+                                        <option value="Willie Torres">Willie Torres</option>
+                                        <option value="Patricia Garcia">Patricia Garcia</option>
+                                        <option value="Juliette Fecteau">Juliette Fecteau</option>
+                                        <option value="Thomas Hatfield">Thomas Hatfield</option>
+                                        <option value="Juliette Fecteau">Juliette Fecteau</option>
+                                        <option value="Nancy Reynolds">Nancy Reynolds</option>
+                                        <option value="Holly Kavanaugh">Holly Kavanaugh</option>
+                                        <option value="Jonas Frederiksen">Jonas Frederiksen</option>
+                                    </select>
+                                </div>
+                    
+                                <div class="mb-4">
+                                    <label for="ExperienceInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Experience</label>
+                                    <input type="text" id="ExperienceInput" class="form-input" placeholder="0.4 year">
+                                </div>
+                    
+                                <div class="mb-4">
+                                    <label for="createDateInput" class="inline-block mb-2 text-sm text-default-800 font-medium">Create Date</label>
+                                    <input type="text" id="createDateInput" class="form-input" placeholder="Select date" data-provider="flatpickr" data-date-format="d M, Y" readonly="readonly">
+                                </div>
+                            </div>
+                    
+                            <div class="mt-10 overflow-x-auto">
+                                <table class="w-full whitespace-nowrap">
+                                    <thead class="bg-default-100 text-sm text-default-800">
+                                        <tr>
+                                            <th class="px-3.5 py-2.5 font-semibold">Month</th>
+                                            <th class="px-3.5 py-2.5 font-semibold">Salary Amount</th>
+                                            <th class="px-3.5 py-2.5 font-semibold">Deductions(TDS)</th>
+                                            <th class="px-3.5 py-2.5 font-semibold">Professional Tax</th>
+                                            <th class="px-3.5 py-2.5 font-semibold">Provident Fund</th>
+                                            <th class="px-3.5 py-2.5 font-semibold">Net Payable</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td class="px-3.5 py-2.5">
+                                                <input type="text" class="form-input" placeholder="Select date" data-provider="flatpickr" data-date-format="d M, Y" readonly="readonly">
+                                            </td>
+                    
+                                            <td class="px-3.5 py-2.5">
+                                                <input type="number" class="form-input" placeholder="$00.00">
+                                            </td>
+                    
+                                            <td class="px-3.5 py-2.5">
+                                                <input type="number" class="form-input" placeholder="$00.00">
+                                            </td>
+                    
+                                            <td class="px-3.5 py-2.5">
+                                                <input type="number" class="form-input" placeholder="$00.00">
+                                            </td>
+                    
+                                            <td class="px-3.5 py-2.5">
+                                                <input type="number" class="form-input" placeholder="$00.00">
+                                            </td>
+                    
+                                            <td class="px-3.5 py-2.5">
+                                                <input type="number" class="form-input" placeholder="$00.00">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                    
+                                    <tbody class="before:block before:h-4">
+                                        <tr>
+                                            <td colspan="6">
+                                                <button type="button" class="btn bg-transparent border border-dashed border-primary text-primary hover:bg-primary/10">
+                                                    <i data-lucide="plus" class="size-3 me-1"></i>
+                                                    Add Item
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                    
+                            <div class="grid lg:grid-cols-2 grid-cols-1 mt-10 gap-5">
+                                <div class="text-sm">
+                                    <p class="mb-2 text-default-500">For any inquiries, please contact us at +(252) 0123 456 7890 or reach out via email at tailwick@themesdesign.in.</p>
+                                    <p class="mb-2 text-default-500">Best Regards,</p>
+                                    <p class="mb-2 text-default-500">Themesdesign</p>
+                                    <p class="text-default-500">Founder &amp; CEO: <span class="font-semibold text-default-800">Paula Keenan</span></p>
+                                </div>
+                    
+                                <div class="flex flex-col lg:justify-end text-center lg:items-end items-center">
+                                    <img src="/images/signature.png" alt="" class="h-12">
+                                    <h6 class="text-default-800 font-semibold text-sm">Authorized Sign</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <?php include('./partials/footer.php'); ?>
+        </div>
+
+        <?php include('./partials/customizer.php'); ?>
+        <script src="/src/scripts/components/timepicker.js" type="module"></script>
+</body>
+
+</html>

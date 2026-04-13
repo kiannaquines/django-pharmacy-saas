@@ -1,0 +1,46 @@
+<?php include('./partials/main.php'); ?>
+
+<head>
+    <?php $title = "404";
+    include('./partials/title-meta.php') ?>
+
+    <?php include('./partials/head-css.php'); ?>
+</head>
+
+<body>
+
+    <div class="bg-cover bg-no-repeat bg-[url('../images/auth-bg.jpg')] dark:bg-[url('../images/auth-bg-dark.jpg')]  h-screen w-full flex justify-center items-center">
+        <div class="relative">
+            <div class="bg-default-50 rounded-lg w-lg relative">
+                <div class="text-center px-10 py-12">
+                    <a href="/" class="flex justify-center">
+                        <img src="/images/logo-dark.png" alt="logo dark" class="h-6 block dark:hidden">
+                        <img src="/images/logo-light.png" alt="logo light" class="h-6 hidden dark:block" alt="">
+                    </a>
+
+                    <div class="mt-10">
+                        <img src="/images/error-404.png" alt="" class="h-64 mx-auto">
+                    </div>
+
+                    <div class="mt-8 text-center">
+                        <h4 class="mb-2 text-purple-500 dark:text-white text-xl font-semibold">OPPS, PAGE NOT FOUND</h4>
+                        <p class="mb-6 text-base text-default-500">It will be as straightforward as Occidental; in fact, it
+                            will be just like Occidental to an English speaker.</p>
+                        <a href="/">
+
+                            <button type="button" class="bg-primary text-white hover:bg-blue-600 rounded text-[13px] py-2 px-4 inline-flex items-center">
+                                <i data-lucide="home" class="size-3 me-1"></i>
+                                Back to Home
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include('./partials/customizer.php'); ?>
+
+</body>
+
+</html>

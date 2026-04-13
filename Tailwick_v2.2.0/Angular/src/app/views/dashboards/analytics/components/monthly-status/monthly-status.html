@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    <h6 class="card-title">Status of Monthly Campaign</h6>
+  </div>
+
+  <div class="card-body">
+    <ul class="flex flex-col gap-5">
+      @for (item of monthlyStatus; track $index) {
+        <li class="flex items-center gap-3 text-sm">
+          <div class="{{item.bgClass}} btn size-8">
+            <div class="{{item.iconClass}} size-4">
+              <ng-icon [name]="item.icon"></ng-icon>
+            </div>
+          </div>
+          <h6 class="grow text-default-900">{{ item.title }}</h6>
+          <p>{{ item.count }}</p>
+          <div class="w-12 {{item.percentClass}} text-end">{{ item.percent }}</div>
+        </li>
+      }
+    </ul>
+  </div>
+</div>

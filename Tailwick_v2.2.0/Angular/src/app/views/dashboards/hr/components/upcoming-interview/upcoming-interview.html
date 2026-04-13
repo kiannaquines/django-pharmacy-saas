@@ -1,0 +1,77 @@
+<div class="card z-10">
+    <div class="card-header">
+        <h6 class="card-title">Upcoming Interview </h6>
+    </div>
+
+    <ngx-simplebar class="h-98">
+        <div class="card-body">
+            <div class="flex flex-col gap-3">
+                @for (item of appointments; track item.name) {
+                <div class="border rounded-md border-default-200">
+                    <div class="flex justify-between items-center p-2 border-b border-default-200">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <div class="rounded-full size-10">
+                                <img [src]="item.avatar" alt="" class="rounded-full" />
+                            </div>
+
+                            <div class="text-sm">
+                                <h6 class="mb-1 text-default-800 font-semibold">
+                                    <a [routerLink]="[]">{{ item.name }}</a>
+                                </h6>
+                                <p class="text-default-500">{{ item.email }}</p>
+                            </div>
+                        </div>
+
+                        <div class="hs-dropdown relative inline-flex">
+                            <button type="button" class="hs-dropdown-toggle btn size-7.5 hover:bg-default-150 text-default-500" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                <div class="size-4">
+                                    <ng-icon name="lucideEllipsisVertical"></ng-icon>
+                                </div>
+                            </button>
+
+                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 card z-60 mt-2 p-2" role="menu">
+                                <div class="flex flex-col gap-y-1 text-sm">
+                                    <a class="py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                        Overview
+                                    </a>
+                                    <a class="py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                        Edit
+                                    </a>
+                                    <a class="py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                        Delete
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-2">
+                        <div class="flex justify-between items-center gap-3 text-sm">
+                            <div class="flex gap-3 items-center text-default-500">
+                                <div class="flex items-center">
+                                    <div class="size-4 me-1.5">
+                                        <ng-icon name="lucideCalendar"></ng-icon>
+                                    </div>
+                                    <span>{{ item.date }}</span>
+                                </div>
+
+                                <div class="flex items-center text-default-500">
+                                    <div class="size-4 me-1.5">
+                                        <ng-icon name="lucideClock"></ng-icon>
+                                    </div>
+                                    <span class="uppercase">{{ item.time }}</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2 rounded text-xs font-normal border" [class]="item.status.class">{{ item.status.label }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </ngx-simplebar>
+
+</div>

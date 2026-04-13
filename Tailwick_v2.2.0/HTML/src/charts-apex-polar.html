@@ -1,0 +1,56 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Polar Area Charts" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Polar Area Charts" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic</h6>
+                                <div id="basicPolar" class="apex-charts" data-chart-colors='["bg-blue-300", "bg-orange-300", "bg-green-300", "bg-yellow-300", "bg-purple-300", "bg-slate-300", "bg-red-300", "bg-emerald-200","bg-pink-200"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Monochrome</h6>
+                                <div id="monochromeChart" class="apex-charts" data-chart-colors='["bg-primary"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Apex Chart Bubble Demo js -->
+    <script src="assets/js/pages/chart-apex-polar-area.js" type="module"></script>
+
+</body>
+
+</html>

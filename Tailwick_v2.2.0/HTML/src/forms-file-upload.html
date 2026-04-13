@@ -1,0 +1,167 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="File Upload" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="File Upload" }}
+
+                <div class="container-fluid">
+
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Dropzone</h4>
+
+                                <form action="target" id="my-dropzone" class="dropzone flex items-center justify-center bg-default-50 dark:bg-default-200 !border !border-default-300 !min-h-auto rounded-md cursor-pointer" data-plugin="dropzone" data-previews-container="#file-previews" data-upload-preview-template="#uploadPreviewTemplate">
+                                    <div class="fallback">
+                                        <input type="file" name="file" />
+                                    </div>
+                                    <div class="dz-message needsclick w-full">
+                                        <div class="mb-3 flex justify-center">
+                                            <i data-lucide="upload-cloud" class="size-12 fill-default-200 text-default-500"></i>
+                                        </div>
+                                        <p class="font-normal text-base text-default-500">Drop files here or click to upload</p>
+                                        <p class="text-default-400 mt-3 text-">Max upload per file is 20GB</p>
+                                    </div>
+                                </form>
+
+                                <!-- Preview -->
+                                <div class="dropzone-previews" id="file-previews"></div>
+
+                                <!-- file preview template -->
+                                <div class="hidden" id="uploadPreviewTemplate">
+                                    <div class="mt-1 rounded border border-dashed border-default-200 dark:border-white/14" data-dz-preview>
+                                        <div class="p-2.5">
+                                            <div class="flex items-center gap-3">
+                                                <!-- Thumbnail -->
+                                                <div class="shrink-0">
+                                                    <img data-dz-thumbnail src="assets/images/file-icon.png" class="size-12 rounded bg-default-100 object-cover" alt="" />
+                                                </div>
+
+                                                <!-- File info -->
+                                                <div class="flex-1 min-w-0">
+                                                    <div class="flex items-center justify-between">
+                                                        <a href="javascript:void(0);" class="block text-sm font-semibold text-default-800 truncate" data-dz-name></a>
+                                                        <p class="text-xs text-default-500" data-dz-size></p>
+                                                    </div>
+
+                                                    <!-- Progress bar -->
+                                                    <div class="w-full mt-1.5 h-1.5 bg-default-100 rounded overflow-hidden">
+                                                        <div class="h-full bg-primary transition-all duration-300 ease-in-out" style="width:0%" data-dz-uploadprogress></div>
+                                                    </div>
+
+                                                    <!-- Status Message -->
+                                                    <!-- Upload speed + message -->
+                                                    <div class="flex justify-between mt-1">
+                                                        <p class="text-xs text-default-400" data-dz-errormessage></p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Remove button -->
+                                                <div>
+                                                    <button type="button" class="text-rose-500 hover:text-rose-700" data-dz-remove>
+                                                        <i class="iconify tabler--x size-4"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Bordered Dashed Dropzone</h4>
+
+                                <form action="target" id="my-dropzone" class="dropzone flex items-center justify-center !border !border-dashed !border-default-300 !min-h-auto rounded-md cursor-pointer" data-plugin="dropzone" data-previews-container="#file-previews-two" data-upload-preview-template="#uploadPreviewTemplate-two">
+                                    <div class="fallback">
+                                        <input type="file" name="file" />
+                                    </div>
+
+                                    <div class="dz-message needsclick w-full">
+                                        <div class="mb-3 flex justify-center">
+                                            <i data-lucide="upload-cloud" class="size-12 fill-default-200 text-default-500"></i>
+                                        </div>
+                                        <p class="font-normal text-base text-default-500">Drop files here or click to upload</p>
+                                        <p class="text-default-400 mt-3 text-">Max upload per file is 20GB</p>
+                                    </div>
+                                </form>
+
+                                <!-- Preview -->
+                                <div class="dropzone-previews" id="file-previews-two"></div>
+
+                                <!-- file preview template -->
+                                <div class="hidden" id="uploadPreviewTemplate-two">
+                                    <div class="mt-1 rounded border border-dashed border-default-200 dark:border-white/14" data-dz-preview>
+                                        <div class="p-2.5">
+                                            <div class="flex items-center gap-3">
+                                                <!-- Thumbnail -->
+                                                <div class="shrink-0">
+                                                    <img data-dz-thumbnail src="assets/images/file-icon.png" class="size-12 rounded bg-default-100 object-cover" alt="" />
+                                                </div>
+
+                                                <!-- File info -->
+                                                <div class="flex-1 min-w-0">
+                                                    <div class="flex items-center justify-between">
+                                                        <a href="javascript:void(0);" class="block text-sm font-semibold text-default-800 truncate" data-dz-name></a>
+                                                        <p class="text-xs text-default-500" data-dz-size></p>
+                                                    </div>
+
+                                                    <!-- Progress bar -->
+                                                    <div class="w-full mt-1.5 h-1.5 bg-default-100 rounded overflow-hidden">
+                                                        <div class="h-full bg-primary transition-all duration-300 ease-in-out" style="width:0%" data-dz-uploadprogress></div>
+                                                    </div>
+
+                                                    <!-- Status Message -->
+                                                    <!-- Upload speed + message -->
+                                                    <div class="flex justify-between mt-1">
+                                                        <p class="text-xs text-default-400" data-dz-errormessage></p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Remove button -->
+                                                <div>
+                                                    <button type="button" class="text-rose-500 hover:text-rose-700" data-dz-remove>
+                                                        <i class="iconify tabler--x size-4"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <script src="assets/js/pages/form-fileupload.js" type="module"></script>
+
+</body>
+
+</html>

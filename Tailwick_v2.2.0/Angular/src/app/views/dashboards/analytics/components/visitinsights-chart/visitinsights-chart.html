@@ -1,0 +1,48 @@
+ <div class="card">
+                        <div class="card-header">
+                            <div class="flex items-center gap-1.5">
+                                <h6 class="card-title">Daily Visit Insights </h6>
+                                <div class="hs-tooltip [--placement:top]">
+                                    <button type="button" class="hs-tooltip-toggle">
+                                        <div class="size-4 text-default-500 mt-2">
+                                        <ng-icon name="lucideInfo"  ></ng-icon>
+                                        </div>
+                                        <span class="hs-tooltip-content max-w-80 hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-30 py-1 px-2 bg-default-900 text-xs font-medium text-default-100 rounded-md shadow-2xs" role="tooltip">
+                                            Analyst or business user discovering a pattern in data or a relationship between variables
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="hs-dropdown relative inline-flex">
+                                <button type="button" class="hs-dropdown-toggle btn size-7.5 hover:bg-default-150" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                    <div class="size-4 text-default-500"> 
+                                    <ng-icon name="lucideEllipsisVertical"></ng-icon>
+                                    </div>
+                                </button>
+
+                                <div class="hs-dropdown-menu" role="menu">
+                                    <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-default-600 hover:bg-default-150 rounded" [routerLink]="[]">
+                                        1 Weekly
+                                    </a>
+                                    <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-default-600 hover:bg-default-150 rounded" [routerLink]="[]">
+                                        1 Monthly
+                                    </a>
+                                    <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-default-600 hover:bg-default-150 rounded" [routerLink]="[]">
+                                        3 Monthly
+                                    </a>
+                                    <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-default-600 hover:bg-default-150 rounded" [routerLink]="[]">
+                                        6 Monthly
+                                    </a>
+                                    <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-default-600 hover:bg-default-150 rounded" [routerLink]="[]">
+                                        This Yearly
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div id="dailyVisitInsightsChart" class="apex-charts"></div>
+                            <app-apexchart [getOptions]="visitInsightsChartOptions" />
+                        </div>
+                    </div>

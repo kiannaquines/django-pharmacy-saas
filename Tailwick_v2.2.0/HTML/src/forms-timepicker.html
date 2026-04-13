@@ -1,0 +1,91 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Time Picker" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Time Picker" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Timepicker</h6>
+                                <p class="mb-4">
+                                    Set <code>data-provider="timepickr" data-time-basic="true"</code> attribute.
+                                </p>
+                                <input type="text" id="timepicker-example" data-provider="timepickr" data-time-basic="true" placeholder="Select Time" class="form-input" />
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">24-hour Time Picker</h6>
+                                <p class="mb-4">
+                                    Set <code>data-provider="timepickr" data-time-hrs="true"</code> attribute.
+                                </p>
+                                <input type="text" id="timepicker-24hrs" data-provider="timepickr" data-time-hrs="true" placeholder="Select Time" class="form-input" />
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Time Picker w/ Limits</h6>
+                                <p class="mb-4">
+                                    Set <code>data-provider="timepickr" data-min-time="Min.Time" data-max-time="Max.Time"</code> attribute.
+                                </p>
+                                <input type="text" data-provider="timepickr" data-min-time="13:00" data-max-time="16:00" placeholder="Select Time" class="form-input" />
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Preloading Time</h6>
+                                <p class="mb-4">
+                                    Set <code>data-provider="timepickr" data-default-time="Your Default Time"</code> attribute.
+                                </p>
+                                <input type="text" data-provider="timepickr" data-default-time="16:45" class="form-input" />
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Inline</h6>
+                                <p class="mb-4">
+                                    Set <code>data-provider="timepickr" data-time-inline="Your Default Time"</code> attribute.
+                                </p>
+                                <input type="text" data-provider="timepickr" data-time-inline="11:42" class="form-input" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <script src="assets/js/components/flatpickr.js" type="module"></script>
+
+</body>
+
+</html>

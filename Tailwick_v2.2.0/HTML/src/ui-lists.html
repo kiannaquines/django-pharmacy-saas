@@ -1,0 +1,222 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Lists" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Lists" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic List</h6>
+
+                                <ul class="flex flex-col gap-5 text-default-800">
+                                    <li>Send the billing agreement</li>
+                                    <li>Send over all the documentation.</li>
+                                    <li>Meeting with daron to review the intake form</li>
+                                    <li>Check tailwick theme and give customer support</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Bullet List</h6>
+
+                                <ul class="list-disc list-inside flex flex-col gap-5 text-default-800">
+                                    <li>Send the billing agreement</li>
+                                    <li>Send over all the documentation.</li>
+                                    <li>Meeting with daron to review the intake form</li>
+                                    <li>Check tailwick theme and give customer support</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">List with Numbered</h6>
+
+                                <ul class="list-decimal list-inside flex flex-col gap-5 text-default-800">
+                                    <li>Send the billing agreement</li>
+                                    <li>Send over all the documentation.</li>
+                                    <li>Meeting with daron to review the intake form</li>
+                                    <li>Check tailwick theme and give customer support</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Marker Colors</h6>
+
+                                <ul class="list-disc list-inside marker:text-danger flex flex-col gap-5 text-default-800">
+                                    <li>Send the billing agreement</li>
+                                    <li>Send over all the documentation.</li>
+                                    <li>Meeting with daron to review the intake form</li>
+                                    <li>Check tailwick theme and give customer support</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Marker Colors</h6>
+
+                                <ul class="list-decimal list-inside marker:text-primary flex flex-col gap-5 text-default-800">
+                                    <li>Send the billing agreement</li>
+                                    <li>Send over all the documentation.</li>
+                                    <li>Meeting with daron to review the intake form</li>
+                                    <li>Check tailwick theme and give customer support</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Custom Square List</h6>
+
+                                <ul class="list-[square] list-inside flex flex-col gap-5 text-default-800">
+                                    <li>Send the billing agreement</li>
+                                    <li>Send over all the documentation.</li>
+                                    <li>Meeting with daron to review the intake form</li>
+                                    <li>Check tailwick theme and give customer support</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Bordered List</h6>
+
+                                <ul class="rounded-md border border-default-200 dark:border-white/14">
+                                    <li class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14">Send the billing agreement</li>
+                                    <li class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14 text-white bg-primary">Send over all the documentation.</li>
+                                    <li class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14">Meeting with daron to review the intake form</li>
+                                    <li class="px-3.5 py-2.5">Check tailwick theme and give customer support</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Flush List</h6>
+
+                                <ul>
+                                    <li class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14">Send the billing agreement</li>
+                                    <li class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14">Send over all the documentation.</li>
+                                    <li class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14">Meeting with daron to review the intake form</li>
+                                    <li class="px-3.5 py-2.5">Check tailwick theme and give customer support</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">List with Link</h6>
+
+                                <div class="flex flex-col border rounded-md border-default-200 dark:border-white/14">
+                                    <a href="#!" class="block px-3.5 py-2.5 transition border-b border-default-200 dark:border-white/14 hover:bg-default-50">Category Download</a>
+                                    <a href="#!" class="block px-3.5 py-2.5 transition border-b border-default-200 dark:border-white/14 bg-primary text-white">Security Access</a>
+                                    <a href="#!" class="block px-3.5 py-2.5 transition border-b border-default-200 dark:border-white/14 hover:bg-default-50">Storage folder</a>
+                                    <a href="#!" class="block px-3.5 py-2.5 transition pointer-events-none bg-default-100 text-default-500">Push Notification disabled</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">List with Checkbox</h6>
+
+                                <div class="flex flex-col border rounded-md border-default-200 dark:border-white/14">
+                                    <label class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14 flex items-center gap-2">
+                                        <input class="form-checkbox" type="checkbox" value="" checked="">
+                                        Declined Payment
+                                    </label>
+
+                                    <label class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14 flex items-center gap-2">
+                                        <input class="form-checkbox" type="checkbox" value="">
+                                        Delivery Error
+                                    </label>
+
+                                    <label class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14 flex items-center gap-2">
+                                        <input class="form-checkbox" type="checkbox" value="">
+                                        Wrong Amount
+                                    </label>
+
+                                    <label class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14 flex items-center gap-2">
+                                        <input class="form-checkbox" type="checkbox" value="" checked="">
+                                        Wrong Address
+                                    </label>
+
+                                    <label class="px-3.5 py-2.5 flex items-center gap-2">
+                                        <input class="form-checkbox" type="checkbox" value="">
+                                        Wrong UX/UI Solution
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">List with Radio</h6>
+
+                                <div class="flex flex-col rounded-md border border-default-200 dark:border-white/14">
+                                    <label class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14 flex items-center gap-2">
+                                        <input class="form-checkbox rounded-full" type="radio" name="listWithRadio" value="">
+                                        Declined Payment
+                                    </label>
+
+                                    <label class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14 flex items-center gap-2">
+                                        <input class="form-checkbox rounded-full" type="radio" name="listWithRadio" value="" checked="">
+                                        Delivery Error
+                                    </label>
+
+                                    <label class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14 flex items-center gap-2">
+                                        <input class="form-checkbox rounded-full" type="radio" name="listWithRadio" value="">
+                                        Wrong Amount
+                                    </label>
+
+                                    <label class="px-3.5 py-2.5 border-b border-default-200 dark:border-white/14 flex items-center gap-2">
+                                        <input class="form-checkbox rounded-full" type="radio" name="listWithRadio" value="">
+                                        Wrong Address
+                                    </label>
+
+                                    <label class="px-3.5 py-2.5 flex items-center gap-2">
+                                        <input class="form-checkbox rounded-full" type="radio" name="listWithRadio" value="" checked="">
+                                        Wrong UX/UI Solution
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

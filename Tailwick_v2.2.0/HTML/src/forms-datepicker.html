@@ -1,0 +1,149 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Date Picker" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Date Picker" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Basic</h6>
+                                <p class="mb-4">Set
+                                    <code>
+                                        data-provider="flatpickr" data-date-format="d M, Y"
+                                    </code>
+                                </p>
+                                <input type="text" class="form-input" data-provider="flatpickr" data-date-format="d M, Y" placeholder="Select date">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">DateTime</h6>
+                                <p class="mb-4">Set
+                                    <code>
+                                        data-provider="flatpickr" data-date-format="d.m.y" data-enable-time.
+                                    </code>
+                                </p>
+                                <input type="text" class="form-input" data-provider="flatpickr" data-date-format="d.m.y" data-enable-time placeholder="Select date & time">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Human-Friendly Dates</h6>
+                                <p class="mb-4">Set
+                                    <code>
+                                        data-provider="flatpickr" data-altFormat="F j, Y".
+                                    </code>
+                                </p>
+                                <input type="text" class="form-input" data-provider="flatpickr" data-altFormat="F j, Y" placeholder="Select date">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">MinDate and MaxDate</h6>
+                                <p class="mb-4">Set
+                                    <code>
+                                        data-provider="flatpickr" data-date-format="d M, Y" data-minDate="..." data-maxDate="...".
+                                    </code>
+                                </p>
+                                <input type="text" class="form-input" data-provider="flatpickr" data-date-format="d M, Y" data-minDate="25 12, 2021" data-maxDate="29 12,2021" placeholder="Select date">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Default Date</h6>
+                                <p class="mb-4">Set
+                                    <code>data-provider="flatpickr" data-default-date="..."</code>.
+                                </p>
+                                <input type="text" class="form-input" data-provider="flatpickr" data-date-format="d M, Y" data-default-date="25 12,2021" placeholder="Select date">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Disabling Dates</h6>
+                                <p class="mb-4">
+                                    Set <code>data-provider="flatpickr" data-disable-date="..."</code>.
+                                </p>
+                                <input type="text" class="form-input" data-provider="flatpickr" data-date-format="d M, Y" data-disable-date="15 12,2021" placeholder="Select date">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Selecting Multiple Dates</h6>
+                                <p class="mb-4">
+                                    Set <code>data-provider="flatpickr" data-multiple-date="true"</code>.
+                                </p>
+                                <input type="text" class="form-input" data-provider="flatpickr" data-date-format="d M, Y" data-multiple-date="true" placeholder="Select multiple dates">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Range</h6>
+                                <p class="mb-4">
+                                    Set <code>data-provider="flatpickr" data-range-date="true"</code>.
+                                </p>
+                                <input type="text" class="form-input" data-provider="flatpickr" data-date-format="d M, Y" data-range-date="true" placeholder="Select date range">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Week Numbers</h6>
+                                <p class="mb-4">
+                                    Set <code>data-provider="flatpickr" data-week-number</code>.
+                                </p>
+                                <input type="text" class="form-input" data-provider="flatpickr" data-date-format="d M, Y" data-week-number placeholder="Select date">
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Inline</h6>
+                                <p class="mb-4">
+                                    Set <code>data-provider="flatpickr" data-inline-date="true"</code>.
+                                </p>
+                                <input type="text" class="form-input" data-provider="flatpickr" data-date-format="d M, Y" data-default-date="25 01,2021" data-inline-date="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <script src="assets/js/components/flatpickr.js" type="module"></script>
+
+</body>
+
+</html>

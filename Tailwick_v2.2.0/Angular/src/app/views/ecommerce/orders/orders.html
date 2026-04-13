@@ -1,0 +1,61 @@
+<main>
+ 
+<app-page-title title="Order Lists" subtitle="Ecommerce" />
+
+
+  <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mb-5">
+                    <div class="col-span-1">
+                        <app-order-list />
+                    </div>
+
+                    <div class="lg:col-span-2 col-span-1">
+                     <app-order-chart />
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="relative">
+                            <input type="email" class="form-input form-input-sm ps-9" placeholder="Search for....">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3">
+                                <div class="size-3.5 flex items-center text-default-500"><ng-icon name="lucideSearch"  ></ng-icon></div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-sm bg-primary text-white">
+                           <div class="size-4 me-1"> <ng-icon name="lucidePlus"  ></ng-icon></div> Add Product
+                        </button>
+                    </div>
+
+                    <div class="card-header">
+                        <div class="flex items-center flex-wrap gap-3">
+                            <button type="button" class="btn btn-sm bg-primary  text-white font-medium">
+                                <div class="size-4"><ng-icon name="lucideBoxes"  ></ng-icon></div>
+                                All Orders
+                            </button>
+
+                            <button type="button" class="btn btn-sm text-default-500 hover:text-primary border-0 bg-transparent">
+                               <div class="size-4"><ng-icon name="lucideLoader" ></ng-icon></div>
+                                Pending
+                            </button>
+
+                            <button type="button" class="btn btn-sm text-default-500 hover:text-primary border-0 bg-transparent">
+                               <div class="size-4"><ng-icon name="lucidePackageCheck" ></ng-icon></div> 
+                                Delivered
+                            </button>
+
+                            <button type="button" class="btn btn-sm text-default-500 hover:text-primary border-0 bg-transparent">
+                                <div class="size-4"><ng-icon name="lucideRefreshCcw"  ></ng-icon></div>
+                                Returns
+                            </button>
+
+                            <button type="button" class="btn btn-sm text-default-500 hover:text-primary border-0 bg-transparent">
+                                <div class="size-4"><ng-icon name="lucidePackageX"  ></ng-icon></div>
+                                Cancelled
+                            </button>
+                        </div>
+                    </div>
+
+                     <app-order-overview />
+                </div>
+</main>

@@ -1,0 +1,287 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Form Select" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Form Select" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 mb-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Default Select</h6>
+                                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+                                    <div>
+                                        <select class="form-input !bg-default-100 dark:!bg-default-200">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select class="!rounded-full form-input !bg-default-100 dark:!bg-default-200">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select class="form-input !bg-default-100 dark:!bg-default-200" disabled>
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Select Size</h6>
+
+                                <div class="grid items-center grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                                    <div>
+                                        <select class="form-input form-input-sm !bg-default-100 dark:!bg-default-200">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select class="form-input !bg-default-100 dark:!bg-default-200">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select class="form-input !bg-default-100 dark:!bg-default-200">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+                    </div>
+
+                    <h5 class="mb-5 underline text-lg">Choices</h5>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Default Single Select</h6>
+                                <p class="mb-4 text-default-500">Set <code class="text-xs">data-choices</code> attribute to set a default single select.</p>
+                                <select class="form-input" data-choices name="choices-single-default" id="choices-single-default">
+                                    <option value="">This is a placeholder</option>
+                                    <option value="Choice 1">Choice 1</option>
+                                    <option value="Choice 2">Choice 2</option>
+                                    <option value="Choice 3">Choice 3</option>
+                                </select>
+                            </div>
+                        </div><!--end card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Option Groups</h6>
+                                <p class="mb-4 text-default-500">Set <code class="text-xs">data-choices data-choices-groups</code> attribute to set option group.</p>
+                                <select class="form-input" id="choices-single-groups" data-choices data-choices-groups data-placeholder="Select City" name="choices-single-groups">
+                                    <option value="">Choose a city</option>
+                                    <optgroup label="UK">
+                                        <option value="London">London</option>
+                                        <option value="Manchester">Manchester</option>
+                                        <option value="Liverpool">Liverpool</option>
+                                    </optgroup>
+                                    <optgroup label="FR">
+                                        <option value="Paris">Paris</option>
+                                        <option value="Lyon">Lyon</option>
+                                        <option value="Marseille">Marseille</option>
+                                    </optgroup>
+                                    <optgroup label="DE" disabled>
+                                        <option value="Hamburg">Hamburg</option>
+                                        <option value="Munich">Munich</option>
+                                        <option value="Berlin">Berlin</option>
+                                    </optgroup>
+                                    <optgroup label="US">
+                                        <option value="New York">New York</option>
+                                        <option value="Washington" disabled>Washington</option>
+                                        <option value="Michigan">Michigan</option>
+                                    </optgroup>
+                                    <optgroup label="SP">
+                                        <option value="Madrid">Madrid</option>
+                                        <option value="Barcelona">Barcelona</option>
+                                        <option value="Malaga">Malaga</option>
+                                    </optgroup>
+                                    <optgroup label="CA">
+                                        <option value="Montreal">Montreal</option>
+                                        <option value="Toronto">Toronto</option>
+                                        <option value="Vancouver">Vancouver</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div><!--end card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Options added via config with no search</h6>
+                                <p class="mb-4 text-default-500">Set <code class="text-xs">data-choices data-choices-search-false data-choices-removeItem</code></p>
+                                <select class="form-input" id="choices-single-no-search" name="choices-single-no-search" data-choices data-choices-search-false data-choices-removeItem>
+                                    <option value="Zero">Zero</option>
+                                    <option value="One">One</option>
+                                    <option value="Two">Two</option>
+                                    <option value="Three">Three</option>
+                                    <option value="Four">Four</option>
+                                    <option value="Five">Five</option>
+                                    <option value="Six">Six</option>
+                                </select>
+                            </div>
+                        </div><!--end card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Options added via config with no sorting</h6>
+                                <p class="mb-4 text-default-500">Set <code class="text-xs">data-choices data-choices-sorting-false</code> attribute.</p>
+                                <select class="form-input" id="choices-single-no-sorting" name="choices-single-no-sorting" data-choices data-choices-sorting-false>
+                                    <option value="Madrid">Madrid</option>
+                                    <option value="Toronto">Toronto</option>
+                                    <option value="Vancouver">Vancouver</option>
+                                    <option value="London">London</option>
+                                    <option value="Manchester">Manchester</option>
+                                    <option value="Liverpool">Liverpool</option>
+                                    <option value="Paris">Paris</option>
+                                    <option value="Malaga">Malaga</option>
+                                    <option value="Washington" disabled>Washington</option>
+                                    <option value="Lyon">Lyon</option>
+                                    <option value="Marseille">Marseille</option>
+                                    <option value="Hamburg">Hamburg</option>
+                                    <option value="Munich">Munich</option>
+                                    <option value="Barcelona">Barcelona</option>
+                                    <option value="Berlin">Berlin</option>
+                                    <option value="Montreal">Montreal</option>
+                                    <option value="New York">New York</option>
+                                    <option value="Michigan">Michigan</option>
+                                </select>
+                            </div>
+                        </div><!--end card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Default Multiple Select</h6>
+                                <p class="mb-4 text-default-500">Set <code class="text-xs">data-choices multiple</code> attribute.</p>
+                                <select class="form-input" id="choices-multiple-default" data-choices name="choices-multiple-default" multiple>
+                                    <option value="Choice 1" selected>Choice 1</option>
+                                    <option value="Choice 2">Choice 2</option>
+                                    <option value="Choice 3">Choice 3</option>
+                                    <option value="Choice 4" disabled>Choice 4</option>
+                                </select>
+                            </div>
+                        </div><!--end card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">With Remove Button</h6>
+                                <p class="mb-4 text-default-500">Set <code class="text-xs">data-choices data-choices-removeItem multiple</code> attribute.</p>
+                                <select class="form-input" id="choices-multiple-remove-button" data-choices data-choices-removeItem name="choices-multiple-remove-button" multiple>
+                                    <option value="Choice 1" selected>Choice 1</option>
+                                    <option value="Choice 2">Choice 2</option>
+                                    <option value="Choice 3">Choice 3</option>
+                                    <option value="Choice 4">Choice 4</option>
+                                </select>
+                            </div>
+                        </div><!--end card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Option Groups Multiple</h6>
+                                <p class="mb-4 text-default-500">Set <code class="text-xs">data-choices data-choices-multiple-groups="true" multiple</code> attribute.</p>
+                                <select class="form-input" id="choices-multiple-groups" name="choices-multiple-groups" data-choices data-choices-multiple-groups="true" multiple>
+                                    <option value="">Choose a city</option>
+                                    <optgroup label="UK">
+                                        <option value="London">London</option>
+                                        <option value="Manchester">Manchester</option>
+                                        <option value="Liverpool">Liverpool</option>
+                                    </optgroup>
+                                    <optgroup label="FR">
+                                        <option value="Paris">Paris</option>
+                                        <option value="Lyon">Lyon</option>
+                                        <option value="Marseille">Marseille</option>
+                                    </optgroup>
+                                    <optgroup label="DE" disabled>
+                                        <option value="Hamburg">Hamburg</option>
+                                        <option value="Munich">Munich</option>
+                                        <option value="Berlin">Berlin</option>
+                                    </optgroup>
+                                    <optgroup label="US">
+                                        <option value="New York">New York</option>
+                                        <option value="Washington" disabled>Washington</option>
+                                        <option value="Michigan">Michigan</option>
+                                    </optgroup>
+                                    <optgroup label="SP">
+                                        <option value="Madrid">Madrid</option>
+                                        <option value="Barcelona">Barcelona</option>
+                                        <option value="Malaga">Malaga</option>
+                                    </optgroup>
+                                    <optgroup label="CA">
+                                        <option value="Montreal">Montreal</option>
+                                        <option value="Toronto">Toronto</option>
+                                        <option value="Vancouver">Vancouver</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div><!--end card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Set limit values with remove button</h6>
+                                <p class="mb-4 text-default-500">Set <code class="text-xs">data-choices data-choices-limit="Required Limit" data-choices-removeItem</code> attribute.</p>
+                                <input class="form-input" id="choices-text-remove-button" data-choices data-choices-limit="3" data-choices-removeItem type="text" value="Task-1">
+                            </div>
+                        </div><!--end card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Unique values only, no pasting</h6>
+                                <p class="mb-4 text-default-500">Set <code class="text-xs">data-choices data-choices-text-unique-true</code> attribute.</p>
+                                <input class="form-input" id="choices-text-unique-values" data-choices data-choices-text-unique-true type="text" value="Project-A, Project-B">
+                            </div>
+                        </div><!--end card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Disabled</h6>
+                                <p class="mb-4 text-default-500">Set <code class="text-xs">data-choices data-choices-text-disabled-true</code> attribute.</p>
+                                <input class="form-input" id="choices-text-disabled" data-choices data-choices-text-disabled-true type="text" value="josh@joshuajohnson.co.uk, joe@bloggs.co.uk">
+                            </div>
+                        </div><!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <script src="assets/js/pages/form-choices.js" type="module"></script>
+
+</body>
+
+</html>

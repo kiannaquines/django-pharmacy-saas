@@ -1,0 +1,531 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Alerts" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Alerts" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic Alerts</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-col gap-3">
+                                        <div class="px-4 py-3 text-sm rounded-md text-primary bg-primary/10">
+                                            <span class="font-bold">Primary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-success rounded-md bg-success/10">
+                                            <span class="font-bold">Success</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-warning rounded-md bg-warning/10">
+                                            <span class="font-bold">Warning</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-info rounded-md bg-info/10">
+                                            <span class="font-bold">Info</span> alert! You should check in on some of those fields below.
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-3">
+
+                                        <div class="px-4 py-3 text-sm text-danger rounded-md bg-danger/10">
+                                            <span class="font-bold">Danger</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-secondary rounded-md bg-secondary/10">
+                                            <span class="font-bold">Secondary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-light rounded-md bg-default-50">
+                                            <span class="font-bold">Light</span> alert! You should check in on some of those fields below.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Outline Alerts</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-col gap-3">
+                                        <div class="px-4 py-3 text-sm rounded-md text-primary border border-primary">
+                                            <span class="font-bold">Primary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-success rounded-md border border-success">
+                                            <span class="font-bold">Success</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-warning rounded-md border border-warning">
+                                            <span class="font-bold">Warning</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-info rounded-md border border-info">
+                                            <span class="font-bold">Info</span> alert! You should check in on some of those fields below.
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-3">
+                                        <div class="px-4 py-3 text-sm text-danger rounded-md border border-danger">
+                                            <span class="font-bold">Danger</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-secondary rounded-md border border-secondary">
+                                            <span class="font-bold">Secondary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-light rounded-md border border-default-200">
+                                            <span class="font-bold">Light</span> alert! You should check in on some of those fields below.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">BordeDanger Alerts</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-col gap-3">
+                                        <div class="px-4 py-3 text-sm rounded-md text-primary bg-primary/10 border border-primary">
+                                            <span class="font-bold">Primary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-success rounded-md bg-success/10 border border-success">
+                                            <span class="font-bold">Success</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-warning rounded-md bg-warning/10 border border-warning">
+                                            <span class="font-bold">Warning</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-info rounded-md bg-info/10 border border-info">
+                                            <span class="font-bold">Info</span> alert! You should check in on some of those fields below.
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-3">
+
+                                        <div class="px-4 py-3 text-sm text-danger rounded-md bg-danger/10 border border-danger">
+                                            <span class="font-bold">Danger</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-secondary rounded-md bg-secondary/10 border border-secondary">
+                                            <span class="font-bold">Secondary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-light rounded-md bg-default-50 border border-default-200">
+                                            <span class="font-bold">Light</span> alert! You should check in on some of those fields below.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Dismiss Alerts</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-col gap-3">
+                                        <div id="primary-alert" class="px-4 py-3 text-sm text-primary rounded-md bg-primary/10 flex justify-between" role="alert" tabindex="-1" aria-labelledby="primary-button-label">
+                                            <div id="primary-button-label">
+                                                <span class="font-bold">Primary</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-primary/20 hover:text-primary focus:outline-hidden" data-hs-remove-element="#primary-alert">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+
+                                        <div id="success-alert" class="px-4 py-3 text-sm text-success rounded-md bg-success/10 flex justify-between" role="alert" tabindex="-1" aria-labelledby="success-button-label">
+                                            <div id="success-button-label">
+                                                <span class="font-bold">Success</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-success/20 hover:text-success focus:outline-hidden" data-hs-remove-element="#success-alert">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+
+                                        <div id="warning-alert" class="px-4 py-3 text-sm text-warning rounded-md bg-warning/10 flex justify-between" role="alert" tabindex="-1" aria-labelledby="warning-button-label">
+                                            <div id="warning-button-label">
+                                                <span class="font-bold">Warning</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-warning/20 hover:text-warning focus:outline-hidden" data-hs-remove-element="#warning-alert">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+
+                                        <div id="info-alert" class="px-4 py-3 text-sm text-info rounded-md bg-info/10 flex justify-between" role="alert" tabindex="-1" aria-labelledby="info-button-label">
+                                            <div id="info-button-label">
+                                                <span class="font-bold">Info</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-info/20 hover:text-info focus:outline-hidden" data-hs-remove-element="#info-alert">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-3">
+
+                                        <div id="danger-alert" class="px-4 py-3 text-sm text-danger rounded-md bg-danger/10 flex justify-between" role="alert" tabindex="-1" aria-labelledby="danger-button-label">
+                                            <div id="danger-button-label">
+                                                <span class="font-bold">Danger</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-danger/20 hover:text-danger focus:outline-hidden" data-hs-remove-element="#danger-alert">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+
+                                        <div id="secondary-alert" class="px-4 py-3 text-sm text-secondary rounded-md bg-secondary/10 flex justify-between" role="alert" tabindex="-1" aria-labelledby="secondary-button-label">
+                                            <div id="secondary-button-label">
+                                                <span class="font-bold">Warning</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-secondary/20 hover:text-secondary focus:outline-hidden" data-hs-remove-element="#secondary-alert">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+
+                                        <div id="light-alert" class="px-4 py-3 text-smrounded-md bg-default-50 flex justify-between" role="alert" tabindex="-1" aria-labelledby="light-button-label">
+                                            <div id="light-button-label">
+                                                <span class="font-bold">Light</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-default-200 hover:text-light focus:outline-hidden" data-hs-remove-element="#light-alert">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Alerts with Icon</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-col gap-3">
+                                        <div class="px-4 py-3 text-sm rounded-md text-primary bg-primary/10 border border-primary flex items-center gap-1">
+                                            <i data-lucide="info" class="size-4"></i>
+                                            <span class="font-bold">Primary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-success rounded-md bg-success/10 border border-success flex items-center gap-1">
+                                            <i data-lucide="info" class="size-4"></i>
+                                            <span class="font-bold">Success</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-warning rounded-md bg-warning/10 border border-warning flex items-center gap-1">
+                                            <i data-lucide="info" class="size-4"></i>
+                                            <span class="font-bold">Warning</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-info rounded-md bg-info/10 border border-info flex items-center gap-1">
+                                            <i data-lucide="info" class="size-4"></i>
+                                            <span class="font-bold">Info</span> alert! You should check in on some of those fields below.
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-3">
+
+                                        <div class="px-4 py-3 text-sm text-danger rounded-md bg-danger/10 border border-danger flex items-center gap-1">
+                                            <i data-lucide="info" class="size-4"></i>
+                                            <span class="font-bold">Danger</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-secondary rounded-md bg-secondary/10 border border-secondary flex items-center gap-1">
+                                            <i data-lucide="info" class="size-4"></i>
+                                            <span class="font-bold">Secondary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-light rounded-md bg-default-50 border border-default-200 flex items-center gap-1">
+                                            <i data-lucide="info" class="size-4"></i>
+                                            <span class="font-bold">Light</span> alert! You should check in on some of those fields below.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Alerts with Images</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-col gap-3">
+                                        <div class="px-4 py-3 text-sm rounded-md text-primary bg-primary/10 border border-primary flex items-center gap-2">
+                                            <img src="assets/images/user/avatar-1.png" class="size-8" alt="">
+                                            <span class="font-bold">Primary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-success rounded-md bg-success/10 border border-success flex items-center gap-2">
+                                            <img src="assets/images/user/avatar-2.png" class="size-8" alt="">
+                                            <span class="font-bold">Success</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-warning rounded-md bg-warning/10 border border-warning flex items-center gap-2">
+                                            <img src="assets/images/user/avatar-3.png" class="size-8" alt="">
+                                            <span class="font-bold">Warning</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-info rounded-md bg-info/10 border border-info flex items-center gap-2">
+                                            <img src="assets/images/user/avatar-4.png" class="size-8" alt="">
+                                            <span class="font-bold">Info</span> alert! You should check in on some of those fields below.
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-3">
+
+                                        <div class="px-4 py-3 text-sm text-danger rounded-md bg-danger/10 border border-danger flex items-center gap-2">
+                                            <img src="assets/images/user/avatar-6.png" class="size-8" alt="">
+                                            <span class="font-bold">Danger</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-secondary rounded-md bg-secondary/10 border border-secondary flex items-center gap-2">
+                                            <img src="assets/images/user/avatar-7.png" class="size-8" alt="">
+                                            <span class="font-bold">Secondary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-light rounded-md bg-default-50 border border-default-200 flex items-center gap-2">
+                                            <img src="assets/images/user/avatar-8.png" class="size-8" alt="">
+                                            <span class="font-bold">Light</span> alert! You should check in on some of those fields below.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Top Border Alerts</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="px-4 py-3 text-sm text-primary rounded-md bg-primary/10 flex justify-between border-t-2 border-primary">
+                                        <div>
+                                            <span class="font-bold">Primary</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <button type="button" class="inline-flex text-primary/20 hover:text-primary focus:outline-hidden">
+                                            <span class="sr-only">Dismiss</span>
+                                            <i data-lucide="x"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="px-4 py-3 text-sm text-success rounded-md bg-success/10 flex justify-between border-t-2 border-success">
+                                        <div>
+                                            <span class="font-bold">Success</span> alert! You should check in on some of those fields below.
+                                        </div>
+
+                                        <button type="button" class="inline-flex text-success/20 hover:text-success focus:outline-hidden">
+                                            <span class="sr-only">Dismiss</span>
+                                            <i data-lucide="x"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Content Alerts</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-col gap-3">
+                                        <div class="bg-primary/10 p-4 rounded flex gap-3 text-primary">
+                                            <i data-lucide="info" class="size-4"></i>
+
+                                            <div>
+                                                <h6 class="mb-1 text-default-900">Hi! A simple Primary alert —check it out!</h6>
+                                                <ul class="ms-2 list-disc list-inside text-[13px]">
+                                                    <li>Send the billing agreement</li>
+                                                    <li>Send over all the documentation.</li>
+                                                    <li>Meeting with daron to review the intake form</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-success/10 p-4 rounded flex gap-3 text-success">
+                                            <i data-lucide="check-circle" class="size-4"></i>
+
+                                            <div>
+                                                <h6 class="mb-1 text-default-900">Yey! Everything worked! A simple success alert —check it out!</h6>
+                                                <ul class="ms-2 list-disc list-inside text-[13px]">
+                                                    <li>Send the billing agreement</li>
+                                                    <li>Send over all the documentation.</li>
+                                                    <li>Meeting with daron to review the intake form</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-3">
+                                        <div class="bg-warning/10 p-4 rounded flex gap-3 text-warning">
+                                            <div>
+                                                <i data-lucide="alert-octagon" class="size-4"></i>
+                                            </div>
+
+                                            <div>
+                                                <h6 class="mb-1 text-default-900">Uh oh, something went wrong!</h6>
+                                                <p class="text-[13px]">Better check yourself, you're not looking too good. Whenever you need to, be sure to use margin utilities to keep things nice and tidy. If your device is running an outdated version of Android, this could be causing the issue. To check for updates, open your device's Settings app, go to System, and then tap System update.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="bg-danger/10 p-4 rounded flex gap-3 text-danger">
+                                            <div>
+                                                <i data-lucide="alert-triangle" class="size-4"></i>
+                                            </div>
+
+                                            <div>
+                                                <h6 class="mb-1 text-default-900">Something is very wrong!</h6>
+                                                <p class="text-[13px] mb-2">Change a few things up and try submitting again. A few informal nouns for a mistake are a blooper, boo-boo, and blunder. We also have hiccup, which means a minor problem/mistake that was corrected.</p>
+                                                <a href="#!" class="inline-flex items-center gap-2 text-[13px] font-semibold text-danger">Read More
+                                                    <i data-lucide="move-right" class="size-4"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Fill Solid Alerts</h6>
+
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-col gap-3">
+                                        <div class="px-4 py-3 text-sm text-white rounded-md bg-primary flex justify-between">
+                                            <div>
+                                                <span class="font-bold">Primary</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-white">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-white rounded-md bg-success flex justify-between">
+                                            <div>
+                                                <span class="font-bold">Success</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-white">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-white rounded-md bg-warning flex justify-between">
+                                            <div>
+                                                <span class="font-bold">Warning</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-white">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-white rounded-md bg-info flex justify-between">
+                                            <div>
+                                                <span class="font-bold">Info</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-white">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-3">
+
+                                        <div class="px-4 py-3 text-sm text-white rounded-md bg-danger flex justify-between">
+                                            <div>
+                                                <span class="font-bold">Danger</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-white">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-white rounded-md bg-secondary flex justify-between">
+                                            <div>
+                                                <span class="font-bold">Secondary</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-white">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="px-4 py-3 text-sm text-white rounded-md bg-default-500 flex justify-between">
+                                            <div>
+                                                <span class="font-bold">Light</span> alert! You should check in on some of those fields below.
+                                            </div>
+
+                                            <button type="button" class="inline-flex text-white">
+                                                <span class="sr-only">Dismiss</span>
+                                                <i data-lucide="x"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

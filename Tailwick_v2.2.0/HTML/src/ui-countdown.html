@@ -1,0 +1,203 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Countdown" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Countdown" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic Examples</h6>
+
+                                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="text-center">
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="745">745</span></h4>
+                                        <p class="text-default-500">Working Hours</p>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="365">365</span></h4>
+                                        <p class="text-primary">Completed Projects</p>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="4645">4,645</span></h4>
+                                        <p class="text-default-500">Happy Users &amp; Clients</p>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="130">130</span></h4>
+                                        <p class="text-default-500">Awards Received</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Counter with Symbols</h6>
+
+                                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="text-center">
+                                        <h4 class="mb-2 text-xl">$<span class="counter-value" data-target="674.3">674.3</span>k</h4>
+                                        <p class="text-default-500">Total Earnings</p>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="54.41">54.41</span>k</h4>
+                                        <p class="text-default-500">Total Orders</p>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="4645">4,645</span></h4>
+                                        <p class="text-default-500">Customers</p>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <h4 class="mb-2 text-xl">$<span class="counter-value" data-target="165.89">165.89</span>k</h4>
+                                        <p class="text-default-500">My Balance</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Counter with Grid</h6>
+
+                                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="px-3 py-6 text-center border rounded-md border-default-200 dark:border-white/14">
+                                        <h4 class="mb-2 text-xl">$<span class="counter-value" data-target="674.3">674.3</span>k</h4>
+                                        <p class="text-default-500">Total Earnings</p>
+                                    </div>
+
+                                    <div class="px-3 py-6 text-center border rounded-md border-default-200 dark:border-white/14">
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="54.41">54.41</span>k</h4>
+                                        <p class="text-default-500">Total Orders</p>
+                                    </div>
+
+                                    <div class="px-3 py-6 text-center border rounded-md border-default-200 dark:border-white/14">
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="4645">4,645</span></h4>
+                                        <p class="text-default-500">Customers</p>
+                                    </div>
+
+                                    <div class="px-3 py-6 text-center border rounded-md border-default-200 dark:border-white/14">
+                                        <h4 class="mb-2 text-xl">$<span class="counter-value" data-target="165.89">165.89</span>k</h4>
+                                        <p class="text-default-500">My Balance</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Counter with Icons</h6>
+
+                                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="px-3 py-6 text-center border rounded-md border-default-200 dark:border-white/14">
+                                        <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 text-[15px] bg-primary/10">
+                                            <i data-lucide="smile" class="fill-primary/20 text-primary"></i>
+                                        </div>
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="8000">8,000</span>k</h4>
+                                        <p class="text-default-500">Happy Clients</p>
+                                    </div>
+
+                                    <div class="px-3 py-6 text-center border rounded-md border-default-200 dark:border-white/14">
+                                        <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 text-[15px] bg-danger/10">
+                                            <i data-lucide="download" class="fill-danger/20 text-danger"></i>
+                                        </div>
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="3000">3,000</span>k</h4>
+                                        <p class="text-default-500">Downloads</p>
+                                    </div>
+
+                                    <div class="px-3 py-6 text-center border rounded-md border-default-200 dark:border-white/14">
+                                        <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 text-[15px] bg-success/10">
+                                            <i data-lucide="monitor" class="fill-success/20 text-success"></i>
+                                        </div>
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="4645">4,645</span>k</h4>
+                                        <p class="text-default-500">Project Completed</p>
+                                    </div>
+
+                                    <div class="px-3 py-6 text-center border rounded-md border-default-200 dark:border-white/14">
+                                        <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 text-[15px] bg-info/10">
+                                            <i data-lucide="clock-4" class="fill-info/20 text-info"></i>
+                                        </div>
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="365">365</span></h4>
+                                        <p class="text-default-500">Working Days</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Counter with Card Colors</h6>
+
+                                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="px-3 py-6 text-center border rounded-md border-default-200 dark:border-white/14">
+                                        <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 text-[15px] bg-primary/10">
+                                            <i data-lucide="smile" class="fill-primary/20 text-primary"></i>
+                                        </div>
+                                        <h4 class="mb-2 text-xl"><span class="counter-value" data-target="8000">8,000</span>k</h4>
+                                        <p class="text-default-500">Happy Clients</p>
+                                    </div>
+
+                                    <div class="px-3 py-6 text-center border rounded-md border-danger/30 bg-danger/20">
+                                        <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 text-[15px] bg-danger/5">
+                                            <i data-lucide="download" class="fill-danger/20 text-danger"></i>
+                                        </div>
+                                        <h4 class="mb-2 text-xl text-danger"><span class="counter-value" data-target="3000">3,000</span>k</h4>
+                                        <p class="text-danger">Downloads</p>
+                                    </div>
+
+                                    <div class="px-3 py-6 text-center border rounded-md border-success/30 bg-success/20">
+                                        <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 text-[15px] bg-success/5">
+                                            <i data-lucide="monitor" class="fill-success/20 text-success"></i>
+                                        </div>
+                                        <h4 class="mb-2 text-xl text-success"><span class="counter-value" data-target="4645">4,645</span>k</h4>
+                                        <p class="text-success">Project Completed</p>
+                                    </div>
+
+                                    <div class="px-3 py-6 text-center border rounded-md border-info/30 bg-info/20">
+                                        <div class="flex items-center justify-center mx-auto mb-4 rounded-md size-12 text-[15px] bg-info/5">
+                                            <i data-lucide="clock-4" class="fill-info/20 text-info"></i>
+                                        </div>
+                                        <h4 class="mb-2 text-xl text-info"><span class="counter-value" data-target="365">365</span></h4>
+                                        <p class="text-info">Working Days</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

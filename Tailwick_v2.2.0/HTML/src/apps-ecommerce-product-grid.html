@@ -1,0 +1,893 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Product Grid" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Grid View" }}
+
+                <div class="grid lg:grid-cols-4 grid-cols-1 gap-5">
+                    <div class="col-span-1 lg:block hidden">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h6 class="card-title">Filter</h6>
+                                    <div class="shrink-0">
+                                        <a href="#" class="underline transition-all duration-200 text-default-700 text-sm ease-linear hover:text-primary">Clear All </a>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="relative">
+                                        <input type="text" id="hs-leading-icon" name="hs-leading-icon" class="ps-9 form-input form-input-sm w-full" placeholder="Search for...">
+                                        <div class="absolute inset-y-0 start-0 flex items-center z-20 ps-3">
+                                            <i data-lucide="search" class="size-3.5 text-default-600"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="hs-accordion-group" data-hs-accordion-always-open="">
+                                        <div class="hs-accordion active mt-4" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                                            <button class="hs-accordion-toggle underline inline-flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 rounded-lg disabled:opacity-50 text-sm disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                                                Color
+                                                <i class="iconify lucide--chevron-down text-base hs-accordion-active:hidden block"></i>
+                                                <i class="iconify lucide--chevron-up text-base hs-accordion-active:block hidden"></i>
+                                            </button>
+
+                                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+                                                <div class="mt-4 flex gap-2">
+                                                    <input id="color1" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-primary checked:bg-primary checked:border-primary focus:ring-0" />
+
+                                                    <input id="color2" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-danger/20 checked:bg-danger/20 checked:border-danger/20 focus:ring-0" />
+
+                                                    <input id="color3" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-success/40 checked:bg-success/40 checked:border-success/40 focus:ring-0" />
+
+                                                    <input id="color4" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-default-500 checked:bg-default-500 checked:border-default-500 focus:ring-0" />
+
+                                                    <input id="color5" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-secondary checked:bg-secondary checked:border-secondary focus:ring-0" />
+
+                                                    <input id="color6" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-info checked:bg-info checked:border-info focus:ring-0" />
+
+                                                    <input id="color7" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-warning checked:bg-warning checked:border-warning focus:ring-0" />
+
+                                                    <input id="color8" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-success checked:bg-success checked:border-success focus:ring-0" />
+
+                                                    <input id="color9" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-default-800 checked:bg-default-800 checked:border-default-800 focus:ring-0" />
+
+                                                    <input id="color10" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-default-200 checked:bg-default-200 checked:border-default-200 dark:border-white/14 focus:ring-0" />
+
+                                                    <input id="color11" type="checkbox" value="" class="size-5 cursor-pointer rounded-sm border-0 bg-success/40 checked:bg-success/40 checked:border-success/40 focus:ring-0" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hs-accordion active mt-4" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                                            <button class="hs-accordion-toggle underline inline-flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 rounded-lg disabled:opacity-50 text-sm disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                                                Price
+                                                <i class="iconify lucide--chevron-down text-base hs-accordion-active:hidden block"></i>
+                                                <i class="iconify lucide--chevron-up text-base hs-accordion-active:block hidden"></i>
+                                            </button>
+
+                                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                                                <div class="mt-4 flex gap-2 flex-col">
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="priceAll">
+                                                        <label for="priceAll" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            All
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="price1">
+                                                        <label for="price1" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            $0.00 – $110.00
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="price2">
+                                                        <label for="price2" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            $110.00 – $220.00
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="price3">
+                                                        <label for="price3" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            $220 - $330
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="price4">
+                                                        <label for="price4" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            $330 - $550
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="price5">
+                                                        <label for="price5" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            $550+
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="price6">
+                                                        <label for="price6" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            Low to High
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="price7">
+                                                        <label for="price7" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            High to Low
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hs-accordion active mt-4" id="hs-basic-with-title-and-arrow-stretched-heading-three">
+                                            <button class="hs-accordion-toggle underline inline-flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 rounded-lg disabled:opacity-50 text-sm disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three">
+                                                Product Category
+                                                <i class="iconify lucide--chevron-down text-base hs-accordion-active:hidden block"></i>
+                                                <i class="iconify lucide--chevron-up text-base hs-accordion-active:block hidden"></i>
+                                            </button>
+
+                                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-three" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-three">
+                                                <div class="mt-4 flex gap-2 flex-col">
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="categoryAll">
+                                                        <label for="categoryAll" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            All
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="category1">
+                                                        <label for="category1" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            Mobiles, Computers
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="category2">
+                                                        <label for="category2" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            TV, Appliances, Electronics
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="category3">
+                                                        <label for="category3" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            Men's Fashion
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="category4">
+                                                        <label for="category4" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            Women's Fashion
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="category5">
+                                                        <label for="category5" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            Home, Kitchen, Pets
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="category6">
+                                                        <label for="category6" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            Beauty, Health, Grocery
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="category7">
+                                                        <label for="category7" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            Books
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hs-accordion active mt-4" id="hs-basic-with-title-and-arrow-stretched-heading-four">
+                                            <button class="hs-accordion-toggle underline inline-flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 rounded-lg disabled:opacity-50 text-sm disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-four">
+                                                Rating
+                                                <i class="iconify lucide--chevron-down text-base hs-accordion-active:hidden block"></i>
+                                                <i class="iconify lucide--chevron-up text-base hs-accordion-active:block hidden"></i>
+                                            </button>
+
+                                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-four" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-four">
+                                                <div class="mt-4 flex gap-2 flex-col">
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="ratingAll">
+                                                        <label for="ratingAll" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            All
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="rating5">
+                                                        <label for="rating5" class="text-sm flex items-center gap-1 text-default-800 align-middle cursor-pointer">
+                                                            <i data-lucide="star" class="text-warning size-4 ms-1"></i>
+                                                            5 Rating
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="rating4">
+                                                        <label for="rating4" class="text-sm flex items-center gap-1 text-default-800 align-middle cursor-pointer">
+                                                            <i data-lucide="star" class="text-warning size-4 ms-1"></i>
+                                                            4 Rating and Up
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="rating3">
+                                                        <label for="rating3" class="text-sm flex items-center gap-1 text-default-800 align-middle cursor-pointer">
+                                                            <i data-lucide="star" class="text-warning size-4 ms-1"></i>
+                                                            3 Rating and Up
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="rating2">
+                                                        <label for="rating2" class="text-sm flex items-center gap-1 text-default-800 align-middle cursor-pointer">
+                                                            <i data-lucide="star" class="text-warning size-4 ms-1"></i>
+                                                            2 Rating and Up
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="rating1">
+                                                        <label for="rating1" class="text-sm flex items-center gap-1 text-default-800 align-middle cursor-pointer">
+                                                            <i data-lucide="star" class="text-warning size-4 ms-1"></i>
+                                                            1 Rating and Up
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="rating0">
+                                                        <label for="rating0" class="text-sm flex items-center gap-1 text-default-800 align-middle cursor-pointer">
+                                                            <i data-lucide="star" class="text-warning size-4 ms-1"></i>
+                                                            0 Rating
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hs-accordion mt-4" id="hs-basic-with-title-and-arrow-stretched-heading-five">
+                                            <button class="hs-accordion-toggle underline inline-flex items-center justify-between gap-x-3 w-full font-semibold text-start text-default-800 rounded-lg disabled:opacity-50 text-sm disabled:pointer-events-none" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five">
+                                                Gender
+                                                <i class="iconify lucide--chevron-down text-base hs-accordion-active:hidden block"></i>
+                                                <i class="iconify lucide--chevron-up text-base hs-accordion-active:block hidden"></i>
+                                            </button>
+
+                                            <div id="hs-basic-with-title-and-arrow-stretched-collapse-five" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five">
+                                                <div class="mt-4 flex gap-2 flex-col">
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="genderAll">
+                                                        <label for="genderAll" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            All
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="gendermal">
+                                                        <label for="gendermal" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            Male
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="genderFemal">
+                                                        <label for="genderFemal" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            Female
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="flex gap-2 items-center">
+                                                        <input type="checkbox" class="form-checkbox checked:bg-primary" id="genderOthers">
+                                                        <label for="genderOthers" class="text-sm text-default-800 align-middle cursor-pointer">
+                                                            Other
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3 col-span-1">
+                        <div class="flex justify-between gap-2 flex-wrap items-center">
+                            <p class="text-default-700 text-sm">Showing all <b>7,410</b> items results</p>
+
+                            <div class="flex gap-2 items-center">
+                                <div class="hs-dropdown relative inline-flex">
+                                    <button type="button" class="hs-dropdown-toggle inline-flex items-center btn btn-sm bg-transparent border border-primary text-primary transition-all duration-300 hover:bg-primary hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                        Sort by:<b class="font-medium">Highest Price</b>
+                                        <i data-lucide="chevron-down" class="size-4 ms-2"></i>
+                                    </button>
+
+                                    <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 card z-30 mt-2 p-2 text-sm" role="menu">
+                                        <a class="flex items-center gap-x-3.5 py-2 font-medium px-4 text-default-600 hover:bg-default-150 rounded" href="#">
+                                            Lowest Price
+                                        </a>
+
+                                        <a class="flex items-center gap-x-3.5 py-2 font-medium px-4 text-default-600 hover:bg-default-150 rounded" href="#">
+                                            Highest Price
+                                        </a>
+
+                                        <a class="flex items-center gap-x-3.5 py-2 font-medium px-4 text-default-600 hover:bg-default-150 rounded" href="#">
+                                            High to Low
+                                        </a>
+
+                                        <hr class="border-t border-default-200 dark:border-white/14 my-2 -mx-2">
+
+                                        <a class="flex items-center gap-x-3.5 py-2 font-medium px-4 text-default-600 hover:bg-default-150 rounded" href="#">
+                                            Low to High
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <nav class="flex gap-x-1" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                                    <button type="button" class="hs-tab-active:font-semibold hs-tab-active:bg-info hs-tab-active:text-white btn size-7.5 bg-info/10 text-info hover:text-white hover:bg-info" id="items-1" aria-selected="false" data-hs-tab="#item-1" aria-controls="item-1" role="tab">
+                                        <i data-lucide="list" class="size-4"></i>
+                                    </button>
+
+                                    <button type="button" class="hs-tab-active:font-semibold hs-tab-active:bg-info hs-tab-active:text-white btn size-7.5 bg-info/10 text-info hover:text-white hover:bg-info active" id="items-2" aria-selected="true" data-hs-tab="#item-2" aria-controls="item-2" role="tab">
+                                        <i data-lucide="layout-grid" class="size-4"></i>
+                                    </button>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center mt-3 gap-3">
+                            <span class="flex items-center gap-1 rounded-full px-2.5 py-0.75 border border-default-200 dark:border-white/14 text-xs">
+                                High to Low
+                                <a href="#" class="align-middle transition-al duration-300">
+                                    <i data-lucide="x" class="size-3"></i>
+                                </a>
+                            </span>
+
+                            <span class="flex items-center gap-1 rounded-full px-2.5 py-0.75 border border-default-200 dark:border-white/14 text-xs">
+                                New
+                                <a href="#" class="align-middle transition-al duration-300">
+                                    <i data-lucide="x" class="size-3"></i>
+                                </a>
+                            </span>
+
+                            <a href="#" class="py-0.75 px-2.5 text-xs rounded-md transition-all duration-300 hover:bg-default-150">
+                                All Clear
+                            </a>
+                        </div>
+
+                        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-5">
+                            <div class="card">
+                                <div class="card-body relative">
+                                    <img src="assets/images/product/img-02.png" alt="">
+                                    <i data-lucide="heart" class="size-5 text-danger fill-danger/15 absolute top-6 end-6"></i>
+                                </div>
+
+                                <div class="pb-5 px-5">
+                                    <h6 class="text-base text-default-800 font-semibold hover:text-primary transition-all mb-2">
+                                        <a href="#">Mesh Ergonomic Black Chair</a>
+                                    </h6>
+
+                                    <div class="flex items-center gap-1">
+                                        <div class="flex items-center gap-0.25 text-warning">
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star-half" class="size-4 fill-warning"></i>
+                                        </div>
+                                        <span class="text-default-500">(198)</span>
+                                    </div>
+
+                                    <h5 class="mt-4 text-base font-semibold text-default-800">$674.12
+                                        <small class="line-through font-medium text-default-500">784.09</small>
+                                    </h5>
+
+                                    <div class="flex items-center gap-2 mt-4">
+                                        <button class="border border-default-600 w-full text-default-500 border-dashed btn">
+                                            <i data-lucide="shopping-cart" class="size-3"></i>
+                                            Add to Cart
+                                        </button>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle btn size-9 bg-default-200 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                                <i class="iconify lucide--ellipsis size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu" role="menu">
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="eye" class="size-3"></i>
+                                                    Overview
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="edit" class="size-3"></i>
+                                                    Edit
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="trash-2" class="size-3"></i>
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body relative">
+                                    <img src="assets/images/product/img-03.png" alt="">
+                                    <i data-lucide="heart" class="size-5 text-default-500 fill-default-100 absolute top-6 end-6"></i>
+                                </div>
+
+                                <div class="pb-5 px-5">
+                                    <h6 class="text-base text-default-800 font-semibold hover:text-primary transition-all mb-2">
+                                        <a href="#">Fastcolors Typography Men</a>
+                                    </h6>
+
+                                    <div class="flex items-center gap-1">
+                                        <div class="flex items-center gap-0.25 text-warning">
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star-half" class="size-4 fill-warning"></i>
+                                        </div>
+                                        <span class="text-default-500">(1,150)</span>
+                                    </div>
+
+                                    <h5 class="mt-4 text-base font-semibold text-default-800">$341.99
+                                        <small class="line-through font-medium text-default-500">784.09</small>
+                                    </h5>
+
+                                    <div class="flex items-center gap-2 mt-4">
+                                        <button class="border border-default-600 w-full text-default-500 border-dashed btn">
+                                            <i data-lucide="shopping-cart" class="size-3"></i>
+                                            Add to Cart
+                                        </button>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle btn size-9 bg-default-200 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                                <i class="iconify lucide--ellipsis size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu" role="menu">
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="eye" class="size-3"></i>
+                                                    Overview
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="edit" class="size-3"></i>
+                                                    Edit
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="trash-2" class="size-3"></i>
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body relative">
+                                    <img src="assets/images/product/img-04.png" alt="">
+                                    <i data-lucide="heart" class="size-5 text-default-500 fill-default-100 absolute top-6 end-6"></i>
+                                </div>
+
+                                <div class="pb-5 px-5">
+                                    <h6 class="text-base text-default-800 font-semibold hover:text-primary transition-all mb-2">
+                                        <a href="#">Mesh Ergonomic Green Chair</a>
+                                    </h6>
+
+                                    <div class="flex items-center gap-1">
+                                        <div class="flex items-center gap-0.25 text-warning">
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star-half" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4"></i>
+                                        </div>
+                                        <span class="text-default-500">(29)</span>
+                                    </div>
+
+                                    <h5 class="mt-4 text-base font-semibold text-default-800">$362.2
+                                        <small class="line-through font-medium text-default-500"> 599.99</small>
+                                    </h5>
+
+                                    <div class="flex items-center gap-2 mt-4">
+                                        <button class="border border-default-600 w-full text-default-500 border-dashed btn">
+                                            <i data-lucide="shopping-cart" class="size-3"></i>
+                                            Add to Cart
+                                        </button>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle btn size-9 bg-default-200 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                                <i class="iconify lucide--ellipsis size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu" role="menu">
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="eye" class="size-3"></i>
+                                                    Overview
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="edit" class="size-3"></i>
+                                                    Edit
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="trash-2" class="size-3"></i>
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body relative">
+                                    <img src="assets/images/product/img-05.png" alt="">
+                                    <i data-lucide="heart" class="size-5 text-danger fill-danger/15 absolute top-6 end-6"></i>
+                                </div>
+
+                                <div class="pb-5 px-5">
+                                    <h6 class="text-base text-default-800 font-semibold hover:text-primary transition-all mb-2">
+                                        <a href="#">Techel Black Bluetooth Sound.</a>
+                                    </h6>
+
+                                    <div class="flex items-center gap-1">
+                                        <div class="flex items-center gap-0.25 text-warning">
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="start-half" class="size-4 fill-warning"></i>
+                                        </div>
+                                        <span class="text-default-500">(1,324)</span>
+                                    </div>
+
+                                    <h5 class="mt-4 text-base font-semibold text-default-800">$249.99
+                                        <small class="line-through font-medium text-default-500"> 399.99</small>
+                                    </h5>
+
+                                    <div class="flex items-center gap-2 mt-4">
+                                        <button class="border border-default-600 w-full text-default-500 border-dashed btn">
+                                            <i data-lucide="shopping-cart" class="size-3"></i>
+                                            Add to Cart
+                                        </button>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle btn size-9 bg-default-200 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                                <i class="iconify lucide--ellipsis size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu" role="menu">
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="eye" class="size-3"></i>
+                                                    Overview
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="edit" class="size-3"></i>
+                                                    Edit
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="trash-2" class="size-3"></i>
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body relative">
+                                    <img src="assets/images/product/img-06.png" alt="">
+                                    <i data-lucide="heart" class="size-5 text-default-500 fill-default-100 absolute top-6 end-6"></i>
+                                </div>
+
+                                <div class="pb-5 px-5">
+                                    <h6 class="text-base text-default-800 font-semibold hover:text-primary transition-all mb-2">
+                                        <a href="#">Bovet Fleurier AIFSQ029</a>
+                                    </h6>
+
+                                    <div class="flex items-center gap-1">
+                                        <div class="flex items-center gap-0.25 text-warning">
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="start-half" class="size-4 fill-warning"></i>
+                                        </div>
+                                        <span class="text-default-500">(1,324)</span>
+                                    </div>
+
+                                    <h5 class="mt-4 text-base font-semibold text-default-800">$496.16
+                                    </h5>
+
+                                    <div class="flex items-center gap-2 mt-4">
+                                        <button class="border border-default-600 w-full text-default-500 border-dashed btn">
+                                            <i data-lucide="shopping-cart" class="size-3"></i>
+                                            Add to Cart
+                                        </button>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle btn size-9 bg-default-200 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                                <i class="iconify lucide--ellipsis size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu" role="menu">
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="eye" class="size-3"></i>
+                                                    Overview
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="edit" class="size-3"></i>
+                                                    Edit
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="trash-2" class="size-3"></i>
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body relative">
+                                    <img src="assets/images/product/img-08.png" alt="">
+                                    <i data-lucide="heart" class="size-5 text-danger fill-danger/15 absolute top-6 end-6"></i>
+                                </div>
+
+                                <div class="pb-5 px-5">
+                                    <h6 class="text-base text-default-800 font-semibold hover:text-primary transition-all mb-2">
+                                        <a href="#">Roar Twill Blue Baseball Cap</a>
+                                    </h6>
+
+                                    <div class="flex items-center gap-1">
+                                        <div class="flex items-center gap-0.25 text-warning">
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="start-half" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4"></i>
+                                            <i data-lucide="start" class="size-4"></i>
+                                        </div>
+                                        <span class="text-default-500">(485)</span>
+                                    </div>
+
+                                    <h5 class="mt-4 text-base font-semibold text-default-800">$674.12
+                                        <small class="line-through font-medium text-default-500"> 784.99</small>
+                                    </h5>
+
+                                    <div class="flex items-center gap-2 mt-4">
+                                        <button class="border border-default-600 w-full text-default-500 border-dashed btn">
+                                            <i data-lucide="shopping-cart" class="size-3"></i>
+                                            Add to Cart
+                                        </button>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle btn size-9 bg-default-200 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                                <i class="iconify lucide--ellipsis size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu" role="menu">
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="eye" class="size-3"></i>
+                                                    Overview
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="edit" class="size-3"></i>
+                                                    Edit
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="trash-2" class="size-3"></i>
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body relative">
+                                    <img src="assets/images/product/img-01.png" alt="">
+                                    <i data-lucide="heart" class="size-5 text-default-500 fill-default-100 absolute top-6 end-6"></i>
+                                </div>
+
+                                <div class="pb-5 px-5">
+                                    <h6 class="text-base text-default-800 font-semibold hover:text-primary transition-all mb-2">
+                                        <a href="#">Smartest Printed T-shirt</a>
+                                    </h6>
+
+                                    <div class="flex items-center gap-1">
+                                        <div class="flex items-center gap-0.25 text-warning">
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="start-half" class="size-4 fill-warning"></i>
+                                            <i data-lucide="start" class="size-4"></i>
+                                        </div>
+                                        <span class="text-default-500">(5,321)</span>
+                                    </div>
+
+                                    <h5 class="mt-4 text-base font-semibold text-default-800">$89.99
+                                    </h5>
+
+                                    <div class="flex items-center gap-2 mt-4">
+                                        <button class="border border-default-600 w-full text-default-500 border-dashed btn">
+                                            <i data-lucide="shopping-cart" class="size-3"></i>
+                                            Add to Cart
+                                        </button>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle btn size-9 bg-default-200 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                                <i class="iconify lucide--ellipsis size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu" role="menu">
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="eye" class="size-3"></i>
+                                                    Overview
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="edit" class="size-3"></i>
+                                                    Edit
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="trash-2" class="size-3"></i>
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body relative">
+                                    <img src="assets/images/product/img-10.png" alt="">
+                                    <i data-lucide="heart" class="size-5 text-danger fill-danger/15 absolute top-6 end-6"></i>
+                                </div>
+
+                                <div class="pb-5 px-5">
+                                    <h6 class="text-base text-default-800 font-semibold hover:text-primary transition-all mb-2">
+                                        <a href="#">Crop tops for Women western.</a>
+                                    </h6>
+
+                                    <div class="flex items-center gap-1">
+                                        <div class="flex items-center gap-0.25 text-warning">
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="star" class="size-4 fill-warning"></i>
+                                            <i data-lucide="start-half" class="size-4 fill-warning"></i>
+                                        </div>
+                                        <span class="text-default-500">(1551)</span>
+                                    </div>
+
+                                    <h5 class="mt-4 text-base font-semibold text-default-800">$145
+                                        <small class="line-through font-medium text-default-500"> 299.99</small>
+                                    </h5>
+
+                                    <div class="flex items-center gap-2 mt-4">
+                                        <button class="border border-default-600 w-full text-default-500 border-dashed btn">
+                                            <i data-lucide="shopping-cart" class="size-3"></i>
+                                            Add to Cart
+                                        </button>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle btn size-9 bg-default-200 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                                                <i class="iconify lucide--ellipsis size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu" role="menu">
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="eye" class="size-3"></i>
+                                                    Overview
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="edit" class="size-3"></i>
+                                                    Edit
+                                                </a>
+
+                                                <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" href="#">
+                                                    <i data-lucide="trash-2" class="size-3"></i>
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap md:justify-between justify-center md:gap-0 gap-4 mt-5">
+                            <p class="text-default-500 text-sm">Showing <b>07</b> of <b>19</b> Results</p>
+
+                            <nav class="flex items-center gap-2" aria-label="Pagination">
+                                <button type="button" class="btn btn-sm border bg-transparent border-default-200 dark:border-white/14 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10">
+                                    <i data-lucide="chevron-left" class="size-4 me-1"></i> Prev
+                                </button>
+
+                                <button type="button" class="btn size-7.5 bg-transparent border border-default-200 dark:border-white/14 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10">
+                                    1
+                                </button>
+
+                                <button type="button" class="btn size-7.5 bg-primary text-white">
+                                    2
+                                </button>
+
+                                <button type="button" class="btn size-7.5 bg-transparent border border-default-200 dark:border-white/14 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10">
+                                    3
+                                </button>
+
+                                <button type="button" class="btn btn-sm border bg-transparent border-default-200 dark:border-white/14 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10">Next
+                                    <i data-lucide="chevron-right" class="size-4 ms-1"></i>
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            {{> footer }}
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

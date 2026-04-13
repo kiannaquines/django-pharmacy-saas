@@ -1,0 +1,320 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Basic Elements" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Basic Elements" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-3 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="index.html">
+                                    <div class="mb-3">
+                                        <label for="inputText" class="inline-block mb-2 font-medium">Text <span class="text-danger">*</span></label>
+                                        <input type="text" id="inputText" class="form-input" required="">
+                                    </div>
+                                    <button type="submit" class="btn bg-primary text-white">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="index.html">
+                                    <div class="mb-3">
+                                        <label for="inputPassword" class="inline-block mb-2 font-medium">Password <span class="text-danger">*</span></label>
+                                        <input type="password" id="inputPassword" class="form-input" required="">
+                                    </div>
+                                    <button type="submit" class="btn bg-primary text-white">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="index.html">
+                                    <div class="mb-3">
+                                        <label for="inputEmail" class="inline-block mb-2 font-medium">Email Address <span class="text-danger">*</span></label>
+                                        <input type="email" id="inputEmail" class="form-input" required="">
+                                    </div>
+                                    <button type="submit" class="btn bg-primary text-white">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputPlaceholder" class="inline-block mb-2 font-medium">Input with Placeholder</label>
+                                    <input type="text" id="inputPlaceholder" class="form-input" placeholder="Placeholder">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputValue" class="inline-block mb-2 font-medium">Input with Value</label>
+                                    <input type="text" id="inputValue" class="form-input" placeholder="Enter your value" value="Input Value">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputPlainReadOnly" class="inline-block mb-2 font-medium">Readonly Plain Text Input</label>
+                                    <input type="text" id="inputPlainReadOnly" class="form-input !bg-transparent !border-transparent" value="Readonly input" readonly="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputPlainReadOnly" class="inline-block mb-2 font-medium">Readonly Input</label>
+                                    <input type="text" id="inputPlainReadOnly" class="form-input !bg-transparent" value="Readonly input" readonly="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputPlainReadOnly" class="inline-block mb-2 font-medium">Disabled Input</label>
+                                    <input type="text" id="inputPlainReadOnly" class="form-input !bg-default-100 dark:!bg-default-200" value="Disabled input" disabled="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputWithIcon" class="inline-block mb-2 font-medium">Input with Icon</label>
+                                    <div class="relative">
+                                        <i data-lucide="mail" class="absolute size-4 start-3 top-3 text-default-500"></i>
+                                        <input type="email" id="inputWithIcon" class="ps-10 form-input" placeholder="Enter your email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputIconRight" class="inline-block mb-2 font-medium">Input with Icon Right</label>
+                                    <div class="relative">
+                                        <i data-lucide="mail" class="absolute size-4 end-3 top-3 text-default-500"></i>
+                                        <input type="email" id="inputIconRight" class="pe-10 form-input" placeholder="Enter your email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputBorderStyle" class="inline-block mb-2 font-medium">Input Border Style</label>
+                                    <input type="text" id="inputBorderStyle" class="border-dashed form-input" placeholder="Enter your text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputRoundedInput" class="inline-block mb-2 font-medium">Rounded Input</label>
+                                    <input type="text" id="inputRoundedInput" class="!rounded-full form-input" placeholder="Enter your name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="textArea" class="inline-block mb-2 font-medium">Example Textarea</label>
+                                    <textarea class="form-textarea" id="textArea" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card h-full">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputFormText" class="inline-block mb-2 text-base font-medium">Form Text</label>
+                                    <input type="password" id="inputFormText" class="form-input" placeholder="Enter password">
+                                    <div class="mt-1 text-xs text-default-500">
+                                        Must be 8-20 characters long.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card h-full">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputValid" class="inline-block mb-2 text-base font-medium">Valid Text</label>
+                                    <input type="email" id="inputValid" class="form-input !border-success" placeholder="Enter email" value="example@gmail.com">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <label for="inputInvalid" class="inline-block mb-2 text-base font-medium">Invalid Text</label>
+                                    <input type="email" id="inputInvalid" class="form-input !border-danger" placeholder="Enter email" value="examplegmail.com">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-3 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="mb-4 text-[15px]">Input Sizing</h6>
+
+                                    <div class="grid items-center lg:grid-cols-3 grid-cols-1 gap-5">
+                                        <div>
+                                            <input type="text" class="form-input-sm form-input" placeholder="Enter your name">
+                                        </div>
+
+                                        <div>
+                                            <input type="text" class="form-input" placeholder="Enter your name">
+                                        </div>
+
+                                        <div>
+                                            <input type="text" class="form-input !py-3 !px-5 !h-full" placeholder="Enter your name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-3 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="mb-4 text-[15px]">Range Color Variant</h6>
+
+                                    <div class="grid items-center grid-cols-1 gap-5 xl:grid-cols-3">
+                                        <div>
+                                            <label for="DefaultRange" class="inline-block mb-2 text-base font-medium">Default Range</label>
+                                            <input type="range" min="0" max="5" step="1" class="w-full h-2 rounded-md appearance-none bg-default-200 dark:bg-default-300" id="DefaultRange">
+                                        </div>
+
+                                        <div>
+                                            <label for="GreenRange" class="inline-block mb-2 text-base font-medium">Green Range</label>
+                                            <input type="range" min="0" max="5" step="1" class="w-full h-2 rounded-md appearance-none accent-success bg-default-200 dark:bg-default-300" id="GreenRange">
+                                        </div>
+
+                                        <div>
+                                            <label for="OrangeRange" class="inline-block mb-2 text-base font-medium">Orange Range</label>
+                                            <input type="range" min="0" max="5" step="1" class="w-full h-2 rounded-md appearance-none accent-danger bg-default-200 dark:bg-default-300" id="OrangeRange">
+                                        </div>
+
+                                        <div>
+                                            <label for="SkyRange" class="inline-block mb-2 text-base font-medium">Sky Range</label>
+                                            <input type="range" min="0" max="5" step="1" class="w-full h-2 rounded-md appearance-none accent-info bg-default-200 dark:bg-default-300" id="SkyRange">
+                                        </div>
+
+                                        <div>
+                                            <label for="YellowRange" class="inline-block mb-2 text-base font-medium">Yellow Range</label>
+                                            <input type="range" min="0" max="5" step="1" class="w-full h-2 rounded-md appearance-none accent-warning bg-default-200 dark:bg-default-300" id="YellowRange">
+                                        </div>
+
+                                        <div>
+                                            <label for="RedRange" class="inline-block mb-2 text-base font-medium">Red Range</label>
+                                            <input type="range" min="0" max="5" step="1" class="w-full h-2 rounded-md appearance-none accent-danger bg-default-200 dark:bg-default-300" id="RedRange">
+                                        </div>
+
+                                        <div>
+                                            <label for="PurpleRange" class="inline-block mb-2 text-base font-medium">Purple Range</label>
+                                            <input type="range" min="0" max="5" step="1" class="w-full h-2 rounded-md appearance-none accent-secondary bg-default-200 dark:bg-default-300" id="PurpleRange">
+                                        </div>
+
+                                        <div>
+                                            <label for="darkRange" class="inline-block mb-2 text-base font-medium">Dark Range</label>
+                                            <input type="range" min="0" max="5" step="1" class="w-full h-2 rounded-md appearance-none accent-default-700 bg-default-200 dark:bg-default-300" id="darkRange">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-3 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="mb-4 text-[15px]">File Sizing</h6>
+
+                                    <div class="grid items-center grid-cols-1 gap-5 xl:grid-cols-3">
+                                        <div>
+                                            <input type="file" class="block w-full border border-default-200 rounded-md file:bg-default-50 dark:file:bg-default-300 file:border-0 file:me-1 file:py-1 file:px-3">
+                                        </div>
+
+                                        <div>
+                                            <input type="file" class="block w-full border border-default-200 rounded-md file:bg-default-50 dark:file:bg-default-300 file:border-0 file:me-1 file:py-2 file:px-4">
+                                        </div>
+
+                                        <div>
+                                            <input type="file" class="block w-full border border-default-200 rounded-md file:bg-default-50 dark:file:bg-default-300 file:border-0 file:me-1 file:py-3 file:px-5">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-3 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="mb-4 text-[15px]">Input Group</h6>
+
+                                    <div class="grid items-center grid-cols-1 gap-5 xl:grid-cols-3">
+                                        <div class="flex items-center">
+                                            <span class="inline-block px-3 py-1.75 !border-e-0 border border-default-200 bg-default-100 dark:bg-default-200 rounded-s-md">@</span>
+                                            <input type="text" id="inputText" class="!rounded-s-none form-input" placeholder="@name">
+                                        </div>
+
+                                        <div class="flex items-center">
+                                            <span class="inline-block px-3 py-1.75 !border-e-0 border border-default-200 rounded-s-md">$</span>
+                                            <input type="number" id="inputText" class="!rounded-s-none form-input" placeholder="00.00">
+                                        </div>
+
+                                        <div class="flex items-center">
+                                            <input type="text" id="inputText" class="!rounded-e-none form-input" placeholder="@name">
+                                            <span class="inline-block px-3 py-1.75 border border-l-0 border-default-200 bg-default-100 dark:bg-default-200 rounded-e-md">@</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

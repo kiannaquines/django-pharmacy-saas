@@ -1,0 +1,45 @@
+<?php include('./partials/main.php'); ?>
+
+<head>
+    <?php $title = "Maintenance";
+    include('./partials/title-meta.php') ?>
+
+    <?php include('./partials/head-css.php'); ?>
+</head>
+
+<body>
+
+    <div class="bg-cover bg-no-repeat bg-[url('../images/auth-bg.jpg')] dark:bg-[url('../images/auth-bg-dark.jpg')]  h-screen w-full flex justify-center items-center">
+        <div class="relative">
+            <div class="bg-default-100 rounded-lg w-lg relative">
+                <div class="text-center px-10 py-12">
+                    <a href="/" class="flex justify-center">
+                        <img src="/images/logo-dark.png" alt="logo dark" class="h-6 block dark:hidden">
+                        <img src="/images/logo-light.png" alt="logo light" class="h-6 hidden dark:block" alt="">
+                    </a>
+
+                    <div class="mt-10">
+                        <img src="/images/maintenance.png" alt="" class="h-72 mx-auto">
+                    </div>
+
+                    <div class="mt-8 text-center">
+                        <h4 class="mb-2 text-purple-500 text-xl font-semibold dark:text-white">Currently in Maintenance Mode !!!</h4>
+                        <p class="mb-6 text-base text-default-500">Website is Under Construction. Please check back later!</p>
+                        <a href="/">
+
+                            <button type="button" class="btn bg-primary text-white">
+                                <i data-lucide="home" class="size-3.5"></i>
+                                Back to Home
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include('./partials/customizer.php'); ?>
+
+</body>
+
+</html>

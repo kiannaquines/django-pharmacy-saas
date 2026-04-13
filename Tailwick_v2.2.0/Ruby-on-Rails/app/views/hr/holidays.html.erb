@@ -1,0 +1,228 @@
+<% @title = "Holidays" %>
+
+<%= render 'layouts/partials/page_title', subtitle: "Menu", title: "Holidays" %>
+
+<div class="card">
+  <div class="card-header">
+    <h6 class="text-default-800 text-base font-semibold">Holidays 2024</h6>
+    <button class="btn btn-sm bg-primary text-white">
+      <i class="size-4 me-1" data-lucide="plus"></i>Add Holiday
+    </button>
+  </div>
+  <div class="flex flex-col">
+    <div class="overflow-x-auto">
+      <div class="min-w-full inline-block align-middle">
+        <div class="overflow-hidden">
+          <table class="min-w-full divide-y divide-default-200">
+            <thead class="font-normal whitespace-nowrap">
+            <tr class="text-sm text-default-800 divide-x divide-default-200">
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">#</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Day</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Date</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Holiday Name</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Type</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody class="divide-y divide-default-200">
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">1</td>
+              <td class="px-3.5 py-3 text-sm">Monday</td>
+              <td class="px-3.5 py-3 text-sm">15 Jan</td>
+              <td class="px-3.5 py-3 text-sm">Makara Sankranti</td>
+              <td class="px-3.5 py-3 text-sm">Gazetted Holiday</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="holidaysLeaveDeleteModal2" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal2" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="holidaysLeaveDeleteModal" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">2</td>
+              <td class="px-3.5 py-3 text-sm">Friday</td>
+              <td class="px-3.5 py-3 text-sm">26 Jan</td>
+              <td class="px-3.5 py-3 text-sm">Republic Day</td>
+              <td class="px-3.5 py-3 text-sm">Gazetted Holiday</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="holidaysLeaveDeleteModal2" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal2" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="holidaysLeaveDeleteModal" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">3</td>
+              <td class="px-3.5 py-3 text-sm">Monday</td>
+              <td class="px-3.5 py-3 text-sm">25 Mar</td>
+              <td class="px-3.5 py-3 text-sm">Holi</td>
+              <td class="px-3.5 py-3 text-sm">Gazetted Holiday</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="holidaysLeaveDeleteModal2" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal2" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="holidaysLeaveDeleteModal" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">4</td>
+              <td class="px-3.5 py-3 text-sm">Friday</td>
+              <td class="px-3.5 py-3 text-sm">29 Mar</td>
+              <td class="px-3.5 py-3 text-sm">Good Friday</td>
+              <td class="px-3.5 py-3 text-sm">Gazetted Holiday</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="holidaysLeaveDeleteModal2" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal2" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="holidaysLeaveDeleteModal" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">5</td>
+              <td class="px-3.5 py-3 text-sm">Sunday</td>
+              <td class="px-3.5 py-3 text-sm">4 Aug</td>
+              <td class="px-3.5 py-3 text-sm">Friendship Day</td>
+              <td class="px-3.5 py-3 text-sm">Observance</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="holidaysLeaveDeleteModal2" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal2" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="holidaysLeaveDeleteModal" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">6</td>
+              <td class="px-3.5 py-3 text-sm">Thursday</td>
+              <td class="px-3.5 py-3 text-sm">15 Aug</td>
+              <td class="px-3.5 py-3 text-sm">Independence Day</td>
+              <td class="px-3.5 py-3 text-sm">Gazetted Holiday</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="holidaysLeaveDeleteModal2" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal2" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="holidaysLeaveDeleteModal" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">7</td>
+              <td class="px-3.5 py-3 text-sm">Sunday</td>
+              <td class="px-3.5 py-3 text-sm">15 Sep</td>
+              <td class="px-3.5 py-3 text-sm">Onam</td>
+              <td class="px-3.5 py-3 text-sm">Restricted Holiday</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="holidaysLeaveDeleteModal2" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal2" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="holidaysLeaveDeleteModal" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">8</td>
+              <td class="px-3.5 py-3 text-sm">Thursday</td>
+              <td class="px-3.5 py-3 text-sm">31 Oct</td>
+              <td class="px-3.5 py-3 text-sm">Halloween</td>
+              <td class="px-3.5 py-3 text-sm">Observance</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="holidaysLeaveDeleteModal2" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal2" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="holidaysLeaveDeleteModal" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">9</td>
+              <td class="px-3.5 py-3 text-sm">Wednesday</td>
+              <td class="px-3.5 py-3 text-sm">25 Dec</td>
+              <td class="px-3.5 py-3 text-sm">Christmas</td>
+              <td class="px-3.5 py-3 text-sm">Gazetted Holiday</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="holidaysLeaveDeleteModal2" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal2" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="holidaysLeaveDeleteModal" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">10</td>
+              <td class="px-3.5 py-3 text-sm">Tuesday</td>
+              <td class="px-3.5 py-3 text-sm">31 Dec</td>
+              <td class="px-3.5 py-3 text-sm">New Year</td>
+              <td class="px-3.5 py-3 text-sm">Observance</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="holidaysLeaveDeleteModal2" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal2" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="holidaysLeaveDeleteModal" aria-expanded="false" aria-haspopup="dialog" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" data-hs-overlay="#holidaysLeaveDeleteModal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <p class="text-default-500 text-sm">Showing <b>07</b> of <b>19</b> Results</p>
+      <nav aria-label="Pagination" class="flex items-center gap-2">
+        <button class="btn btn-sm border bg-transparent border-default-200 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10" type="button">
+          <i class="size-4 me-1" data-lucide="chevron-left"></i> Prev
+        </button>
+        <button class="btn size-7.5 bg-transparent border border-default-200 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10" type="button">
+          1
+        </button>
+        <button class="btn size-7.5 bg-primary text-white" type="button">
+          2
+        </button>
+        <button class="btn size-7.5 bg-transparent border border-default-200 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10" type="button">
+          3
+        </button>
+        <button class="btn btn-sm border bg-transparent border-default-200 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10" type="button">Next
+          <i class="size-4 ms-1" data-lucide="chevron-right"></i>
+        </button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<% content_for :javascript do %>
+  <%= vite_javascript_tag 'js/components/timepicker.js' %>
+<% end %>

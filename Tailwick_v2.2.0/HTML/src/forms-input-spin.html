@@ -1,0 +1,206 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Input Spin" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Input Spin" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic Example</h6>
+                                <div class="flex flex-wrap gap-4">
+                                    <div class="inline-flex p-2 text-center border rounded input-step border-default-200 dark:border-white/14">
+                                        <button type="button" class="btn btn-icon bg-default-200 size-7 minusBtn hover:bg-primary hover:text-white focus:bg-primary focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="50" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon bg-default-200 size-7 plusBtn hover:bg-primary hover:text-white focus:bg-primary focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex p-2 text-center border rounded input-step border-default-200 dark:border-white/14">
+                                        <button type="button" class="btn btn-icon bg-primary/20 text-primary size-7 minusBtn hover:bg-primary hover:text-white focus:bg-primary focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="19" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon bg-primary/20 text-primary size-7 plusBtn hover:bg-primary hover:text-white focus:bg-primary focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex p-2 text-center border rounded input-step border-default-200 dark:border-white/14">
+                                        <button type="button" class="btn btn-icon bg-success/20 text-success size-7 minusBtn hover:bg-success hover:text-white focus:bg-success focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="33" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon bg-success/20 text-success size-7 plusBtn hover:bg-success hover:text-white focus:bg-success focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex p-2 text-center border rounded input-step border-default-200 dark:border-white/14">
+                                        <button type="button" class="btn btn-icon bg-warning/20 text-warning size-7 minusBtn hover:bg-warning hover:text-white focus:bg-warning focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="10" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon bg-warning/20 text-warning size-7 plusBtn hover:bg-warning hover:text-white focus:bg-warning focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex p-2 text-center border rounded input-step border-default-200 dark:border-white/14">
+                                        <button type="button" class="btn btn-icon bg-info/20 text-info size-7 minusBtn hover:bg-info hover:text-white focus:bg-info focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="25" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon bg-info/20 text-info size-7 plusBtn hover:bg-info hover:text-white focus:bg-info focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex p-2 text-center border rounded input-step border-default-200 dark:border-white/14">
+                                        <button type="button" class="btn btn-icon bg-warning/20 text-warning size-7 minusBtn hover:bg-warning hover:text-white focus:bg-warning focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="10" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon bg-warning/20 text-warning size-7 plusBtn hover:bg-warning hover:text-white focus:bg-warning focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex p-2 text-center border rounded input-step border-default-200 dark:border-white/14">
+                                        <button type="button" class="btn btn-icon bg-danger/20 text-danger size-7 minusBtn hover:bg-danger hover:text-white focus:bg-danger focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="18" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon bg-danger/20 text-danger size-7 plusBtn hover:bg-danger hover:text-white focus:bg-danger focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex p-2 text-center border rounded input-step border-default-200 dark:border-white/14">
+                                        <button type="button" class="btn btn-icon bg-secondary/20 text-secondary size-7 minusBtn hover:bg-secondary hover:text-white focus:bg-secondary focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="18" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon bg-secondary/20 text-secondary size-7 plusBtn hover:bg-secondary hover:text-white focus:bg-secondary focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Group Input Spin Example</h6>
+                                <div class="flex flex-wrap gap-4">
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-primary hover:text-white minusBtn focus:bg-primary focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="10" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-primary hover:text-white plusBtn focus:bg-primary focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-success hover:text-white minusBtn focus:bg-success focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="20" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-success hover:text-white plusBtn focus:bg-success focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-warning hover:text-white minusBtn focus:bg-warning focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="30" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-warning hover:text-white plusBtn focus:bg-warning focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-info hover:text-white minusBtn focus:bg-info focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="30" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-info hover:text-white plusBtn focus:bg-info focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-warning hover:text-white minusBtn focus:bg-warning focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="40" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-warning hover:text-white plusBtn focus:bg-warning focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-danger hover:text-white minusBtn focus:bg-danger focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="45" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-danger hover:text-white plusBtn focus:bg-danger focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-secondary hover:text-white minusBtn focus:bg-secondary focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="34" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-secondary hover:text-white plusBtn focus:bg-secondary focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-default-500 hover:text-white minusBtn focus:bg-default-500 focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="55" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-default-500 hover:text-white plusBtn focus:bg-default-500 focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Rounded Example</h6>
+                                <div class="flex flex-wrap gap-4">
+                                    <div class="inline-flex p-2 text-center input-step">
+                                        <button type="button" class="btn btn-icon rounded-full bg-default-200 size-7 minusBtn hover:bg-primary hover:text-white focus:bg-primary focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="50" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon rounded-full bg-default-200 size-7 plusBtn hover:bg-primary hover:text-white focus:bg-primary focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex p-2 text-center input-step">
+                                        <button type="button" class="btn btn-icon rounded-full bg-primary/20 text-primary size-7 minusBtn hover:bg-primary hover:text-white focus:bg-primary focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="19" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon rounded-full bg-primary/20 text-primary size-7 plusBtn hover:bg-primary hover:text-white focus:bg-primary focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex p-2 text-center input-step">
+                                        <button type="button" class="btn btn-icon rounded-full bg-success/20 text-success size-7 minusBtn hover:bg-success hover:text-white focus:bg-success focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="33" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon rounded-full bg-success/20 text-success size-7 plusBtn hover:bg-success hover:text-white focus:bg-success focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex p-2 text-center input-step">
+                                        <button type="button" class="btn btn-icon rounded-full bg-warning/20 text-warning size-7 minusBtn hover:bg-warning hover:text-white focus:bg-warning focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="text-center border-none w-15 h-7 product-quantity bg-transparent" value="10" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon rounded-full bg-warning/20 text-warning size-7 plusBtn hover:bg-warning hover:text-white focus:bg-warning focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border rounded-full border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-warning hover:text-white minusBtn focus:bg-warning focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="40" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border rounded-full border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-warning hover:text-white plusBtn focus:bg-warning focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border rounded-full border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-danger hover:text-white minusBtn focus:bg-danger focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="45" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border rounded-full border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-danger hover:text-white plusBtn focus:bg-danger focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border rounded-full border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-secondary hover:text-white minusBtn focus:bg-secondary focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="34" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border rounded-full border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-secondary hover:text-white plusBtn focus:bg-secondary focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+
+                                    <div class="inline-flex text-center input-step">
+                                        <button type="button" class="btn btn-icon border rounded-full border-e-0 rounded-e-none border-default-200 dark:border-white/14 hover:bg-default-500 hover:text-white minusBtn focus:bg-default-500 focus:text-white"><i data-lucide="minus" class="inline-block size-4"></i></button>
+                                        <input type="number" class="w-14 text-center h-9.25 bg-transparent border-y border-default-200 dark:border-white/14 product-quantity" value="55" min="0" max="100" readonly>
+                                        <button type="button" class="btn btn-icon border rounded-full border-s-0 rounded-s-none border-default-200 dark:border-white/14 hover:bg-default-500 hover:text-white plusBtn focus:bg-default-500 focus:text-white"><i data-lucide="plus" class="inline-block size-4"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <script src="assets/js/pages/form-input-spine.init.js" type="module"></script>
+
+</body>
+
+</html>

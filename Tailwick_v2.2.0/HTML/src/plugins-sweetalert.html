@@ -1,0 +1,134 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Sweetalert" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Sweetalert" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-3 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Basic Message</h6>
+                                <button id="sa-basic" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Title</h6>
+                                <button id="sa-title" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Success Message!</h6>
+                                <button id="sa-success" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Error Message!</h6>
+                                <button id="sa-error" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Long Content</h6>
+                                <button id="sa-longcontent" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Warning Message</h6>
+                                <button id="sa-warning" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Parameter</h6>
+                                <button id="sa-params" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Custom Images</h6>
+                                <button id="sa-image" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Auto Close Timer</h6>
+                                <button id="sa-close" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Custom HTML Alert</h6>
+                                <button id="custom-html-alert" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Dialog Three Buttons</h6>
+                                <button id="sa-dialog-three-btn" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Position</h6>
+                                <button id="sa-position" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Ajax Content</h6>
+                                <button id="ajax-alert" type="button" class="btn bg-primary text-white">Click Me</button>
+                            </div>
+                        </div><!--end card-->
+                    </div>
+                </div>
+
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- nestable init js -->
+    <script src="assets/js/pages/misc-sweetalerts.js" type="module"></script>
+
+</body>
+
+</html>

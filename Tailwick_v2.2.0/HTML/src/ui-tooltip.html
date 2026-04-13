@@ -1,0 +1,201 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Tooltip" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Tooltip" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Default</h6>
+
+                                <div class="hs-tooltip [--placement:top] inline-block">
+                                    <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                        Default Tooltips
+                                        <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                            Test Tooltip
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Placements</h6>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <div class="hs-tooltip [--placement:top] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Default
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Default Tooltip
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:top-start] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Top Start
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Top Start
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:top-end] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Top End
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Top End
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:bottom] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Bottom
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Bottom
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:bottom-start] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Bottom Start
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Bottom Start
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:bottom-end] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Bottom Right End
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Right Start
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:right] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Right
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Right
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:right-start] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Right Start
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Right Start
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:right-end] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Right End
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Right End
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:left] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Left
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Left
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:left-start] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Left Start
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Left Start
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <div class="hs-tooltip [--placement:left-end] inline-block">
+                                        <button type="button" class="hs-tooltip-toggle btn bg-primary text-white">
+                                            Left End
+                                            <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-default-900 dark:text-default-100 dark:bg-default-800 text-xs font-medium text-white rounded" role="tooltip">
+                                                Left End
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Triggers Tooltip</h6>
+
+                                <div class="flex flex-wrap gap-2">
+                                    <div class="hs-tooltip [--placement:top] inline-block">
+                                        <div class="relative inline-block">
+                                            <button type="button" class="btn bg-primary text-white px-4 py-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                                                Click Tooltip
+                                            </button>
+
+                                            <span class="absolute start-1/2 -translate-x-1/2 -top-8 opacity-0 invisible transition-all duration-200 bg-default-900 text-white dark:text-default-100 dark:bg-default-800 text-xs font-medium px-2 py-1 rounded whitespace-nowrap focus-within:opacity-100 focus-within:visible peer-focus:opacity-100 peer-focus:visible [button:focus_+_&]:opacity-100 [button:focus_+_&]:visible">
+                                                Click Tooltip
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="relative inline-block">
+                                        <button type="button" class="btn bg-primary text-white px-4 py-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                                            Focus Tooltip
+                                        </button>
+
+                                        <span class="absolute start-1/2 -translate-x-1/2 -top-8 opacity-0 invisible transition-all duration-200 bg-default-900 text-white dark:text-default-100 dark:bg-default-800 text-xs font-medium px-2 py-1 rounded whitespace-nowrap focus-within:opacity-100 focus-within:visible [button:focus_+_&]:opacity-100 [button:focus_+_&]:visible">
+                                            Focus Tooltip
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

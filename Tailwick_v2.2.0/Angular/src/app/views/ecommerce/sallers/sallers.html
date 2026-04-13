@@ -1,0 +1,88 @@
+<main>
+
+    <app-page-title title="Sellers" subtitle="Ecommerce" />
+
+
+    <div class="flex justify-between gap-3 flex-wrap items-center mb-5">
+        <div class="relative">
+            <input type="email" class="ps-11 form-input" placeholder="Search for..." />
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3">
+                <div class="size-4 flex items-center text-default-500"> <ng-icon name="lucideSearch"></ng-icon></div>
+            </div>
+        </div>
+
+        <button type="button" class="btn  bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="ecommerce-sellers-add" data-hs-overlay="#ecommerce-sellers-add">
+            <div class="size-4 ms-1"> <ng-icon name="lucidePlus"></ng-icon></div>
+            Add Seller
+        </button>
+    </div>
+
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+
+        @for(card of cardsData; track $index){
+        <div class="card">
+            <div class="card-body">
+                <div class="flex justify-between gap-5 items-center mb-4">
+                    <div class="size-5" [class]="card.heartFilled ? 'text-warning fill-warning/10' : 'text-default-500 fill-default-100'">
+                        <ng-icon name="lucideHeart"></ng-icon>
+                    </div>
+
+                    <div class="hs-dropdown relative inline-flex">
+                        <button type="button" class="hs-dropdown-toggle btn size-7.5 bg-default-200 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                            <div class="size-4">
+                                <ng-icon name="lucideEllipsis"></ng-icon>
+                            </div>
+                        </button>
+                        <div class="hs-dropdown-menu" role="menu">
+                            <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                <div class="size-3"><ng-icon name="lucideEye"></ng-icon></div>
+                                Overview
+                            </a>
+                            <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                <div class="size-3"><ng-icon name="lucideFilePen"></ng-icon></div>
+                                Edit
+                            </a>
+                            <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                <div class="size-3"><ng-icon name="lucideTrash2"></ng-icon></div>
+                                Delete
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-center mx-auto rounded-full size-16 bg-default-100 outline outline-default-100 outline-offset-4">
+                        <iconify-icon [icon]="card.icon" class="text-[40px]"></iconify-icon>
+                    </div>
+
+                    <div class="mt-4 mb-6 text-center">
+                        <h6 class="text-base text-default-800 font-semibold">{{ card.name }}</h6>
+                        <p class="text-default-500 text-sm">{{ card.owner }}</p>
+                    </div>
+
+                    <div class="grid grid-cols-3">
+                        @for(stat of card.stats; track $index){
+                        <div class="text-center p-2 text-sm" [class]="$last ? '' : 'border-e  border-dashed border-default-200'">
+                            <h6 class="mb-1 text-default-800 font-semibold">{{ stat.value }}</h6>
+                            <p class="text-default-500">{{ stat.label }}</p>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+
+    </div>
+
+
+    <div class="flex flex-wrap justify-center md:justify-between items-center md:gap-0 gap-4 mt-5 text-default-500">
+        <p class="text-default-500 text-sm">Showing <b>12</b> of <b>44</b> Results</p>
+
+        <app-pagination />
+    </div>
+
+
+
+</main>
+<app-sallers-modal />             

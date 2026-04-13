@@ -1,0 +1,70 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Heatmap Chart" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Heatmap Chart" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic</h6>
+                                <div id="basicHeatmap" class="apex-charts" data-chart-colors='["bg-primary"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Multiple Colors</h6>
+                                <div id="multipleColorsHeatmap" class="apex-charts" data-chart-colors='["bg-primary", "bg-purple-500", "bg-orange-500", "bg-yellow-500", "bg-green-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Color Range</h6>
+                                <div id="ColorsRangeHeatmap" class="apex-charts" data-chart-colors='["bg-primary", "bg-purple-500", "bg-orange-500", "bg-yellow-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Rounded (Range without Shades)</h6>
+                                <div id="RoundedRangeHeatmap" class="apex-charts" data-chart-colors='["bg-sky-500", "bg-green-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Apex Chart Bubble Demo js -->
+    <script src="assets/js/pages/chart-apex-heatmap.js" type="module"></script>
+
+</body>
+
+</html>

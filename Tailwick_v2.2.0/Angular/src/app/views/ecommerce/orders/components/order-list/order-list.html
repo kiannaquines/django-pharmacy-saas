@@ -1,0 +1,20 @@
+<div class="grid md:grid-cols-2 grid-cols-1 gap-5">
+    @for(card of orderCards; track $index){
+    <div class="card">
+        <div class="card-body">
+            <div class="flex items-center gap-3">
+                <div class="btn size-12 text-15" [class]="card.iconBgClass + ' ' + card.iconTextClass">
+                    <div class="size-6">
+                        <ng-icon [name]="card.icon"></ng-icon>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="mb-1 text-base font-semibold text-default-800">{{ card.count }}</h5>
+                    <p class="text-default-500 text-sm">{{ card.label }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+</div>

@@ -1,0 +1,77 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Candlstick Charts" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Candlstick Charts" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-default-800 text-[15px]">Simple</h6>
+                                <div id="basicChart" class="apex-charts" data-chart-colors='["bg-green-500", "bg-red-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-default-800 text-[15px]">Candlestick Synced with Brush Chart (Combo)</h6>
+                                <div>
+                                    <div id="combo_candlestick" data-chart-colors='["bg-sky-500", "bg-orange-500"]' class="apex-charts" dir="ltr"></div>
+                                    <div id="combo_candlestick_chart" data-chart-colors='["bg-yellow-500", "bg-red-500"]' class="apex-charts" dir="ltr"></div>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-default-800 text-[15px]">Category x-axis</h6>
+                                <div id="categoryCandlestick" class="apex-charts" data-chart-colors='["bg-green-500", "bg-red-500", "bg-sky-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-default-800 text-[15px]">Candlestick with Line</h6>
+                                <div id="candlestickWithLine" class="apex-charts" data-chart-colors='["bg-green-500", "bg-red-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Apex Chart Candlestick Demo js -->
+    <script src="assets/js/pages/chart-apex-candlestick.js" type="module"></script>
+
+    <script src="https://apexcharts.com/samples/assets/ohlc.js"></script>
+    <!-- for Category x-axis chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.17/dayjs.min.js"></script>
+
+</body>
+
+</html>

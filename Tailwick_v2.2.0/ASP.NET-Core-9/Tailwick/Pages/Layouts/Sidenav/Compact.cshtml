@@ -1,0 +1,23 @@
+@page "/layouts-sidenav-compact"
+@model Tailwick.Pages.Layouts.Sidenav.CompactModel
+
+@{
+    ViewBag.Title = "Compact Sidenav";
+    ViewBag.Subtitle = "Layouts";
+    ViewBag.HTMLAttributes = "data-sidenav-size=md";
+}
+
+@section styles
+{
+
+}
+
+@await Html.PartialAsync("~/Pages/Shared/Partials/_PageTitle.cshtml")
+
+<div class="card h-40">
+</div>
+
+@section scripts
+{
+
+}

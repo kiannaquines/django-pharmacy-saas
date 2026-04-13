@@ -1,0 +1,126 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Spinner" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Spinner" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Default Spinner</h6>
+
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <div class="inline-block border-2 rounded-full size-8 animate-spin border-s-transparent border-primary"></div>
+                                    <div class="inline-block border-2 border-success rounded-full size-8 animate-spin border-s-transparent"></div>
+                                    <div class="inline-block border-2 border-warning rounded-full size-8 animate-spin border-s-transparent"></div>
+                                    <div class="inline-block border-2 border-info rounded-full size-8 animate-spin border-s-transparent"></div>
+                                    <div class="inline-block border-2 border-warning rounded-full size-8 animate-spin border-s-transparent"></div>
+                                    <div class="inline-block border-2 border-danger rounded-full size-8 animate-spin border-s-transparent"></div>
+                                    <div class="inline-block border-2 border-secondary rounded-full size-8 animate-spin border-s-transparent"></div>
+                                    <div class="inline-block border-2 border-default-200 rounded-full size-8 animate-spin border-s-transparent"></div>
+                                    <div class="inline-block border-2 border-default-800 rounded-full size-8 animate-spin border-s-transparent"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Ping Animation</h6>
+
+                                <div class="flex flex-wrap items-center gap-5 px-3 py-2">
+                                    <div class="inline-flex rounded-full opacity-75 size-4 animate-ping bg-primary"></div>
+                                    <div class="inline-flex rounded-full opacity-75 size-4 animate-ping bg-success"></div>
+                                    <div class="inline-flex rounded-full opacity-75 size-4 animate-ping bg-warning"></div>
+                                    <div class="inline-flex rounded-full opacity-75 size-4 animate-ping bg-info"></div>
+                                    <div class="inline-flex rounded-full opacity-75 size-4 animate-ping bg-warning"></div>
+                                    <div class="inline-flex rounded-full opacity-75 size-4 animate-ping bg-danger"></div>
+                                    <div class="inline-flex rounded-full opacity-75 size-4 animate-ping bg-secondary"></div>
+                                    <div class="inline-flex rounded-full opacity-75 size-4 animate-ping bg-default-500"></div>
+                                    <div class="inline-flex rounded-full opacity-75 size-4 animate-ping bg-default-800"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-2 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Bounce Animation</h6>
+
+                                    <div class="flex flex-wrap items-center gap-5">
+                                        <div class="inline-flex rounded-full opacity-75 size-6 animate-bounce bg-primary"></div>
+                                        <div class="inline-flex rounded-full opacity-75 size-6 animate-bounce bg-success"></div>
+                                        <div class="inline-flex rounded-full opacity-75 size-6 animate-bounce bg-warning"></div>
+                                        <div class="inline-flex rounded-full opacity-75 size-6 animate-bounce bg-info"></div>
+                                        <div class="inline-flex rounded-full opacity-75 size-6 animate-bounce bg-warning"></div>
+                                        <div class="inline-flex rounded-full opacity-75 size-6 animate-bounce bg-danger"></div>
+                                        <div class="inline-flex rounded-full opacity-75 size-6 animate-bounce bg-secondary"></div>
+                                        <div class="inline-flex rounded-full opacity-75 size-6 animate-bounce bg-default-500"></div>
+                                        <div class="inline-flex rounded-full opacity-75 size-6 animate-bounce bg-default-800"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-2 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Sizes Animation</h6>
+
+                                    <div class="grid lg:grid-cols-3 grid-cols-1 gap-5">
+                                        <div class="flex flex-wrap items-center gap-5">
+                                            <div class="inline-block border-2 rounded-full size-4 animate-spin border-s-transparent border-primary"></div>
+                                            <div class="inline-block border-2 rounded-full size-6 animate-spin border-s-transparent border-primary"></div>
+                                            <div class="inline-block border-2 rounded-full size-8 animate-spin border-s-transparent border-primary"></div>
+                                            <div class="inline-block border-2 rounded-full size-10 animate-spin border-s-transparent border-primary"></div>
+                                        </div>
+
+                                        <div class="flex flex-wrap items-center gap-6">
+                                            <div class="inline-flex rounded-full size-4 animate-bounce bg-primary/75"></div>
+                                            <div class="inline-flex rounded-full size-6 animate-bounce bg-primary/75"></div>
+                                            <div class="inline-flex rounded-full size-8 animate-bounce bg-primary/75"></div>
+                                            <div class="inline-flex rounded-full size-10 animate-bounce bg-primary/75"></div>
+                                        </div>
+
+                                        <div class="flex flex-wrap items-center gap-6">
+                                            <div class="inline-flex rounded-full size-2 animate-ping bg-primary/75"></div>
+                                            <div class="inline-flex rounded-full size-4 animate-ping bg-primary/75"></div>
+                                            <div class="inline-flex rounded-full size-6 animate-ping bg-primary/75"></div>
+                                            <div class="inline-flex rounded-full size-8 animate-ping bg-primary/75"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Bubble Apexchart" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Bubble Apexchart" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Simple</h6>
+                                <div id="simpleChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-green-500", "bg-orange-500", "bg-yellow-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">3D Bubble</h6>
+                                <div id="bubble_chart" class="apex-charts" data-chart-colors='["bg-sky-500", "bg-yellow-500", "bg-red-500", "bg-purple-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Apex Chart Bubble Demo js -->
+    <script src="assets/js/pages/chart-apex-bubble.js" type="module"></script>
+
+</body>
+
+</html>

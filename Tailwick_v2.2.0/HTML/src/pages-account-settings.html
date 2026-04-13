@@ -1,0 +1,546 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Account Settings" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Account Settings" }}
+
+                <div class="container-fluid">
+                    <div class="mb-5">
+                        <div class="card !rounded-none">
+                            <div class="card-body !px-2.5">
+                                <div class="grid lg:grid-cols-12 grid-cols-1 gap-5">
+                                    <div class="col-span-1">
+
+                                        <div class="relative inline-block rounded-full shadow-md size-20 bg-default-100 dark:bg-default-200 profile-user xl:size-28">
+                                            <img src="assets/images/user/avatar-1.png" alt="" class="object-cover border-0 rounded-full img-thumbnail user-profile-image">
+                                            <div class="absolute bottom-0 flex items-center justify-center rounded-full size-8 end-0 profile-photo-edit">
+                                                <input id="profile-img-file-input" type="file" class="hidden profile-img-file-input">
+                                                <label for="profile-img-file-input" class="flex items-center justify-center bg-white dark:bg-zinc-800 rounded-full shadow-lg cursor-pointer size-8 profile-photo-edit">
+                                                    <i data-lucide="image-plus" class="size-4 text-slate-500 dark:text-zinc-200 fill-slate-100 dark:fill-zinc-500"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="lg:col-span-9 col-span-1">
+                                        <h5 class="mb-1 flex items-center gap-1">Paula Keenan
+                                            <i data-lucide="badge-check" class="size-4 text-info fill-info/10"></i>
+                                        </h5>
+
+                                        <div class="flex gap-3 mb-4">
+                                            <p class="text-default-500 flex gap-1 items-center">
+                                                <i data-lucide="user-circle" class="fill-default-100 size-4"></i>
+                                                CEO &amp; Founder
+                                            </p>
+
+                                            <p class="text-default-500 flex gap-1 items-center">
+                                                <i data-lucide="map-pin" class="fill-default-100 size-4"></i>
+                                                Los Angeles, California
+                                            </p>
+                                        </div>
+
+                                        <ul class="flex flex-wrap gap-3 mt-4 text-center divide-x divide-default-200 dark:divide-white/14">
+                                            <li class="px-5">
+                                                <h5 class="text-lg">1542</h5>
+                                                <p class="text-default-500">Following</p>
+                                            </li>
+
+                                            <li class="px-5">
+                                                <h5 class="text-lg">10.65k</h5>
+                                                <p class="text-default-500">Followers</p>
+                                            </li>
+
+                                            <li class="px-5">
+                                                <h5 class="text-lg">115+</h5>
+                                                <p class="text-default-500">Products</p>
+                                            </li>
+                                        </ul>
+
+                                        <p class="mt-4 text-default-500">Strong leader and negotiator adept at driving collaboration and innovation. Highly accomplished CEO &amp; Founder with 10+ years of experience creating, launching and leading successful business ventures. Proven ability to build relationships, drive customer loyalty and increase profitability.</p>
+
+                                        <div class="flex gap-2 mt-4">
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded size-9 text-info bg-info/10 hover:bg-info/20">
+                                                <i data-lucide="facebook" class="size-4"></i>
+                                            </a>
+
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded size-9 text-warning bg-warning/10 hover:bg-warning/20">
+                                                <i data-lucide="instagram" class="size-4"></i>
+                                            </a>
+
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded size-9 text-danger bg-danger/10 hover:bg-danger/20">
+                                                <i data-lucide="globe" class="size-4"></i>
+                                            </a>
+
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded size-9 text-primary bg-primary/10 hover:bg-primary/20">
+                                                <i data-lucide="linkedin" class="size-4"></i>
+                                            </a>
+
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded size-9 text-warning bg-warning/10 hover:bg-warning/20">
+                                                <i data-lucide="dribbble" class="size-4"></i>
+                                            </a>
+
+                                            <a href="#!" class="flex items-center justify-center transition-all duration-200 ease-linear rounded size-9 text-default-500 bg-default-100 dark:bg-default-200 hover:bg-default-300">
+                                                <i data-lucide="github" class="size-4"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="lg:col-span-2 col-span-1">
+                                        <div class="flex gap-2 2xl:justify-end">
+                                            <a href="#" class="btn btn-icon bg-default-100 dark:bg-default-200">
+                                                <i data-lucide="mail" class="size-4"></i>
+                                            </a>
+                                            <button type="button" class="btn bg-primary text-white">Hire Us</button>
+
+                                            <div class="relative">
+                                                <div class="hs-dropdown [--placement:bottom-right] relative inline-flex">
+                                                    <button type="button" class="hs-dropdown-toggle btn btn-icon text-default-800 bg-default-100 dark:bg-default-200 hover:bg-default-800 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                                                        <i data-lucide="more-horizontal" class="size-4"></i>
+                                                    </button>
+
+                                                    <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-44 px-0 py-1" role="menu" aria-orientation="vertical">
+                                                        <div class="space-y-0.5">
+                                                            <div class="px-3 mb-2 text-sm text-default-500">
+                                                                Payments
+                                                            </div>
+
+                                                            <a class="py-1.5 px-3.75 block font-medium text-default-600 hover:bg-default-100 dark:hover:bg-default-200 focus:outline-hidden focus:bg-default-100 dark:focus:bg-default-200" href="#">
+                                                                Create Invoice
+                                                            </a>
+
+                                                            <a class="py-1.5 px-3.75 block font-medium text-default-600 hover:bg-default-100 dark:hover:bg-default-200 focus:outline-hidden focus:bg-default-100 dark:focus:bg-default-200" href="#">
+                                                                Pending Billing
+                                                            </a>
+
+                                                            <a class="py-1.5 px-3.75 block font-medium text-default-600 hover:bg-default-100 dark:hover:bg-default-200 focus:outline-hidden focus:bg-default-100 dark:focus:bg-default-200" href="#">
+                                                                Genarate Bill
+                                                            </a>
+
+                                                            <a class="py-1.5 px-3.75 block font-medium text-default-600 hover:bg-default-100 dark:hover:bg-default-200 focus:outline-hidden focus:bg-default-100 dark:focus:bg-default-200" href="#">
+                                                                Subscription
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="!px-2.5">
+                                <div>
+                                    <nav class="flex gap-1 flex-wrap" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                                        <button type="button" class="hs-tab-active:font-semibold hs-tab-active:border-primary hs-tab-active:text-primary py-2 px-4 inline-flex items-center gap-2 border-b border-transparent text-sm whitespace-nowrap text-default-500 hover:text-primary focus:outline-hidden focus:text-primary disabled:opacity-50 disabled:pointer-events-none active" id="personalTabs" aria-selected="true" data-hs-tab="#personal" aria-controls="personal" role="tab">
+                                            Personal Info
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:font-semibold hs-tab-active:border-primary hs-tab-active:text-primary py-2 px-4 inline-flex items-center gap-2 border-b border-transparent text-sm whitespace-nowrap text-default-500 hover:text-primary focus:outline-hidden focus:text-primary disabled:opacity-50 disabled:pointer-events-none" id="integrationTabs" aria-selected="false" data-hs-tab="#integration" aria-controls="integration" role="tab">
+                                            Integrations
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:font-semibold hs-tab-active:border-primary hs-tab-active:text-primary py-2 px-4 inline-flex items-center gap-2 border-b border-transparent text-sm whitespace-nowrap text-default-500 hover:text-primary focus:outline-hidden focus:text-primary disabled:opacity-50 disabled:pointer-events-none" id="changePasswordTabs" aria-selected="false" data-hs-tab="#changePassword" aria-controls="changePassword" role="tab">
+                                            Change Password
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:font-semibold hs-tab-active:border-primary hs-tab-active:text-primary py-2 px-4 inline-flex items-center gap-2 border-b border-transparent text-sm whitespace-nowrap text-default-500 hover:text-primary focus:outline-hidden focus:text-primary disabled:opacity-50 disabled:pointer-events-none" id="privacyPolicyTabs" aria-selected="false" data-hs-tab="#privacyPolicy" aria-controls="privacyPolicy" role="tab">
+                                            Privacy Policy
+                                        </button>
+                                    </nav>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="personal" role="tabpanel" aria-labelledby="personalTabs">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Personal Information</h6>
+                                <p class="mb-4 text-default-500">Update your photo and personal details here easily.</p>
+                                <form action="#!">
+                                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-12">
+                                        <div class="lg:col-span-6 col-span-1">
+                                            <label for="inputValue" class="inline-block mb-2 font-medium">First Name</label>
+                                            <input type="text" id="inputValue" class="form-input" placeholder="Enter your value" value="Paula">
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-6 col-span-1">
+                                            <label for="inputValue" class="inline-block mb-2 font-medium">Last Name</label>
+                                            <input type="text" id="inputValue" class="form-input" placeholder="Enter your value" value="Keenan">
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-6 col-span-1">
+                                            <label for="inputValue" class="inline-block mb-2 font-medium">Phone Number</label>
+                                            <input type="text" id="inputValue" class="form-input" placeholder="+214 8456 8459 23" value="+214 8456 8459 23">
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-6 col-span-1">
+                                            <label for="inputValue" class="inline-block mb-2 font-medium">Email Address</label>
+                                            <input type="email" id="inputValue" class="form-input" placeholder="Enter your email address" value="richardmarshall@tailwick.com">
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-6 col-span-1">
+                                            <label for="joiningDateInput" class="inline-block mb-2 font-medium">Birth of Date</label>
+                                            <input type="text" id="joiningDateInput" class="form-input" placeholder="Select date" data-provider="flatpickr" data-date-format="d M, Y" data-default-date="24 Oct, 2023">
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-6 col-span-1">
+                                            <label for="joiningDateInput" class="inline-block mb-2 font-medium">Joining Date</label>
+                                            <input type="text" id="joiningDateInput" class="form-input" placeholder="Select date" data-provider="flatpickr" data-date-format="d M, Y" data-default-date="30 Nov, 2023">
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-12 col-span-1">
+                                            <label for="inputValue" class="inline-block mb-2 font-medium">Skill</label>
+                                            <select class="form-input" id="choices-multiple-default" data-choices name="choices-multiple-default" multiple>
+                                                <option value="Choice 1" selected>Choice 1</option>
+                                                <option value="Choice 2">Choice 2</option>
+                                                <option value="Choice 3">Choice 3</option>
+                                                <option value="Choice 2">Choice 4</option>
+                                                <option value="Choice 3">Choice 5 </option>
+                                                <option value="Choice 4" disabled>Choice 4</option>
+                                            </select>
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-6 col-span-1">
+                                            <label for="inputValue" class="inline-block mb-2 font-medium">Designation</label>
+                                            <input type="text" id="inputValue" class="form-input" placeholder="Enter your value" value="CEO & Founder">
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-6 col-span-1">
+                                            <label for="inputValue" class="inline-block mb-2 font-medium">Website</label>
+                                            <input type="text" id="inputValue" class="form-input" placeholder="Enter your value" value="www.themesdesign.in">
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-4 col-span-1">
+                                            <label for="inputValue" class="inline-block mb-2 font-medium">City</label>
+                                            <select class="form-input" id="choices-single-no-sorting" name="choices-single-no-sorting" data-choices data-choices-sorting-false>
+                                                <option value="Madrid">Madrid</option>
+                                                <option value="Toronto">Toronto</option>
+                                                <option value="Vancouver">Vancouver</option>
+                                                <option value="London">London</option>
+                                                <option value="Manchester">Manchester</option>
+                                                <option value="Liverpool">Liverpool</option>
+                                                <option value="Paris">Paris</option>
+                                                <option value="Malaga">Malaga</option>
+                                                <option value="Washington" disabled>Washington</option>
+                                                <option value="Lyon">Lyon</option>
+                                                <option value="Marseille">Marseille</option>
+                                                <option value="Hamburg">Hamburg</option>
+                                                <option value="Munich">Munich</option>
+                                                <option value="Barcelona">Barcelona</option>
+                                                <option value="Berlin">Berlin</option>
+                                                <option value="Montreal">Montreal</option>
+                                                <option value="New York">New York</option>
+                                                <option value="Michigan">Michigan</option>
+                                            </select>
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-4 col-span-1">
+                                            <label for="inputValue" class="inline-block mb-2 font-medium">Country</label>
+                                            <select id="choices-single-no-sorting" name="choices-single-no-sorting" class="form-input" data-choices data-choices-sorting-false>
+                                                <option value="Madrid">USA</option>
+                                                <option value="Toronto">Toronto</option>
+                                                <option value="Vancouver">Vancouver</option>
+                                                <option value="London">London</option>
+                                                <option value="Manchester">Manchester</option>
+                                                <option value="Liverpool">Liverpool</option>
+                                                <option value="Paris">Paris</option>
+                                                <option value="Malaga">Malaga</option>
+                                                <option value="Washington" disabled>Washington</option>
+                                                <option value="Lyon">Lyon</option>
+                                                <option value="Marseille">Marseille</option>
+                                                <option value="Hamburg">Hamburg</option>
+                                                <option value="Munich">Munich</option>
+                                                <option value="Barcelona">Barcelona</option>
+                                                <option value="Berlin">Berlin</option>
+                                                <option value="Montreal">Montreal</option>
+                                                <option value="New York">New York</option>
+                                                <option value="Michigan">Michigan</option>
+                                            </select>
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-4 col-span-1">
+                                            <label for="inputValue" class="inline-block mb-2 font-medium">Zip Code</label>
+                                            <select id="choices-single-no-sorting" class="form-input" name="choices-single-no-sorting" data-choices data-choices-sorting-false>
+                                                <option value="Madrid">00012</option>
+                                                <option value="Toronto">00014</option>
+                                                <option value="Vancouver">00016</option>
+                                                <option value="London">88800</option>
+                                                <option value="Manchester">00100</option>
+                                                <option value="Liverpool">00001</option>
+                                            </select>
+                                        </div><!--end col-->
+
+                                        <div class="lg:col-span-12 cols-span-1">
+                                            <label for="inputValue" class="block mb-2 font-medium">Description</label>
+                                            <textarea class="w-full form-textarea" id="exampleFormControlTextarea" placeholder="Enter your description" rows="5">A Web Developer creates and designs different websites for clients. They are responsible for their aesthetic as well as their function. Professionals in this field may also need to be able to ensure sites are compatible with multiple types of media. Web Developers need to have a firm understanding of programming and graphical design. Having a strong resume that emphasizes these attributes makes it significantly easier to get hired as a Web Developer. As a web designer, my objective is to make a positive impact on clients, co-workers, and the Internet using my skills and experience to design compelling and attractive websites. Solving code problems. Editing &amp; Design with designing team in the company to build perfect web designs.</textarea>
+                                            </select>
+                                        </div><!--end col-->
+                                    </div><!--end grid-->
+
+                                    <div class="flex justify-end mt-6 gap-4">
+                                        <button type="button" class="btn bg-primary text-white">Updates</button>
+                                        <button type="button" class="btn bg-danger/10 text-danger hover:bg-danger hover:text-white">Cancel</button>
+                                    </div>
+                                </form><!--end form-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="integration" class="hidden" role="tabpanel" aria-labelledby="integrationTabs">
+                        <h6 class="mb-4 text-[15px]">Connected Apps</h6>
+
+                        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="flex gap-3 mb-5">
+                                        <div class="grow">
+                                            <img src="assets/images/brand/meta.png" alt="" class="h-8">
+                                        </div>
+
+                                        <div class="shrink-0">
+                                            <button type="button" class="btn btn-sm border-primary border-dashed text-primary hover:bg-primary/10"><i data-lucide="cable" class="inline-block size-3"></i> Connect</button>
+                                        </div>
+                                    </div>
+                                    <h6 class="mb-2 text-base">Meta</h6>
+                                    <p class="text-default-500">Meta Platforms Inc, which used to be called Facebook Inc.</p>
+                                </div>
+                            </div><!--end col-->
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="flex gap-3 mb-5">
+                                        <div class="grow">
+                                            <img src="assets/images/brand/figma.png" alt="" class="h-8">
+                                        </div>
+                                        <div class="shrink-0">
+                                            <button type="button" class="btn btn-sm border-primary border-dashed text-primary hover:bg-primary/10"><i data-lucide="cable" class="inline-block size-3"></i> Connect</button>
+                                        </div>
+                                    </div>
+
+                                    <h6 class="mb-2 text-base">Figma Tools</h6>
+                                    <p class="text-default-500">Figma is a cloud-based design tool that is similar to Sketch in functionality and features.</p>
+                                </div>
+                            </div><!--end col-->
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="flex gap-3 mb-5">
+                                        <div class="grow">
+                                            <img src="assets/images/brand/telegram.png" alt="" class="h-8">
+                                        </div>
+                                        <div class="shrink-0">
+                                            <button type="button" class="btn btn-sm border-primary border-dashed text-primary hover:bg-primary/10"><i data-lucide="cable" class="inline-block size-3"></i> Connect</button>
+                                        </div>
+                                    </div>
+                                    <h6 class="mb-2 text-base">Telegram Channel</h6>
+                                    <p class="text-default-500">Telegram Tools offers multiple useful tools for Telegram users.</p>
+                                </div>
+                            </div><!--end col-->
+                        </div><!--end grid-->
+                    </div>
+
+                    <div id="changePassword" class="hidden" role="tabpanel" aria-labelledby="changePasswordTabs">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Changes Password</h6>
+
+                                <form action="#!">
+                                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-12">
+                                        <div class="lg:col-span-4 col-span-1">
+                                            <label for="oldpassword" class="inline-block mb-2 font-medium">Old Password*</label>
+
+                                            <div class="relative">
+                                                <input id="oldpassword" type="password" class="form-input disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter old password">
+                                                <button type="button" data-hs-toggle-password='{"target": "#oldpassword" }' class="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer">
+                                                    <i data-lucide="eye-off" class="hs-password-active:block hidden size-3.5"></i>
+                                                    <i data-lucide="eye" class="hs-password-active:hidden block size-3.5"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="lg:col-span-4 col-span-1">
+                                            <label for="newpassword" class="inline-block mb-2 font-medium">New Password*</label>
+
+                                            <div class="relative">
+                                                <input id="newpassword" type="password" class="form-input disabled:opacity-50 disabled:pointer-events-none" placeholder="Enter new password">
+                                                <button type="button" data-hs-toggle-password='{"target": "#newpassword" }' class="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer">
+                                                    <i data-lucide="eye-off" class="hs-password-active:block hidden size-3.5"></i>
+                                                    <i data-lucide="eye" class="hs-password-active:hidden block size-3.5"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="lg:col-span-4 col-span-1">
+                                            <label for="confirmpassword" class="inline-block mb-2 font-medium">Confirm Password*</label>
+
+                                            <div class="relative">
+                                                <input id="confirmpassword" type="password" class="form-input disabled:opacity-50 disabled:pointer-events-none" placeholder="Confirm password">
+                                                <button type="button" data-hs-toggle-password='{"target": "#confirmpassword" }' class="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer">
+                                                    <i data-lucide="eye-off" class="hs-password-active:block hidden size-3.5"></i>
+                                                    <i data-lucide="eye" class="hs-password-active:hidden block size-3.5"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center lg:col-span-6 col-span-1">
+                                            <a href="javascript:void(0);" class="underline text-primary text-[13px]">Forgot Password ?</a>
+                                        </div>
+
+                                        <div class="flex justify-end lg:col-span-6 col-span-1">
+                                            <button type="button" class="btn bg-success text-white">Change Password</button>
+                                        </div>
+                                    </div><!--end grid-->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="privacyPolicy" class="hidden" role="tabpanel" aria-labelledby="privacyPolicyTabs">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-4 text-[15px]">Security & Privacy</h6>
+                                <div class="space-y-6">
+                                    <div class="flex flex-col justify-between gap-2 md:flex-row">
+                                        <div>
+                                            <h4 class="text-[15px]">Two-factor Authentication</h4>
+                                            <p class="mt-1 text-default-500">Two-factor authentication is an enhanced security. Once enabled, you'll be required to give two types of identification when you log into Google Authentication and SMS are Supported.</p>
+                                        </div>
+
+                                        <div class="shrink-0">
+                                            <button type="button" class="btn btn-sm bg-primary text-white !py-1 !px-1.5">Enable Two-factor Authentication</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col justify-between gap-2 md:flex-row">
+                                        <div>
+                                            <h4 class="text-[15px]">Secondary Verification</h4>
+                                            <p class="mt-1 text-default-500">The first factor is a password and the second commonly includes a text with a code sent to your smartphone, or biometrics using your fingerprint, face, or retina.</p>
+                                        </div>
+
+                                        <div class="shrink-0">
+                                            <button type="button" class="btn btn-sm bg-primary text-white !py-1 !px-1.5">Set up secondary method</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col justify-between gap-2 md:flex-row">
+                                        <div>
+                                            <h4 class="text-[15px]">Backup Codes</h4>
+                                            <p class="mt-1 text-default-500">A backup code is automatically generated for you when you turn on two-factor authentication through your iOS or Android Twitter app. You can also generate a backup code on twitter.com.</p>
+                                        </div>
+
+                                        <div class="shrink-0">
+                                            <button type="button" class="btn btn-sm bg-primary text-white !py-1 !px-1.5">Generate backup codes</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="inline-block mt-6 mb-4 underline text-[15px]">Application Notifications:</h6>
+                                <div class="space-y-6">
+                                    <div class="flex justify-between gap-2">
+                                        <div>
+                                            <h4 class="text-[15px]">Direct messages</h4>
+                                            <p class="mt-1 text-default-500">Messages from people you follow</p>
+                                        </div>
+
+                                        <div class="shrink-0">
+                                            <div class="relative inline-block w-10">
+                                                <input type="checkbox" name="directMessage" id="directMessage" class="form-switch" checked="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between gap-2">
+                                        <div>
+                                            <h4 class="text-[15px]">Show email notifications</h4>
+                                            <p class="mt-1 text-default-500">Under Settings, choose Notifications. Under Select an account, choose the account to enable notifications for.</p>
+                                        </div>
+
+                                        <div class="shrink-0">
+                                            <div class="relative inline-block w-10">
+                                                <input type="checkbox" name="emailNotification" id="emailNotification" class="form-switch" checked="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between gap-2">
+                                        <div>
+                                            <h4 class="text-[15px]">Show chat notifications</h4>
+                                            <p class="mt-1 text-default-500">Messages from people you follow</p>
+                                        </div>
+
+                                        <div class="shrink-0">
+                                            <div class="relative inline-block w-10">
+                                                <input type="checkbox" name="chatNotification" id="chatNotification" class="form-switch" checked="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between gap-2">
+                                        <div>
+                                            <h4 class="text-[15px]">Show purchase notifications</h4>
+                                            <p class="mt-1 text-default-500">Get real-time purchase alerts to protect yourself from fraudulent charges.</p>
+                                        </div>
+
+                                        <div class="shrink-0">
+                                            <div class="relative inline-block w-10">
+                                                <input type="checkbox" name="showPurchase" id="showPurchase" class="form-switch" checked="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h6 class="inline-block mt-6 mb-4 underline text-[15px]">Delete This Account:</h6>
+                                <p class="mt-1 text-default-500">Go to the Data & Privacy section of your profile Account. Scroll to "Your data & privacy options." Delete your Profile Account. Follow the instructions to delete your account :</p>
+                                <form action="">
+                                    <div class="max-w-xs mt-4">
+                                        <div>
+                                            <input type="password" class="form-input" id="oldpasswordInput" placeholder="Enter password">
+                                        </div>
+
+                                        <div class="flex mt-4 gap-2 flex-wrap">
+                                            <button type="button" class="btn bg-danger/10 text-danger hover:bg-danger hover:text-white">Close & delete this Account</button>
+                                            <button type="button" class="btn bg-default-100">Cancel</button>
+                                        </div>
+                                    </div><!--end col-->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+
+    </div>
+
+    {{> customizer }}
+
+    <script src="assets/js/pages/form-choices.js" type="module"></script>
+
+    <script src="assets/js/pages/pages-account-settings.init.js" type="module"></script>
+
+</body>
+
+</html>

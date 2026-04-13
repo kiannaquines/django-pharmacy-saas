@@ -1,0 +1,16 @@
+{% extends 'layouts/vertical.html.twig' %}
+
+{% set title = 'Dark Mode' %}
+
+{% block html_attributes %}data-theme="dark"{% endblock %}
+
+{% block styles %}{% endblock %}
+
+{% block content %}
+
+	{{ include('partials/page-title.html.twig', {'subtitle': 'Layouts'}, {'title': 'Dark Mode'}) }}
+
+	<div class="card h-40"></div>
+{% endblock %}
+
+{% block scripts %}{% endblock %}

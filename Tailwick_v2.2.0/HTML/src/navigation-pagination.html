@@ -1,0 +1,344 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Pagination" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Pagination" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic Pagination</h6>
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                        <button type="button" class="btn btn-icon" aria-label="Previous">
+                                            <i data-lucide="chevron-left" class="size-4 hover:text-primary"></i>
+                                        </button>
+                                        <div class="flex items-center gap-2">
+                                            <button type="button" class="btn btn-icon text-primary" aria-current="page">1</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary">2</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary">3</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary">4</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary">5</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary">6</button>
+                                        </div>
+                                        <button type="button" class="btn btn-icon hover:text-primary" aria-label="Next">
+                                            <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>
+                                        </button>
+                                    </nav>
+
+                                    <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                        <button type="button" class="btn btn-icon" aria-label="Previous">
+                                            <i data-lucide="move-left" class="size-4 hover:text-primary"></i>
+                                        </button>
+                                        <div class="flex items-center gap-2">
+                                            <button type="button" class="btn btn-icon hover:text-primary">1</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary">2</button>
+                                            <button type="button" class="btn btn-icon text-primary" aria-current="page">3</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary">4</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary">5</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary">6</button>
+                                        </div>
+                                        <button type="button" class="btn btn-icon hover:text-primary" aria-label="Next">
+                                            <i data-lucide="move-right" class="size-4 hover:text-primary"></i>
+                                        </button>
+                                    </nav>
+
+                                    <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                        <button type="button" class="btn btn-icon" aria-label="Previous">
+                                            <i data-lucide="chevron-left" class="size-4 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10"></i>
+                                        </button>
+                                        <div class="flex items-center gap-2">
+                                            <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">1</button>
+                                            <button type="button" class="btn btn-icon text-primary bg-primary/10" aria-current="page">2</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">3</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">4</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">5</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">6</button>
+                                        </div>
+                                        <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                            <i data-lucide="chevron-right" class="size-4 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10"></i>
+                                        </button>
+                                    </nav>
+
+                                    <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                        <button type="button" class="btn btn-icon rounded-full" aria-label="Previous">
+                                            <i data-lucide="chevron-left" class="size-4 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10"></i>
+                                        </button>
+                                        <div class="flex items-center gap-2">
+                                            <button type="button" class="btn btn-icon rounded-full hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">1</button>
+                                            <button type="button" class="btn btn-icon rounded-full text-primary bg-primary/10" aria-current="page">2</button>
+                                            <button type="button" class="btn btn-icon rounded-full hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">3</button>
+                                            <button type="button" class="btn btn-icon rounded-full hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">4</button>
+                                            <button type="button" class="btn btn-icon rounded-full hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">5</button>
+                                            <button type="button" class="btn btn-icon rounded-full hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">6</button>
+                                        </div>
+                                        <button type="button" class="btn btn-icon rounded-full hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                            <i data-lucide="chevron-right" class="size-4 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10"></i>
+                                        </button>
+                                    </nav>
+
+                                    <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                        <button type="button" class="btn hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10 rounded-full" aria-label="Previous">
+                                            <i data-lucide="chevron-left" class="size-4 hover:text-primary"></i>Prev
+                                        </button>
+                                        <div class="flex items-center gap-2">
+                                            <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">1</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10 rounded-full">2</button>
+                                            <button type="button" class="btn btn-icon text-white bg-primary rounded-full" aria-current="page">3</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10 rounded-full">4</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10 rounded-full">5</button>
+                                            <button type="button" class="btn btn-icon hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10 rounded-full">6</button>
+                                        </div>
+                                        <button type="button" class="btn hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10 rounded-full" aria-label="Next">
+                                            <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>Next
+                                        </button>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Bordered Pagination</h6>
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                        <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10" aria-label="Previous">
+                                            <i data-lucide="chevrons-left" class="size-4"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Previous">
+                                            <i data-lucide="chevron-left" class="size-4"></i>
+                                        </button>
+                                        <div class="flex items-center gap-2">
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">1</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">2</button>
+                                            <button type="button" class="btn btn-icon size-8 bg-primary text-white" aria-current="page">3</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">4</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">5</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">6</button>
+                                        </div>
+                                        <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                            <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                            <i data-lucide="chevrons-right" class="size-4 hover:text-primary"></i>
+                                        </button>
+                                    </nav>
+
+                                    <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                        <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Previous">
+                                            <i data-lucide="chevron-left" class="size-4"></i>
+                                        </button>
+                                        <div class="flex items-center gap-2">
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">1</button>
+                                            <button type="button" class="btn btn-icon size-8 bg-primary/10 text-primary" aria-current="page">2</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">3</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">4</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">5</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">6</button>
+                                        </div>
+                                        <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                            <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>
+                                        </button>
+                                    </nav>
+
+                                    <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                        <button type="button" class="btn border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Previous">
+                                            <i data-lucide="chevron-left" class="size-4"></i>Prev
+                                        </button>
+                                        <div class="flex items-center gap-2">
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">1</button>
+                                            <button type="button" class="btn btn-icon size-8 bg-primary/10 text-primary" aria-current="page">2</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">3</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">4</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">5</button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">6</button>
+                                        </div>
+                                        <button type="button" class="btn border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                            <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>Next
+                                        </button>
+                                    </nav>
+
+                                    <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                        <button type="button" class="btn btn-icon rounded-full size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Previous">
+                                            <i data-lucide="chevron-left" class="size-4"></i>
+                                        </button>
+                                        <div class="flex items-center gap-2">
+                                            <button type="button" class="btn btn-icon rounded-full size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">1</button>
+                                            <button type="button" class="btn btn-icon rounded-full size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">2</button>
+                                            <button type="button" class="btn btn-icon rounded-full size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">3</button>
+                                            <button type="button" class="btn btn-icon rounded-full size-8 bg-primary text-white" aria-current="page">4</button>
+                                            <button type="button" class="btn btn-icon rounded-full size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">5</button>
+                                            <button type="button" class="btn btn-icon rounded-full size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">6</button>
+                                        </div>
+                                        <button type="button" class="btn btn-icon rounded-full size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                            <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>
+                                        </button>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic Pagination</h6>
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                                    <div class="flex flex-col gap-3">
+                                        <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                            <button type="button" class="btn btn-icon size-6" aria-label="Previous">
+                                                <i data-lucide="chevron-left" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                            <div class="flex items-center gap-2">
+                                                <button type="button" class="btn btn-icon size-6 hover:text-primary">1</button>
+                                                <button type="button" class="btn btn-icon size-6 hover:text-primary">2</button>
+                                                <button type="button" class="btn btn-icon size-6 hover:text-primary">3</button>
+                                                <button type="button" class="btn btn-icon size-6 hover:text-primary">4</button>
+                                                <button type="button" class="btn btn-icon size-6 text-primary" aria-current="page">5</button>
+                                                <button type="button" class="btn btn-icon size-6 hover:text-primary">6</button>
+                                            </div>
+                                            <button type="button" class="btn btn-icon size-6 hover:text-primary" aria-label="Next">
+                                                <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                        </nav>
+
+                                        <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                            <button type="button" class="btn btn-icon size-8" aria-label="Previous">
+                                                <i data-lucide="chevron-left" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                            <div class="flex items-center gap-2">
+                                                <button type="button" class="btn btn-icon size-8 hover:text-primary">1</button>
+                                                <button type="button" class="btn btn-icon size-8 text-primary" aria-current="page">2</button>
+                                                <button type="button" class="btn btn-icon size-8 hover:text-primary">3</button>
+                                                <button type="button" class="btn btn-icon size-8 hover:text-primary">4</button>
+                                                <button type="button" class="btn btn-icon size-8 hover:text-primary">5</button>
+                                                <button type="button" class="btn btn-icon size-8 hover:text-primary">6</button>
+                                            </div>
+                                            <button type="button" class="btn btn-icon size-8 hover:text-primary" aria-label="Next">
+                                                <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                        </nav>
+
+                                        <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                            <button type="button" class="btn btn-icon size-10 text-lg" aria-label="Previous">
+                                                <i data-lucide="chevron-left" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                            <div class="flex items-center gap-2">
+                                                <button type="button" class="btn btn-icon size-10 text-lg hover:text-primary">1</button>
+                                                <button type="button" class="btn btn-icon size-10 text-lg hover:text-primary">2</button>
+                                                <button type="button" class="btn btn-icon size-10 text-lg text-primary" aria-current="page">3</button>
+                                                <button type="button" class="btn btn-icon size-10 text-lg hover:text-primary">4</button>
+                                                <button type="button" class="btn btn-icon size-10 text-lg hover:text-primary">5</button>
+                                                <button type="button" class="btn btn-icon size-10 text-lg hover:text-primary">6</button>
+                                            </div>
+                                            <button type="button" class="btn btn-icon size-10 text-lg hover:text-primary" aria-label="Next">
+                                                <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                        </nav>
+                                    </div>
+
+                                    <div class="flex flex-col gap-3">
+                                        <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                            <button type="button" class="btn btn-icon size-6 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10" aria-label="Previous">
+                                                <i data-lucide="chevrons-left" class="size-4"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-icon size-6 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Previous">
+                                                <i data-lucide="chevron-left" class="size-4"></i>
+                                            </button>
+                                            <div class="flex items-center gap-2">
+                                                <button type="button" class="btn btn-icon size-6 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">1</button>
+                                                <button type="button" class="btn btn-icon size-6 bg-primary text-white" aria-current="page">2</button>
+                                                <button type="button" class="btn btn-icon size-6 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">3</button>
+                                                <button type="button" class="btn btn-icon size-6 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">4</button>
+                                                <button type="button" class="btn btn-icon size-6 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">5</button>
+                                                <button type="button" class="btn btn-icon size-6 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">6</button>
+                                            </div>
+                                            <button type="button" class="btn btn-icon size-6 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                                <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-icon size-6 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                                <i data-lucide="chevrons-right" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                        </nav>
+
+                                        <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10" aria-label="Previous">
+                                                <i data-lucide="chevrons-left" class="size-4"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Previous">
+                                                <i data-lucide="chevron-left" class="size-4"></i>
+                                            </button>
+                                            <div class="flex items-center gap-2">
+                                                <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">1</button>
+                                                <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">2</button>
+                                                <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">3</button>
+                                                <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">4</button>
+                                                <button type="button" class="btn btn-icon size-8 bg-primary text-white" aria-current="page">5</button>
+                                                <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">6</button>
+                                            </div>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                                <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-icon size-8 border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                                <i data-lucide="chevrons-right" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                        </nav>
+
+                                        <nav class="flex items-center gap-2 flex-wrap" aria-label="Pagination">
+                                            <button type="button" class="btn btn-icon size-10 text-lg border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10" aria-label="Previous">
+                                                <i data-lucide="chevrons-left" class="size-4"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-icon size-10 text-lg border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Previous">
+                                                <i data-lucide="chevron-left" class="size-4"></i>
+                                            </button>
+                                            <div class="flex items-center gap-2">
+                                                <button type="button" class="btn btn-icon size-10 text-lg border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">1</button>
+                                                <button type="button" class="btn btn-icon size-10 text-lg bg-primary text-white" aria-current="page">2</button>
+                                                <button type="button" class="btn btn-icon size-10 text-lg border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">3</button>
+                                                <button type="button" class="btn btn-icon size-10 text-lg border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">4</button>
+                                                <button type="button" class="btn btn-icon size-10 text-lg border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">5</button>
+                                                <button type="button" class="btn btn-icon size-10 text-lg border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10">6</button>
+                                            </div>
+                                            <button type="button" class="btn btn-icon size-10 text-lg border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                                <i data-lucide="chevron-right" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-icon size-10 text-lg border border-default-200 dark:border-white/14 hover:text-primary hover:bg-primary/10 focus:text-primary focus:bg-primary/10" aria-label="Next">
+                                                <i data-lucide="chevrons-right" class="size-4 hover:text-primary"></i>
+                                            </button>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

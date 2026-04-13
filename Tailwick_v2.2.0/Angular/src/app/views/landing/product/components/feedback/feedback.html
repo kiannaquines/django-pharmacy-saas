@@ -1,0 +1,38 @@
+<section id="Feedback" class="relative lg:pb-28 md:pb-18 pb-12">
+    <div class="container">
+        <div class="mx-auto md:mb-8 text-center lg:w-3xl">
+            <h1 class="leading-normal capitalize md:text-4xl text-3xl font-semibold text-default-800">What Our Customer Says</h1>
+        </div>
+
+        <swiper-container [spaceBetween]="30" [loop]="true" [autoplay]="{ delay: 2500, disableOnInteraction: false }" [breakpoints]="{
+    '1440': { 'slidesPerView': 3, 'spaceBetween': 20},
+    '768': { 'slidesPerView': 2, 'spaceBetween': 40},
+    '375': { 'slidesPerView': 1, 'spaceBetween': 50}
+  }">
+
+
+            @for (testimonial of testimonials; track $index) {
+            <swiper-slide class="mb-9">
+                <div class="p-5 text-center aos-init aos-animate" data-aos="fade-up" data-aos-easing="linear">
+                    <div class="mx-auto rounded-full size-20 {{ testimonial.bgClass }}">
+                        <img [src]="testimonial.img" alt="" class="rounded-full size-20" />
+                    </div>
+                    <p class="mt-6 text-default-600 text-base">{{ testimonial.message }}</p>
+                    <h6 class="mt-4 mb-2 text-base text-default-900 font-semibold">{{ testimonial.name }}</h6>
+                    <div class="text-yellow-500 flex items-center justify-center gap-1">
+                        @for (star of [].constructor(testimonial.rating); track $index) {
+                        <div class="fill-yellow-500 size-3.5">
+                            <ng-icon name="tablerStarFill"></ng-icon>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </swiper-slide>
+            }
+
+
+
+        </swiper-container>
+
+    </div>
+</section>

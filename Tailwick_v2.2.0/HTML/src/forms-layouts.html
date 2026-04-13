@@ -1,0 +1,139 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Forms Layouts" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Forms Layouts" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Browser Default</h6>
+
+                                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-5">
+                                    <div class="mb-4">
+                                        <label for="firstNameInput2" class="inline-block mb-2 font-medium">First Name <span class="text-danger">*</span></label>
+                                        <input type="text" id="firstNameInput2" class="form-input" placeholder="Enter First Name" value="Sophia" required="">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="lastNameInput2" class="inline-block mb-2 font-medium">Last Name <span class="text-danger">*</span></label>
+                                        <input type="text" id="lastNameInput2" class="form-input" placeholder="Enter Last Name" value="Bethany" required="">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="UsernameInput" class="inline-block mb-2 font-medium">Username <span class="text-danger">*</span></label>
+                                        <input type="text" id="UsernameInput" class="form-input" placeholder="Username" required="">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="cityInput" class="inline-block mb-2 font-medium">City <span class="text-danger">*</span></label>
+                                        <input type="text" id="cityInput" class="form-input" placeholder="Enter city" required="">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="stateInput" class="inline-block mb-2 font-medium">State <span class="text-danger">*</span></label>
+                                        <select class="form-input" id="stateInput" required="">
+                                            <option selected="" disabled="" value="">Choose...</option>
+                                            <option>Name</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="zipInput" class="inline-block mb-2 font-medium">Zip <span class="text-danger">*</span></label>
+                                        <input type="number" id="zipInput" class="form-input" placeholder="Enter zip code" required="">
+                                    </div>
+
+                                    <div class="lg:col-span-3 col-span-1">
+                                        <div class="flex justify-end gap-2">
+                                            <button type="button" class="btn text-danger btn-sm">
+                                                <i data-lucide="x" class="size-4"></i>
+                                                <span class="align-middle">Cancel</span></button>
+                                            <button type="submit" class="btn bg-primary text-white btn-sm">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Sign Up Form</h6>
+
+                                <div class="mx-auto md:max-w-xl w-full">
+                                    <form action="#!" id="signUp">
+                                        <div class="grid grid-cols-1 gap-x-5 lg:grid-cols-2">
+                                            <div class="mb-4">
+                                                <label for="firstNameInput" class="inline-block mb-2 font-medium">First Name <span class="text-danger">*</span></label>
+                                                <input type="text" id="firstNameInput" class="form-input" placeholder="Enter firstname">
+                                                <p id="firstNameError" class="mt-1 text-sm text-danger"></p>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <label for="lastNameInput" class="inline-block mb-2 font-medium">Last Name <span class="text-danger">*</span></label>
+                                                <input type="text" id="lastNameInput" class="form-input" placeholder="Enter lastname">
+                                                <p id="lastNameError" class="mt-1 text-sm text-danger"></p>
+                                            </div>
+                                        </div><!--end grid-->
+
+                                        <div class="mb-4">
+                                            <label for="emailInput" class="inline-block mb-2 font-medium">Email Address <span class="text-danger">*</span></label>
+                                            <input type="email" id="emailInput" class="form-input" placeholder="example@gmail.com">
+                                            <p id="emailError" class="mt-1 text-sm text-danger"></p>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <label for="phoneNumberInput" class="inline-block mb-2 font-medium">Phone Number <span class="text-danger">*</span></label>
+                                            <input type="number" id="phoneNumberInput" class="form-input" placeholder="+(254) 0123 456 789">
+                                            <p id="phoneNumberError" class="mt-1 text-sm text-danger"></p>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <input id="termsCondition" class="form-checkbox" type="checkbox">
+                                            <label for="termsCondition" class="text-sm align-top text-default-500">By registering you agree to the Tailwick <a href="#!" class="underline text-primary">Terms of Use</a></label>
+                                            <p id="termsError" class="mt-1 text-sm text-danger"></p>
+                                        </div>
+
+                                        <div class="flex justify-end gap-2 mt-5">
+                                            <button type="button" class="btn btn-sm text-danger">
+                                                <i data-lucide="x" class="size-4"></i>
+                                                <span class="align-middle">Cancel</span></button>
+                                            <button type="submit" class="btn btn-sm text-white bg-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

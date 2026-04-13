@@ -1,0 +1,166 @@
+/* _gridjs.scss */
+
+.gridjs-container {
+    padding: 0;
+    display: block;
+    @apply text-slate-500;
+}
+
+.gridjs-wrapper {
+    box-shadow: none;
+    border-radius: 0px;
+    @apply overflow-clip border border-collapse border-default-200;
+    @apply rounded-t-md;
+}
+
+.gridjs-table {
+    width: 100%;
+}
+
+.gridjs-tbody,
+td.gridjs-td {
+    @apply bg-transparent;
+}
+
+th.gridjs-th,
+td.gridjs-td {
+    @apply border p-4 border-default-200;
+}
+
+th {
+    &.gridjs-th {
+        @apply bg-transparent;
+        border-top: 0;
+
+    }
+
+    &.gridjs-th-sort {
+
+        &:focus,
+        &:hover {
+            @apply bg-transparent;
+        }
+    }
+}
+
+.gridjs-head {
+    padding-top: 0;
+}
+
+.gridjs-footer {
+    @apply shadow-none border border-t-0 bg-transparent border-default-200;
+}
+
+.gridjs-summary {
+    @apply text-default-400;
+    margin-top: 8px !important;
+}
+
+.gridjs-pagination {
+
+    .gridjs-pages button {
+        @apply text-default-600 px-3 py-2 bg-transparent border border-default-200;
+        outline: none;
+        user-select: none;
+
+        &:first-child {
+            @apply rounded-none rounded-s-md border border-default-200;
+        }
+
+        &:last-child {
+            @apply rounded-none rounded-e-md border border-default-200;
+        }
+
+        &:disabled,
+        &:hover:disabled,
+        &[disabled] {
+            @apply text-default-600 bg-transparent;
+        }
+
+        &:hover {
+            @apply text-primary bg-transparent;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &.gridjs-currentPage {
+            @apply bg-primary text-white border-primary font-medium;
+        }
+    }
+
+}
+
+.gridjs-search {
+    position: relative;
+    float: left;
+
+    &::before {
+        content: '';
+        @apply absolute top-1/2 start-5 text-lg -translate-1/2 iconify tabler--search transition-all text-default-400;
+    }
+}
+
+input.gridjs-input {
+    @apply form-input pe-3 ps-9;
+    @apply bg-card h-9.25 text-sm py-0 rounded outline-0 block w-full border border-default-200 dark:border-white/14 transition-all text-default-800 dark:placeholder:text-default-600 placeholder:text-default-400;
+    @apply focus-visible:ring-default-300/30 focus-visible:border-default-300 focus-visible:outline-none focus-visible:ring-[3px];
+    @apply disabled:cursor-not-allowed disabled:opacity-70;
+    @apply [&[readonly]]:bg-default-100/80 [&[readonly]]:cursor-not-allowed [&[readonly]]:text-default-600/80;
+    @apply file:h-full [&[type=file]]:py-0;
+    @apply file:border-solid file:border-default-200 file:bg-transparent file:font-medium file:not-italic file:text-default-800 file:p-0 file:border-0 file:border-e;
+    @apply aria-invalid:border-danger/60 aria-invalid:ring-danger/10;
+    transition-property: color, box-shadow;
+}
+
+th.gridjs-th {
+    .gridjs-th-content {
+        display: inline-block;
+        vertical-align: middle;
+        @apply font-semibold;
+    }
+}
+
+button.gridjs-sort {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 20px;
+}
+
+th.gridjs-th-sort .gridjs-th-content {
+    width: calc(100% - 10px);
+}
+
+button {
+
+    &.gridjs-sort-asc,
+    &.gridjs-sort-desc {
+        background-size: 7px;
+    }
+}
+
+
+.gridjs-td {
+    .gridjs-checkbox {
+        vertical-align: top;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        appearance: none;
+    }
+}
+
+.gridjs-border-none {
+
+    td.gridjs-td,
+    th.gridjs-th {
+        border-inline-end-width: 0;
+        border-inline-start-width: 0;
+    }
+}
+
+.gridjs-loading-bar {
+    @apply bg-transparent;
+}

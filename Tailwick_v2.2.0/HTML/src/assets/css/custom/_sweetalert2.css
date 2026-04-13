@@ -1,0 +1,71 @@
+/* ss */
+
+.swal2-container {
+    .swal2-title {
+        @apply p-6 pb-0 text-xl font-semibold;
+    }
+}
+
+.swal2-popup {
+    @apply pb-6 rounded-md bg-card text-body-color;
+
+}
+
+.swal2-footer {
+    @apply text-body-color border-t border-slate-200;
+}
+
+.swal2-html-container {
+    @apply text-lg text-body-color;
+}
+
+.swal2-icon.swal2-question {
+    @apply border-sky-500 text-sky-500;
+}
+
+
+
+.swal2-icon.swal2-warning {
+    @apply border-yellow-500 text-yellow-500;
+}
+
+.swal2-styled:focus {
+    @apply shadow-none;
+}
+
+.swal2-loader {
+    @apply border-y-primary border-x-transparent;
+}
+
+.swal2-timer-progress-bar {
+    @apply border-green-200;
+}
+
+.swal2-progress-steps {
+    .swal2-progress-step {
+        @apply bg-primary;
+    }
+
+    .swal2-progress-step.swal2-active-progress-step {
+        @apply bg-primary;
+    }
+
+    .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step,
+    .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line {
+        @apply bg-primary/50;
+    }
+
+    .swal2-progress-step-line {
+        @apply bg-primary;
+    }
+}
+
+
+.swal2-close {
+    @apply border border-slate-200 font-light text-3xl transition ease-in-out duration-300 hover:text-zinc-200 focus:shadow-none;
+}
+
+.swal2-validation-message {
+    @apply bg-transparent;
+
+}

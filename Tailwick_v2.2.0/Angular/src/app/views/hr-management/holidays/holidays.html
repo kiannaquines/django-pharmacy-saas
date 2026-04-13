@@ -1,0 +1,65 @@
+<main>
+ 
+    <app-page-title title="Holidays" subtitle="Hr" />
+
+
+    <div class="card">
+        <div class="card-header">
+            <h6 class="text-default-800 text-base font-semibold">Holidays 2024</h6>
+
+            <button class="btn btn-sm bg-primary text-white">
+                <div class="size-4  me-1"><ng-icon name="lucidePlus"></ng-icon></div>Add Holiday
+            </button>
+        </div>
+
+        <div class="flex flex-col">
+            <div class="overflow-x-auto">
+                <div class="min-w-full inline-block align-middle">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full divide-y divide-default-200">
+                            <thead class="font-normal whitespace-nowrap">
+                                <tr class="text-sm  text-default-800 divide-x divide-default-200">
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">#</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Day</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Date</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Holiday Name</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Type</th>
+                                    <th scope="col" class="px-3.5 py-3 font-medium text-start">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="divide-y divide-default-200">
+                                @for (holiday of holidays; track holiday.id) {
+                                <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+                                    <td class="px-3.5 py-3 text-sm">{{ holiday.id }}</td>
+                                    <td class="px-3.5 py-3 text-sm">{{ holiday.day }}</td>
+                                    <td class="px-3.5 py-3 text-sm">{{ holiday.date }}</td>
+                                    <td class="px-3.5 py-3 text-sm">{{ holiday.name }}</td>
+                                    <td class="px-3.5 py-3 text-sm">{{ holiday.type }}</td>
+                                    <td class="px-3.5 py-3">
+                                        <div class="flex items-center gap-2">
+                                            <a [routerLink]="[]" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" aria-haspopup="dialog" aria-expanded="false" aria-controls="holidaysLeaveDeleteModal2" data-hs-overlay="#holidaysLeaveDeleteModal2">
+                                                <div class="size-4"><ng-icon name="lucidePencil"></ng-icon></div>
+                                            </a>
+
+                                            <a [routerLink]="[]" class="flex size-8 bg-default-200 rounded-md items-center justify-center hover:bg-primary/10 hover:text-primary transition-all text-default-600" aria-haspopup="dialog" aria-expanded="false" aria-controls="holidaysLeaveDeleteModal" data-hs-overlay="#holidaysLeaveDeleteModal">
+                                                <div class="size-4"><ng-icon name="lucideTrash2"></ng-icon></div>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <p class="text-default-500 text-sm">Showing <b>07</b> of <b>19</b> Results</p>
+                <app-pagination />
+            </div>
+        </div>
+    </div>
+</main>
+<app-holiday-delete />
+<app-holiday-delete2 />

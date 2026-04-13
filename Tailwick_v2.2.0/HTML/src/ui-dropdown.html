@@ -1,0 +1,367 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Dropdown" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Dropdown" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic Dropdown</h6>
+
+                                <div class="flex gap-2 flex-wrap">
+                                    <div class="hs-dropdown relative inline-flex">
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Dropdown Button
+                                            <i data-lucide="chevron-down" class="size-4"></i>
+                                        </button>
+
+                                        <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 py-2 px-0 bg-card shadow-md rounded-md" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                            <div class="space-y-0.5">
+                                                <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                    Action
+                                                </a>
+
+                                                <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                    Another action
+                                                </a>
+
+                                                <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                    Something else here
+                                                </a>
+
+                                                <div class="mt-2 pt-2 border-t border-default-200">
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Your Link
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="hs-dropdown relative inline-flex">
+                                        <a href="#!" class="btn text-primary" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Link Dropdown
+                                            <i data-lucide="chevron-down" class="size-4"></i>
+                                        </a>
+
+                                        <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 py-2 px-0 bg-card shadow-md rounded-md" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                            <div class="space-y-0.5">
+                                                <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                    Action
+                                                </a>
+
+                                                <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                    Another action
+                                                </a>
+
+                                                <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                    Something else here
+                                                </a>
+
+                                                <div class="mt-2 pt-2 border-t border-default-200">
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Your Link
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Split Button Dropdowns</h6>
+
+                                <div class="flex gap-2 flex-wrap">
+                                    <div class="inline-flex">
+                                        <button type="button" class="relative btn rounded-e-none bg-primary/85 rounded-s text-white">
+                                            Dropdown Split
+                                        </button>
+
+                                        <div class="hs-dropdown relative [--placement:bottom-left] inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle relative py-2 px-3 rounded-e flex justify-center items-center bg-primary text-white">
+                                                <i data-lucide="chevron-down" class="size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 py-2 px-0 bg-card shadow-md rounded-md" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                                <div class="space-y-0.5">
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Another action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Something else here
+                                                    </a>
+
+                                                    <div class="mt-2 pt-2 border-t border-default-200">
+                                                        <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                            Your Link
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="inline-flex">
+                                        <div class="hs-dropdown relative [--placement:bottom-left] inline-flex">
+                                            <button type="button" class="hs-dropdown-toggle relative py-2 px-3 rounded-s flex justify-center items-center bg-primary text-white">
+                                                <i data-lucide="chevron-down" class="size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 py-2 px-0 bg-card shadow-md rounded-md" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                                <div class="space-y-0.5">
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Another action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Something else here
+                                                    </a>
+
+                                                    <div class="mt-2 pt-2 border-t border-default-200">
+                                                        <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                            Your Link
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="relative btn bg-primary/85 rounded-s-none text-white">
+                                            Dropdown Split
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-2 col-span-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Color Dropdown</h6>
+
+                                    <div class="flex gap-2 flex-wrap">
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="btn bg-primary text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Primary Dropdown
+                                                <i data-lucide="chevron-down" class="size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 py-2 px-0 bg-card shadow-md rounded-md text-primary" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                                <div class="space-y-0.5">
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Another action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Something else here
+                                                    </a>
+
+                                                    <div class="mt-2 pt-2 border-t border-default-200">
+                                                        <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                            Your Link
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="btn bg-success text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Success Dropdown
+                                                <i data-lucide="chevron-down" class="size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 py-2 px-0 bg-card shadow-md rounded-md text-success" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                                <div class="space-y-0.5">
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Another action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Something else here
+                                                    </a>
+
+                                                    <div class="mt-2 pt-2 border-t border-default-200">
+                                                        <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                            Your Link
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="btn bg-warning text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Warning Dropdown
+                                                <i data-lucide="chevron-down" class="size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 py-2 px-0 bg-card shadow-md rounded-md text-warning" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                                <div class="space-y-0.5">
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Another action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Something else here
+                                                    </a>
+
+                                                    <div class="mt-2 pt-2 border-t border-default-200">
+                                                        <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                            Your Link
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button type="button" class="btn bg-danger text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Danger Dropdown
+                                                <i data-lucide="chevron-down" class="size-4"></i>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 py-2 px-0 bg-card shadow-md rounded-md text-danger" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                                <div class="space-y-0.5">
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Another action
+                                                    </a>
+
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Something else here
+                                                    </a>
+
+                                                    <div class="mt-2 pt-2 border-t border-default-200">
+                                                        <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                            Your Link
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Dropdown Content</h6>
+
+                                <div class="flex gap-2 flex-wrap">
+                                    <div class="hs-dropdown relative inline-flex">
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Heading Content
+                                            <i data-lucide="chevron-down" class="size-4"></i>
+                                        </button>
+
+                                        <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-40 py-2 px-0 bg-card shadow-md rounded-md" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                            <div class="space-y-0.5">
+                                                <p class="px-2 py-1 text-[13px] truncate text-default-500">
+                                                    Welcome to Tailwick
+                                                </p>
+
+                                                <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                    Action
+                                                </a>
+
+                                                <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                    Another action
+                                                </a>
+
+                                                <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                    Something else here
+                                                </a>
+
+                                                <div class="mt-2 pt-2 border-t border-default-200">
+                                                    <a class="py-1.5 px-4 block font-medium hover:bg-default-100 dark:hover:bg-default-200" href="#">
+                                                        Your Link
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="hs-dropdown relative inline-flex">
+                                        <button type="button" class="btn bg-primary text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Form Content
+                                            <i data-lucide="chevron-down" class="size-4"></i>
+                                        </button>
+
+                                        <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 p-5 bg-card shadow-md rounded-md" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                                            <div class="space-y-0.5">
+                                                <div class="mb-3">
+                                                    <label for="inputText" class="inline-block mb-2 text-base font-medium">Email <span class="text-danger">*</span></label>
+                                                    <input type="email" id="inputText" class="form-input" placeholder="Enter email" required="">
+                                                </div>
+
+                                                <div class="mb-4">
+                                                    <label for="inputText" class="inline-block mb-2 text-base font-medium">Password <span class="text-danger">*</span></label>
+                                                    <input type="password" id="inputText" class="form-input" placeholder="Password" required="">
+                                                </div>
+
+                                                <div class="text-end">
+                                                    <button type="submit" class="btn btn-sm bg-success text-white">Sign In
+                                                        <i data-lucide="move-right" class="size-3"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

@@ -1,0 +1,619 @@
+<!-- Start Sidebar -->
+<aside class="app-menu" id="app-menu">
+    <!-- Sidenav Menu Brand Logo -->
+    <a class="logo-box sticky top-0 flex min-h-topbar-height items-center justify-start px-6 backdrop-blur-xs"
+       href=@Url.Action("Index", "Dashboards")>
+        <!-- Light Brand Logo -->
+        <div class="logo-light">
+            <img alt="Light logo" class="logo-lg h-6" src="/images/logo-light.png"/>
+            <img alt="Small logo" class="logo-sm h-6" src="/images/logo-sm.png"/>
+        </div>
+        <!-- Dark Brand Logo -->
+        <div class="logo-dark">
+            <img alt="Dark logo" class="logo-lg h-6" src="/images/logo-dark.png"/>
+            <img alt="Small logo" class="logo-sm h-6" src="/images/logo-sm.png"/>
+        </div>
+    </a>
+    <!-- Sidenav Menu Toggle Button -->
+    <div class="absolute top-0 end-5 flex h-topbar items-center justify">
+        <button class="" id="button-hover-toggle">
+            <i class="iconify tabler--circle size-5"></i>
+        </button>
+    </div>
+    <!-- Sidenav Menu Item Link -->
+    <div class="relative min-h-0 flex-grow">
+        <div class="size-full" data-simplebar="">
+            <ul class="side-nav p-3 hs-accordion-group">
+                <li class="menu-title">
+                    <span>Overview</span>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="monitor-dot"></i></span>
+                        <span class="menu-text"> Dashboards </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Analytics", "Dashboards")>
+                                <span class="menu-text"> Analytics </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Index", "Dashboards")>
+                                <span class="menu-text"> Ecommerce </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Email", "Dashboards")>
+                                <span class="menu-text"> Email </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Hr", "Dashboards")>
+                                <span class="menu-text"> HR </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="picture-in-picture-2"></i> </span>
+                        <span class="menu-text"> Landing Page </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Index", "Landing") target="_blank">
+                                <span class="menu-text"> One Page </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Product", "Landing") target="_blank">
+                                <span class="menu-text"> Product </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-title">
+                    <span>Apps</span>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href=@Url.Action("Chat", "Apps")>
+                        <span class="menu-icon"><i data-lucide="messages-square"></i></span>
+                        <div class="menu-text">Chat</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href=@Url.Action("Calendar", "Apps")>
+                        <span class="menu-icon"><i data-lucide="calendar-1"></i></span>
+                        <div class="menu-text">Calendar</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href=@Url.Action("Mailbox", "Apps")>
+                        <span class="menu-icon"><i data-lucide="mail"></i></span>
+                        <div class="menu-text">Email</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href=@Url.Action("Notes", "Apps")>
+                        <span class="menu-icon"><i data-lucide="clipboard-list"></i></span>
+                        <div class="menu-text">Notes</div>
+                    </a>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="shopping-bag"></i></span>
+                        <span class="menu-text"> Ecommerce </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ProductList", "Ecommerce")>
+                                <span class="menu-text">Products</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ProductGrid", "Ecommerce")>
+                                <span class="menu-text">Products Grid</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link"
+                               href=@Url.Action("ProductOverview", "Ecommerce")>
+                                <span class="menu-text">Product Details</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Cart", "Ecommerce")>
+                                <span class="menu-text">Shopping Cart</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Checkout", "Ecommerce")>
+                                <span class="menu-text">Checkout</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ProductCreate", "Ecommerce")>
+                                <span class="menu-text">Add Products</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Orders", "Ecommerce")>
+                                <span class="menu-text">Orders</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("OrderOverview", "Ecommerce")>
+                                <span class="menu-text">Order Details</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Sellers", "Ecommerce")>
+                                <span class="menu-text">Sellers</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="circuit-board"></i></span>
+                        <span class="menu-text"> HR Management </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hs-accordion-group hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Employee", "Hr")>
+                                <span class="menu-text">Employee List</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Holidays", "Hr")>
+                                <span class="menu-text">Holidays</span>
+                            </a>
+                        </li>
+                        <li class="menu-item hs-accordion">
+                            <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                                <span class="menu-text"> Leave Manage </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="sub-menu hs-accordion-content hidden">
+                                <li class="menu-item">
+                                    <a class="menu-link" href=@Url.Action("LeaveEmployee", "Hr")>
+                                        <span class="menu-text">By Employee</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link"
+                                       href=@Url.Action("CreateLeaveEmployee", "Hr")>
+                                        <span class="menu-text">Add Leave(Employee)</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href=@Url.Action("Leave", "Hr")>
+                                        <span class="menu-text">By HR</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href=@Url.Action("CreateLeave", "Hr")>
+                                        <span class="menu-text">Add Leave(HR)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item hs-accordion">
+                            <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                                <span class="menu-text"> Attendance </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="sub-menu hs-accordion-content hidden">
+                                <li class="menu-item">
+                                    <a class="menu-link" href=@Url.Action("Attendance", "Hr")>
+                                        <span class="menu-text">Attendance(HR)</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link"
+                                       href=@Url.Action("AttendanceMain", "Hr")>
+                                        <span class="menu-text">Main Attendance</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Department", "Hr")>
+                                <span class="menu-text">Department</span>
+                            </a>
+                        </li>
+                        <li class="menu-item hs-accordion">
+                            <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                                <span class="menu-text"> Sales </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="sub-menu hs-accordion-content hidden">
+                                <li class="menu-item">
+                                    <a class="menu-link"
+                                       href=@Url.Action("SalesEstimates", "Hr")>
+                                        <span class="menu-text">Estimates</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href=@Url.Action("SalesPayments", "Hr")>
+                                        <span class="menu-text">Payments</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href=@Url.Action("SalesExpenses", "Hr")>
+                                        <span class="menu-text">Expenses</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item hs-accordion">
+                            <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                                <span class="menu-text"> Payroll </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="sub-menu hs-accordion-content hidden">
+                                <li class="menu-item">
+                                    <a class="menu-link"
+                                       href=@Url.Action("PayrollEmployeeSalary", "Hr")>
+                                        <span class="menu-text">Employee Salary</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link"
+                                       href=@Url.Action("PayrollPayslip", "Hr")>
+                                        <span class="menu-text">Payslip</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link"
+                                       href=@Url.Action("PayrollCreatePayslip", "Hr")>
+                                        <span class="menu-text">Create Payslip</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="file-text"></i></span>
+                        <span class="menu-text"> Invoice </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Overview", "Invoice")>
+                                <span class="menu-text">Overview</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("List", "Invoice")>
+                                <span class="menu-text">List Invoice</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("AddNew", "Invoice")>
+                                <span class="menu-text">Add Invoice</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="square-user-round"></i></span>
+                        <span class="menu-text"> Users </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("List", "Users")>
+                                <span class="menu-text">List View</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Grid", "Users")>
+                                <span class="menu-text">Grid View</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-title">
+                    <span>Extra</span>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="codesandbox"></i></span>
+                        <span class="menu-text"> Pages </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Starter", "Pages")>
+                                <span class="menu-text">Starter Page</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Pricing", "Pages")>
+                                <span class="menu-text">Pricing</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Faqs", "Pages")>
+                                <span class="menu-text">FAQ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Maintenance", "Pages")>
+                                <span class="menu-text">Maintenance</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Timeline", "Pages")>
+                                <span class="menu-text">Timeline</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ComingSoon", "Pages")>
+                                <span class="menu-text">Coming Soon</span>
+                            </a>
+                        </li>                        
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Maintenance", "Pages")>
+                                <span class="menu-text">Maintenance</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Error404", "Pages")>
+                                <span class="menu-text">404</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("Offline", "Pages")>
+                                <span class="menu-text">Offline</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="lock"></i></span>
+                        <span class="menu-text"> Basic Auth </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BasicLogin", "Auth")>
+                                <span class="menu-text">Login</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BasicRegister", "Auth")>
+                                <span class="menu-text">Register</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BasicVerifyEmail", "Auth")>
+                                <span class="menu-text">Verify Email</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BasicTwoSteps", "Auth")>
+                                <span class="menu-text">Two Steps</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BasicLogout", "Auth")>
+                                <span class="menu-text">Logout</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BasicResetPassword", "Auth")>
+                                <span class="menu-text">Reset Password</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BasicCreatePassword", "Auth")>
+                                <span class="menu-text">Create Password</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="shield-check"></i></span>
+                        <span class="menu-text"> Cover Auth </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("CoverLogin", "Auth")>
+                                <span class="menu-text">Login</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("CoverRegister", "Auth")>
+                                <span class="menu-text">Register</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("CoverVerifyEmail", "Auth")>
+                                <span class="menu-text">Verify Email</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("CoverTwoSteps", "Auth")>
+                                <span class="menu-text">Two Steps</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("CoverLogout", "Auth")>
+                                <span class="menu-text">Logout</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("CoverResetPassword", "Auth")>
+                                <span class="menu-text">Reset Password</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("CoverCreatePassword", "Auth")>
+                                <span class="menu-text">Create Password</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="package"></i></span>
+                        <span class="menu-text"> Boxed Auth </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BoxedLogin", "Auth")>
+                                <span class="menu-text">Login</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BoxedRegister", "Auth")>
+                                <span class="menu-text">Register</span>
+                            </a>
+                        </li>                    
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BoxedTwoSteps", "Auth")>
+                                <span class="menu-text">Two Steps</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BoxedLogout", "Auth")>
+                                <span class="menu-text">Logout</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BoxedResetPassword", "Auth")>
+                                <span class="menu-text">Reset Password</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("BoxedCreatePassword", "Auth")>
+                                <span class="menu-text">Create Password</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="fingerprint"></i></span>
+                        <span class="menu-text"> Modern Auth </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ModernLogin", "Auth")>
+                                <span class="menu-text">Login</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ModernRegister", "Auth")>
+                                <span class="menu-text">Register</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ModernVerifyEmail", "Auth")>
+                                <span class="menu-text">Verify Email</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ModernTwoSteps", "Auth")>
+                                <span class="menu-text">Two Steps</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ModernLogout", "Auth")>
+                                <span class="menu-text">Logout</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ModernResetPassword", "Auth")>
+                                <span class="menu-text">Reset Password</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("ModernCreatePassword", "Auth")>
+                                <span class="menu-text">Create Password</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="layout-panel-left"></i></span>
+                        <span class="menu-text"> Layouts </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("SidenavHover", "Layouts")
+                               target="_blank">Hover Sidenav</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("SidenavHoverActive", "Layouts")
+                               target="_blank">Hover Active Sidenav</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("SidenavSmall", "Layouts")
+                               target="_blank">Small Sidenav</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("SidenavCompact", "Layouts")
+                               target="_blank">Compact Sidenav</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("SidenavOffcanvas", "Layouts")
+                               target="_blank">Offcanvas Sidenav</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("SidenavHidden", "Layouts")
+                               target="_blank">Hidden Sidenav</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("SidenavDark", "Layouts")
+                               target="_blank">Dark Sidenav</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("DarkMode", "Layouts") target="_blank">Dark Mode</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href=@Url.Action("RtlMode", "Layouts") target="_blank">RTL Mode</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item hs-accordion">
+                    <a class="hs-accordion-toggle menu-link" href="javascript:void(0)">
+                        <span class="menu-icon"><i data-lucide="share-2"></i></span>
+                        <span class="menu-text"> Multi Level </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="sub-menu hs-accordion-content hidden">
+                        <li class="menu-item">
+                            <a class="menu-link" href="javascript: void(0)">
+                                <span class="menu-text">Item 1</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="javascript: void(0)">
+                                <span class="menu-text">Item 2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
+<!-- End Sidebar -->

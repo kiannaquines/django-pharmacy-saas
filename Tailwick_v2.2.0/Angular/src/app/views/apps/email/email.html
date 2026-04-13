@@ -1,0 +1,39 @@
+ <main class="overflow-x-hidden">
+  
+      
+            
+                <div class="grid grid-cols-1">
+                    <div class="col-span-1">
+                        <div class="card">
+                            <div class="flex">
+                                <div class="lg:border-e border-default-200">
+                                    <div id="mailBoxSidebar" class="hs-overlay [--auto-close:lg] lg:block lg:translate-x-0 lg:static lg:end-auto lg:bottom-0 w-64 hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform h-full hidden fixed top-0 start-0 bottom-0 overflow-hidden z-60" role="dialog" tabindex="-1" aria-label="Sidebar">
+                                        <div class="card shadow-none relative flex flex-col h-full max-h-full overflow-hidden">
+                                            <div class="card-body">
+                                                <button class="btn bg-danger text-white w-full" data-hs-overlay="#addEmailModal">
+                                                    <div class="size-4"><ng-icon name="lucidePlus"></ng-icon></div>
+                                                    Compose Email
+                                                </button>
+
+                                                <app-email-sidebar/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="w-full relative">
+                                     
+                                    <app-email-navbar />
+
+                                    <app-email-inbox />
+
+                                    <app-email-overview />
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+            <app-email-modal/>

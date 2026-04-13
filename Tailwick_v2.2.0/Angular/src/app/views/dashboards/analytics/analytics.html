@@ -1,0 +1,74 @@
+<main>
+    <app-page-title title="Analytics" subtitle="Dashboards" />
+    <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mb-5">
+
+
+        <div class="col-span-1">
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
+
+                @for (card of cards; track $index) {
+                <div class="card {{card.background}} overflow-hidden">
+                    <div class="card-body">
+                        <div class="absolute top-0 size-32 {{card.cornerColor}} -end-10">
+                            <ng-icon [name]="card.cornerIcon"></ng-icon>
+                        </div>
+
+                        <div class="btn btn-icon size-12 {{card.btnBg}}">
+                            <div class="size-6 {{card.textColor}}">
+                                <ng-icon [name]="card.icon"></ng-icon>
+                            </div>
+                        </div>
+
+                        <h5 class="mt-5 mb-2 text-lg font-semibold">
+                            {{card.value}}
+                        </h5>
+                        <p class="text-sm text-default-700">{{card.title}}</p>
+                    </div>
+                </div>
+                }
+
+            </div>
+        </div>
+
+        <div class="lg:col-span-2 col-span-1">
+            <app-perspective-chart />
+        </div>
+
+    </div>
+
+    <div class="grid lg:grid-cols-12 grid-cols-1 gap-5 mb-5">
+        <div class="lg:col-span-5 col-span-1">
+            <app-location-chart />
+        </div>
+
+        <div class="lg:col-span-7 col-span-1">
+            <app-interaction-chart />
+        </div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mb-5">
+
+        <app-userdevice-chart />
+
+        <app-satisfactionrate-chart />
+
+        <app-visitinsights-chart />
+
+    </div>
+
+    <div class="grid grid-cols-1 gap-5 mb-5">
+        <app-product-statistic />
+    </div>
+
+    <div class="grid lg:grid-cols-4 grid-cols-1 gap-5">
+
+        <app-analytics-report />
+
+        <app-monthly-status />
+
+        <app-subscription />
+
+        <app-traffic-source />
+
+    </div>
+</main>

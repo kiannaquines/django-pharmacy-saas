@@ -1,0 +1,39 @@
+ <div id="addEmailModal" class="hs-overlay hidden size-full fixed top-0 start-0 z-80 overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="addEmailModal-label">
+        <div class=" hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95 opacity-0 ease-in-out transition-all duration-200 sm:max-w-4xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-56px)] flex items-center">
+            <div class="card w-full border border-default-200 pointer-events-auto">
+
+                <div class="card-header">
+                    <h3 class="font-semibold text-base text-default-800">New Message</h3>
+                    <button type="button" class="size-5 text-default-800" aria-label="Close" data-hs-overlay="#addEmailModal">
+                        <span class="sr-only">Close</span>
+                        <div class="size-5"><ng-icon name="lucideX"></ng-icon></div>
+                    </button>
+                </div>
+
+                <div class="card-body">
+                    <div class="mb-4">
+                        <label for="event-title" class="inline-block mb-2 text-base font-medium">To</label>
+                        <input type="text" id="event-title" class="form-input" placeholder="tailwink@themesdesign.in">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="subject" class="inline-block mb-2 text-base font-medium">Subject</label>
+                        <input type="text" id="subject" class="form-input" placeholder="Subject">
+                    </div>
+
+                    <div>
+                        <label for="Textarea" class="inline-block mb-2 text-base font-medium">Example Textarea</label>
+                        <textarea id="Textarea" class="form-input" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="card-footer flex gap-2 md:justify-end">
+                    <button type="reset" data-hs-overlay="#addEmailModal" class="btn text-danger btn border-0 hover:bg-red-50">Cancel</button>
+
+                    <button type="submit" class="btn bg-primary text-white">Send</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>

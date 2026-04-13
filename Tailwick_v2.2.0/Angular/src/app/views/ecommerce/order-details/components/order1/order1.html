@@ -1,0 +1,58 @@
+<div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+  @for (card of detailCards; track card.title) {
+    <div class="card">
+      <div class="card-body">
+        <div class="flex justify-between">
+          <div>
+            <h6 class="mb-4 card-title">{{ card.title }}</h6>
+
+            @if (card.name) {
+              <h6 class="mb-1 text-default-800 font-semibold text-sm">{{ card.name }}</h6>
+            }
+
+            @if (card.addressLine1) {
+              <p class="mb-1 text-default-500 text-sm">{{ card.addressLine1 }}</p>
+            }
+
+            @if (card.addressLine2) {
+              <p class="text-default-500 text-sm">{{ card.addressLine2 }}</p>
+            }
+
+            @if (card.id) {
+              <h6 class="mb-1 text-default-800 font-semibold text-sm">ID: {{ card.id }}</h6>
+            }
+
+            @if (card.paymentMethod) {
+              <p class="mb-1 text-default-500 text-sm">
+                Payment Method: <b>{{ card.paymentMethod }}</b>
+              </p>
+            }
+
+            @if (card.cardNumber) {
+              <p class="mb-1 text-default-500 text-sm">
+                Card Number: <b>{{ card.cardNumber }}</b>
+              </p>
+            }
+
+            @if (card.email) {
+              <p class="mb-1 text-default-500 text-sm">{{ card.email }}</p>
+            }
+
+            @if (card.phone) {
+              <p class="text-default-500 text-sm">{{ card.phone }}</p>
+            }
+          </div>
+
+          <div class="btn {{ card.bgClass }} {{ card.textClass }} size-12 float-end">
+            @if (card.iconType === 'icon') {
+              <div class="size-6 text-2xl"><ng-icon [name]="card.iconName!"></ng-icon></div>
+            }
+            @else {
+              <img [src]="card.iconSrc!" alt="" />
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>

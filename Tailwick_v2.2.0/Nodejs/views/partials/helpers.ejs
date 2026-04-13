@@ -1,0 +1,76 @@
+<script>
+  const APP_ENV = "<%= APP_ENV %>"
+  const VITE_HOST = "<%= VITE_HOST %>";
+
+  async function file_get_contents(filename) {
+    const res = await fetch(filename);
+    return await res.text();
+  }
+
+  async function getManifest() {
+    const res = await file_get_contents("/dist/manifest.json");
+    return JSON.parse(res);
+  }
+
+  async function getAsset(entry) {
+    const manifest = await getManifest();
+    return manifest[entry] ?? null;
+  }
+
+  async function jsTag(entry) {
+    if (APP_ENV=='development') {
+      // If the vite server is running than this code will inject scripts
+      // remove this in production
+      const script = document.createElement("script");
+      script.type = "module";
+      script.crossOrigin = true;
+      script.src = `${VITE_HOST + "/" + entry}`;
+      document.head.appendChild(script);
+      return;
+    }
+
+    const asset = await getAsset(entry);
+    if (asset) {
+      // If the vite server is not running means in the production, this code will inject scripts
+      const script = document.createElement("script");
+      script.type = "module";
+      script.crossOrigin = true;
+      script.src = `dist/${asset["file"]}`;
+      document.head.appendChild(script);
+      if (asset["css"]) {
+        for (let css in asset["css"]) {
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.type = "text/css";
+          link.href = `dist/${asset["css"][css]}`;
+          document.head.appendChild(link);
+        }
+      }
+    }
+  }
+
+  async function cssTag(entry) {
+    if (APP_ENV=='development') {
+      // If the vite server is running than this code will inject css
+      // remove this in production
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = `${VITE_HOST + "/" + entry}`;
+      document.head.appendChild(link);
+      return;
+    }
+
+    const asset = await getAsset(entry);
+    if (asset && asset["css"]) {
+      // If the vite server is not running means in the production, this code will inject css
+      for (let css in asset["css"]) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = `dist/${asset["css"][css]}`;
+        document.head.appendChild(link);
+      }
+    }
+  }
+</script>

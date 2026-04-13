@@ -1,0 +1,779 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="UI Elements" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="UI Elements" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+                        <div class="card h-full">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Card title
+                                </h6>
+
+                                <p class="text-default-500">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 mt-3 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card h-full">
+                            <div class="card-body">
+                                <h6 class="mb-2 text-[15px]">
+                                    Card title
+                                </h6>
+
+                                <p class="mb-4 font-medium uppercase">
+                                    Card subtitle
+                                </p>
+
+                                <p class="mt-2 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 mt-3 text-sm font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card h-full">
+                            <div class="bg-default-200 card-body rounded-t-md">
+                                <h6 class="text-[15px]">
+                                    Card title
+                                </h6>
+                            </div>
+
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Card title
+                                </h6>
+
+                                <p class="text-default-500">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 mt-3 text-sm font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card h-full">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Card title
+                                </h6>
+
+                                <p class="text-default-500">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 mt-3 text-sm font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+
+                            <div class="bg-default-200 card-body rounded-b-md">
+                                <p class="text-default-500">
+                                    Last updated 5 mins ago
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="mb-5 underline text-lg">Horizontal Card</h5>
+
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 mb-5">
+                        <div class="grid md:grid-cols-12 grid-cols-1 bg-card rounded-md overflow-hidden">
+
+                            <div class="overflow-hidden md:col-span-7 col-span-1">
+                                <img src="assets/images/img-4.jpg" alt="Image" class="rounded-s-md" />
+                            </div>
+
+                            <div class="md:col-span-5 col-span-1">
+                                <div class="p-5 flex flex-col justify-between">
+                                    <div>
+                                        <h6 class="card-title mb-4 font-medium text-default-900">Card title</h6>
+                                        <p class="text-default-500">
+                                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                                        </p>
+                                    </div>
+                                    <p class="mt-5 text-[13px] text-default-500">Last updated 5 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-12 grid-cols-1 bg-card rounded-md overflow-hidden">
+                            <div class="md:col-span-5 col-span-1">
+                                <div class="p-5 flex flex-col justify-between">
+                                    <div>
+                                        <h6 class="card-title mb-4 font-medium text-default-900">Card title</h6>
+                                        <p class="text-default-500">
+                                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                                        </p>
+                                    </div>
+                                    <p class="mt-5 text-[13px] text-default-500">Last updated 5 mins ago</p>
+                                </div>
+                            </div>
+
+                            <div class="overflow-hidden md:col-span-7 col-span-1">
+                                <img src="assets/images/img-1.jpg" alt="Image" class="rounded-e-md" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="mb-5 underline text-lg">Card Animation</h5>
+
+                    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+                        <a class="overflow-hidden transition card group hover:shadow-lg" href="#">
+                            <div class="relative overflow-hidden">
+                                <img class="transition-transform duration-500 group-hover:scale-105 rounded-t-md" src="assets/images/img-4.jpg" alt="Image">
+                            </div>
+
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Card title
+                                </h6>
+
+                                <p class="mt-2 text-default-500">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+                            </div>
+                        </a>
+
+                        <a class="block overflow-hidden transition card group hover:shadow-lg" href="#">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Card title
+                                </h6>
+
+                                <p class="text-default-500">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+                            </div>
+
+                            <div class="relative overflow-hidden">
+                                <img class="transition-transform duration-500 group-hover:scale-105 rounded-b-md" src="assets/images/img-9.jpg" alt="Image">
+                            </div>
+                        </a>
+
+                        <a class="overflow-hidden transition card hover:shadow-lg" href="#">
+                            <img class="rounded-t-md" src="assets/images/img-10.jpg" alt="Image">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Card title
+                                </h6>
+
+                                <p class="text-default-500">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+                            </div>
+                        </a>
+
+                        <a class="overflow-hidden transition card hover:shadow-lg hover:-tranDark-y-1" href="#">
+                            <img class="rounded-t-md" src="assets/images/img-10.jpg" alt="Image">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Card title
+                                </h6>
+
+                                <p class="text-default-500">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <h5 class="mb-5 underline text-lg">Border Card</h5>
+
+                    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+                        <div class="border card border-primary/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Primary Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border card border-success/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Success Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border card border-warning/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Warning Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border card border-info/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Info Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border card border-danger/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Dander Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border card border-secondary/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Secondary Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border card border-default-200/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Dark Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="mb-5 underline text-lg">Dashed Border Card</h5>
+
+                    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+                        <div class="border-dashed border card border-primary/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Primary Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border-dashed border card border-success/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Success Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border-dashed border card border-warning/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Warning Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border-dashed border card border-info/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Info Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border-dashed border card border-danger/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Dander Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border-dashed border card border-secondary/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Secondary Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border-dashed border card border-default-200/30">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Dark Card
+                                </h6>
+
+                                <p class="mb-4 text-default-500">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-primary" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="mb-5 underline text-lg">Fill Card</h5>
+
+                    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+                        <div class="card text-white bg-primary">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Primary Card
+                                </h6>
+
+                                <p class="mb-4 text-white/80">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-white/70" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card text-white bg-success">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Success Card
+                                </h6>
+
+                                <p class="mb-4 text-white/80">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-white/70" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card text-white bg-warning">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Warning Card
+                                </h6>
+
+                                <p class="mb-4 text-white/80">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-white/70" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card text-white bg-info">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Info Card
+                                </h6>
+
+                                <p class="mb-4 text-white/80">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-white/70" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card text-white bg-danger">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Dander Card
+                                </h6>
+
+                                <p class="mb-4 text-white/80">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-white/70" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card text-white bg-secondary">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Secondary Card
+                                </h6>
+
+                                <p class="mb-4 text-white/80">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-white/70" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card text-white bg-default-500">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Dark Card
+                                </h6>
+
+                                <p class="mb-4 text-white/80">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium text-white/70" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="mb-5 underline text-lg">Modern Card</h5>
+
+                    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+                        <div class="card text-primary bg-primary/10">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Primary Card
+                                </h6>
+
+                                <p class="mb-4">
+                                    With supporting text below as a natural lead-in to additional content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card bg-success/10 text-success">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Success Card
+                                </h6>
+
+                                <p class="mb-4">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card bg-warning/10 text-warning">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Warning Card
+                                </h6>
+
+                                <p class="mb-4">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card bg-info/10 text-info">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Info Card
+                                </h6>
+
+                                <p class="mb-4">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card bg-danger/10 text-danger">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Dander Card
+                                </h6>
+
+                                <p class="mb-4">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card bg-secondary/10 text-secondary">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Secondary Card
+                                </h6>
+
+                                <p class="mb-4">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card bg-default-500/10 text-default-500">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">
+                                    Dark Card
+                                </h6>
+
+                                <p class="mb-4">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+
+                                <a class="inline-flex items-center gap-2 font-medium" href="#">
+                                    Card link
+                                    <i data-lucide="chevron-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="mb-5 underline text-lg">Group Card</h5>
+
+                    <div class="grid md:grid-cols-3 grid-cols-1 overflow-hidden border border-default-200 card">
+                        <div class="flex flex-col">
+                            <img class="w-full h-auto rounded-t-md md:rounded-tr-none" src="assets/images/img-2.jpg" alt="Image">
+                            <div class="flex-1 card-body">
+                                <h6 class="card-title mb-4">
+                                    Card title
+                                </h6>
+
+                                <p class="text-default-500">
+                                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                </p>
+                            </div>
+
+                            <div class="border-t card-body border-default-200">
+                                <p>
+                                    Last updated 5 mins ago
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:border-s border-default-200">
+                            <img class="w-full h-auto" src="assets/images/img-7.jpg" alt="Image">
+                            <div class="flex-1 card-body">
+                                <h6 class="card-title mb-4">
+                                    Card title
+                                </h6>
+
+                                <p class="text-default-500">
+                                    This card has supporting text below as a natural lead-in to additional content.
+                                </p>
+                            </div>
+
+                            <div class="border-t card-body border-default-200">
+                                <p>
+                                    Last updated 5 mins ago
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <img class="w-full h-auto md:rounded-tr-md" src="assets/images/img-5.jpg" alt="Image">
+                            <div class="flex-1 card-body">
+                                <h6 class="card-title mb-4">
+                                    Card title
+                                </h6>
+
+                                <p class="text-default-500">
+                                    This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                                </p>
+                            </div>
+
+                            <div class="border-t card-body border-default-200">
+                                <p>
+                                    Last updated 5 mins ago
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

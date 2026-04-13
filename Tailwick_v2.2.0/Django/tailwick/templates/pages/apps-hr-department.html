@@ -1,0 +1,183 @@
+{% extends 'layouts/vertical.html' %}
+{% load static i18n django_vite %}
+
+{% block title %}Holidays{% endblock title %}
+
+{% block content %}
+
+{% include 'partials/page-title.html' with title='Holidays' subtitle='Menu' %}
+
+<div class="card">
+  <div class="card-header">
+    <h6 class="card-title">Departments</h6>
+    <button class="btn btn-sm bg-primary text-white">
+      <i class="size-4 me-1" data-lucide="plus"></i>Add Department
+    </button>
+  </div>
+  <div class="flex flex-col">
+    <div class="overflow-x-auto">
+      <div class="min-w-full inline-block align-middle">
+        <div class="overflow-hidden">
+          <table class="min-w-full divide-y divide-default-200">
+            <thead class="font-semibold whitespace-nowrap">
+            <tr class="text-sm text-default-800 divide-x divide-default-200">
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">#</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Department Name</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Head of Dep.</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Phone Number</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Email</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Employee</th>
+              <th class="px-3.5 py-3 font-medium text-start" scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody class="divide-y divide-default-200">
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">1</td>
+              <td class="px-3.5 py-3 text-sm">Web Development</td>
+              <td class="px-3.5 py-3 text-sm">Patricia Garcia</td>
+              <td class="px-3.5 py-3 text-sm">077 7317 7572</td>
+              <td class="px-3.5 py-3 text-sm">PatriciaJGarcia@tailwick.com</td>
+              <td class="px-3.5 py-3 text-sm">15</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="department-edit-modal" aria-expanded="false" aria-haspopup="dialog"
+                     class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600"
+                     data-hs-overlay="#department-edit-modal" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="department-delete-modal" aria-expanded="false" aria-haspopup="dialog"
+                     class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600"
+                     data-hs-overlay="#department-delete-modal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">2</td>
+              <td class="px-3.5 py-3 text-sm">IOS Application Development</td>
+              <td class="px-3.5 py-3 text-sm"> Frederiksen</td>
+              <td class="px-3.5 py-3 text-sm">61 53 62 05</td>
+              <td class="px-3.5 py-3 text-sm">jonas@tailwick.com</td>
+              <td class="px-3.5 py-3 text-sm">09</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="department-edit-modal" aria-expanded="false" aria-haspopup="dialog"
+                     class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600"
+                     data-hs-overlay="#department-edit-modal" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="department-delete-modal" aria-expanded="false" aria-haspopup="dialog"
+                     class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600"
+                     data-hs-overlay="#department-delete-modal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">3</td>
+              <td class="px-3.5 py-3 text-sm">Designing</td>
+              <td class="px-3.5 py-3 text-sm">Juliette Fecteau</td>
+              <td class="px-3.5 py-3 text-sm">07231 96 25 88</td>
+              <td class="px-3.5 py-3 text-sm">JulietteFecteau@tailwick.com</td>
+              <td class="px-3.5 py-3 text-sm">11</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="department-edit-modal" aria-expanded="false" aria-haspopup="dialog"
+                     class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600"
+                     data-hs-overlay="#department-edit-modal" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="department-delete-modal" aria-expanded="false" aria-haspopup="dialog"
+                     class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600"
+                     data-hs-overlay="#department-delete-modal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">4</td>
+              <td class="px-3.5 py-3 text-sm">HR Management</td>
+              <td class="px-3.5 py-3 text-sm">Thomas Hatfield</td>
+              <td class="px-3.5 py-3 text-sm">0911 47 65 49</td>
+              <td class="px-3.5 py-3 text-sm">thomas@tailwick.com</td>
+              <td class="px-3.5 py-3 text-sm">03</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="department-edit-modal" aria-expanded="false" aria-haspopup="dialog"
+                     class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600"
+                     data-hs-overlay="#department-edit-modal" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="department-delete-modal" aria-expanded="false" aria-haspopup="dialog"
+                     class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600"
+                     data-hs-overlay="#department-delete-modal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="text-default-800 font-normal whitespace-nowrap divide-x divide-default-200">
+              <td class="px-3.5 py-3 text-sm">5</td>
+              <td class="px-3.5 py-3 text-sm">Accounts Management</td>
+              <td class="px-3.5 py-3 text-sm">Holly Kavanaugh</td>
+              <td class="px-3.5 py-3 text-sm">819 947 5846</td>
+              <td class="px-3.5 py-3 text-sm">HollyKavanaugh@tailwick.com</td>
+              <td class="px-3.5 py-3 text-sm">02</td>
+              <td class="px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <a aria-controls="department-edit-modal" aria-expanded="false" aria-haspopup="dialog"
+                     class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600"
+                     data-hs-overlay="#department-edit-modal" href="#">
+                    <i class="size-4" data-lucide="pencil"></i>
+                  </a>
+                  <a aria-controls="department-delete-modal" aria-expanded="false" aria-haspopup="dialog"
+                     class="btn size-8 bg-default-200 hover:bg-primary/10 hover:text-primary text-default-600"
+                     data-hs-overlay="#department-delete-modal" href="#">
+                    <i class="size-4" data-lucide="trash-2"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <p class="text-default-500 text-sm">Showing <b>5</b> of <b>8</b> Results</p>
+      <nav aria-label="Pagination" class="flex items-center gap-2">
+        <button
+          class="btn btn-sm border bg-transparent border-default-200 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10"
+          type="button">
+          <i class="size-4 me-1" data-lucide="chevron-left"></i> Prev
+        </button>
+        <button
+          class="btn size-7.5 bg-transparent border border-default-200 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10"
+          type="button">
+          1
+        </button>
+        <button class="btn size-7.5 bg-primary text-white" type="button">
+          2
+        </button>
+        <button
+          class="btn size-7.5 bg-transparent border border-default-200 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10"
+          type="button">
+          3
+        </button>
+        <button
+          class="btn btn-sm border bg-transparent border-default-200 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10"
+          type="button">Next
+          <i class="size-4 ms-1" data-lucide="chevron-right"></i>
+        </button>
+      </nav>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+{% vite_asset 'tailwick/static/js/components/timepicker.js' %}
+{% endblock scripts %}

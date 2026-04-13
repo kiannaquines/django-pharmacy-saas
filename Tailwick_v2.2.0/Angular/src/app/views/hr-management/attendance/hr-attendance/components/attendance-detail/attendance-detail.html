@@ -1,0 +1,54 @@
+<div class="flex flex-col">
+    <div class="overflow-x-auto">
+        <div class="min-w-full inline-block align-middle">
+            <div class="overflow-hidden">
+                <table class="min-w-full divide-y divide-default-200">
+                    <thead class="bg-default-100 font-normal whitespace-nowrap">
+                        <tr class="text-sm  text-default-800">
+                            <th scope="col" class="px-3.5 py-3 font-medium text-start">Date</th>
+                            <th scope="col" class="px-3.5 py-3 font-medium text-start">Check In</th>
+                            <th scope="col" class="px-3.5 py-3 font-medium text-start">Check Out</th>
+                            <th scope="col" class="px-3.5 py-3 font-medium text-start">Meal Break>
+                            <th scope="col" class="px-3.5 py-3 font-medium text-start">Work Hours</th>
+                            <th scope="col" class="px-3.5 py-3 font-medium text-start">Overtime</th>
+                            <th scope="col" class="px-3.5 py-3 font-medium text-start">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="divide-y divide-default-200">
+                        @for(record of attendanceData; track $index) {
+                        <tr class="text-default-800 font-normal whitespace-nowrap">
+                            <td class="px-3.5 py-3 text-sm">
+                                {{ record.date }}
+                                <span class="py-0.5 px-2.5 border border-default-200 text-default-600 rounded">{{ record.day }}</span>
+                            </td>
+                            <td class="px-3.5 py-3 text-sm">{{ record.inTime }}</td>
+                            <td class="px-3.5 py-3 text-sm">{{ record.outTime }}</td>
+                            <td class="px-3.5 py-3 text-sm">{{ record.workedHrs }}</td>
+                            <td class="px-3.5 py-3 text-sm">{{ record.totalHrs }}</td>
+                            <td class="px-3.5 py-3 text-sm">{{ record.overtime }}</td>
+                            <td class="px-3.5 py-3">
+                                <div class="flex items-center gap-2">
+                                    <a [routerLink]="[]" class="btn size-8 {{ record.approveBtn.bgClass }} hover:bg-success hover:text-white {{ record.approveBtn.colorClass }}">
+                                        <div class="size-4"><ng-icon name="{{ record.approveBtn.icon }}"></ng-icon></div>
+                                    </a>
+
+                                    <a [routerLink]="[]" class="btn size-8 {{ record.rejectBtn.bgClass }} hover:bg-danger hover:text-white {{ record.rejectBtn.colorClass }}">
+                                        <div class="size-4"><ng-icon name="{{ record.rejectBtn.icon }}"></ng-icon></div>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="card-footer">
+        <p class="text-default-500 text-sm">Showing <b>10</b> of <b>15</b> Results</p>
+        <app-pagination />
+    </div>
+</div>

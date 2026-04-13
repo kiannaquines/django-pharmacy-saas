@@ -1,0 +1,926 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Basic Table" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Basic Table" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Default Table</h6>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full">
+                                        <thead class="text-left">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#541254265</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Amezon</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#744145235</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Shoppers</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$7,546</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#9855126598</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Flipkart</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$1,350</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#847512653</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Tailwick</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Without Borders</h6>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full">
+                                        <thead class="text-left">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-transparent">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-transparent">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-transparent">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-transparent">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-transparent">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent"><a href="#!" class="text-primary">#541254265</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">Amezon</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent"><a href="#!" class="text-primary">#744145235</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">Shoppers</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">$7,546</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent"><a href="#!" class="text-primary">#9855126598</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">Flipkart</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">$1,350</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent"><a href="#!" class="text-primary">#847512653</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">Tailwick</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-transparent">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Striped Even Rows</h6>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full">
+                                        <thead class="text-left">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr class="odd:bg-card even:bg-default-50">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#541254265</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Amezon</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="odd:bg-card even:bg-default-50">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#744145235</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Shoppers</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$7,546</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="odd:bg-card even:bg-default-50">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#9855126598</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Flipkart</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$1,350</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="odd:bg-card even:bg-default-50">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#847512653</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Tailwick</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Striped Odd Rows</h6>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full">
+                                        <thead class="text-left">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr class="odd:bg-default-50 even:bg-card">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#541254265</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Amezon</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="odd:bg-default-50 even:bg-card">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#744145235</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Shoppers</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$7,546</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="odd:bg-default-50 even:bg-card">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#9855126598</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Flipkart</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$1,350</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="odd:bg-default-50 even:bg-card">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#847512653</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Tailwick</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Hoverable Rows</h6>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full">
+                                        <thead class="text-left">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr class="hover:bg-default-50">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#541254265</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Amezon</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="hover:bg-default-50">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#744145235</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Shoppers</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$7,546</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="hover:bg-default-50">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#9855126598</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Flipkart</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$1,350</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="hover:bg-default-50">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#847512653</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Tailwick</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Hoverable Striped Rows</h6>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full">
+                                        <thead class="text-left">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-200 dark:border-white/14">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr class="even:bg-default-50 hover:bg-default-50 even:hover:bg-default-100 dark:hover:bg-default-200">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#541254265</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Amezon</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="even:bg-default-50 hover:bg-default-50 even:hover:bg-default-100 dark:hover:bg-default-200">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#744145235</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Shoppers</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$7,546</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="even:bg-default-50 hover:bg-default-50 even:hover:bg-default-100 dark:hover:bg-default-200">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#9855126598</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Flipkart</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$1,350</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="even:bg-default-50 hover:bg-default-50 even:hover:bg-default-100 dark:hover:bg-default-200">
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">#847512653</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Tailwick</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Border Colors</h6>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full">
+                                        <thead class="text-left">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold border border-primary">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border border-primary">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border border-primary">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border border-primary">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border border-primary">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border border-primary">
+                                                    <a href="#!" class="text-primary">#541254265</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border border-primary">Amezon</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border border-primary">
+                                                    <a href="#!" class="text-primary">#744145235</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border border-primary">Shoppers</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">$7,546</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border border-primary">
+                                                    <a href="#!" class="text-primary">#9855126598</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border border-primary">Flipkart</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">$1,350</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border border-primary">
+                                                    <a href="#!" class="text-primary">#847512653</a>
+                                                </td>
+                                                <td class="px-3.5 py-2.5 border border-primary">Tailwick</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border border-primary">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Bordered Table</h6>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full">
+                                        <thead class="text-left">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold border border-default-200 dark:border-white/14">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border border-default-200 dark:border-white/14">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border border-default-200 dark:border-white/14">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border border-default-200 dark:border-white/14">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border border-default-200 dark:border-white/14">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14"><a href="#!" class="text-primary">#541254265</a></td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">Amezon</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14"><a href="#!" class="text-primary">#744145235</a></td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">Shoppers</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">$7,546</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14"><a href="#!" class="text-primary">#9855126598</a></td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">Flipkart</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">$1,350</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14"><a href="#!" class="text-primary">#847512653</a></td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">Tailwick</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border border-default-200 dark:border-white/14">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Primary Colors Table</h6>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full bg-primary/5">
+                                        <thead class="text-left bg-primary/10">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-primary/20">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-primary/20">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-primary/20">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-primary/20">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-primary/20">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20"><a href="#!" class="text-primary">#541254265</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">Amezon</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20"><a href="#!" class="text-primary">#744145235</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">Shoppers</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">$7,546</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20"><a href="#!" class="text-primary">#9855126598</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">Flipkart</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">$1,350</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20"><a href="#!" class="text-primary">#847512653</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">Tailwick</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-primary/20">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Dark Table</h6>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full bg-default-800 dark:bg-default-200">
+                                        <thead class="text-left bg-card/5">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-700 text-default-400">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-700 text-default-400">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-700 text-default-400">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-700 text-default-400">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold border-b border-default-700 text-default-400">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400"><a href="#!" class="text-primary">#541254265</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">Amezon</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400"><a href="#!" class="text-primary">#744145235</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">Shoppers</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">$7,546</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400"><a href="#!" class="text-primary">#9855126598</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">Flipkart</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">$1,350</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400"><a href="#!" class="text-primary">#847512653</a></td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">Tailwick</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">$4,521</td>
+                                                <td class="px-3.5 py-2.5 border-y border-default-700 text-default-400">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Custom Table</h6>
+
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-separate table-custom border-spacing-y-1">
+                                        <thead class="text-left">
+                                            <tr>
+                                                <th class="px-3.5 py-2.5 font-semibold">Order ID</th>
+                                                <th class="px-3.5 py-2.5 font-semibold">Shop</th>
+                                                <th class="px-3.5 py-2.5 font-semibold">Customer</th>
+                                                <th class="px-3.5 py-2.5 font-semibold">Price</th>
+                                                <th class="px-3.5 py-2.5 font-semibold">Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="px-3.5 py-2.5"><a href="#!" class="text-primary">#541254265</a></td>
+                                                <td class="px-3.5 py-2.5">Amezon</td>
+                                                <td class="px-3.5 py-2.5">Cleo Carson</td>
+                                                <td class="px-3.5 py-2.5">$4,521</td>
+                                                <td class="px-3.5 py-2.5">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="active">
+                                                <td class="px-3.5 py-2.5"><a href="#!" class="text-primary">#744145235</a></td>
+                                                <td class="px-3.5 py-2.5">Shoppers</td>
+                                                <td class="px-3.5 py-2.5">Juston Eichmann</td>
+                                                <td class="px-3.5 py-2.5">$7,546</td>
+                                                <td class="px-3.5 py-2.5">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-3.5 py-2.5"><a href="#!" class="text-primary">#9855126598</a></td>
+                                                <td class="px-3.5 py-2.5">Flipkart</td>
+                                                <td class="px-3.5 py-2.5">Bettie Johson</td>
+                                                <td class="px-3.5 py-2.5">$1,350</td>
+                                                <td class="px-3.5 py-2.5">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-3.5 py-2.5"><a href="#!" class="text-primary">#847512653</a></td>
+                                                <td class="px-3.5 py-2.5">Tailwick</td>
+                                                <td class="px-3.5 py-2.5">Maritza Blanda</td>
+                                                <td class="px-3.5 py-2.5">$4,521</td>
+                                                <td class="px-3.5 py-2.5">
+                                                    <a href="#!" class="text-primary">
+                                                        <i data-lucide="download" class="size-3.5"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title mb-4">Card Table</h6>
+
+                                    <div class="-mx-5 -mb-5 overflow-x-auto">
+                                        <table class="w-full whitespace-nowrap">
+                                            <thead class="text-left">
+                                                <tr>
+                                                    <th class="px-3.5 py-2.5 ps-5 font-semibold border-b border-default-200 dark:border-white/14">Order ID</th>
+                                                    <th class="px-3.5 py-2.5 ps-5 font-semibold border-b border-default-200 dark:border-white/14">Shop</th>
+                                                    <th class="px-3.5 py-2.5 ps-5 font-semibold border-b border-default-200 dark:border-white/14">Customer</th>
+                                                    <th class="px-3.5 py-2.5 ps-5 font-semibold border-b border-default-200 dark:border-white/14">Price</th>
+                                                    <th class="px-3.5 py-2.5 ps-5 font-semibold border-b border-default-200 dark:border-white/14">Action</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14"><a href="#!" class="text-primary">#541254265</a></td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">Amezon</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">Cleo Carson</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">
+                                                        <a href="#!" class="text-primary">
+                                                            <i data-lucide="download" class="size-3.5"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14"><a href="#!" class="text-primary">#744145235</a></td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">Shoppers</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">Juston Eichmann</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">$7,546</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">
+                                                        <a href="#!" class="text-primary">
+                                                            <i data-lucide="download" class="size-3.5"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14"><a href="#!" class="text-primary">#9855126598</a></td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">Flipkart</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">Bettie Johson</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">$1,350</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">
+                                                        <a href="#!" class="text-primary">
+                                                            <i data-lucide="download" class="size-3.5"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14"><a href="#!" class="text-primary">#847512653</a></td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">Tailwick</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">Maritza Blanda</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">$4,521</td>
+                                                    <td class="px-3.5 py-2.5 ps-5 border-y border-default-200 dark:border-white/14">
+                                                        <a href="#!" class="text-primary">
+                                                            <i data-lucide="download" class="size-3.5"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div><!--end card-->
+                        </div>
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

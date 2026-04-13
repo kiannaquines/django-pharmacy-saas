@@ -1,0 +1,23 @@
+@page "/layouts-sidenav-hover"
+@model Tailwick.Pages.Layouts.Sidenav.HoverModel
+
+@{
+    ViewBag.Title = "Hover View Sidenav";
+    ViewBag.Subtitle = "Layouts";
+    ViewBag.HTMLAttributes = "data-sidenav-size=hover";
+}
+
+@section styles
+{
+
+}
+
+@await Html.PartialAsync("~/Pages/Shared/Partials/_PageTitle.cshtml")
+
+<div class="card h-40">
+</div>
+
+@section scripts
+{
+
+}

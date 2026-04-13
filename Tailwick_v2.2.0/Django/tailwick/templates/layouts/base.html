@@ -1,0 +1,28 @@
+{% load static i18n django_vite %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" {% block html_attribute %}{% endblock html_attribute %}>
+<head>
+  <meta charset="utf-8"/>
+  <title> {% block title %}{% endblock title %} | Tailwick - Tailwind CSS 3 Admin Layout & UI Kit Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+  <meta content="Themesdesign" name="author">
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+  {% include 'partials/head-css.html' %}
+
+  {% block styles %} {% endblock styles %}
+
+</head>
+<body {% block body_attribute %}{% endblock body_attribute %}>
+
+{% block preloader %}{% endblock %}
+
+{% block page_content %}{% endblock page_content %}
+
+{% block scripts %} {% endblock scripts %}
+
+</body>
+</html>

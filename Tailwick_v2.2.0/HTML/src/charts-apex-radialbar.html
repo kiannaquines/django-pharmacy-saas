@@ -1,0 +1,91 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Radialbar Charts" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Radialbar Charts" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Simple Radialbar Chart</h6>
+                                <div id="simpleRadialbarChart" class="apex-charts" data-chart-colors='["bg-primary"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Multiple Radialbar</h6>
+                                <div id="multipleRadialbarChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-orange-500", "bg-green-500", "bg-yellow-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Custom Angle Circle</h6>
+                                <div id="customAngleCircleChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-sky-500", "bg-green-500", "bg-purple-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Gradient</h6>
+                                <div id="gradientChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-green-400"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Radialbar with Image</h6>
+                                <div id="radialbarsWithImageChart" class="apex-charts" dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Stroked Gauge</h6>
+                                <div id="strokedGauge" class="apex-charts" data-chart-colors='["bg-purple-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Semi Circle Gauge</h6>
+                                <div id="semiCircleGauge" class="apex-charts" data-chart-colors='["bg-primary"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Apex Chart Bubble Demo js -->
+    <script src="assets/js/pages/chart-apex-radialbar.js" type="module"></script>
+
+</body>
+
+</html>

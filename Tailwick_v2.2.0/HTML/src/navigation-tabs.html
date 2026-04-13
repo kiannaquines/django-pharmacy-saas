@@ -1,0 +1,568 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Tabs" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Tabs" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Default Tabs</h6>
+
+                                <div>
+                                    <nav class="flex flex-wrap" aria-label="Tabs" role="tablist" data-hs-tab-select="#tab-select">
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none active" id="home" aria-selected="true" data-hs-tab="#default-home" aria-controls="default-home" role="tab">
+                                            Home
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="Profile" aria-selected="false" data-hs-tab="#default-Profile" aria-controls="default-Profile" role="tab">
+                                            Profile
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="settings" aria-selected="false" data-hs-tab="#default-settings" aria-controls="default-settings" role="tab">
+                                            Settings
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="contact" aria-selected="false" data-hs-tab="#default-contact" aria-controls="default-contact" role="tab">
+                                            Contact
+                                        </button>
+                                    </nav>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div id="default-home" role="tabpanel" aria-labelledby="home">
+                                        <p>
+                                            They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic. That's why it's important to think about your message, then choose a font that fits. Cosby sweater eu banh mi, qui irure terry richardson ex squid.
+                                        </p>
+                                    </div>
+
+                                    <div id="default-Profile" role="tabpanel" class="hidden" aria-labelledby="Profile">
+                                        <p>
+                                            You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
+                                        </p>
+                                    </div>
+
+                                    <div id="default-settings" class="hidden" role="tabpanel" aria-labelledby="settings">
+                                        <p>
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                        </p>
+                                    </div>
+
+                                    <div id="default-contact" class="hidden" role="tabpanel" aria-labelledby="contact">
+                                        <p>
+                                            Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Tabs Justified</h6>
+
+                                <div>
+                                    <nav class="flex md:flex-nowrap flex-wrap" aria-label="Tabs" role="tablist" data-hs-tab-select="#tab-select">
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none md:w-full justify-center active" id="homeJustified" aria-selected="true" data-hs-tab="#Justified-home" aria-controls="Justified-home" role="tab">
+                                            Home
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none md:w-full justify-center" id="ProfileJustified" aria-selected="false" data-hs-tab="#Justified-Profile" aria-controls="Justified-Profile" role="tab">
+                                            Profile
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none md:w-full justify-center" id="settingJustified" aria-selected="false" data-hs-tab="#Justified-settings" aria-controls="Justified-settings" role="tab">
+                                            Settings
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none md:w-full justify-center" id="contactJustified" aria-selected="false" data-hs-tab="#Justified-contact" aria-controls="Justified-contact" role="tab">
+                                            Contact
+                                        </button>
+                                    </nav>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div id="Justified-home" role="tabpanel" aria-labelledby="homeJustified">
+                                        <p>
+                                            They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic. That's why it's important to think about your message, then choose a font that fits. Cosby sweater eu banh mi, qui irure terry richardson ex squid.
+                                        </p>
+                                    </div>
+
+                                    <div id="Justified-Profile" role="tabpanel" class="hidden" aria-labelledby="ProfileJustified">
+                                        <p>
+                                            You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
+                                        </p>
+                                    </div>
+
+                                    <div id="Justified-settings" class="hidden" role="tabpanel" aria-labelledby="settingJustified">
+                                        <p>
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                        </p>
+                                    </div>
+
+                                    <div id="Justified-contact" class="hidden" role="tabpanel" aria-labelledby="contactJustified">
+                                        <p>
+                                            Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Pills Tabs</h6>
+
+                                <div>
+                                    <nav class="flex flex-wrap" aria-label="Tabs" role="tablist" data-hs-tab-select="#tab-select">
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none active" id="homePill" aria-selected="true" data-hs-tab="#Pill-home" aria-controls="Pill-home" role="tab">
+                                            Home
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="profilePill" aria-selected="false" data-hs-tab="#Pill-Profile" aria-controls="Pill-Profile" role="tab">
+                                            Profile
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="settingPill" aria-selected="false" data-hs-tab="#Pill-settings" aria-controls="Pill-settings" role="tab">
+                                            Settings
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="contactPill" aria-selected="false" data-hs-tab="#Pill-contact" aria-controls="Pill-contact" role="tab">
+                                            Contact
+                                        </button>
+                                    </nav>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div id="Pill-home" role="tabpanel" aria-labelledby="homePill">
+                                        <p>
+                                            They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic. That's why it's important to think about your message, then choose a font that fits. Cosby sweater eu banh mi, qui irure terry richardson ex squid.
+                                        </p>
+                                    </div>
+
+                                    <div id="Pill-Profile" role="tabpanel" class="hidden" aria-labelledby="profilePill">
+                                        <p>
+                                            You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
+                                        </p>
+                                    </div>
+
+                                    <div id="Pill-settings" class="hidden" role="tabpanel" aria-labelledby="settingPill">
+                                        <p>
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                        </p>
+                                    </div>
+
+                                    <div id="Pill-contact" class="hidden" role="tabpanel" aria-labelledby="contactPill">
+                                        <p>
+                                            Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Pills Justified Tabs</h6>
+
+                                <div>
+                                    <nav class="flex md:flex-nowrap flex-wrap" aria-label="Tabs" role="tablist" data-hs-tab-select="#tab-select">
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none w-full justify-center active" id="homePillJustified" aria-selected="true" data-hs-tab="#PillJustified-home" aria-controls="PillJustified-home" role="tab">
+                                            Home
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none w-full justify-center" id="profilePillJustified" aria-selected="false" data-hs-tab="#PillJustified-Profile" aria-controls="PillJustified-Profile" role="tab">
+                                            Profile
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none w-full justify-center" id="settingPillJustified" aria-selected="false" data-hs-tab="#PillJustified-settings" aria-controls="PillJustified-settings" role="tab">
+                                            Settings
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none w-full justify-center" id="contactPillJustified" aria-selected="false" data-hs-tab="#PillJustified-contact" aria-controls="PillJustified-contact" role="tab">
+                                            Contact
+                                        </button>
+                                    </nav>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div id="PillJustified-home" role="tabpanel" aria-labelledby="homePillJustified">
+                                        <p>
+                                            They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic. That's why it's important to think about your message, then choose a font that fits. Cosby sweater eu banh mi, qui irure terry richardson ex squid.
+                                        </p>
+                                    </div>
+
+                                    <div id="PillJustified-Profile" class="hidden" role="tabpanel" aria-labelledby="profilePillJustified">
+                                        <p>
+                                            You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
+                                        </p>
+                                    </div>
+
+                                    <div id="PillJustified-settings" class="hidden" role="tabpanel" aria-labelledby="settingPillJustified">
+                                        <p>
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                        </p>
+                                    </div>
+
+                                    <div id="PillJustified-contact" class="hidden" role="tabpanel" aria-labelledby="contactPillJustified">
+                                        <p>
+                                            Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Simple Tabs</h6>
+
+                                <div>
+                                    <nav class="flex flex-wrap border-b border-default-200 dark:border-white/14" aria-label="Tabs" role="tablist" data-hs-tab-select="#tab-select">
+                                        <button type="button" class="hs-tab-active:border-b hs-tab-active:border-primary hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none active" id="homeSimple" aria-selected="true" data-hs-tab="#Simple-home" aria-controls="Simple-home" role="tab">
+                                            Home
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b hs-tab-active:border-primary hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="ProfileSimple" aria-selected="false" data-hs-tab="#Simple-Profile" aria-controls="Simple-Profile" role="tab">
+                                            Profile
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b hs-tab-active:border-primary hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="settingSimple" aria-selected="false" data-hs-tab="#Simple-settings" aria-controls="Simple-settings" role="tab">
+                                            Settings
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b hs-tab-active:border-primary hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="contactSimple" aria-selected="false" data-hs-tab="#Simple-contact" aria-controls="Simple-contact" role="tab">
+                                            Contact
+                                        </button>
+                                    </nav>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div id="Simple-home" role="tabpanel" aria-labelledby="homeSimple">
+                                        <p>
+                                            They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic. That's why it's important to think about your message, then choose a font that fits. Cosby sweater eu banh mi, qui irure terry richardson ex squid.
+                                        </p>
+                                    </div>
+
+                                    <div id="Simple-Profile" role="tabpanel" class="hidden" aria-labelledby="ProfileSimple">
+                                        <p>
+                                            You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
+                                        </p>
+                                    </div>
+
+                                    <div id="Simple-settings" class="hidden" role="tabpanel" aria-labelledby="settingSimple">
+                                        <p>
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                        </p>
+                                    </div>
+
+                                    <div id="Simple-contact" class="hidden" role="tabpanel" aria-labelledby="contactSimple">
+                                        <p>
+                                            Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Border Top Nav</h6>
+
+                                <div>
+                                    <nav class="flex flex-wrap" aria-label="Tabs" role="tablist" data-hs-tab-select="#tab-select">
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card hs-tab-active:border-t-2 hs-tab-active:border-t-danger hs-tab-active:rounded-t-md border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-danger py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none active" id="homeBorderTop" aria-selected="true" data-hs-tab="#BorderTop-home" aria-controls="BorderTop-home" role="tab">
+                                            Home
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card hs-tab-active:border-t-2 hs-tab-active:border-t-danger hs-tab-active:rounded-t-md border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-danger py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="ProfileBorderTop" aria-selected="false" data-hs-tab="#BorderTop-Profile" aria-controls="BorderTop-Profile" role="tab">
+                                            Profile
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card hs-tab-active:border-t-2 hs-tab-active:border-t-danger hs-tab-active:rounded-t-md border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-danger py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="settingBorderTop" aria-selected="false" data-hs-tab="#BorderTop-settings" aria-controls="BorderTop-settings" role="tab">
+                                            Settings
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card hs-tab-active:border-t-2 hs-tab-active:border-t-danger hs-tab-active:rounded-t-md border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-danger py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="contactBorderTop" aria-selected="false" data-hs-tab="#BorderTop-contact" aria-controls="BorderTop-contact" role="tab">
+                                            Contact
+                                        </button>
+                                    </nav>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div id="BorderTop-home" role="tabpanel" aria-labelledby="homeBorderTop">
+                                        <p>
+                                            They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic. That's why it's important to think about your message, then choose a font that fits. Cosby sweater eu banh mi, qui irure terry richardson ex squid.
+                                        </p>
+                                    </div>
+
+                                    <div id="BorderTop-Profile" role="tabpanel" class="hidden" aria-labelledby="ProfileBorderTop">
+                                        <p>
+                                            You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
+                                        </p>
+                                    </div>
+
+                                    <div id="BorderTop-settings" class="hidden" role="tabpanel" aria-labelledby="settingBorderTop">
+                                        <p>
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                        </p>
+                                    </div>
+
+                                    <div id="BorderTop-contact" class="hidden" role="tabpanel" aria-labelledby="contactBorderTop">
+                                        <p>
+                                            Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Icon Tabs</h6>
+
+                                <div>
+                                    <nav class="flex flex-wrap" aria-label="Tabs" role="tablist" data-hs-tab-select="#tab-select">
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none active" id="homeIcon" aria-selected="true" data-hs-tab="#Icon-home" aria-controls="Icon-home" role="tab">
+                                            <i data-lucide="home" class="size-4 me-1.5"></i>
+                                            Home
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="ProfileIcon" aria-selected="false" data-hs-tab="#Icon-Profile" aria-controls="Icon-Profile" role="tab">
+                                            <i data-lucide="user" class="size-4 me-1.5"></i>
+                                            Profile
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="settingsIcon" aria-selected="false" data-hs-tab="#Icon-settings" aria-controls="Icon-settings" role="tab">
+                                            <i data-lucide="settings" class="size-4 me-1.5"></i>
+                                            Settings
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:border-b-transparent hs-tab-active:bg-card border-b border-default-200 dark:border-white/14 rounded-t hs-tab-active:border hs-tab-active:text-primary py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none" id="contactIcon" aria-selected="false" data-hs-tab="#Icon-contact" aria-controls="Icon-contact" role="tab">
+                                            <i data-lucide="phone" class="size-4 me-1.5"></i>
+                                            Contact
+                                        </button>
+                                    </nav>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div id="Icon-home" role="tabpanel" aria-labelledby="homeIcon">
+                                        <p>
+                                            They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic. That's why it's important to think about your message, then choose a font that fits. Cosby sweater eu banh mi, qui irure terry richardson ex squid.
+                                        </p>
+                                    </div>
+
+                                    <div id="Icon-Profile" role="tabpanel" class="hidden" aria-labelledby="ProfileIcon">
+                                        <p>
+                                            You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
+                                        </p>
+                                    </div>
+
+                                    <div id="Icon-settings" class="hidden" role="tabpanel" aria-labelledby="settingsIcon">
+                                        <p>
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                        </p>
+                                    </div>
+
+                                    <div id="Icon-contact" class="hidden" role="tabpanel" aria-labelledby="contactIcon">
+                                        <p>
+                                            Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Arrow Nav Tabs</h6>
+
+                                <div>
+                                    <nav class="flex md:flex-nowrap flex-wrap" aria-label="Tabs" role="tablist" data-hs-tab-select="#tab-select">
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none md:w-full justify-center relative before:content-[''] before:size-4 hs-tab-active:before:bg-primary before:bg-transparent before:absolute before:start-1/2 before:-translate-x-1/2 before:rotate-45 before:-bottom-1 active" id="homeArrow" aria-selected="true" data-hs-tab="#Arrow-home" aria-controls="Arrow-home" role="tab">
+                                            Home
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none md:w-full justify-center relative before:content-[''] before:size-4 hs-tab-active:before:bg-primary before:bg-transparent before:absolute before:start-1/2 before:-translate-x-1/2 before:rotate-45 before:-bottom-1" id="profileArrow" aria-selected="false" data-hs-tab="#Arrow-Profile" aria-controls="Arrow-Profile" role="tab">
+                                            Profile
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none md:w-full justify-center relative before:content-[''] before:size-4 hs-tab-active:before:bg-primary before:bg-transparent before:absolute before:start-1/2 before:-translate-x-1/2 before:rotate-45 before:-bottom-1" id="settingArrow" aria-selected="false" data-hs-tab="#Arrow-settings" aria-controls="Arrow-settings" role="tab">
+                                            Settings
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none md:w-full justify-center relative before:content-[''] before:size-4 hs-tab-active:before:bg-primary before:bg-transparent before:absolute before:start-1/2 before:-translate-x-1/2 before:rotate-45 before:-bottom-1" id="contactArrow" aria-selected="false" data-hs-tab="#Arrow-contact" aria-controls="Arrow-contact" role="tab">
+                                            Contact
+                                        </button>
+                                    </nav>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div id="Arrow-home" role="tabpanel" aria-labelledby="homeArrow">
+                                        <p>
+                                            They all have something to say beyond the words on the page. They can come across as casual or neutral, exotic or graphic. That's why it's important to think about your message, then choose a font that fits. Cosby sweater eu banh mi, qui irure terry richardson ex squid.
+                                        </p>
+                                    </div>
+
+                                    <div id="Arrow-Profile" class="hidden" role="tabpanel" aria-labelledby="profileArrow">
+                                        <p>
+                                            You've probably heard that opposites attract. The same is true for fonts. Don't be afraid to combine font styles that are different but complementary, like sans serif with serif, short with tall, or decorative with simple. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
+                                        </p>
+                                    </div>
+
+                                    <div id="Arrow-settings" class="hidden" role="tabpanel" aria-labelledby="settingArrow">
+                                        <p>
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                        </p>
+                                    </div>
+
+                                    <div id="Arrow-contact" class="hidden" role="tabpanel" aria-labelledby="contactArrow">
+                                        <p>
+                                            Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Vertical Tabs</h6>
+
+                                <div class="md:flex gap-4">
+                                    <nav class aria-label="Tabs" role="tablist" data-hs-tab-select="#tab-select">
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none w-full justify-center active" id="homeVertical" aria-selected="true" data-hs-tab="#Vertical-home" aria-controls="Vertical-home" role="tab">
+                                            Home
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none w-full justify-center" id="profileVertical" aria-selected="false" data-hs-tab="#Vertical-Profile" aria-controls="Vertical-Profile" role="tab">
+                                            Profile
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none w-full justify-center" id="settingVertical" aria-selected="false" data-hs-tab="#Vertical-settings" aria-controls="Vertical-settings" role="tab">
+                                            Settings
+                                        </button>
+
+                                        <button type="button" class="hs-tab-active:bg-primary hs-tab-active:text-white rounded py-2 px-4 inline-flex items-center font-medium text-center focus:outline-hidden hover:text-primary disabled:opacity-50 disabled:pointer-events-none w-full justify-center" id="contactVertical" aria-selected="false" data-hs-tab="#Vertical-contact" aria-controls="Vertical-contact" role="tab">
+                                            Contact
+                                        </button>
+                                    </nav>
+
+                                    <div>
+                                        <div id="Vertical-home" role="tabpanel" aria-labelledby="homeVertical">
+                                            <div class="flex gap-2 mb-2">
+                                                <div>
+                                                    <i data-lucide="check-square" class="size-4 text-success mt-1"></i>
+                                                </div>
+                                                <p class="text-default-500">
+                                                    Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+                                                </p>
+                                            </div>
+
+                                            <div class="flex gap-2 mb-2">
+                                                <div>
+                                                    <i data-lucide="check-square" class="size-4 text-success mt-2"></i>
+                                                </div>
+                                                <p class="text-default-500">
+                                                    Too much or too little spacing, as in the example below, can make things unpleasant for the reader. The goal is to make your text as comfortable to read as possible.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div id="Vertical-Profile" class="hidden" role="tabpanel" aria-labelledby="profileVertical">
+                                            <div class="flex gap-2 mb-2">
+                                                <div>
+                                                    <i data-lucide="check-square" class="size-4 text-success mt-1"></i>
+                                                </div>
+                                                <p class="text-default-500">
+                                                    In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.
+                                                </p>
+                                            </div>
+
+                                            <div class="flex gap-2 mb-2">
+                                                <div>
+                                                    <i data-lucide="check-square" class="size-4 text-success mt-2"></i>
+                                                </div>
+                                                <p class="text-default-500">
+                                                    A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div id="Vertical-settings" class="hidden" role="tabpanel" aria-labelledby="settingVertical">
+                                            <div class="flex gap-2 mb-2">
+                                                <div>
+                                                    <i data-lucide="check-square" class="size-4 text-success mt-1"></i>
+                                                </div>
+                                                <p class="text-default-500">
+                                                    Each design is a new, unique piece of art birthed into this world, and while you have the opportunity to be creative and make your own style choices.
+                                                </p>
+                                            </div>
+
+                                            <div class="flex gap-2 mb-2">
+                                                <div>
+                                                    <i data-lucide="check-square" class="size-4 text-success mt-2"></i>
+                                                </div>
+                                                <p class="text-default-500">
+                                                    For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div id="Vertical-contact" class="hidden" role="tabpanel" aria-labelledby="contactVertical">
+                                            <div class="flex gap-2 mb-2">
+                                                <div>
+                                                    <i data-lucide="check-square" class="size-4 text-success mt-1"></i>
+                                                </div>
+                                                <p class="text-default-500">
+                                                    For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live.
+                                                </p>
+                                            </div>
+
+                                            <div class="flex gap-2 mb-2">
+                                                <div>
+                                                    <i data-lucide="check-square" class="size-4 text-success mt-2"></i>
+                                                </div>
+                                                <p class="text-default-500">
+                                                    Too much or too little spacing, as in the example below, can make things unpleasant for the reader. The goal is to make your text as comfortable to read as possible.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Funnel Charts" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Funnel Charts" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic</h6>
+                                <div id="basicFunnel" class="apex-charts" data-chart-colors='["bg-primary"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Pyramid</h6>
+                                <div id="pyramidChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-blue-400", "bg-blue-300", "bg-blue-200", "bg-purple-200", "bg-purple-300", "bg-purple-400", "bg-purple-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Apex Chart Funnel Demo js -->
+    <script src="assets/js/pages/chart-apex-funnel.js" type="module"></script>
+
+</body>
+
+</html>

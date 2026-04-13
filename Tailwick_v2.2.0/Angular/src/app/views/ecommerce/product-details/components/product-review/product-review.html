@@ -1,0 +1,154 @@
+<div class="grid lg:grid-cols-3 grid-cols-1 gap-5">
+    <div class="col-span-1">
+        <div class="card-body border border-dashed border-default-200 rounded-md">
+            <div class="text-center">
+                <h5 class="mb-2 text-base font-semibold text-default-800">Customer Ratings</h5>
+                <span class="px-3.5 py-1.5 text-default-500 inline-flex gap-3 text-xs font-medium rounded-full border bg-default-100 border-default-200">
+                    <span class="flex items-center gap-2 text-yellow-500">
+                        <div class="size-3 fill-yellow-500"><ng-icon name="tablerStarFill"></ng-icon></div>
+                        <div class="size-3 fill-yellow-500"><ng-icon name="tablerStarFill"></ng-icon></div>
+                        <div class="size-3 fill-yellow-500"><ng-icon name="tablerStarFill"></ng-icon></div>
+                        <div class="size-3 fill-yellow-500"><ng-icon name="tablerStarFill"></ng-icon></div>
+                        <div class="size-3 fill-yellow-500"><ng-icon name="tablerStarHalfFill"></ng-icon></div>
+                    </span>
+                    (4.8 out of 5)
+                </span>
+                <p class="mt-2 text-[13px] text-default-500">4,213 total ratings</p>
+            </div>
+
+            <div class="flex flex-col gap-3 mt-4">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center text-default-800 text-[13px]"> 5 <div class="size-3.25 fill-yellow-500 ms-1 text-yellow-500"><ng-icon name="tablerStarFill"></ng-icon></div>
+                    </div>
+                    <div class="w-full h-1.5 rounded-full bg-default-200">
+                        <div class="h-1.5 rounded-full bg-success" style="width: 79%"></div>
+                    </div>
+
+                    <div class="text-end w-10 text-default-800 text-[13px]">
+                        1,210
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center text-default-800 text-[13px]"> 4 <div class="size-3.25 fill-yellow-500 ms-1 text-yellow-500"><ng-icon name="tablerStarFill"></ng-icon></div>
+                    </div>
+                    <div class="w-full h-1.5 rounded-full bg-default-200">
+                        <div class="h-1.5 rounded-full bg-secondary" style="width: 66%"></div>
+                    </div>
+
+                    <div class="text-end w-10 text-default-800 text-[13px]">
+                        1,174
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center text-default-800 text-[13px]"> 3 <div class="size-3.25 fill-yellow-500 ms-1 text-yellow-500"><ng-icon name="tablerStarFill"></ng-icon></div>
+                    </div>
+                    <div class="w-full h-1.5 rounded-full bg-default-200">
+                        <div class="h-1.5 rounded-full bg-info" style="width: 45%"></div>
+                    </div>
+
+                    <div class="text-end w-10 text-default-800 text-[13px]">
+                        762
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center text-default-800 text-[13px]"> 2 <div class="size-3.25 fill-yellow-500 ms-1 text-yellow-500"><ng-icon name="tablerStarFill"></ng-icon></div>
+                    </div>
+                    <div class="w-full h-1.5 rounded-full bg-default-200">
+                        <div class="h-1.5 rounded-full bg-warning" style="width: 22%"></div>
+                    </div>
+
+                    <div class="text-end w-10 text-default-800 text-[13px]">
+                        274
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center text-default-800 text-[13px]"> 1 <div class="size-3.25 fill-yellow-500 ms-1 text-yellow-500"><ng-icon name="tablerStarFill"></ng-icon></div>
+                    </div>
+                    <div class="w-full h-1.5 rounded-full bg-default-200">
+                        <div class="h-1.5 rounded-full bg-danger" style="width: 5%"></div>
+                    </div>
+
+                    <div class="text-end w-10 text-default-800 text-[13px]">
+                        32
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lg:col-span-2 col-span-1">
+        <div class="flex justify-between items-center gap-5">
+            <h6 class="text-default-800 font-semibold text-[15px]">Reviews</h6>
+            <button class="text-white btn btn-sm btn-primary">Add Review</button>
+        </div>
+
+        <div class="mt-3">
+            @for (review of reviews; track review.userName) {
+            <div class="mt-3 pt-3 first:pt-0 first:mt-0 border-t first:border-0 border-default-200">
+               
+                <div class="flex justify-between items-center gap-5">
+                    <div class="flex gap-3 items-center">
+                        <div class="bg-default-200 rounded-full">
+                            <img [src]="review.avatar" alt="" class="h-10 rounded-full" />
+                        </div>
+                        <div>
+                            <h6 class="card-title"><a [routerLink]="[]">{{ review.userName }}</a></h6>
+                            <p class="text-[13px] text-default-500">on {{ review.date }}</p>
+                        </div>
+                    </div>
+
+                   
+                    <div class="hs-dropdown relative inline-flex">
+                        <button type="button" class="hs-dropdown-toggle flex justify-center items-center size-7.5 text-sm font-semibold rounded-md bg-default-100 hover:bg-default-600 text-default-500 hover:text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                            <div class="size-4"><ng-icon name="lucideEllipsis"></ng-icon></div>
+                        </button>
+                        <div class="hs-dropdown-menu" role="menu">
+                            <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-sm text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                <div class="size-3"><ng-icon name="lucideFilePen"></ng-icon></div>
+                                Edit
+                            </a>
+                            <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-sm text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                <div class="size-3"><ng-icon name="lucideTrash2"></ng-icon></div>
+                                Delete
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 mt-4 mb-2 text-yellow-500">
+                    @for (i of [0,1,2,3,4]; track i) {
+                    <div class="size-3.5">
+                        @if (i + 1 <= review.rating) { <ng-icon name="tablerStarFill" class="fill-yellow-500"></ng-icon>
+                            } @else if (i < review.rating && (i + 1)> review.rating) {
+                                <ng-icon name="tablerStarHalfFill" class="fill-yellow-500"></ng-icon>
+                                } @else {
+                                <ng-icon name="lucideStar"></ng-icon>
+                                }
+                    </div>
+                    }
+                </div>
+
+
+                <p class="text-default-500 text-sm">"{{ review.reviewText }}"</p>
+
+               
+                <div class="flex items-center gap-3 mt-3">
+                    <a [routerLink]="[]" class="text-success flex items-center gap-1.25">
+                        <div class="size-3"><ng-icon name="lucideThumbsUp"></ng-icon></div>
+                        <span class="text-sm">{{ review.likes }}</span>
+                    </a>
+                    <a [routerLink]="[]" class="text-danger flex items-center gap-1.25">
+                        <div class="size-3"><ng-icon name="lucideThumbsDown"></ng-icon></div>
+                        <span class="text-sm">{{ review.dislikes }}</span>
+                    </a>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+
+</div>

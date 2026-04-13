@@ -1,0 +1,25 @@
+<main>
+ 
+<app-page-title title="Shopping Cart" subtitle="Menu" />
+
+    <div class="grid lg:grid-cols-4 grid-cols-1 gap-5">
+        <div class="lg:col-span-3 col-span-1">
+
+            <div class="flex justify-between gap-5 items-center mb-5">
+                <h5 class="text-base text-default-800 font-semibold underline">Shopping Cart (3)</h5>
+
+                <button class="flex items-center gap-1.25 text-danger">
+                    <div class="size-4"><ng-icon name="lucideTrash2"></ng-icon></div>
+                    <span class="text-sm">Delete All</span>
+                </button>
+            </div>
+
+            <app-cart-details />
+
+        </div>
+
+        <div class="col-span-1">
+            <app-order-summary />
+        </div>
+    </div>
+</main>

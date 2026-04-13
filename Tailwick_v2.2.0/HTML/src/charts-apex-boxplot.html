@@ -1,0 +1,63 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Boxplot Charts" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Boxplot Charts" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic</h6>
+                                <div id="basicBoxplot" class="apex-charts" data-chart-colors='["bg-primary", "bg-slate-100"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Boxplot-Scatter</h6>
+                                <div id="boxplotScatterChart" class="apex-charts" data-chart-colors='["bg-primary", "bg-green-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Horizontal BoxPlot</h6>
+                                <div id="boxplotHorizontalChart" class="apex-charts" data-chart-colors='["bg-slate-50", "bg-slate-200"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Apex Chart Boxplot Demo js -->
+    <script src="assets/js/pages/chart-apex-boxplot.js" type="module"></script>
+
+</body>
+
+</html>

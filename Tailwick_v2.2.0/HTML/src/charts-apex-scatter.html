@@ -1,0 +1,63 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Scatter Charts" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Scatter Charts" }}
+
+                <div class="container-fluid">
+                    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Basic</h6>
+                                <div id="basicScatter" class="apex-charts" data-chart-colors='["bg-primary","bg-green-500", "bg-yellow-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Scatter – Datetime</h6>
+                                <div id="scatterDatetime" class="apex-charts" data-chart-colors='["bg-primary","bg-green-500", "bg-yellow-500", "bg-purple-500", "bg-red-500"]' dir="ltr"></div>
+                            </div>
+                        </div><!--end card-->
+                        <!-- <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Scatter – Images</h6>
+                                <div id="scatterImages" class="apex-charts" data-chart-colors='["bg-primary","bg-green-500"]' dir="ltr"></div>
+                            </div>
+                        </div> -->
+                        <!--end card-->
+                    </div><!--end grid-->
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Apex Chart Bubble Demo js -->
+    <script src="assets/js/pages/chart-apex-scatter.js" type="module"></script>
+
+</body>
+
+</html>

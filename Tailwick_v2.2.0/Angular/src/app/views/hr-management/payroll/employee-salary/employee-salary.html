@@ -1,0 +1,43 @@
+<main>
+ 
+    <app-page-title title="Employee Salary" subtitle="Hr" />
+
+
+    <div class="card mb-5">
+                  <app-salary-report />
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="flex gap-3">
+                            <div class="relative">
+                                <input type="email" class="form-input form-input-sm ps-9" placeholder="Search for....">
+                                <div class="absolute inset-y-0 start-0 flex items-center ps-3">
+                                    <div class="size-4 flex items-center text-default-500"><ng-icon name="lucideSearch"></ng-icon></div>
+                                </div>
+                            </div>
+
+                            <input mwlFlatpickr type="text" id="dateRangeFilterInput" class="form-input form-input-sm lg:w-52 w-full" placeholder="Select date" data-provider="flatpickr" data-date-format="d M, Y" data-range-date="true" readonly="readonly">
+                        </div>
+
+                        <a routerLink="/hr/payroll/create-payslip" class="btn btn-sm bg-primary text-white">
+                            <div  class="size-4 me-1"><ng-icon name="lucidePlus"></ng-icon></div>
+                            Create Salary
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <div class="overflow-x-auto">
+                            <div class="min-w-full inline-block align-middle">
+                                <div class="overflow-hidden">
+                                  <app-salary-details />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <p class="text-default-500 text-sm">Showing <b>10</b> of <b>46</b> Results</p>
+                            <app-pagination />
+                        </div>
+                    </div>
+                </div>
+</main>

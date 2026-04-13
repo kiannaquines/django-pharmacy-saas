@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>One Page Landing | Tailwick - Tailwind CSS 3 Admin Layout & UI Kit Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+    <meta content="Themesdesign" name="author">
+    
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/favicon-CK1QI2Xs.ico">
+
+    <script>
+        (function () {
+            const html = document.documentElement;
+            const storageKey = "__TAILWICK_CONFIG__";
+            const savedConfig = sessionStorage.getItem(storageKey);
+    
+            // Default config
+            const defaultConfig = {
+                dir: "ltr",
+                theme: "light",
+                sidenav: {
+                    color: "light",
+                    size: "default",
+                },
+            };
+    
+            // Build config from HTML attributes
+            function getSystemTheme() {
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+            }
+    
+            // Build config from HTML attributes
+            const htmlConfig = {
+                dir: html.getAttribute("dir") || defaultConfig.dir,
+    
+                theme: html.getAttribute("data-theme") === 'system'
+                    ? getSystemTheme()
+                    : html.getAttribute("data-theme") || (defaultConfig.theme === 'system' ? getSystemTheme() : defaultConfig.theme),
+                sidenav: {
+                    color: html.getAttribute("data-sidenav-color") || defaultConfig.sidenav.color,
+                    size: html.getAttribute("data-sidenav-size") || defaultConfig.sidenav.size,
+                },
+            };
+    
+            // Save merged config as defaults globally
+            window.defaultConfig = structuredClone(htmlConfig);
+    
+            // Load from session if exists
+            let config = savedConfig ? JSON.parse(savedConfig) : htmlConfig;
+            window.config = config;
+    
+            // Apply layout attributes immediately
+            html.setAttribute("dir", config.dir);
+            html.setAttribute("data-theme", config.theme);
+            html.setAttribute("data-sidenav-color", config.sidenav.color);
+    
+            if (config.sidenav.size) {
+                let size = config.sidenav.size;
+    
+                if (window.innerWidth <= 1140) {
+                    size = "offcanvas";
+                }
+    
+                html.setAttribute("data-sidenav-size", size);
+            }
+        })();
+    </script>
+    
+    
+
+  <script type="module" crossorigin src="/assets/app-BxTRRtUp.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/app-0ZOPNGSF.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="fixed inset-x-0 top-0 z-50 bg-card py-6 shadow flex justify-between items-center">
+            <div class="container">
+                <div class="grid lg:grid-cols-12 md:grid-cols-10 grid-cols-2 items-center">
+                    <div class="lg:col-span-2 md:col-span-2">
+                        <a href="index.html">
+                            <img src="/assets/logo-dark-BRT9tiBX.png" alt="logo dark" class="h-6 block dark:hidden">
+                            <img src="/assets/logo-light-CCjoJosn.png" alt="logo light" class="h-6 hidden dark:block" alt="">
+                        </a>
+                    </div>
+
+                    <div class="lg:col-span-8 md:col-span-6 md:block hidden">
+                        <ul class="flex items-center justify-center lg:gap-8 md:gap-6 font-medium text-sm">
+                            <li>
+                                <a href="#home" class="text-default-800 hover:text-primary transition duration-300">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#features" class="text-default-800 hover:text-primary transition duration-300">Our Features</a>
+                            </li>
+
+                            <li>
+                                <a href="#about" class="text-default-800 hover:text-primary transition duration-300">About Us</a>
+                            </li>
+
+                            <li>
+                                <a href="#pricing" class="text-default-800 hover:text-primary transition duration-300">Pricing</a>
+                            </li>
+
+                            <li>
+                                <a href="#contact" class="text-default-800 hover:text-primary transition duration-300">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-2 md:col-span-2 flex items-center justify-end gap-2">
+                        <button class="btn size-9 bg-primary text-white md:hidden" aria-haspopup="dialog" aria-expanded="false" aria-controls="navbarMenu" data-hs-overlay="#navbarMenu">
+                            <i data-lucide="menu"></i>
+                        </button>
+
+                        <a href="#" class="flex justify-end">
+                            <button type="button" class="btn bg-primary text-white">
+                                Sign In
+                                <i data-lucide="log-in" class="size-4"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- hero section -->
+    <section class="relative lg:pt-44 lg:pb-36 md:pt-34 md:pb-20 pt-30 pb-16">
+        <div class="absolute rotate-45 size-125 border border-dashed border-t-default-300 border-l-default-300 border-r-default-300/40 border-b-default-700 rounded-full end-40 -bottom-62.5 z-20 lg:block hidden">
+        </div>
+
+        <div class="absolute rotate-45 size-175 border border-dashed border-t-default-300 border-l-default-300 border-r-default-300/40 border-b-default-700 rounded-full end-16 -bottom-87.5 z-20 lg:block hidden">
+        </div>
+
+        <div class="container">
+            <div class="grid lg:grid-cols-2">
+                <div>
+                    <h1 class="mb-8 leading-relaxed md:text-5xl text-4xl font-semibold text-default-800">Effective Management of
+                        Large Projects at
+                        <span class="relative inline-block px-2 mx-2 before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-primary/10 before:rounded-md before:backdrop-blur-xl">
+                            <span class="relative text-primary">Tailwick</span></span>
+                    </h1>
+                    <p class="mb-6 text-lg text-default-500">Effective professional services project management means
+                        having a firm grasp on the scope, budget, resources, personnel, and timeline dedicated to a
+                        project. An effective project manager is able to manage unplanned issues while keeping the
+                        ball rolling on company goals and tasks in progress.
+                    </p>
+                    <div class="flex items-center gap-2.5">
+                        <a href="#">
+                            <button type="button" class="btn bg-primary text-white">
+                                <i data-lucide="rocket" class="size-4"></i>
+                                Get Started
+                            </button>
+                        </a>
+
+                        <a href="#">
+                            <button type="button" class="btn hover:bg-danger border border-dashed border-danger hover:text-white bg-transparent text-danger">
+                                <i data-lucide="shopping-cart" class="size-4"></i>
+                                Buy Now
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature section -->
+    <section id="features" class="relative py-32 bg-default-900">
+        <div class="container">
+            <div class="grid lg:grid-cols-12 grid-cols-1 gap-5">
+                <div class="lg:col-span-5 relative z-20 lg:order-1 order-2">
+                    <div class="relative z-10 grid lg:grid-cols-2 grid-cols-3 gap-5">
+                        <div class="lg:col-span-2">
+                            <img src="/assets/widgets-7PDsVPAE.jpg" alt="" class="rounded-xl ms-auto">
+                        </div>
+
+                        <div class="lg:col-span-1 lg:mt-5">
+                            <img src="/assets/widgets-3-DKQp86NA.jpg" alt="" class="rounded-xl">
+                        </div>
+
+                        <div class="lg:col-span-1 lg:mt-5">
+                            <img src="/assets/widgets-2-USZ0KsUh.jpg" alt="" class="rounded-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 relative z-20 lg:-mt-72 lg:order-2 order-1">
+                    <img src="/assets/home-BFgx7U8c.jpg" alt="" class="rounded-xl shadow-2xl">
+                </div>
+            </div>
+
+            <div class="mt-24">
+                <h1 class="mb-16 capitalize text-white font-semibold text-4xl leading-normal">Build for anyone who works with Tailwick</h1>
+            </div>
+        </div>
+
+        <div class="absolute rotate-45 size-125 border border-dashed border-default-300/40 rounded-full -start-80 bottom-48 z-10 lg:block hidden md:block">
+        </div>
+        <div class="absolute rotate-45 size-175 border border-dashed border-default-300/40 rounded-full -start-96 bottom-24 z-10 lg:block hidden md:block">
+        </div>
+    </section>
+
+    <section class="relative z-20 pb-32 bg-default-100 dark:bg-default-950">
+        <div class="container">
+            <div class="grid lg:grid-cols-3 gap-6">
+                <div class="card rounded-md shadow-md transition-all duration-300 hover:-translate-y-2 -mt-36">
+                    <div class="card-body">
+                        <div class="flex flex-col gap-y-6">
+                            <img src="/assets/chat-DdXYAt3u.jpg" alt="" class="rounded-md shadow">
+                            <div>
+                                <span class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium border border-primary/30 bg-primary/15 text-primary">Popular Apps</span>
+
+                                <h6 class="text-lg font-semibold mt-3 mb-2 text-default-800">
+                                    <a href="#">Chat with Client & Employee</a>
+                                </h6>
+
+                                <p class="mb-3 text-base text-default-500">A chat UI, or user interface, is one of the
+                                    first things users see when using a web or mobile application to communicate.
+                                </p>
+
+                                <a href="#" class="text-primary text-base flex items-center gap-1.5">
+                                    Read More
+                                    <i data-lucide="move-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card rounded-md shadow-md transition-all duration-300 hover:-translate-y-2 lg:-mt-36">
+                    <div class="card-body">
+                        <div class="flex flex-col gap-y-6">
+                            <img src="/assets/email-_n36xcxk.jpg" alt="" class="rounded-md shadow">
+                            <div>
+                                <span class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium border border-secondary/30 bg-secondary/15 text-secondary">Email Apps</span>
+                                <h6 class="text-lg font-semibold mt-3 mb-2 text-default-800">
+                                    <a href="#">Exciting New Features Await You</a>
+                                </h6>
+
+                                <p class="mb-3 text-base text-default-500">A chat UI, or user interface, is one of the
+                                    first things users see when using a web or mobile application to communicate.
+                                </p>
+
+                                <a href="#" class="text-primary text-base flex items-center gap-1.5">
+                                    Read More
+                                    <i data-lucide="move-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card rounded-md shadow-md transition-all duration-300 hover:-translate-y-2 lg:-mt-36">
+                    <div class="card-body">
+                        <div class="flex flex-col gap-y-6">
+                            <img src="/assets/order-overview-DXzcorD7.jpg" alt="" class="rounded-md shadow">
+                            <div>
+                                <span class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium border border-danger/20 bg-danger/15 text-danger">HR Management</span>
+                                <h6 class="text-lg font-semibold mt-3 mb-2 text-default-800">
+                                    <a href="#">Unleash Your Creativity with Our Latest Tools</a>
+                                </h6>
+
+                                <p class="mb-3 text-base text-default-500">A chat UI, or user interface, is one of the
+                                    first things users see when using a web or mobile application to communicate.
+                                </p>
+
+                                <a href="#" class="text-primary text-base flex items-center gap-1.5">
+                                    Read More
+                                    <i data-lucide="move-right" class="size-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-10 rounded-md mt-20 bg-default-900 dark:bg-default-900">
+                <div class="grid lg:grid-cols-5 md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <h3 class="mb-2 text-white text-2xl font-semibold">
+                            <span data-target="4" class="counter-value me-1">4</span>+
+                        </h3>
+                        <p class="text-base text-default-500">Multiple Layouts</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h3 class="mb-2 text-white text-2xl font-semibold">
+                            <span data-target="12" class="counter-value me-1">12</span>+
+                        </h3>
+                        <p class="text-base text-default-500">Multi Languages </p>
+                    </div>
+
+                    <div class="text-center">
+                        <h3 class="mb-2 text-white text-2xl font-semibold">
+                            <span data-target="7" class="counter-value me-1">7</span>+
+                        </h3>
+                        <p class="text-base text-default-500">Apps & Dashboard</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h3 class="mb-2 text-white text-2xl font-semibold">
+                            <span data-target="4" class="counter-value me-1">4</span>+
+                        </h3>
+                        <p class="text-base text-default-500">Multiple Modes</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h3 class="mb-2 text-white text-2xl font-semibold">
+                            <span data-target="36500" class="counter-value me-1">36500</span>+
+                        </h3>
+                        <p class="text-base text-default-500">Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section id="about" class="relative lg:py-24 md:py-12 py-14">
+        <div class="container">
+            <div class="flex flex-col lg:gap-y-20 gap-y-12">
+                <div class="text-center lg:w-3xl mx-auto">
+                    <h1 class="mb-6 leading-relaxed text-4xl font-semibold text-default-800">Why Developers Should Embrace <span class="relative inline-block px-2 mx-2 before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-primary/10 before:rounded-md before:backdrop-blur-xl"><span class="relative text-primary">Tailwick</span></span> </h1>
+                    <p class="text-lg text-default-500">The purpose of developer communities is to provide the resources for developers to learn anything they want to.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-5">
+                        <h1 class="mb-3 leading-normal capitalize text-4xl font-semibold text-default-800">
+                            Craft a Complete Website Quickly with the Help of Design Blocks
+                        </h1>
+                        <p class="text-lg mb-6 text-default-500">The block design approach basically breaks the design
+                            into small parts. These are built independently and then later combine into a
+                            customizable page which makes a website more flexible in terms of layout and content.
+                        </p>
+                        <button type="button" class="btn border-primary text-primary hover:bg-primary hover:text-white">
+                            Discover Now
+                            <i data-lucide="move-right" class="size-4"></i>
+                        </button>
+                    </div>
+
+                    <div class="lg:col-span-6">
+                        <img src="/assets/widgets-4-D8ynyKxd.jpg" alt="" class="shadow-lg lg:ms-auto rounded-xl">
+                        <img src="/assets/widgets-5-B_13p6DH.jpg" alt="" class="shadow-lg -mt-24 rounded-xl ms-auto me-24">
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-6 items-center lg:mt-12 mt-8">
+                    <div class="lg:col-span-6 lg:order-1 order-2">
+                        <img src="/assets/widgets-6-EWrH3E88.jpg" alt="" class="shadow-lg rounded-xl">
+                        <img src="/assets/widgets-7-C0szJVnm.jpg" alt="" class="shadow-lg -mt-24 ms-auto lg:me-24 md:me-40 rounded-xl">
+                    </div>
+
+                    <div class="lg:col-span-5 lg:order-2 order-1">
+                        <h1 class="mb-3 leading-normal capitalize text-4xl font-semibold text-default-800">Boost Your
+                            Business Using Our Potent Tools</h1>
+                        <p class="text-lg mb-6 text-default-500">The block design approach basically breaks the design
+                            into small parts. These are built independently and then later combine into a
+                            customizable page which makes a website more flexible in terms of layout and content.
+                        </p>
+                        <button type="button" class="btn border-primary text-primary hover:bg-primary hover:text-white">
+                            Discover Now
+                            <i data-lucide="move-right" class="size-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-6 items-center lg:mt-12 mt-8">
+                    <div class="lg:col-span-5">
+                        <h1 class="mb-3 leading-normal capitalize text-4xl font-semibold text-default-800">Building a
+                            User-Friendly Website is Effortless</h1>
+                        <p class="text-lg mb-4 text-default-500">With a user-friendly interface and easy navigation,
+                            the user decreases search time and increases satisfaction, fulfilling his needs in a
+                            fast and efficient way.</p>
+                        <ul class="flex flex-col gap-y-3 mb-6 text-lg list-disc list-inside text-default-900">
+                            <li>
+                                6+ Ready touse Dashboard
+                            </li>
+
+                            <li>
+                                Light, Dark & RTL Mode Support
+                            </li>
+
+                            <li>
+                                Multiple Layouts Support
+                            </li>
+                        </ul>
+
+                        <button type="button" class="btn border-primary text-primary hover:bg-primary hover:text-white">
+                            Discover Now
+                            <i data-lucide="move-right" class="size-4"></i>
+                        </button>
+                    </div>
+
+                    <div class="lg:col-span-6">
+                        <img src="/assets/widgets-2-USZ0KsUh.jpg" alt="" class="shadow-lg lg:ms-auto me-auto rounded-xl">
+                        <img src="/assets/widgets-7PDsVPAE.jpg" alt="" class="shadow-lg -mt-24 rounded-xl ms-auto lg:me-24 me-40">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- pricing section -->
+    <section id="pricing" class="relative lg:pb-24 md:pb-18 pb-12">
+        <div class="container">
+            <div class="flex flex-col gap-y-16">
+                <div class="text-center lg:w-3xl mx-auto">
+                    <h1 class="mb-4 leading-relaxed text-4xl font-semibold text-default-800">Tailored Website Design Package</h1>
+                    <p class="text-lg text-default-500">A good web design package will include designing a logo,ingratiation with local SEO, linking a site to a social media presence, and more.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-5 mb-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="mb-2 flex items-center gap-1.5">
+                                <i data-lucide="goal" class="text-success size-5"></i>
+                                <span class="text-lg font-semibold text-default-800">Lite</span>
+                            </h5>
+
+                            <p class="mb-4 text-default-500">Perfect plan for Lite</p>
+                            <h1 class="mb-4 text-4xl text-default-800 font-normal">
+                                <span class="text-default-400">$</span>9.99<small class="text-base text-default-500">/Monthly</small>
+                            </h1>
+
+                            <button type="button" class="btn border w-full border-dashed border-primary bg-transparent text-primary hover:bg-primary/20">
+                                Purchase Now
+                            </button>
+
+                            <ul class="mt-5 flex flex-col gap-3 text-sm">
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>3</b> Projects</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>299 </b>Customers</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">Scalable Bandwidth</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>0</b>No Team Account</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">In app messaging</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">5 FTP Login</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">Detailed Analytics</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">Custom Domain</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">Smart Workflow</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">IQ test</del>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="mb-2 flex items-center gap-1.5">
+                                <i data-lucide="graduation-cap" class="text-secondary size-5"></i>
+                                <span class="text-lg font-semibold text-default-800">Professional</span>
+                            </h5>
+
+                            <p class="mb-4 text-default-500">For users who want to do more.</p>
+                            <h1 class="mb-4 text-4xl text-default-800 font-normal">
+                                <span class="text-default-400">$</span>29.99<small class="text-base text-default-500">/Monthly</small>
+                            </h1>
+
+                            <button type="button" class="btn border w-full border-dashed border-primary bg-transparent text-primary hover:bg-primary/20">Purchase
+                                Now
+                            </button>
+
+                            <ul class="mt-5 flex flex-col gap-3 text-sm">
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>3</b> Projects</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>299</b>Customers</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">Scalable Bandwidth</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>3</b> No Team Account</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">In app messaging</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">5 FTP Login</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">Detailed Analytics</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">Custom Domain</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">Smart Workflow</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">IQ test</del>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card relative overflow-hidden">
+                        <div class="card-body">
+                            <div class="size-16 absolute top-0 end-0">
+                                <div class="absolute bg-primary text-center w-42.5 text-white py-1 transform rotate-45 top-6 -end-12 font-semibold">
+                                    25% Sale
+                                </div>
+                            </div>
+
+                            <h5 class="mb-2 flex items-center gap-1.5">
+                                <i data-lucide="crown" class="text-primary size-5"></i>
+                                <span class="text-lg font-semibold text-default-800"> Enterprise</span>
+                            </h5>
+                            <p class="mb-4 text-default-500">Run your company on your teams</p>
+                            <h1 class="mb-4 text-4xl text-default-800 font-normal">
+                                <span class="text-default-400">$</span>39.99<small class="text-base text-default-500">/Monthly</small>
+                            </h1>
+
+                            <button type="button" class="btn border w-full border-dashed border-primary bg-transparent text-primary hover:bg-primary/20">Purchase
+                                Now
+                            </button>
+
+                            <ul class="mt-5 flex flex-col gap-3 text-sm">
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>3</b> Projects</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>299</b>Customers</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">Scalable Bandwidth</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>3</b> No Team Account</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">In app messaging</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">5 FTP Login</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">Detailed Analytics</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">Custom Domain</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">Smart Workflow</del>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="x" class="size-4 text-danger"></i>
+                                    <del class="text-default-500">IQ test</del>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="mb-2 flex items-center gap-1.5">
+                                <i data-lucide="luggage" class="text-danger size-5"></i>
+                                <span class="text-lg font-semibold text-default-800">Unlimited</span>
+                            </h5>
+
+                            <p class="mb-4 text-default-500">Your entire team in one place</p>
+                            <h1 class="mb-4 text-4xl text-default-800 font-normal">
+                                <span class="text-default-400">$</span>49.99<small class="text-base text-default-500">/Monthly</small>
+                            </h1>
+
+                            <button type="button" class="btn border w-full border-dashed border-primary bg-transparent text-primary hover:bg-primary/20">Purchase
+                                Now
+                            </button>
+
+                            <ul class="mt-5 flex flex-col gap-3 text-sm">
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>3</b> Projects</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>299</b>Customers</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">Scalable Bandwidth</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900"><b>3</b> No Team Account</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">In app messaging</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">5 FTP Login</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">Detailed Analytics</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">Custom Domain</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">Smart Workflow</span>
+                                </li>
+
+                                <li class="flex items-center gap-2.5">
+                                    <i data-lucide="check-check" class="size-4 text-success"></i>
+                                    <span class="text-default-900">IQ test</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact" class="relative py-20 bg-blue-700/80 dark:bg-blue-900">
+        <div class="absolute size-125 border border-dashed rotate-45 border-t-primary border-l-primary border-r-default-700 border-b-default-700 rounded-full right-40 -bottom-62.5 z-10 lg:block hidden"></div>
+        <div class="container">
+            <div class="lg:flex justify-between items-center">
+                <div>
+                    <h1 class="mb-4 capitalize text-primary/10 leading-normal text-4xl font-semibold">
+                        Ready to get started with Tailwick
+                    </h1>
+
+                    <p class="text-lg text-primary/20">Tell us which describes you, and we'll get in touch with next steps.
+                    </p>
+                </div>
+
+                <button type="button" class="relative z-20 btn bg-card text-primary lg:mt-0 md:mt-4">
+                    <i data-lucide="shopping-cart" class="size-4"></i>
+                    Purchase Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative pt-20 pb-12 bg-default-800 dark:bg-default-900">
+        <div class="container">
+            <div class="relative z-10 grid lg:grid-cols-12 md:grid-cols-2 gap-5">
+                <div class="lg:col-span-3">
+                    <h5 class="mb-4 font-medium text-white text-lg">Dashboards</h5>
+                    <ul class="flex flex-col gap-y-3 text-sm">
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Analytics</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">CRM</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Ecommerce</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Email</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full
+                    ore:transition-all before:duration-300 before:ease-linear">HR</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Social
+                                Media</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h5 class="mb-4 font-medium text-white text-lg">Apps Pages</h5>
+                    <ul class="flex flex-col gap-y-3 text-sm">
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Ecommerce
+                                Apps
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Invoices</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Email
+                                App
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Chat
+                                App
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full
+                    ore:transition-all before:duration-300 before:ease-linear">
+                                Users Apps
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">HR
+                                Management
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Social
+                                Media
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h5 class="mb-4 font-medium text-white text-lg">Resources</h5>
+                    <ul class="flex flex-col gap-y-3 text-sm">
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">All
+                                Resources
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Blog</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">FAQ's</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="relative inline-block transition-all duration-200 ease-linear text-default-400 before:absolute before:border-b before:border-default-400 before:inset-x-0 before:bottom-0 before:w-0 hover:before:w-full before:transition-all before:duration-300 before:ease-linear">Help
+                                Center
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <div class="flex p-1 lg:w-96 md:w-90 w-86 rounded-md border border-white/14 bg-card/4 relative mb-6">
+                        <input type="email" placeholder="tailwick@themesdesign.in" class="px-3 text-sm text-white border-none bg-transparent focus:outline-none focus:ring-0" />
+                        <button type="button" class="absolute end-2 btn text-white bg-primary hover:bg-primary/90">
+                            Subscribe Now
+                        </button>
+                    </div>
+
+                    <div>
+                        <p class="mb-1 text-sm text-default-400">Support Email</p>
+                        <h5 class="text-lg text-white">support@themesdesign.in</h5>
+                    </div>
+
+                    <div class="mt-6">
+                        <p class="mb-1 text-sm text-default-400">Contact Us</p>
+                        <h5 class="text-lg text-white">+(012) 1202 012 4567</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-5 mt-20 border-y border-default-400/40">
+                <div class="md:flex justify-between items-center">
+                    <div class="hs-dropdown relative inline-flex">
+                        <button id="hs-dropdown-with-icons" type="button" class="hs-dropdown-toggle py-2 px-4 bg-transparent border border-default-400/40 text-white hover:border-primary rounded hover:text-primary font-semibold gap-2 flex items-center" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHB8fHx8fHx8fHx//2wBDAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAqAEADAREAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAMHAgQFBgH/xAA3EAAABAEHCQcEAwEAAAAAAAABAgMEAAUGBxESExYUFTFVVpKh0dMhIjIzQZGTI0JR0iVFYYL/xAAbAQEAAgMBAQAAAAAAAAAAAAAAAgYBBAUDB//EADIRAAACAxACAgEFAAAAAAAAAAABAgPwBAUREhMUFSExUVJTVIGCoUFxMpHRIkJDYeH/2gAMAwEAAhEDEQA/APLDJaK0nN3RxUaLKJuFjuXQjdOjJnAATbCUgiJ+3ttDpi1xoDgtss8exrDdGb7POxksnd2AUMnmb+yAAQvL0Qu7Fi1wiMocXx78WhANZvIbQzUwmWFW3kg5xStC1a5QIgcjqsloDBV9sSNYcP3V5P0A7M0JGkfEEkpSgquyaOE3V/KIiFwtdCcCGbiJAGz3QAa/WOc+kCShKMdVXsh03nXLVboRNUjGTrqvqFm4Xo32iU9y/pFUklWIXOknxyC7/IYXo32iU9y/pCSVYgpJ8cgu/wAhhejfaJT3L+kJJViCknxyC7/I+lmzRyUwGLONQDANYCAlAQEP+ISSrEMG+L4n/ATbinmhQQkZFU4ZKDhq7IVd2ALpOBBQoWGxLA3KgaLden1CL0lWlfWVnj3ePnQ6Qtv5AZPyZe9Byc+abRc5FDJK7zLLuoU/Wxw9Y84aoYfFv7bbgEDcxDppOwUIoRsWTinfopARq2G0PdeN7v65gq8XrV6xI7r41Xk/R+AG9No8kNJxSO8lZis4k5Ur0xjJmC4X7yhSnbJfSuilNpLXGi+SSJKEo1Zfpq8+LR03nVrk3QiSk4qdcB7ejFj4hor1E49g60VWUU4W+xc5g+mci3EMQ0V6icewdaEopwt9hMH0zkW4hiGivUTj2DrQlFOFvsJg+mci3EMQ0V6icewdaEopwt9hMH0zkW4itCTLn80albtJuPEXBk1m75eyKpVk1DAIAUogJSVAFVoo9sXWcKjOE0i/ofO4hicZqTzFwKWFHuZr0Vyyd37YKCld2sos3mnvVaIjLq4PmUa//AiHcME5r0igUqys3nikotgblk92CdkESthEQKZMC2Fa+ztNxjJr1OIoK4dwiJDrzQkGe8lziYSsE13AOm5XAu1FQNdrHXtVGAlQASoDVVFjTfB0IyJkicY6oCG89znQTXESxKIhXCYsrFE/dmC7h+cVyVWYRZKNcOo7IMUT92YLuH5wlVmEKNcOo7IMUT92YLuH5wlVmEKNcOo7IMUT92YLuH5wlVmEKNcOo7IZ5kpZ1014dCERdeTbCM8erKTbmGZKWddNeHQhEXXk2wTx6spNuYZkpZ1014dCERdeTbBPHqyk25hmSlnXTXh0IRF15NsE8erKTbmGZKWddNeHQhEXXk2wTx6spNuYZkpZ1014dCERdeTbBPHqyk25hmSlnXTXh0IRF15NsE8erKTbmGZKWddNeHQhEXXk2wTx6spNuY4+F5nbWj8hOceckhiHQpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abox4Jx56nl+I3l+DT9v8An4jTMWlD4lbvaI92MCQbsADdgAbsADdgAbsAEjfz0/L8RfM8Gn7v8/MZIRT+J27Wj//Z" alt="" class="size-5 rounded-full">
+                            English
+                        </button>
+
+                        <div class="hs-dropdown-menu p-2 transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-38 card z-40 mt-2 divide-y divide-default-200 dark:divide-white/14" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-with-icons">
+                            <div class="p-1 space-y-3 text-sm font-normal">
+                                <a class="flex items-center gap-x-3.5 px-3 text-default-600 hover:text-primary" href="#">
+                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHB8fHx8fHx8fHx//2wBDAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAqAEADAREAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAMHAgQFBgH/xAA3EAAABAEHCQcEAwEAAAAAAAABAgMEAAUGBxESExYUFTFVVpKh0dMhIjIzQZGTI0JR0iVFYYL/xAAbAQEAAgMBAQAAAAAAAAAAAAAAAgYBBAUDB//EADIRAAACAxACAgEFAAAAAAAAAAABAgPwBAUREhMUFSExUVJTVIGCoUFxMpHRIkJDYeH/2gAMAwEAAhEDEQA/APLDJaK0nN3RxUaLKJuFjuXQjdOjJnAATbCUgiJ+3ttDpi1xoDgtss8exrDdGb7POxksnd2AUMnmb+yAAQvL0Qu7Fi1wiMocXx78WhANZvIbQzUwmWFW3kg5xStC1a5QIgcjqsloDBV9sSNYcP3V5P0A7M0JGkfEEkpSgquyaOE3V/KIiFwtdCcCGbiJAGz3QAa/WOc+kCShKMdVXsh03nXLVboRNUjGTrqvqFm4Xo32iU9y/pFUklWIXOknxyC7/IYXo32iU9y/pCSVYgpJ8cgu/wAhhejfaJT3L+kJJViCknxyC7/I+lmzRyUwGLONQDANYCAlAQEP+ISSrEMG+L4n/ATbinmhQQkZFU4ZKDhq7IVd2ALpOBBQoWGxLA3KgaLden1CL0lWlfWVnj3ePnQ6Qtv5AZPyZe9Byc+abRc5FDJK7zLLuoU/Wxw9Y84aoYfFv7bbgEDcxDppOwUIoRsWTinfopARq2G0PdeN7v65gq8XrV6xI7r41Xk/R+AG9No8kNJxSO8lZis4k5Ur0xjJmC4X7yhSnbJfSuilNpLXGi+SSJKEo1Zfpq8+LR03nVrk3QiSk4qdcB7ejFj4hor1E49g60VWUU4W+xc5g+mci3EMQ0V6icewdaEopwt9hMH0zkW4hiGivUTj2DrQlFOFvsJg+mci3EMQ0V6icewdaEopwt9hMH0zkW4itCTLn80albtJuPEXBk1m75eyKpVk1DAIAUogJSVAFVoo9sXWcKjOE0i/ofO4hicZqTzFwKWFHuZr0Vyyd37YKCld2sos3mnvVaIjLq4PmUa//AiHcME5r0igUqys3nikotgblk92CdkESthEQKZMC2Fa+ztNxjJr1OIoK4dwiJDrzQkGe8lziYSsE13AOm5XAu1FQNdrHXtVGAlQASoDVVFjTfB0IyJkicY6oCG89znQTXESxKIhXCYsrFE/dmC7h+cVyVWYRZKNcOo7IMUT92YLuH5wlVmEKNcOo7IMUT92YLuH5wlVmEKNcOo7IMUT92YLuH5wlVmEKNcOo7IZ5kpZ1014dCERdeTbCM8erKTbmGZKWddNeHQhEXXk2wTx6spNuYZkpZ1014dCERdeTbBPHqyk25hmSlnXTXh0IRF15NsE8erKTbmGZKWddNeHQhEXXk2wTx6spNuYZkpZ1014dCERdeTbBPHqyk25hmSlnXTXh0IRF15NsE8erKTbmGZKWddNeHQhEXXk2wTx6spNuY4+F5nbWj8hOceckhiHQpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abowwvM7a0fkJzhJIYgpJ2abox4Jx56nl+I3l+DT9v8An4jTMWlD4lbvaI92MCQbsADdgAbsADdgAbsAEjfz0/L8RfM8Gn7v8/MZIRT+J27Wj//Z" alt="" class="size-4 rounded-full">
+                                    English
+                                </a>
+                                <a class="flex items-center gap-x-3.5 px-3 text-default-600 hover:text-primary" href="#">
+                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHB8fHx8fHx8fHx//2wBDAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAqAEADAREAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAQFAQMHAgb/xAAxEAABAwEGAwUIAwAAAAAAAAABAgMEAAUGERJVkxZR0RUyM5LSExQiMTRBQmJhcZH/xAAbAQEAAgMBAQAAAAAAAAAAAAAAAgYDBAUBB//EAC0RAAIBAQYFAwMFAAAAAAAAAAABAgMRExQxUpEEEiFBUSJxoTJhgQWxwdHw/9oADAMBAAIRAxEAPwCkU44tRUpRUpRxUokkkn7muWfTEjGZXM0AzK5mgGZXM0AzK5mgGZXM0AzK5mgMpccQoKSopUk4pUCQQR9xQNHeOwLC06Lst+mqPiauqW7K7fT8vc8rsW7bTa3ZEOGww0lS3HVsthKUpGJJ+Gs3DzrVZqKm1b92eOtU7OTZWQJdxJs9cJuI0y7nyMLkQw0hxWOXLmKfhOcEAKw5fOunPgqlj5ar3z6e/wDkTnfxipPLvZK2wtewLC06Lst+muNiauqW7I30/L3HYFhadF2W/TTE1dUt2L6fl7jsCwtOi7LfppiauqW7F9Py9x2BYWnRdlv00xNXVLdi+n5e47AsLTouy36aYmrqluxfT8vcn1gMZ8veF8QkFMWJLie9voVaMlXu7iS2oFGZKG1POAKCRhmb/wAqwLhYqEJW2vktSfn7ZfLNjhvW+ri+XLP+bFszNxrTuq4p9qQuL73FlqBelZY6xHKQEFJIZBVmCsRhiKsFD9LhcRlWj9a1P+zR4rinOpKFNy9KySt9XyXMERVyHpbUKQw7IOWQ+6uOptZaOVASGnHFAhJ/ICqrx3DqnRptO3rL2z7dLfe38Gbml9LaaXvb191+xOrkgUAoBQCgKSREctGG9CFlpsrMQtUkeyV7VYcCiVhtRUSeZrt1+JppU7JqXKrOilv1SRHh6s1NuSl+WvghP3FQiOlMaW0VvtluaS0oHEqcwWjAjMcruHxfcA/xWatx1Hkj6pSce3bt5yyNilxVkm3Czb5LmKsmXk7ITF9mlSDaGLRW6kKGUKyEr/rGtTi6sJUIRU4uUeyUrevXurOmWZpwlPmdttnurPx17k+uSZhQCgFAcK4ovHqcreX1q7YOjojsWG4p6UOKLx6nK3l9aYOjojsLinpQ4ovHqcreX1pg6OiOwuKelDii8epyt5fWmDo6I7C4p6UOKLx6nK3l9aYOjojsLinpQ4ovHqcreX1pg6OiOwuKelDii8epyt5fWmDo6I7C4p6UOKLx6nK3l9aYOjojsLinpRDk/Uu+F31eF3Pn+H68q2mSjkszX5a8JDy0A8tAPLQDy0A8tAbI31LXhd9Pi9z5/n+vOvURlk8z/9k=" alt="" class="size-4 rounded-full">
+                                    Spanish
+                                </a>
+                                <a class="flex items-center gap-x-3.5 px-3 text-default-600 hover:text-primary" href="#">
+                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHB8fHx8fHx8fHx//2wBDAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAqAEADAREAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAAEGAgUH/8QAKBAAAQIBDQADAQAAAAAAAAAAAAECAwUSFhcxUVRVkaKj0uMhMkGB/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAEFAgQGB//EACQRAQAAAgoDAQAAAAAAAAAAAAAWYgIDBBQVUVKhouEBsdEx/9oADAMBAAIRAxEAPwDzZ8WK97nve5z3Kqucqqqqq/KqqqbCEnOvUkJzr1ATnXqAnOvUBOdeoCc69QKyLFY9r2Pc17VRWuRVRUVPlFRUIHZUZlvDb4fY1r5VZ+1zD1t0cqP0ozLeG3w+wvlVn7IetujlR+lGZbw2+H2F8qs/ZD1t0cqP0ozLeG3w+wvlVn7IetujlR+lGZbw2+H2F8qs/ZD1t0cqP0ozLeG3w+wvlVn7IetujlR+lGZbw2+H2F8qs/ZD1t0cqP0ozLeG3w+wvlVn7IetujlR+t0Ub04AAAAAAAA3dV6ZnwehSYxJv05uIZOXRVemZ8HoMYk36Ihk5dFV6ZnwegxiTfoiGTl0VXpmfB6DGJN+iIZOXRVemZ8HoMYk36Ihk5dFV6ZnwegxiTfoiGTl0VXpmfB6DGJN+iIZOXRVemZ8HoMYk36Ihk5dN2UjmwAAAAAAADk77LZb+Wfwzp/vn8R4TQxDQBoA0AaANAK37JZb+2f0yofvj8PL/9k=" alt="" class="size-4 rounded-full">
+                                    German
+
+                                </a>
+                                <a class="flex items-center gap-x-3.5 px-3 text-default-600 hover:text-primary" href="#">
+                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHB8fHx8fHx8fHx//2wBDAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAqAEADAREAAhEBAxEB/8QAGgAAAwEBAQEAAAAAAAAAAAAAAAYHCAMBAv/EAC8QAAEDAQUGAwkAAAAAAAAAAAABAgM2BwgxM3QRMjRRsbMERJIGEhYhQmFicXP/xAAbAQACAwEBAQAAAAAAAAAAAAAABwMFBgQBAv/EACIRAQAAAwkBAQAAAAAAAAAAAAABMTIDBAUGMzSBgsERAv/aAAwDAQACEQMRAD8AQHyyPe573q57lVXOVVVVVcVVTY/HI+fedzUApt3tVX27m2r5CbuRldielyks5tIGfTgAjVrKr8VJ8/LR9XFZe6zEyxte0fCXtXmcrRfHrXva5HNcrXNXaiouxUVAeRhCKcjOI8AFOu913NoJu5GV2KaXKSzm0gZ9OACM2s1Wmmj6uKy91mJlja9o+Ew5WiABOhnEcACnXe67m0E3cjK7FNLlJZzaQM+nABGbWarTTR9XFZe6zEyxte0fCYcrRAAnQziOABTrvddzaCbuRldimlyks5tIGfTgAjNrNVppo+risvdZiZY2vaPhMOVogAToZxHAAp13uu5tBN3IyuxTS5SWc2kDPpwARm1mq000fVxWXusxMsbXtHwmHK0QAEPxfFTZO+7Ky8V3Px5DMhIjnL0HoUy77XUu7wM2H9IyuxPS5SWc2jygTgAjVrFVJhw0eP7cVl7rMPLG17R8JnpOVoXTw+fHl7zczcx+r7cz2D5/dMZ8Tf/Z" alt="" class="size-4 rounded-full">
+                                    French
+                                </a>
+                                <a class="flex items-center gap-x-3.5 px-3 text-default-600 hover:text-primary" href="#">
+                                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20id='flag-icons-jp'%20viewBox='0%200%20512%20512'%3e%3cdefs%3e%3cclipPath%20id='a'%3e%3cpath%20fill-opacity='.7'%20d='M177.2%200h708.6v708.7H177.2z'/%3e%3c/clipPath%3e%3c/defs%3e%3cg%20fill-rule='evenodd'%20stroke-width='1pt'%20clip-path='url(%23a)'%20transform='translate(-128)%20scale(.72249)'%3e%3cpath%20fill='%23fff'%20d='M0%200h1063v708.7H0z'/%3e%3ccircle%20cx='523.1'%20cy='344.1'%20r='194.9'%20fill='%23d30000'%20transform='translate(-59.7%20-34.5)%20scale(1.1302)'/%3e%3c/g%3e%3c/svg%3e" alt="" class="size-4 rounded-full">
+                                    Japanese
+                                </a>
+                                <a class="flex items-center gap-x-3.5 px-3 text-default-600 hover:text-primary" href="#">
+                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHB8fHx8fHx8fHx//2wBDAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAqAEADAREAAhEBAxEB/8QAGgAAAwEBAQEAAAAAAAAAAAAAAAYHBAECA//EACsQAAEDAQYEBgMAAAAAAAAAAAABAgMHETEzNnSxFjJRsiE0QkRhkgRxcv/EABsBAAIDAQEBAAAAAAAAAAAAAAAGBAUHAwEC/8QAIREBAAEDBQEBAQEAAAAAAAAAAAEGMjQDBHKCwTECEYH/2gAMAwEAAhEDEQA/ANznvc5XOcquVbVVVtVVUyeZmVa5avUAcqUqvE0nj7WTvYX9OZE8Z8dtC5XR5TAARqrKrxUnj7aPdxWbu9olMYvafCXavUimL+Ote9rkc1ytc1bUVFsVFQHkxEtAiMIAA50pzNJpZO9hfU5kTxnx20LldHpMABGas5rTTR7uKzd3tEpjF7T4TCKYgAaREYOABzpTmaTSyd7C+pzInjPjtoXK6PSYACM1ZzWmmj3cVm7vaJTGL2nwmEUxAA0iIwcADnSnM0mlk72F9TmRPGfHbQuV0ekwAEZqzmtNNHu4rN3e0SmMXtPhMIpiABpERg4AHOlOZpNLJ3sL6nMieM+O2hcro9JgAIzVnNaaaPdxWbu9olMYvafCYRTEADfPjyYfMuHyX+n46CP+/s/GDy8fU+QcaVZmku8tJd/TC+pzInjPjtoXK6PKYACNVYzUl3lo7/24rN3e0OmMXtPhM+pFML6fj48eHzNxOS/1fHU9h8/u2fv+fX//2Q==" alt="" class="size-4 rounded-full">
+                                    Italian
+                                </a>
+                                <a class="flex items-center gap-x-3.5 px-3 text-default-600 hover:text-primary" href="#">
+
+                                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHB8fHx8fHx8fHx//2wBDAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAqAEADAREAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMGCP/EACgQAAEABwcFAQAAAAAAAAAAAAABBAcWF1RVMjOSo6TT4gIDMUJRYf/EABkBAQADAQEAAAAAAAAAAAAAAAABAgYEA//EACMRAQAABAcBAAMAAAAAAAAAAAABFmOiAxMVUqHR4jECMoH/2gAMAwEAAhEDEQA/AOnAAAAAAAAAGIjUzOs6Za2js0/G28w7UzIEamZ1nTLW0NPxtvMOzMgRqZnWdMtbQ0/G28w7MyBGpmdZ0y1tDT8bbzDszIEamZ1nTLW0NPxtvMOzMgRqZnWdMtbQ0/G28w7MyBGpmdZ0y1tDT8bbzDszIEamZ1nTLW0NPxtvMOzMg5YNK5wAAAAAAADRuiiay+RmJjp3eW4kyrZ6HRRNZfITHTu8kmVbPQ6KJrL5CY6d3kkyrZ6HRRNZfITHTu8kmVbPQ6KJrL5CY6d3kkyrZ6HRRNZfITHTu8kmVbPQ6KJrL5CY6d3kkyrZ6HRRNZfITHTu8kmVbPTRGYbkAAAAAAAAssX/AHLu11Xdjz6/nwmLz/D9Yff79TwkLGEBhAYQGEBhAor3/bu7XTeWPPt+fSYK/n+sfv8APr//2Q==" alt="" class="size-4 rounded-full">
+                                    Russian
+
+                                </a>
+                                <a class="flex items-center gap-x-3.5 px-3 text-default-600 hover:text-primary" href="#">
+                                    <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20id='flag-icons-ae'%20viewBox='0%200%20512%20512'%3e%3cpath%20fill='%2300732f'%20d='M0%200h512v170.7H0z'/%3e%3cpath%20fill='%23fff'%20d='M0%20170.7h512v170.6H0z'/%3e%3cpath%20d='M0%20341.3h512V512H0z'/%3e%3cpath%20fill='red'%20d='M0%200h180v512H0z'/%3e%3c/svg%3e" alt="" class="size-4 rounded-full">
+                                    Arabic
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-3 md:mt-0 mt-5">
+                        <button type="button" class="size-10 btn border border-default-400/40 bg-transparent rounded-full text-default-400 hover:text-primary">
+                            <i data-lucide="facebook" class="size-4"></i>
+                        </button>
+
+                        <button type="button" class="size-10 btn border border-default-400/40 bg-transparent rounded-full text-default-400 hover:text-primary">
+                            <i data-lucide="linkedin" class="size-4"></i>
+                        </button>
+
+                        <button type="button" class="size-10 btn border border-default-400/40 bg-transparent rounded-full text-default-400 hover:text-primary">
+                            <i data-lucide="instagram" class="size-4"></i>
+                        </button>
+
+                        <button type="button" class="size-10 btn border border-default-400/40 bg-transparent rounded-full text-default-400 hover:text-primary">
+                            <i data-lucide="twitter" class="size-4"></i>
+                        </button>
+
+                        <button type="button" class="size-10 btn border border-default-400/40 bg-transparent rounded-full text-default-400 hover:text-primary">
+                            <i data-lucide="youtube" class="size-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-base mt-12 text-center text-default-400">
+                <p>2025 © Tailwick. Design & Develop by <a href="#" class="underline text-white hover:text-primary">Themesdesign</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="hs-overlay hs-overlay-open:translate-y-0 -translate-y-full fixed top-0 inset-x-0 transition-all duration-300 transform max-h-64 p-5 size-full z-80 card border-b border-default-200 hidden" role="dialog" tabindex="-1" aria-labelledby="navbarMenu-label" id="navbarMenu">
+        <div class="flex items-center justify-between">
+            <a href="#">
+                <img src="/assets/logo-dark-BRT9tiBX.png" alt="logo dark" class="h-6 block dark:hidden">
+                <img src="/assets/logo-light-CCjoJosn.png" alt="logo light" class="h-6 hidden dark:block" alt="">
+            </a>
+
+            <button aria-label="Close" data-hs-overlay="#navbarMenu" class="inline-flex justify-end items-center gap-x-2 rounded-full">
+                <i data-lucide="x" class="size-4"></i>
+            </button>
+        </div>
+
+        <div class="pt-8">
+            <ul class="flex flex-col gap-y-4 lg:gap-8 md:gap-6 font-semibold text-sm">
+                <li>
+                    <a href="#home" class="text-secondary-default-400 hover:text-primary transition duration-300">Home</a>
+                </li>
+
+                <li>
+                    <a href="#features" class="text-secondary-default-400 hover:text-primary transition duration-300">Our
+                        Features</a>
+                </li>
+
+                <li>
+                    <a href="#about" class="text-secondary-default-400 hover:text-primary transition duration-300">About
+                        Us</a>
+                </li>
+
+                <li>
+                    <a href="#pricing" class="text-secondary-default-400 hover:text-primary transition duration-300">Pricing</a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="text-secondary-default-400 hover:text-primary transition duration-300">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

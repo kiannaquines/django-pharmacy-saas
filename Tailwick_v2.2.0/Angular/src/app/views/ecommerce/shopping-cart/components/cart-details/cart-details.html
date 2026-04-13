@@ -1,0 +1,77 @@
+@for (item of cartItems; track item.id){
+<div class="card p-5 mb-5">
+    <div class="grid lg:grid-cols-12 grid-cols-1 gap-5">
+
+
+        <div class="lg:col-span-2 col-span-1">
+            <div class="p-4 rounded-md bg-default-150 flex justify-center">
+                <img [src]="item.image" [alt]="item.title">
+            </div>
+        </div>
+
+
+        <div class="lg:col-span-3 col-span-1 flex flex-col justify-between">
+            <div>
+                <h5 class="mb-1 text-base text-default-800 font-semibold">
+                    <a routerLink="/e-commerce/product-overview">{{ item.title }}</a>
+                </h5>
+                <p class="mb-2 text-default-500 text-sm">
+                    <a [routerLink]="[]">{{ item.category }}</a>
+                </p>
+                <p class="mb-1 text-default-500 text-sm">
+                    Color: <span class="text-default-800">{{ item.color }}</span>
+                </p>
+                <p class="mb-3 text-default-500 text-sm">
+                    Size: <span class="text-default-800">{{ item.size }}</span>
+                </p>
+            </div>
+
+
+            <div class="flex items-center gap-2">
+                <div class="inline-flex p-2 text-center border border-default-200 rounded">
+                  
+                    <button type="button" class="size-7 btn minusBtn bg-default-200" (click)="decreaseQty(item)">
+                        <div class="size-4 text-default-500">
+                            <ng-icon name="lucideMinus"></ng-icon>
+                        </div>
+                    </button>
+
+                    
+                    <input type="number" class="text-center product-quantity ps-2 w-15 h-7 border-0 ring-0 bg-transparent" [value]="item.quantity" readonly>
+
+                    
+                    <button type="button" class="size-7 plusBtn btn bg-default-200" (click)="increaseQty(item)">
+                        <div class="size-4 text-default-500">
+                            <ng-icon name="lucidePlus"></ng-icon>
+                        </div>
+                    </button>
+                </div>
+
+
+                <button type="button" class="size-9.5 rounded bg-danger/15 justify-center items-center inline-flex text-danger hover:bg-danger hover:text-white transition-all duration-300">
+                    <div class="size-4"><ng-icon name="lucideTrash2"></ng-icon></div>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="lg:col-span-7 col-span-1 flex lg:justify-end">
+            <div class="flex lg:flex-col flex-row w-full justify-between">
+                <h6 class="text-base text-end text-default-800 font-semibold">
+                    $<span>{{ item.price }}</span>
+                    @if (item.originalPrice) {
+                    <small class="font-normal line-through text-default-500">
+                        ${{ item.originalPrice }}
+                    </small>
+                    }
+                </h6>
+
+                <h6 class="text-base text-end text-default-800 font-semibold">
+                    $<span>{{ item.total }}</span>
+                </h6>
+            </div>
+        </div>
+
+    </div>
+</div>
+}

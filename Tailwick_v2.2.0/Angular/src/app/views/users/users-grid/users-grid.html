@@ -1,0 +1,90 @@
+<main>
+
+    <app-page-title title="Grid View" subtitle="Users" />
+
+
+    <div class="flex justify-between gap-3 flex-wrap items-center mb-5">
+        <div class="relative">
+            <input type="email" class="form-input form-input-sm ps-9" placeholder="Search for name,email,phone number etc...">
+            <div class="absolute inset-y-0 start-4 flex items-center">
+                <div class="size-3.5 flex items-center text-default-500"><ng-icon name="lucideSearch"></ng-icon></div>
+            </div>
+        </div>
+
+        <div class="flex gap-3 items-center">
+            <button type="button" class="btn btn-sm bg-primary text-white" aria-haspopup="dialog" aria-expanded="false" aria-controls="addUserModal" data-hs-overlay="#addUserModal">
+                <div class="size-4 ms-1"> <ng-icon name="lucidePlus"></ng-icon></div>
+                Add User
+            </button>
+
+            <button type="button" class="btn size-7.5 bg-default-500 text-white hover:bg-default-600   ">
+                <div class="size-4"> <ng-icon name="lucideSlidersHorizontal"></ng-icon></div>
+            </button>
+        </div>
+    </div>
+
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+        @for(user of users; track $index) {
+        <div class="card">
+            <div class="card-body">
+                <div class="relative flex items-center justify-center mx-auto text-lg rounded-full size-16 bg-default-100">
+                    @if(user.avatar) {
+                    <img [src]="user.avatar" alt="" class="rounded-full size-16" />
+                    } @else {
+                    {{ getInitials(user.name) }}
+                    }
+                    <span class="absolute bg-{{user.status}} border-2 border-white rounded-full size-3 end-0 bottom-1"></span>
+                </div>
+
+                <div class="mt-4 text-center text-default-500">
+                    <h5 class="mb-1 text-base text-default-800 font-semibold">
+                        <a routerLink="/pages/account">{{user.name}}</a>
+                    </h5>
+                    <p class="mb-3 text-sm text-default-500">{{user.role}}</p>
+                    <p class="text-sm text-default-500">{{user.address}}</p>
+                </div>
+
+                <div class="flex gap-2 mt-5">
+                    <a routerLink="/apps/chat" class="btn border-primary text-primary hover:bg-primary hover:text-white flex-grow">
+                        <ng-icon name="lucideMessageSquare"></ng-icon>
+                        <span class="align-middle">Send Message</span>
+                    </a>
+
+                    <div class="hs-dropdown relative inline-flex">
+                        <button type="button" class="hs-dropdown-toggle btn bg-primary size-9 text-white" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                            <div class="size-4">
+                                <ng-icon name="lucideEllipsis"></ng-icon>
+                            </div>
+                        </button>
+                        <div class="hs-dropdown-menu" role="menu">
+                            <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                <div class="size-3"><ng-icon name="lucideEye"></ng-icon></div>
+                                Overview
+                            </a>
+                            <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                <div class="size-3"><ng-icon name="lucideFilePen"></ng-icon></div>
+                                Edit
+                            </a>
+                            <a class="flex items-center gap-1.5 py-1.5 font-medium px-3 text-default-500 hover:bg-default-150 rounded" [routerLink]="[]">
+                                <div class="size-3"><ng-icon name="lucideTrash2"></ng-icon></div>
+                                Delete
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+
+
+    <div class="flex flex-wrap md:justify-between justify-center items-centermd:gap-0 gap-4 my-5 text-default-500">
+        <p class="text-default-500 text-sm">Showing <b>07</b> of <b>19</b> Results</p>
+        <app-pagination />
+
+    </div>
+
+</main>
+
+<app-user-add />

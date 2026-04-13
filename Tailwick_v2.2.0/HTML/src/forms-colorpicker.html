@@ -1,0 +1,122 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Color Picker" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Color Picker" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-3 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Classic Demo</h6>
+                                <p class="mb-4">
+                                    Use <code>classic-colorpicker</code> class to set classic colorpicker.
+                                </p>
+                                <div class="classic-colorpicker"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Monolith Demo</h6>
+                                <p class="mb-4">
+                                    Use <code>monolith-colorpicker</code> class to set monolith colorpicker.
+                                </p>
+                                <div class="monolith-colorpicker"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Nano Demo</h6>
+                                <p class="mb-4">
+                                    Use <code>nano-colorpicker</code> class to set nano colorpicker.
+                                </p>
+                                <div class="nano-colorpicker"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Demo</h6>
+                                <p class="mb-4">
+                                    Use <code>colorpicker-demo</code> class to set demo option colorpicker.
+                                </p>
+                                <div class="colorpicker-demo"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Picker with Opacity & Hue</h6>
+                                <p class="mb-4">
+                                    Use <code>colorpicker-opacity-hue</code> class to set colorpicker with opacity & hue.
+                                </p>
+                                <div class="colorpicker-opacity-hue"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Switches</h6>
+                                <p class="mb-4">
+                                    Use <code>colorpicker-switch</code> class to set switch colorpicker.
+                                </p>
+                                <div class="colorpicker-switch"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Picker with Input</h6>
+                                <p class="mb-4">
+                                    Use <code>colorpicker-input</code> class to set colorpicker with input.
+                                </p>
+                                <div class="colorpicker-input"></div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="mb-1 text-[15px]">Color Format</h6>
+                                <p class="mb-4">
+                                    Use <code>colorpicker-format</code> class to set colorpicker with format option.
+                                </p>
+                                <div class="colorpicker-format"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+    <!-- Color Picker Demo Js -->
+    <script type="module" src="assets/js/pages/form-colorpickr.js"></script>
+
+</body>
+
+</html>

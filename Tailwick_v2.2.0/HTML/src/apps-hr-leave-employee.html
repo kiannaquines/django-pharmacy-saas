@@ -1,0 +1,364 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Leave Manage (Employee)" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Leave Manage (Employee)" }}
+
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex items-center gap-3">
+                                <div class="btn text-danger bg-danger/10 size-12">
+                                    <i data-lucide="file-bar-chart-2" class="size-6"></i>
+                                </div>
+
+                                <div>
+                                    <h5 class="mb-1 text-heading font-semibold">
+                                        <span class="counter-value text-base" data-target="23">23</span>
+                                    </h5>
+                                    <p class="text-default-500">Total Leave Balance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex items-center gap-3">
+                                <div class="btn text-secondary bg-secondary/10 size-12">
+                                    <i data-lucide="stethoscope" class="size-6"></i>
+                                </div>
+
+                                <div>
+                                    <h5 class="mb-1 text-base text-heading font-semibold">
+                                        <span class="counter-value" data-target="4">4</span>
+                                    </h5>
+                                    <p class="text-default-500">Medical Leave</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex items-center gap-3">
+                                <div class="btn text-success bg-success/10 size-12">
+                                    <i data-lucide="calendar-days" class="size-6"></i>
+                                </div>
+
+                                <div>
+                                    <h5 class="mb-1 text-base text-heading font-semibold">
+                                        <span class="counter-value" data-target="12">12</span>
+                                    </h5>
+                                    <p class="text-default-500">Annual Leave</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex items-center gap-3">
+                                <div class="btn text-info bg-info/10 size-12">
+                                    <i data-lucide="anchor" class="size-6"></i>
+                                </div>
+
+                                <div>
+                                    <h5 class="mb-1 text-base text-heading font-semibold">
+                                        <span class="counter-value" data-target="11">11</span>
+                                    </h5>
+                                    <p class="text-default-500">Remaining Leave</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 mb-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="relative">
+                                <input type="email" class="ps-11 form-input form-input-sm" placeholder="Search for....">
+                                <div class="absolute inset-y-0 start-0 flex items-center ps-3">
+                                    <i data-lucide="search" class="size-4 flex items-center text-default-500"></i>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-sm bg-primary text-white">
+                                <i data-lucide="download" class="size-3.5 me-1"></i> Export
+                            </button>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <div class="overflow-x-auto">
+                                <div class="min-w-full inline-block align-middle">
+                                    <div class="overflow-hidden">
+                                        <table class="min-w-full divide-y divide-default-200 dark:divide-white/14">
+                                            <thead class="bg-default-150">
+                                                <tr class="text-sm font-normal whitespace-nowrap text-default-500">
+                                                    <th scope="col" class="px-3.5 py-3 text-start">
+                                                        #
+                                                    </th>
+                                                    <th scope="col" class="px-3.5 py-3 text-start">Leave Type</th>
+                                                    <th scope="col" class="px-3.5 py-3 text-start">Reason</th>
+                                                    <th scope="col" class="px-3.5 py-3 text-start">No Of Days</th>
+                                                    <th scope="col" class="px-3.5 py-3 text-start">From</th>
+                                                    <th scope="col" class="px-3.5 py-3 text-start">to</th>
+                                                    <th scope="col" class="px-3.5 py-3 text-start">Approved By</th>
+                                                    <th scope="col" class="px-3.5 py-3 text-start">Status</th>
+                                                    <th scope="col" class="px-3.5 py-3 text-end">Action</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="divide-y divide-default-200 dark:divide-white/14">
+                                                <tr class="text-default-800 font-normal whitespace-nowrap">
+                                                    <td class="px-3.5 py-2.5 text-sm">01</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Medical Leave</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Going to Hospital</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">02</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">11 Oct, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">12 Oct, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Paula Keenan</td>
+                                                    <td class="px-3.5 py-2.5">
+                                                        <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2.5 rounded text-xs font-medium bg-success/15 text-success">Approved</span>
+                                                    </td>
+                                                    <td class="px-3.5 py-2.5 text-end">
+                                                        <a href="#" class="btn size-8 bg-primary/20 hover:bg-primary text-primary hover:text-white">
+                                                            <i class="iconify lucide--info size-4"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="text-default-800 font-normal whitespace-nowrap">
+                                                    <td class="px-3.5 py-2.5 text-sm">02</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Casual Leave</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Going to Family Function</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">01</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">07 Sept, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">07 Sept, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Admin</td>
+                                                    <td class="px-3.5 py-2.5">
+                                                        <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2.5 rounded text-xs font-medium bg-warning/15 text-warning">Pending</span>
+                                                    </td>
+                                                    <td class="px-3.5 py-2.5 flex items-center justify-end gap-2">
+                                                        <a href="#" class="btn size-8 bg-default-200 hover:bg-default-600 hover:text-white transition-all text-default-600">
+                                                            <i data-lucide="pencil" class="size-4"></i>
+                                                        </a>
+
+                                                        <a href="#" class="btn size-8 bg-primary/20 hover:bg-primary text-primary hover:text-white">
+                                                            <i class="iconify lucide--info size-4"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="text-default-800 font-normal whitespace-nowrap">
+                                                    <td class="px-3.5 py-2.5 text-sm">03</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Casual Leave</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Going to Holiday</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">06</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">11 Jun, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">16 Jun, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Admin</td>
+                                                    <td class="px-3.5 py-2.5">
+                                                        <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2.5 rounded text-xs font-medium bg-danger/10 text-danger">Declined</span>
+                                                    </td>
+                                                    <td class="px-3.5 py-2.5 text-end">
+                                                        <a href="#" class="btn size-8 bg-primary/20 hover:bg-primary text-primary hover:text-white">
+                                                            <i class="iconify lucide--info size-4"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="text-default-800 font-normal whitespace-nowrap">
+                                                    <td class="px-3.5 py-2.5 text-sm">04</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Sick Leave</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Attend Birthday party</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">01</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">15 July, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">15 July, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Paula Keenan</td>
+                                                    <td class="px-3.5 py-2.5">
+                                                        <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2.5 rounded text-xs font-medium bg-success/15 text-success">Approved</span>
+                                                    </td>
+                                                    <td class="px-3.5 py-2.5 text-end">
+                                                        <a href="#" class="btn size-8 bg-primary/20 hover:bg-primary text-primary hover:text-white">
+                                                            <i class="iconify lucide--info size-4"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="text-default-800 font-normal whitespace-nowrap">
+                                                    <td class="px-3.5 py-2.5 text-sm">05</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Sick Leave</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Personal</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">02</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">19 Aug, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">20 Aug, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Paula Keenan</td>
+                                                    <td class="px-3.5 py-2.5">
+                                                        <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2.5 rounded text-xs font-medium bg-danger/10 text-danger">Declined</span>
+                                                    </td>
+                                                    <td class="px-3.5 py-2.5 text-end">
+                                                        <a href="#" class="btn size-8 bg-primary/20 hover:bg-primary text-primary hover:text-white">
+                                                            <i class="iconify lucide--info size-4"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="text-default-800 font-normal whitespace-nowrap">
+                                                    <td class="px-3.5 py-2.5 text-sm">06</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Casual Leave</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Going to Family Function</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">01</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">14 Feb, 2022</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">14 Feb, 2022</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Admin</td>
+                                                    <td class="px-3.5 py-2.5">
+                                                        <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2.5 rounded text-xs font-medium bg-success/15 text-success">Approved</span>
+                                                    </td>
+                                                    <td class="px-3.5 py-2.5 text-end">
+                                                        <a href="#" class="btn size-8 bg-primary/20 hover:bg-primary text-primary hover:text-white">
+                                                            <i class="iconify lucide--info size-4"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="text-default-800 font-normal whitespace-nowrap">
+                                                    <td class="px-3.5 py-2.5 text-sm">07</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Medical Leave</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Medical Emergency</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">04</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">23 Jan, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">26 Jan, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Paula Keenan</td>
+                                                    <td class="px-3.5 py-2.5">
+                                                        <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2.5 rounded text-xs font-medium bg-warning/15 text-warning">Pending</span>
+                                                    </td>
+                                                    <td class="px-3.5 py-2.5 flex items-center justify-end gap-2">
+                                                        <a href="#" class="btn size-8 bg-default-200 hover:bg-default-600 hover:text-white transition-all text-default-600">
+                                                            <i data-lucide="pencil" class="size-4"></i>
+                                                        </a>
+
+                                                        <a href="#" class="btn size-8 bg-primary/20 hover:bg-primary text-primary hover:text-white">
+                                                            <i class="iconify lucide--info size-4"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="text-default-800 font-normal whitespace-nowrap">
+                                                    <td class="px-3.5 py-2.5 text-sm">08</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Casual Leave</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Personal</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">02</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">16 Dec, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">17 Dec, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Paula Keenan</td>
+                                                    <td class="px-3.5 py-2.5">
+                                                        <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2.5 rounded text-xs font-medium bg-danger/10 text-danger">Declined</span>
+                                                    </td>
+                                                    <td class="px-3.5 py-2.5 text-end">
+                                                        <a href="#" class="btn size-8 bg-primary/20 hover:bg-primary text-primary hover:text-white">
+                                                            <i class="iconify lucide--info size-4"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="text-default-800 font-normal whitespace-nowrap">
+                                                    <td class="px-3.5 py-2.5 text-sm">09</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Casual Leave</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Going to Holiday</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">05</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">29 Nov, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">03 Dec, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Admin</td>
+                                                    <td class="px-3.5 py-2.5">
+                                                        <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2.5 rounded text-xs font-medium bg-success/15 text-success">Approved</span>
+                                                    </td>
+                                                    <td class="px-3.5 py-2.5 text-end">
+                                                        <a href="#" class="btn size-8 bg-primary/20 hover:bg-primary text-primary hover:text-white">
+                                                            <i class="iconify lucide--info size-4"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="text-default-800 font-normal whitespace-nowrap">
+                                                    <td class="px-3.5 py-2.5 text-sm">10</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Sick Leave</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Going to Hospital</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">01</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">15 Oct, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">15 Oct, 2023</td>
+                                                    <td class="px-3.5 py-2.5 text-sm">Paula Keenan</td>
+                                                    <td class="px-3.5 py-2.5">
+                                                        <span class="inline-flex items-center gap-x-1.5 py-0.5 px-2.5 rounded text-xs font-medium bg-success/15 text-success">Approved</span>
+                                                    </td>
+                                                    <td class="px-3.5 py-2.5 text-end">
+                                                        <a href="#" class="btn size-8 bg-primary/20 hover:bg-primary text-primary hover:text-white">
+                                                            <i class="iconify lucide--info size-4"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text-default-500 text-sm">Showing <b>10</b> of <b>17</b> Results</p>
+                                <nav class="flex items-center gap-2" aria-label="Pagination">
+                                    <button type="button" class="btn btn-sm border bg-transparent border-default-200 dark:border-white/14 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10">
+                                        <i data-lucide="chevron-left" class="size-4 me-1"></i> Prev
+                                    </button>
+
+                                    <button type="button" class="btn size-7.5 bg-transparent border border-default-200 dark:border-white/14 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10">
+                                        1
+                                    </button>
+
+                                    <button type="button" class="btn size-7.5 bg-primary text-white">
+                                        2
+                                    </button>
+
+                                    <button type="button" class="btn size-7.5 bg-transparent border border-default-200 dark:border-white/14 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10">
+                                        3
+                                    </button>
+
+                                    <button type="button" class="btn btn-sm border bg-transparent border-default-200 dark:border-white/14 text-default-600 hover:bg-primary/10 hover:text-primary hover:border-primary/10">Next
+                                        <i data-lucide="chevron-right" class="size-4 ms-1"></i>
+                                    </button>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Switch" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Switch" }}
+
+                <div class="container-fluid">
+                    <div class="grid lg:grid-cols-3 grid-cols-1 gap-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Default Switch</h6>
+
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="primaryDefaultSwitch" class="form-switch" checked />
+                                        <label for="primaryDefaultSwitch" class="text-default-700">Primary Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="successDefaultSwitch" class="form-switch checked:!bg-success" checked />
+                                        <label for="successDefaultSwitch" class="text-default-700">Success Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="warningDefaultSwitch" class="form-switch checked:!bg-warning" checked />
+                                        <label for="warningDefaultSwitch" class="text-default-700">Warning Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="infoDefaultSwitch" class="form-switch checked:!bg-info" checked />
+                                        <label for="infoDefaultSwitch" class="text-default-700">Info Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="dangerDefaultSwitch" class="form-switch checked:!bg-danger" checked />
+                                        <label for="dangerDefaultSwitch" class="text-default-700">Danger Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="secondaryDefaultSwitch" class="form-switch checked:!bg-secondary" checked />
+                                        <label for="secondaryDefaultSwitch" class="text-default-700">Secondary Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="darkDefaultSwitch" class="form-switch checked:!bg-default-300" checked />
+                                        <label for="darkDefaultSwitch" class="text-default-700">Light Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="lightDefaultSwitch" class="form-switch checked:!bg-default-500" checked />
+                                        <label for="lightDefaultSwitch" class="text-default-700">Dark Switch</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Icon with Switch</h6>
+
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="primaryIconSwitch" class="form-switch form-checkicon-switch" checked />
+                                        <label for="primaryIconSwitch" class="text-default-700">Primary Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="successIconSwitch" class="form-switch form-checkicon-switch checked:!bg-success" checked />
+                                        <label for="successIconSwitch" class="text-default-700">Success Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="warningIconSwitch" class="form-switch form-checkicon-switch checked:!bg-warning" checked />
+                                        <label for="warningIconSwitch" class="text-default-700">Warning Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="infoIconSwitch" class="form-switch form-checkicon-switch checked:!bg-info" checked />
+                                        <label for="infoIconSwitch" class="text-default-700">Info Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="dangerIconSwitch" class="form-switch form-checkicon-switch checked:!bg-danger" checked />
+                                        <label for="dangerIconSwitch" class="text-default-700">Danger Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="secondaryIconSwitch" class="form-switch form-checkicon-switch checked:!bg-secondary" checked />
+                                        <label for="secondaryIconSwitch" class="text-default-700">Secondary Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="darkIconSwitch" class="form-switch form-checkicon-switch checked:!bg-default-300" checked />
+                                        <label for="darkIconSwitch" class="text-default-700">Light Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="lightIconSwitch" class="form-switch form-checkicon-switch checked:!bg-default-500" checked />
+                                        <label for="lightIconSwitch" class="text-default-700">Dark Switch</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Square Switch</h6>
+
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="primarySquareSwitch" class="form-switch form-square-switch" checked />
+                                        <label for="primarySquareSwitch" class="text-default-700">Primary Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="successSquareSwitch" class="form-switch form-square-switch checked:!bg-success" checked />
+                                        <label for="successSquareSwitch" class="text-default-700">Success Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="warningSquareSwitch" class="form-switch form-square-switch checked:!bg-warning" checked />
+                                        <label for="warningSquareSwitch" class="text-default-700">Warning Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="infoSquareSwitch" class="form-switch form-square-switch checked:!bg-info" checked />
+                                        <label for="infoSquareSwitch" class="text-default-700">Info Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="dangerSquareSwitch" class="form-switch form-square-switch checked:!bg-danger" checked />
+                                        <label for="dangerSquareSwitch" class="text-default-700">Danger Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="secondarySquareSwitch" class="form-switch form-square-switch checked:!bg-secondary" checked />
+                                        <label for="secondarySquareSwitch" class="text-default-700">Secondary Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="darkSquareSwitch" class="form-switch form-square-switch checked:!bg-default-300" checked />
+                                        <label for="darkSquareSwitch" class="text-default-700">Light Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="lightSquareSwitch" class="form-switch form-square-switch checked:!bg-default-500" checked />
+                                        <label for="lightSquareSwitch" class="text-default-700">Dark Switch</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title mb-4">Icon with Square Switch</h6>
+
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="primaryIconSquareSwitch" class="form-switch form-square-switch form-checkicon-switch" checked />
+                                        <label for="primaryIconSquareSwitch" class="text-default-700">Primary Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="successIconSquareSwitch" class="form-switch form-square-switch form-checkicon-switch checked:!bg-success" checked />
+                                        <label for="successIconSquareSwitch" class="text-default-700">Success Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="warningIconSquareSwitch" class="form-switch form-square-switch form-checkicon-switch checked:!bg-warning" checked />
+                                        <label for="warningIconSquareSwitch" class="text-default-700">Warning Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="infoIconSquareSwitch" class="form-switch form-square-switch form-checkicon-switch checked:!bg-info" checked />
+                                        <label for="infoIconSquareSwitch" class="text-default-700">Info Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="dangerIconSquareSwitch" class="form-switch form-square-switch form-checkicon-switch checked:!bg-danger" checked />
+                                        <label for="dangerIconSquareSwitch" class="text-default-700">Danger Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="secondaryIconSquareSwitch" class="form-switch form-square-switch form-checkicon-switch checked:!bg-secondary" checked />
+                                        <label for="secondaryIconSquareSwitch" class="text-default-700">Secondary Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="darkIconSquareSwitch" class="form-switch form-square-switch form-checkicon-switch checked:!bg-default-300" checked />
+                                        <label for="darkIconSquareSwitch" class="text-default-700">Light Switch</label>
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox" id="lightIconSwitch" class="form-switch form-square-switch form-checkicon-switch checked:!bg-default-500" checked />
+                                        <label for="lightIconSwitch" class="text-default-700">Dark Switch</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+</body>
+
+</html>

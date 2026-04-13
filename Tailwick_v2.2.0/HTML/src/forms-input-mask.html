@@ -1,0 +1,112 @@
+{{> main }}
+
+<head>
+    {{> title-meta title="Input Mask" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        {{> sidenav }}
+
+        <!-- Start Page Content here -->
+        <div class="page-content">
+
+            {{> topbar }}
+
+            <main>
+
+                {{> page-title subtitle="Menu" title="Input Mask" }}
+
+                <div class="container-fluid">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <h6 class="mb-4 text-[15px]">Date Formatting</h6>
+                            <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-2">
+                                <div>
+                                    <label for="cleave-date" class="inline-block mb-2 text-base font-medium">Date</label>
+                                    <input type="text" id="cleave-date" class="form-input" placeholder="DD-MM-YYYY">
+                                </div>
+
+                                <div>
+                                    <label for="cleaveDateFormat" class="inline-block mb-2 text-base font-medium">Date Formatting</label>
+                                    <input type="text" id="cleaveDateFormat" class="form-input" placeholder="DD/MM">
+                                </div>
+                            </div><!--END GRID-->
+                        </div>
+                    </div><!--end card-->
+
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <h6 class="mb-4 text-[15px]">Time Formatting</h6>
+                            <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-2">
+                                <div>
+                                    <label for="cleaveTime" class="inline-block mb-2 text-base font-medium">Time</label>
+                                    <input type="text" id="cleaveTime" class="form-input" placeholder="hh:mm:ss">
+                                </div>
+
+                                <div>
+                                    <label for="cleaveTimeFormat" class="inline-block mb-2 text-base font-medium">Time Formatting</label>
+                                    <input type="text" id="cleaveTimeFormat" class="form-input" placeholder="hh:mm">
+                                </div>
+                            </div><!--END GRID-->
+                        </div>
+                    </div><!--end card-->
+
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <h6 class="mb-4 text-[15px]">Custom Options</h6>
+                            <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-2">
+                                <div>
+                                    <label for="cleaveCreditCard" class="inline-block mb-2 text-base font-medium">Credit Card</label>
+                                    <input type="text" id="cleaveCreditCard" class="form-input" placeholder="xxxx xxxx xxxx xxxx">
+                                </div>
+
+                                <div>
+                                    <label for="cleaveDelimiter" class="inline-block mb-2 text-base font-medium">Delimiter</label>
+                                    <input type="text" id="cleaveDelimiter" class="form-input" placeholder="xxx·xxx·xxx">
+                                </div>
+
+                                <div>
+                                    <label for="cleaveDelimiters" class="inline-block mb-2 text-base font-medium">Delimiters</label>
+                                    <input type="text" id="cleaveDelimiters" class="form-input" placeholder="xxx.xxx.xxx-xx">
+                                </div>
+
+                                <div>
+                                    <label for="cleavePrefix" class="inline-block mb-2 text-base font-medium">Prefix</label>
+                                    <input type="text" id="cleavePrefix" class="form-input" placeholder="xxx.xxx.xxx-xx">
+                                </div>
+
+                                <div>
+                                    <label for="cleavePhone" class="inline-block mb-2 text-base font-medium">Phone</label>
+                                    <input type="text" id="cleavePhone" class="form-input" placeholder="(xxx)xxx-xxxx">
+                                </div>
+
+                                <div>
+                                    <label for="cleaveNumeral" class="inline-block mb-2 text-base font-medium">Numeral Formatting</label>
+                                    <input type="text" id="cleaveNumeral" class="form-input" placeholder="Enter numeral">
+                                </div>
+                            </div><!--END GRID-->
+                        </div>
+                    </div><!--end card-->
+                </div>
+
+            </main>
+
+            {{> footer }}
+
+        </div>
+        <!-- End Page content -->
+    </div>
+
+    {{> customizer }}
+
+
+    <script src="assets/js/pages/form-mask.js" type="module"></script>
+
+</body>
+
+</html>

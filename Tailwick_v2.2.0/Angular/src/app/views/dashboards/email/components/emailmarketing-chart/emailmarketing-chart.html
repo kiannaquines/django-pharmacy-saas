@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-header">
+        <h6 class="card-title">Email Marketing</h6>
+        <div class="hs-dropdown relative inline-flex">
+            <button type="button" class="hs-dropdown-toggle btn size-7.5 hover:bg-default-150" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown" hs-dropdown-placement="bottom-end">
+                <div class="size-4 text-default-600"><ng-icon name="lucideEllipsis" ></ng-icon></div>
+            </button>
+
+            <div class="hs-dropdown-menu" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-custom-icon-trigger">
+                <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-default-600 hover:bg-default-150 rounded" [routerLink]="[]">
+                    This Year
+                </a>
+
+                <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-default-600 hover:bg-default-150 rounded" [routerLink]="[]">
+                    Last Year
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <app-apexchart [getOptions]="emailMarketingOptions" />
+    </div>
+</div>

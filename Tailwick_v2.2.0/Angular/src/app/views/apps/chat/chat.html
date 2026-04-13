@@ -1,0 +1,35 @@
+<main>
+   
+    <div class="card overflow-hidden">
+        <div class="flex">
+            
+            <app-chat-sidebar/>
+
+            <div class="w-full border-e border-default-200 rounded">
+               
+               <app-chat-navbar/>
+
+               <app-user-chat/>
+
+                <div class="card-body">
+                    <div class="flex gap-2 items-center">
+                        <input type="text" class="form-input w-full" placeholder="Type your message here...">
+
+                        <div class="flex items-center gap-2">
+                            <button class="btn size-9 bg-danger/10 text-danger hover:bg-danger hover:text-white">
+                               <div class="size-4"> <ng-icon name="lucideMic"  ></ng-icon></div>
+                            </button>
+
+                            <button class="btn size-9 bg-primary/10 text-primary hover:bg-primary hover:text-white">
+                               <div class="size-4"> <ng-icon name="lucideImage"  ></ng-icon></div>
+                            </button>
+
+                            <button class="btn bg-primary text-white"> <div class="size-4"><ng-icon name="lucideSend" ></ng-icon></div>Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
