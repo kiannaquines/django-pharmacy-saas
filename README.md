@@ -329,7 +329,9 @@ with schema_context('tenant_schema_name'):
     products = Product.objects.all()
 ```
 
-## 🎨 Fronteuses Tailwick HTML templates as the foundation for the user interface:
+## 🎨 Frontend
+
+This project uses Tailwick HTML templates as the foundation for the user interface.
 
 ### Structure
 
@@ -351,10 +353,7 @@ Tailwick_v2.2.0/HTML/
 - Django serves the compiled Tailwick HTML templates
 - Static assets (CSS, JS, images) served from Django's static files system
 - Templates adapted to Django template syntax for dynamic content
-- Vite handles asset bundling and optimization └── images/
-  └── vite.config.js # Build configuration
-
-```
+- Vite handles asset bundling and optimization
 
 ### Features
 - Responsive layouts
