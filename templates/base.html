@@ -1,0 +1,19 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Pharmacy SaaS{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/themes.css' %}" />
+
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body class="{% block body_class %}bg-slate-50 text-slate-900{% endblock %}">
+    {% include "partials/messages.html" %}
+    {% block content %}{% endblock %}
+    {% block extra_js %}{% endblock %}
+  </body>
+</html>
