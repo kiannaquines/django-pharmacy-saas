@@ -1,23 +1,151 @@
-<div class="p-4">
-  <div class="text-xs font-semibold uppercase tracking-wide text-default-500">Navigation</div>
-  <ul class="mt-3 space-y-1 text-sm">
-    <li>
-      <a class="block rounded-md px-3 py-2 font-medium text-default-900 hover:bg-default-50"
-         href="{% url 'dashboard' %}">
-        Dashboard
-      </a>
-    </li>
-    <li>
-      <a class="block rounded-md px-3 py-2 font-medium text-default-900 hover:bg-default-50"
-         href="{% url 'admin:index' %}">
-        Admin
-      </a>
-    </li>
-    <li>
-      <a class="block rounded-md px-3 py-2 font-medium text-default-900 hover:bg-default-50"
-         href="{% url 'password_change' %}">
-        Change password
-      </a>
-    </li>
-  </ul>
-</div>
+{% load static %}
+<aside id="app-menu" class="app-menu">
+
+  <!-- Logo -->
+  <a href="{% url 'dashboard' %}"
+    class="logo-box sticky top-0 flex min-h-topbar-height items-center justify-start px-6 backdrop-blur-xs">
+    <div class="logo-light">
+      <img src="{% static 'assets/logo-light-CCjoJosn.png' %}" class="logo-lg h-6" alt="PharmaSaaS" />
+      <img src="{% static 'assets/logo-light-CCjoJosn.png' %}" class="logo-sm h-6" alt="PharmaSaaS" />
+    </div>
+    <div class="logo-dark">
+      <img src="{% static 'assets/logo-dark-BRT9tiBX.png' %}" class="logo-lg h-6" alt="PharmaSaaS" />
+      <img src="{% static 'assets/logo-dark-BRT9tiBX.png' %}" class="logo-sm h-6" alt="PharmaSaaS" />
+    </div>
+  </a>
+
+  <!-- Hover toggle button -->
+  <div class="absolute top-0 end-5 flex h-topbar items-center justify">
+    <button id="button-hover-toggle">
+      <i class="iconify tabler--circle size-5"></i>
+    </button>
+  </div>
+
+  <!-- Menu -->
+  <div class="relative min-h-0 flex-grow">
+    <div class="size-full" data-simplebar>
+      <ul class="side-nav p-3 pb-20 hs-accordion-group" data-hs-accordion-always-open>
+
+        <!-- OVERVIEW -->
+        <li class="menu-title"><span>Overview</span></li>
+
+        <li class="menu-item">
+          <a href="{% url 'dashboard' %}" class="menu-link">
+            <span class="menu-icon"><i data-lucide="monitor-dot"></i></span>
+            <div class="menu-text">Dashboard</div>
+          </a>
+        </li>
+
+        <!-- PHARMACY -->
+        <li class="menu-title mt-4"><span>Pharmacy</span></li>
+
+        <li class="menu-item hs-accordion" id="menu-inventory">
+          <a href="javascript:void(0)" class="hs-accordion-toggle menu-link">
+            <span class="menu-icon"><i data-lucide="package"></i></span>
+            <span class="menu-text">Inventory</span>
+            <span class="menu-arrow"></span>
+          </a>
+          <ul class="sub-menu hs-accordion-content hidden">
+            <li class="menu-item"><a href="{% url 'inventory_dashboard' %}" class="menu-link"><span class="menu-text">Dashboard</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">All Medicines</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Categories</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Low Stock</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Expiry Tracking</span></a></li>
+          </ul>
+        </li>
+
+        <li class="menu-item hs-accordion" id="menu-sales">
+          <a href="javascript:void(0)" class="hs-accordion-toggle menu-link">
+            <span class="menu-icon"><i data-lucide="circle-dollar-sign"></i></span>
+            <span class="menu-text">Sales</span>
+            <span class="menu-arrow"></span>
+          </a>
+          <ul class="sub-menu hs-accordion-content hidden">
+            <li class="menu-item"><a href="{% url 'sales_dashboard' %}" class="menu-link"><span class="menu-text">Dashboard</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Transactions</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Revenue Report</span></a></li>
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="menu-link">
+            <span class="menu-icon"><i data-lucide="file-text"></i></span>
+            <div class="menu-text">Prescriptions</div>
+          </a>
+        </li>
+
+        <li class="menu-item hs-accordion" id="menu-pos">
+          <a href="javascript:void(0)" class="hs-accordion-toggle menu-link">
+            <span class="menu-icon"><i data-lucide="shopping-cart"></i></span>
+            <span class="menu-text">Point of Sale</span>
+            <span class="menu-arrow"></span>
+          </a>
+          <ul class="sub-menu hs-accordion-content hidden">
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">New Transaction</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Order History</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Returns &amp; Refunds</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="menu-link">
+            <span class="menu-icon"><i data-lucide="truck"></i></span>
+            <div class="menu-text">Suppliers</div>
+          </a>
+        </li>
+
+        <li class="menu-item">
+          <a href="#" class="menu-link">
+            <span class="menu-icon"><i data-lucide="users"></i></span>
+            <div class="menu-text">Customers</div>
+          </a>
+        </li>
+
+        <!-- REPORTS -->
+        <li class="menu-title mt-4"><span>Reports</span></li>
+
+        <li class="menu-item hs-accordion" id="menu-reports">
+          <a href="javascript:void(0)" class="hs-accordion-toggle menu-link">
+            <span class="menu-icon"><i data-lucide="bar-chart-2"></i></span>
+            <span class="menu-text">Reports</span>
+            <span class="menu-arrow"></span>
+          </a>
+          <ul class="sub-menu hs-accordion-content hidden">
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Sales Report</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Stock Report</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Prescription Report</span></a>
+            </li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Expiry Report</span></a></li>
+          </ul>
+        </li>
+
+        <!-- ADMINISTRATION -->
+        <li class="menu-title mt-4"><span>Administration</span></li>
+
+        <li class="menu-item hs-accordion" id="menu-settings">
+          <a href="javascript:void(0)" class="hs-accordion-toggle menu-link">
+            <span class="menu-icon"><i data-lucide="settings"></i></span>
+            <span class="menu-text">Settings</span>
+            <span class="menu-arrow"></span>
+          </a>
+          <ul class="sub-menu hs-accordion-content hidden">
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">Branches</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><span class="menu-text">User Roles</span></a></li>
+            <li class="menu-item"><a href="{% url 'admin:index' %}" class="menu-link"><span class="menu-text">Admin
+                  Panel</span></a></li>
+          </ul>
+        </li>
+
+        <li class="menu-item">
+          <a href="{% url 'password_change' %}" class="menu-link">
+            <span class="menu-icon"><i data-lucide="lock-keyhole"></i></span>
+            <div class="menu-text">Change Password</div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+</aside>
