@@ -35,7 +35,7 @@ ROOT_URLCONF = "pharmacy_saas.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -90,3 +90,11 @@ USE_TZ = True
 
 
 STATIC_URL = "static/"
+
+# Reuse the Tailwick (Tailwind) static bundle shipped in-repo.
+STATICFILES_DIRS = [
+    BASE_DIR / "Tailwick_v2.2.0" / "Django" / "tailwick" / "static",
+]
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/accounts/login/"
