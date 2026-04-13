@@ -1,22 +1,22 @@
-<header class="border-b border-slate-200 bg-white">
+<header class="border-b border-default-200 bg-white">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
     <div class="flex items-center gap-3">
-      <a class="text-sm font-semibold text-slate-900" href="{% url 'dashboard' %}">Pharmacy SaaS</a>
-      <span class="hidden sm:inline text-xs text-slate-500">Template scaffold</span>
+      <a class="text-sm font-semibold text-default-900" href="{% url 'dashboard' %}">Pharmacy SaaS</a>
+      <span class="hidden sm:inline text-xs text-default-500">Template scaffold</span>
     </div>
 
     <nav class="flex items-center gap-3 text-sm">
       {% if request.user.is_authenticated %}
-        <span class="hidden sm:inline text-slate-600">{{ request.user.get_username }}</span>
+        <span class="hidden sm:inline text-default-600">{{ request.user.get_username }}</span>
         <form method="post" action="{% url 'logout' %}">
           {% csrf_token %}
-          <button class="rounded-md border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-900 hover:bg-slate-50"
+          <button class="rounded-md border border-default-200 bg-white px-3 py-1.5 text-sm font-medium text-default-900 hover:bg-default-50"
                   type="submit">
             Log out
           </button>
         </form>
       {% else %}
-        <a class="rounded-md bg-slate-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-slate-800"
+        <a class="rounded-md bg-default-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-default-800"
            href="{% url 'login' %}">
           Log in
         </a>

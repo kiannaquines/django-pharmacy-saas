@@ -92,7 +92,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -122,8 +122,9 @@ TENANT_APPS = [
     # Example: "inventory", "sales", "customers"
 ]
 
-# Reuse the Tailwick (Tailwind) static bundle shipped in-repo.
+# Project-level static assets + the Tailwick (Tailwind) bundle shipped in-repo.
 STATICFILES_DIRS = [
+    BASE_DIR / "static",
     BASE_DIR / "Tailwick_v2.2.0" / "Django" / "tailwick" / "static",
 ]
 
