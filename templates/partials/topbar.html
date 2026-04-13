@@ -108,7 +108,8 @@
           </div>
           <!-- Name + email (desktop only) -->
           <div class="hidden md:block text-start leading-tight">
-            <p class="text-sm font-medium text-default-800 leading-none">{{ request.user.get_full_name|default:request.user.username }}</p>
+            <p class="text-sm font-medium text-default-800 leading-none">{{
+              request.user.get_full_name|default:request.user.username }}</p>
             <p class="text-xs text-default-500 mt-0.5">{{ request.user.email|default:"Pharmacist" }}</p>
           </div>
           <i data-lucide="chevron-down" class="size-4 text-default-400 hidden md:block"></i>
@@ -116,7 +117,8 @@
 
         <div class="hs-dropdown-menu min-w-52" role="menu">
           <div class="p-2">
-            <h6 class="mb-2 text-default-500 text-xs">Welcome, {{ request.user.get_full_name|default:request.user.username }}</h6>
+            <h6 class="mb-2 text-default-500 text-xs">Welcome, {{
+              request.user.get_full_name|default:request.user.username }}</h6>
             <div class="flex gap-3">
               <!-- Avatar with online indicator -->
               <div class="relative inline-block flex-shrink-0">
@@ -127,7 +129,8 @@
                   class="-top-1 -end-1 absolute size-2.5 bg-green-400 border-2 border-white dark:border-default-100 rounded-full"></span>
               </div>
               <div>
-                <h6 class="mb-0.5 text-sm font-semibold text-default-800">{{ request.user.get_full_name|default:request.user.username }}</h6>
+                <h6 class="mb-0.5 text-sm font-semibold text-default-800">{{
+                  request.user.get_full_name|default:request.user.username }}</h6>
                 <p class="text-xs text-default-500">{{ request.user.email|default:"Pharmacist" }}</p>
               </div>
             </div>
