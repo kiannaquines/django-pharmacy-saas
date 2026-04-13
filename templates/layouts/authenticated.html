@@ -9,7 +9,26 @@
         {% include "partials/sidebar.html" %}
       </aside>
 
+      <div class="lg:hidden">
+        <div class="pointer-events-none fixed inset-0 z-40 bg-slate-900/30 opacity-0 backdrop-blur-[1px] transition"
+             data-sidebar-overlay></div>
+        <aside class="fixed inset-y-0 left-0 z-50 w-72 -translate-x-full border-r border-slate-200 bg-white shadow-xl transition"
+               data-sidebar-drawer
+               aria-label="Sidebar">
+          <div class="flex items-center justify-between border-b border-slate-200 px-4 py-3">
+            <a class="text-sm font-semibold text-slate-900" href="{% url 'dashboard' %}">Pharmacy SaaS</a>
+            <button class="rounded-md p-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900" type="button" data-sidebar-close aria-label="Close sidebar">
+              <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.22 4.22a.75.75 0 0 1 1.06 0L10 8.94l4.72-4.72a.75.75 0 1 1 1.06 1.06L11.06 10l4.72 4.72a.75.75 0 1 1-1.06 1.06L10 11.06l-4.72 4.72a.75.75 0 1 1-1.06-1.06L8.94 10 4.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+          {% include "partials/sidebar.html" %}
+        </aside>
+      </div>
+
       <main class="flex-1 p-6 lg:p-10">
+        {% include "partials/breadcrumbs.html" %}
         {% block page_content %}{% endblock %}
         <div class="mt-12">
           {% include "partials/footer.html" %}
@@ -17,4 +36,37 @@
       </main>
     </div>
   </div>
+{% endblock %}
+
+{% block extra_js %}
+  {{ block.super }}
+  <script>
+    (function () {
+      const openButton = document.querySelector('[data-sidebar-open]');
+      const closeButton = document.querySelector('[data-sidebar-close]');
+      const drawer = document.querySelector('[data-sidebar-drawer]');
+      const overlay = document.querySelector('[data-sidebar-overlay]');
+
+      if (!openButton || !closeButton || !drawer || !overlay) return;
+
+      function openDrawer() {
+        drawer.classList.remove('-translate-x-full');
+        overlay.classList.remove('pointer-events-none', 'opacity-0');
+        overlay.classList.add('opacity-100');
+      }
+
+      function closeDrawer() {
+        drawer.classList.add('-translate-x-full');
+        overlay.classList.add('pointer-events-none', 'opacity-0');
+        overlay.classList.remove('opacity-100');
+      }
+
+      openButton.addEventListener('click', openDrawer);
+      closeButton.addEventListener('click', closeDrawer);
+      overlay.addEventListener('click', closeDrawer);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeDrawer();
+      });
+    })();
+  </script>
 {% endblock %}
