@@ -1,20 +1,23 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %}Logged out · Pharmacy SaaS{% endblock %}
+{% block title %}Logged Out · Pharmacy SaaS{% endblock %}
 
 {% block content %}
-  <div class="min-h-screen bg-slate-50">
-    <div class="mx-auto flex max-w-6xl justify-center px-4 py-12">
-      <div class="w-full max-w-md rounded-lg border border-slate-200 bg-white p-6">
-        <h1 class="text-xl font-semibold text-slate-900">Logged out</h1>
-        <p class="mt-1 text-sm text-slate-600">You’ve been signed out successfully.</p>
-        <div class="mt-6">
-          <a class="inline-flex items-center rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
-             href="{% url 'login' %}">
-            Log back in
-          </a>
+<div class="relative min-h-screen w-full flex justify-center items-center py-16 md:py-10">
+    <div class="card md:w-lg w-screen z-10">
+        <div class="text-center px-10 py-12">
+            <a href="/" class="flex justify-center mb-8">
+                <span class="text-xl font-bold text-primary">Pharmacy SaaS</span>
+            </a>
+
+            <h4 class="mb-2.5 text-xl font-semibold text-default-900">You've Been Logged Out</h4>
+            <p class="text-base text-default-500 mb-8">
+                Thank you for using Pharmacy SaaS. You have been securely signed out.
+            </p>
+
+            <a href="{% url 'login' %}" class="btn bg-primary text-white w-full">Sign In Again</a>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 {% endblock %}

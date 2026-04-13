@@ -1,19 +1,51 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% block title %}Pharmacy SaaS{% endblock %}</title>
+<html lang="en" dir="ltr" data-theme="light" data-sidenav-color="light" data-sidenav-size="default">
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/themes.css' %}" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Pharmacy SaaS{% endblock %}</title>
 
-    {% block extra_head %}{% endblock %}
-  </head>
-  <body class="{% block body_class %}bg-slate-50 text-slate-900{% endblock %}">
-    {% include "partials/messages.html" %}
-    {% block content %}{% endblock %}
-    {% block extra_js %}{% endblock %}
-  </body>
+  <link rel="shortcut icon" href="{% static 'assets/favicon-CK1QI2Xs.ico' %}">
+  <link rel="stylesheet" href="{% static 'assets/app-0ZOPNGSF.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <script>
+    (function () {
+      const html = document.documentElement;
+      const storageKey = "__TAILWICK_CONFIG__";
+      const savedConfig = sessionStorage.getItem(storageKey);
+      const defaultConfig = { dir: "ltr", theme: "light", sidenav: { color: "light", size: "default" } };
+      function getSystemTheme() { return window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light"; }
+      const htmlConfig = {
+        dir: html.getAttribute("dir") || defaultConfig.dir,
+        theme: html.getAttribute("data-theme") === 'system' ? getSystemTheme() : html.getAttribute("data-theme") || (defaultConfig.theme === 'system' ? getSystemTheme() : defaultConfig.theme),
+        sidenav: { color: html.getAttribute("data-sidenav-color") || defaultConfig.sidenav.color, size: html.getAttribute("data-sidenav-size") || defaultConfig.sidenav.size },
+      };
+      window.defaultConfig = structuredClone(htmlConfig);
+      let config = savedConfig ? JSON.parse(savedConfig) : htmlConfig;
+      window.config = config;
+      html.setAttribute("dir", config.dir);
+      html.setAttribute("data-theme", config.theme);
+      html.setAttribute("data-sidenav-color", config.sidenav.color);
+      if (config.sidenav.size) {
+        let size = config.sidenav.size;
+        if (window.innerWidth <= 1140) { size = "offcanvas"; }
+        html.setAttribute("data-sidenav-size", size);
+      }
+    })();
+  </script>
+
+  {% block extra_head %}{% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+  {% include "partials/messages.html" %}
+  {% block content %}{% endblock %}
+  <link rel="modulepreload" crossorigin href="{% static 'assets/app-BxTRRtUp.js' %}">
+  <script type="module" crossorigin src="{% static 'assets/index-DsDs3XAz.js' %}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+
 </html>

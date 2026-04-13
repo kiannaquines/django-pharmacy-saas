@@ -92,9 +92,17 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
-# Default primary key field type
+# Static files directories
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+# Media files (for user uploads)
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Django Tenants Configuration
@@ -122,10 +130,6 @@ TENANT_APPS = [
     # Example: "inventory", "sales", "customers"
 ]
 
-# Reuse the Tailwick (Tailwind) static bundle shipped in-repo.
-STATICFILES_DIRS = [
-    BASE_DIR / "Tailwick_v2.2.0" / "Django" / "tailwick" / "static",
-]
-
+LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/accounts/login/"

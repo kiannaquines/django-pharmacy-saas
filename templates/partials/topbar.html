@@ -1,0 +1,170 @@
+{% load static %}
+<div
+  class="app-header min-h-topbar-height flex items-center sticky top-0 z-30 bg-(--topbar-background) border-b border-default-200">
+  <div class="w-full flex items-center justify-between px-6">
+
+    <!-- Left: sidebar toggle + search -->
+    <div class="flex items-center gap-4">
+      <div class="topbar-item">
+        <button id="button-toggle-menu" class="btn btn-icon size-9 bg-default-400/10 hover:bg-default-150 rounded">
+          <i class="iconify lucide--align-left text-xl"></i>
+        </button>
+      </div>
+      <div
+        class="topbar-item hidden md:flex items-center gap-2 h-9 rounded-lg border border-default-200 bg-default-50 px-3">
+        <i class="iconify tabler--search text-base text-default-400 flex-shrink-0"></i>
+        <input type="search" placeholder="Search medicines, Rx, orders…"
+          class="bg-transparent outline-none w-52 text-sm placeholder:text-default-400 text-default-800" />
+      </div>
+    </div>
+
+    <!-- Right items -->
+    <div class="flex items-center gap-2">
+
+      <!-- Dark/Light toggle -->
+      <div class="topbar-item">
+        <button class="btn btn-icon size-8 hover:bg-default-150 rounded-full relative" id="light-dark-mode"
+          title="Toggle theme">
+          <i
+            class="iconify tabler--moon text-xl absolute dark:scale-0 dark:-rotate-90 scale-100 rotate-0 transition-all duration-200"></i>
+          <i
+            class="iconify tabler--sun text-xl absolute dark:scale-100 dark:rotate-0 scale-0 rotate-90 transition-all duration-200"></i>
+        </button>
+      </div>
+
+      <!-- Notifications -->
+      <div class="topbar-item hs-dropdown [--auto-close:inside] relative inline-flex">
+        <button type="button" class="hs-dropdown-toggle btn btn-icon size-8 hover:bg-default-150 rounded-full relative"
+          aria-haspopup="menu" aria-expanded="false" aria-label="Notifications">
+          <i data-lucide="bell-ring" class="size-4.5"></i>
+          <span class="absolute end-0 top-0 size-1.5 bg-primary/90 rounded-full"></span>
+        </button>
+        <div class="hs-dropdown-menu min-w-80" role="menu">
+          <div class="px-4 pt-3 pb-2 flex items-center justify-between border-b border-default-200">
+            <h6 class="font-semibold text-sm text-default-800">Notifications</h6>
+            <a href="#" class="text-xs text-primary-600 hover:underline">Mark all read</a>
+          </div>
+          <div class="max-h-64 overflow-y-auto divide-y divide-default-100">
+            <a href="#" class="flex gap-3 px-4 py-3 hover:bg-default-50">
+              <span class="flex-shrink-0 size-8 rounded-full bg-warning-100 flex items-center justify-center">
+                <i data-lucide="alert-triangle" class="size-4 text-warning-600"></i>
+              </span>
+              <div>
+                <p class="text-sm font-medium text-default-800">Low Stock Alert</p>
+                <p class="text-xs text-default-500">Amoxicillin 500mg — only 3 units left</p>
+                <p class="text-xs text-default-400 mt-0.5">2 minutes ago</p>
+              </div>
+            </a>
+            <a href="#" class="flex gap-3 px-4 py-3 hover:bg-default-50">
+              <span class="flex-shrink-0 size-8 rounded-full bg-danger-100 flex items-center justify-center">
+                <i data-lucide="calendar-x" class="size-4 text-danger-600"></i>
+              </span>
+              <div>
+                <p class="text-sm font-medium text-default-800">Expiry Notice</p>
+                <p class="text-xs text-default-500">Metformin 850mg expires in 7 days</p>
+                <p class="text-xs text-default-400 mt-0.5">1 hour ago</p>
+              </div>
+            </a>
+            <a href="#" class="flex gap-3 px-4 py-3 hover:bg-default-50">
+              <span class="flex-shrink-0 size-8 rounded-full bg-primary-100 flex items-center justify-center">
+                <i data-lucide="file-text" class="size-4 text-primary-600"></i>
+              </span>
+              <div>
+                <p class="text-sm font-medium text-default-800">New Prescription</p>
+                <p class="text-xs text-default-500">Rx #00284 submitted by Dr. Santos</p>
+                <p class="text-xs text-default-400 mt-0.5">3 hours ago</p>
+              </div>
+            </a>
+          </div>
+          <div class="flex items-center justify-between p-4 border-t border-default-200">
+            <a href="#" class="text-sm font-medium text-default-900">Manage Notifications</a>
+            <a href="#" class="btn btn-sm text-white bg-primary flex items-center gap-1">
+              View All <i data-lucide="move-right" class="size-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Theme Settings trigger -->
+      <div class="topbar-item">
+        <button class="btn btn-icon size-8 hover:bg-default-150 rounded-full" type="button" aria-haspopup="dialog"
+          aria-expanded="false" aria-controls="theme-customization" data-hs-overlay="#theme-customization"
+          title="Theme Settings">
+          <i data-lucide="settings" class="size-4.5"></i>
+        </button>
+      </div>
+
+      <!-- User dropdown -->
+      <div class="topbar-item hs-dropdown relative inline-flex">
+        <button class="hs-dropdown-toggle cursor-pointer rounded-full flex items-center gap-2 ms-1 focus:outline-none"
+          aria-haspopup="menu" aria-expanded="false" aria-label="Profile">
+          <!-- Avatar with online indicator -->
+          <div class="relative">
+            <div
+              class="size-9 rounded-full bg-primary flex items-center justify-center text-white font-semibold text-sm select-none">
+              {{ request.user.username|slice:":2"|upper }}</div>
+            <span
+              class="absolute -bottom-0.5 -end-0.5 size-2.5 bg-green-400 border-2 border-white dark:border-default-100 rounded-full"></span>
+          </div>
+          <!-- Name + email (desktop only) -->
+          <div class="hidden md:block text-start leading-tight">
+            <p class="text-sm font-medium text-default-800 leading-none">{{
+              request.user.get_full_name|default:request.user.username }}</p>
+            <p class="text-xs text-default-500 mt-0.5">{{ request.user.email|default:"Pharmacist" }}</p>
+          </div>
+          <i data-lucide="chevron-down" class="size-4 text-default-400 hidden md:block"></i>
+        </button>
+
+        <div class="hs-dropdown-menu min-w-52" role="menu">
+          <div class="p-2">
+            <h6 class="mb-2 text-default-500 text-xs">Welcome, {{
+              request.user.get_full_name|default:request.user.username }}</h6>
+            <div class="flex gap-3">
+              <!-- Avatar with online indicator -->
+              <div class="relative inline-block flex-shrink-0">
+                <div
+                  class="size-12 rounded bg-primary flex items-center justify-center text-white font-bold text-base select-none">
+                  {{ request.user.username|slice:":2"|upper }}</div>
+                <span
+                  class="-top-1 -end-1 absolute size-2.5 bg-green-400 border-2 border-white dark:border-default-100 rounded-full"></span>
+              </div>
+              <div>
+                <h6 class="mb-0.5 text-sm font-semibold text-default-800">{{
+                  request.user.get_full_name|default:request.user.username }}</h6>
+                <p class="text-xs text-default-500">{{ request.user.email|default:"Pharmacist" }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t border-default-200 -mx-2 my-1"></div>
+
+          <div class="flex flex-col gap-y-0.5 px-2">
+            <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-sm text-default-600 hover:bg-default-150 rounded"
+              href="#">
+              <i data-lucide="user" class="size-4"></i> My Profile
+            </a>
+            <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-sm text-default-600 hover:bg-default-150 rounded"
+              href="{% url 'password_change' %}">
+              <i data-lucide="lock-keyhole" class="size-4"></i> Change Password
+            </a>
+            {% if request.user.is_staff %}
+            <a class="flex items-center gap-x-3.5 py-1.5 font-medium px-3 text-sm text-default-600 hover:bg-default-150 rounded"
+              href="{% url 'admin:index' %}">
+              <i data-lucide="shield" class="size-4"></i> Admin Panel
+            </a>
+            {% endif %}
+            <div class="border-t border-default-200 -mx-3 my-1"></div>
+            <form method="post" action="{% url 'logout' %}">
+              {% csrf_token %}
+              <button type="submit"
+                class="flex w-full items-center gap-x-3.5 py-1.5 font-medium px-3 text-sm text-danger-600 hover:bg-danger-50 rounded">
+                <i data-lucide="log-out" class="size-4"></i> Sign Out
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end right -->
+  </div><!-- end inner -->
+</div><!-- end app-header -->

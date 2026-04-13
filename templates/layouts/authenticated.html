@@ -1,20 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="min-h-screen flex flex-col">
-    {% include "partials/navbar.html" %}
+<div class="wrapper">
 
-    <div class="flex flex-1">
-      <aside class="hidden lg:block w-72 border-r border-slate-200 bg-white">
-        {% include "partials/sidebar.html" %}
-      </aside>
+  {% include "partials/sidebar.html" %}
 
-      <main class="flex-1 p-6 lg:p-10">
-        {% block page_content %}{% endblock %}
-        <div class="mt-12">
-          {% include "partials/footer.html" %}
-        </div>
-      </main>
-    </div>
-  </div>
+  <div class="page-content">
+
+    {% include "partials/topbar.html" %}
+
+    <main class="p-6">
+      {% block page_content %}{% endblock %}
+    </main>
+
+    {% include "partials/footer.html" %}
+
+  </div><!-- end page-content -->
+
+</div><!-- end wrapper -->
+
+{% include "partials/customizer.html" %}
 {% endblock %}

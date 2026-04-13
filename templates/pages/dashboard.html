@@ -1,75 +1,816 @@
 {% extends "layouts/authenticated.html" %}
 
-{% block title %}Dashboard · Pharmacy SaaS{% endblock %}
+{% block title %}Dashboard — PharmaSaaS{% endblock %}
 
 {% block page_content %}
-  <div class="flex items-start justify-between gap-4">
-    <div>
-      <h1 class="text-2xl font-semibold text-slate-900">Dashboard</h1>
-      <p class="mt-1 text-slate-600">Welcome back, {{ request.user.get_username }}.</p>
+
+<!-- Page header -->
+<div class="flex items-center justify-between mb-6">
+  <div>
+    <h1 class="text-xl font-semibold text-default-900">Dashboard</h1>
+    <p class="text-default-500 text-sm mt-0.5">Welcome back, {{ request.user.get_full_name|default:request.user.username
+      }}. Here's what's happening today.</p>
+  </div>
+  <div class="flex gap-2">
+    <button
+      class="btn bg-default-100 hover:bg-default-200 text-default-700 text-sm px-4 h-9 rounded-lg flex items-center gap-2">
+      <i data-lucide="calendar" class="text-base"></i> Today
+    </button>
+    <button class="btn bg-primary hover:bg-primary/80 text-white text-sm px-4 h-9 rounded-lg flex items-center gap-2">
+      <i data-lucide="plus" class="text-base"></i> New Transaction
+    </button>
+  </div>
+</div>
+
+<!-- ===== STAT CARDS ===== -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+
+  <!-- Revenue -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-sm text-default-500 font-medium">Today's Revenue</span>
+      <span class="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
+        <i data-lucide="banknote" class="text-primary text-xl"></i>
+      </span>
     </div>
-    <a class="inline-flex items-center rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
-       href="{% url 'admin:index' %}">
-      Admin
-    </a>
+    <h3 class="text-2xl font-bold text-default-900">&#8369;12,480</h3>
+    <div class="flex items-center gap-1 mt-1.5">
+      <i data-lucide="trending-up" class="text-success text-sm"></i>
+      <span class="text-xs text-success font-medium">+8.2%</span>
+      <span class="text-xs text-default-400">vs yesterday</span>
+    </div>
   </div>
 
-  <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-    <div class="rounded-lg border border-slate-200 bg-white p-5">
-      <div class="text-sm font-medium text-slate-600">Tenants</div>
-      <div class="mt-2 text-3xl font-semibold text-slate-900">—</div>
-      <div class="mt-1 text-xs text-slate-500">Placeholder metric</div>
+  <!-- Prescriptions -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-sm text-default-500 font-medium">Prescriptions Today</span>
+      <span class="size-10 rounded-lg bg-success/10 flex items-center justify-center">
+        <i data-lucide="file-text" class="text-success text-xl"></i>
+      </span>
     </div>
-    <div class="rounded-lg border border-slate-200 bg-white p-5">
-      <div class="text-sm font-medium text-slate-600">Inventory Items</div>
-      <div class="mt-2 text-3xl font-semibold text-slate-900">—</div>
-      <div class="mt-1 text-xs text-slate-500">Placeholder metric</div>
-    </div>
-    <div class="rounded-lg border border-slate-200 bg-white p-5">
-      <div class="text-sm font-medium text-slate-600">Low Stock</div>
-      <div class="mt-2 text-3xl font-semibold text-slate-900">—</div>
-      <div class="mt-1 text-xs text-slate-500">Placeholder metric</div>
-    </div>
-    <div class="rounded-lg border border-slate-200 bg-white p-5">
-      <div class="text-sm font-medium text-slate-600">Today’s Sales</div>
-      <div class="mt-2 text-3xl font-semibold text-slate-900">—</div>
-      <div class="mt-1 text-xs text-slate-500">Placeholder metric</div>
+    <h3 class="text-2xl font-bold text-default-900">284</h3>
+    <div class="flex items-center gap-1 mt-1.5">
+      <i data-lucide="trending-up" class="text-success text-sm"></i>
+      <span class="text-xs text-success font-medium">+14</span>
+      <span class="text-xs text-default-400">since yesterday</span>
     </div>
   </div>
 
-  <div class="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
-    <div class="rounded-lg border border-slate-200 bg-white p-5 lg:col-span-2">
-      <h2 class="text-base font-semibold text-slate-900">Quick actions</h2>
-      <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-        <a class="rounded-md border border-slate-200 bg-slate-50 p-4 hover:bg-slate-100" href="{% url 'admin:index' %}">
-          <div class="text-sm font-medium text-slate-900">Open admin</div>
-          <div class="mt-1 text-xs text-slate-600">Manage users, tenants, and data</div>
-        </a>
-        <a class="rounded-md border border-slate-200 bg-slate-50 p-4 hover:bg-slate-100" href="{% url 'password_change' %}">
-          <div class="text-sm font-medium text-slate-900">Change password</div>
-          <div class="mt-1 text-xs text-slate-600">Update your credentials</div>
-        </a>
+  <!-- Inventory -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-sm text-default-500 font-medium">Items in Stock</span>
+      <span class="size-10 rounded-lg bg-info/10 flex items-center justify-center">
+        <i data-lucide="package" class="text-info text-xl"></i>
+      </span>
+    </div>
+    <h3 class="text-2xl font-bold text-default-900">1,847</h3>
+    <div class="flex items-center gap-1 mt-1.5">
+      <i data-lucide="minus" class="text-default-400 text-sm"></i>
+      <span class="text-xs text-default-500 font-medium">342 SKUs</span>
+      <span class="text-xs text-default-400">in catalogue</span>
+    </div>
+  </div>
+
+  <!-- Low Stock Alerts -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-sm text-default-500 font-medium">Low Stock Alerts</span>
+      <span class="size-10 rounded-lg bg-warning/10 flex items-center justify-center">
+        <i data-lucide="alert-triangle" class="text-warning text-xl"></i>
+      </span>
+    </div>
+    <h3 class="text-2xl font-bold text-default-900">12</h3>
+    <div class="flex items-center gap-1 mt-1.5">
+      <i data-lucide="trending-up" class="text-danger text-sm"></i>
+      <span class="text-xs text-danger font-medium">+3</span>
+      <span class="text-xs text-default-400">since yesterday</span>
+    </div>
+  </div>
+
+</div><!-- end stat cards -->
+
+<!-- ===== ROW 2: Module Overview Cards ===== -->
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-6">
+
+  <!-- Sales Module Card -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <span class="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
+          <i data-lucide="circle-dollar-sign" class="text-primary text-xl"></i>
+        </span>
+        <div>
+          <h5 class="font-semibold text-default-800">Sales</h5>
+          <p class="text-xs text-default-400">Revenue &amp; transactions</p>
+        </div>
+      </div>
+      <a href="{% url 'sales_dashboard' %}"
+        class="btn text-xs px-3 h-7 rounded-md bg-primary/10 hover:bg-primary/20 text-primary font-medium flex items-center gap-1">
+        Open <i data-lucide="arrow-right" class="size-3"></i>
+      </a>
+    </div>
+
+    <!-- Mini bar chart -->
+    <div class="flex items-end gap-1.5 h-16 mb-4">
+      <div class="flex-1 rounded-t-sm bg-primary/30" style="height:60%"></div>
+      <div class="flex-1 rounded-t-sm bg-primary/40" style="height:80%"></div>
+      <div class="flex-1 rounded-t-sm bg-primary/35" style="height:65%"></div>
+      <div class="flex-1 rounded-t-sm bg-primary/60" style="height:90%"></div>
+      <div class="flex-1 rounded-t-sm bg-primary/30" style="height:50%"></div>
+      <div class="flex-1 rounded-t-sm bg-primary/50" style="height:75%"></div>
+      <div class="flex-1 rounded-t-sm bg-primary" style="height:100%"></div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3 pt-3 border-t border-default-200">
+      <div class="text-center">
+        <p class="text-xs text-default-400">Today</p>
+        <p class="text-sm font-semibold text-default-900 mt-0.5">&#8369;12,480</p>
+      </div>
+      <div class="text-center border-x border-default-200">
+        <p class="text-xs text-default-400">This Week</p>
+        <p class="text-sm font-semibold text-default-900 mt-0.5">&#8369;74,320</p>
+      </div>
+      <div class="text-center">
+        <p class="text-xs text-default-400">Orders</p>
+        <p class="text-sm font-semibold text-default-900 mt-0.5">1,429</p>
       </div>
     </div>
-    <div class="rounded-lg border border-slate-200 bg-white p-5">
-      <h2 class="text-base font-semibold text-slate-900">Account</h2>
-      <dl class="mt-4 space-y-3 text-sm">
-        <div class="flex items-center justify-between">
-          <dt class="text-slate-600">Username</dt>
-          <dd class="font-medium text-slate-900">{{ request.user.get_username }}</dd>
+  </div>
+
+  <!-- Inventory Module Card -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <span class="size-10 rounded-lg bg-info/10 flex items-center justify-center">
+          <i data-lucide="package" class="text-info text-xl"></i>
+        </span>
+        <div>
+          <h5 class="font-semibold text-default-800">Inventory</h5>
+          <p class="text-xs text-default-400">Stock &amp; expiry management</p>
         </div>
-        <div class="flex items-center justify-between">
-          <dt class="text-slate-600">Email</dt>
-          <dd class="font-medium text-slate-900">{{ request.user.email|default:"—" }}</dd>
+      </div>
+      <a href="{% url 'inventory_dashboard' %}"
+        class="btn text-xs px-3 h-7 rounded-md bg-info/10 hover:bg-info/20 text-info font-medium flex items-center gap-1">
+        Open <i data-lucide="arrow-right" class="size-3"></i>
+      </a>
+    </div>
+
+    <div class="space-y-2.5 mb-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="size-1.5 rounded-full bg-success"></span>
+          <span class="text-xs text-default-600">In Stock</span>
         </div>
-      </dl>
-      <form class="mt-6" method="post" action="{% url 'logout' %}">
-        {% csrf_token %}
-        <button class="w-full rounded-md border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50"
-                type="submit">
-          Log out
-        </button>
-      </form>
+        <div class="flex items-center gap-2 flex-1 mx-3">
+          <div class="flex-1 bg-default-100 rounded-full h-1.5">
+            <div class="bg-success h-1.5 rounded-full" style="width:85%"></div>
+          </div>
+        </div>
+        <span class="text-xs font-medium text-default-700">1,847</span>
+      </div>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="size-1.5 rounded-full bg-warning"></span>
+          <span class="text-xs text-default-600">Low Stock</span>
+        </div>
+        <div class="flex items-center gap-2 flex-1 mx-3">
+          <div class="flex-1 bg-default-100 rounded-full h-1.5">
+            <div class="bg-warning h-1.5 rounded-full" style="width:12%"></div>
+          </div>
+        </div>
+        <span class="text-xs font-medium text-default-700">12</span>
+      </div>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="size-1.5 rounded-full bg-danger"></span>
+          <span class="text-xs text-default-600">Expiring Soon</span>
+        </div>
+        <div class="flex items-center gap-2 flex-1 mx-3">
+          <div class="flex-1 bg-default-100 rounded-full h-1.5">
+            <div class="bg-danger h-1.5 rounded-full" style="width:5%"></div>
+          </div>
+        </div>
+        <span class="text-xs font-medium text-default-700">8</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3 pt-3 border-t border-default-200">
+      <div class="text-center">
+        <p class="text-xs text-default-400">Total SKUs</p>
+        <p class="text-sm font-semibold text-default-900 mt-0.5">342</p>
+      </div>
+      <div class="text-center border-x border-default-200">
+        <p class="text-xs text-default-400">Low Stock</p>
+        <p class="text-sm font-semibold text-warning mt-0.5">12</p>
+      </div>
+      <div class="text-center">
+        <p class="text-xs text-default-400">Expiring</p>
+        <p class="text-sm font-semibold text-danger mt-0.5">8</p>
+      </div>
     </div>
   </div>
+
+</div><!-- end module cards -->
+
+<!-- ===== ROW 3: Recent Prescriptions ===== -->
+<div class="card mb-6">
+  <div class="flex items-center justify-between px-5 py-4 border-b border-default-200">
+    <div>
+      <h5 class="font-semibold text-default-800">Recent Prescriptions</h5>
+      <p class="text-xs text-default-400 mt-0.5">Last 5 prescriptions processed today</p>
+    </div>
+    <a href="#" class="btn text-sm bg-default-100 hover:bg-default-200 text-default-700 px-4 h-8 rounded-lg">View
+      All</a>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="table w-full text-sm">
+      <thead>
+        <tr class="border-b border-default-200 text-default-500 text-xs">
+          <th class="text-start px-5 py-3 font-medium">Rx #</th>
+          <th class="text-start px-5 py-3 font-medium">Patient</th>
+          <th class="text-start px-5 py-3 font-medium">Doctor</th>
+          <th class="text-start px-5 py-3 font-medium">Medication</th>
+          <th class="text-start px-5 py-3 font-medium">Amount</th>
+          <th class="text-start px-5 py-3 font-medium">Status</th>
+          <th class="text-start px-5 py-3 font-medium">Time</th>
+          <th class="px-5 py-3"></th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-default-200">
+        <tr class="hover:bg-default-50">
+          <td class="px-5 py-3 font-mono text-xs text-default-500">Rx-00284</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-2">
+              <div
+                class="size-7 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">
+                MA</div>
+              <span class="font-medium text-default-800">Maria Abad</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-default-600">Dr. Santos</td>
+          <td class="px-5 py-3 text-default-600">Amoxicillin 500mg x30</td>
+          <td class="px-5 py-3 font-medium text-default-800">&#8369;285</td>
+          <td class="px-5 py-3"><span
+              class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-success/10 text-success border border-success/30">Dispensed</span>
+          </td>
+          <td class="px-5 py-3 text-default-400 text-xs">09:12 AM</td>
+          <td class="px-5 py-3"><button class="btn btn-icon size-7 hover:bg-default-100 rounded"><i
+                data-lucide="more-horizontal" class="text-base"></i></button></td>
+        </tr>
+        <tr class="hover:bg-default-50">
+          <td class="px-5 py-3 font-mono text-xs text-default-500">Rx-00283</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-2">
+              <div
+                class="size-7 rounded-full bg-success/10 flex items-center justify-center text-success text-xs font-bold flex-shrink-0">
+                JR</div>
+              <span class="font-medium text-default-800">Jose Reyes</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-default-600">Dr. Cruz</td>
+          <td class="px-5 py-3 text-default-600">Metformin 850mg x60</td>
+          <td class="px-5 py-3 font-medium text-default-800">&#8369;540</td>
+          <td class="px-5 py-3"><span
+              class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-success/10 text-success border border-success/30">Dispensed</span>
+          </td>
+          <td class="px-5 py-3 text-default-400 text-xs">08:58 AM</td>
+          <td class="px-5 py-3"><button class="btn btn-icon size-7 hover:bg-default-100 rounded"><i
+                data-lucide="more-horizontal" class="text-base"></i></button></td>
+        </tr>
+        <tr class="hover:bg-default-50">
+          <td class="px-5 py-3 font-mono text-xs text-default-500">Rx-00282</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-2">
+              <div
+                class="size-7 rounded-full bg-warning/10 flex items-center justify-center text-warning text-xs font-bold flex-shrink-0">
+                LC</div>
+              <span class="font-medium text-default-800">Lita Cabrera</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-default-600">Dr. Bautista</td>
+          <td class="px-5 py-3 text-default-600">Losartan 50mg x30</td>
+          <td class="px-5 py-3 font-medium text-default-800">&#8369;390</td>
+          <td class="px-5 py-3"><span
+              class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-warning/10 text-warning border border-warning/30">Pending</span>
+          </td>
+          <td class="px-5 py-3 text-default-400 text-xs">08:45 AM</td>
+          <td class="px-5 py-3"><button class="btn btn-icon size-7 hover:bg-default-100 rounded"><i
+                data-lucide="more-horizontal" class="text-base"></i></button></td>
+        </tr>
+        <tr class="hover:bg-default-50">
+          <td class="px-5 py-3 font-mono text-xs text-default-500">Rx-00281</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-2">
+              <div
+                class="size-7 rounded-full bg-info/10 flex items-center justify-center text-info text-xs font-bold flex-shrink-0">
+                RD</div>
+              <span class="font-medium text-default-800">Ramon Dela Cruz</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-default-600">Dr. Santos</td>
+          <td class="px-5 py-3 text-default-600">Atorvastatin 20mg x30</td>
+          <td class="px-5 py-3 font-medium text-default-800">&#8369;720</td>
+          <td class="px-5 py-3"><span
+              class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-success/10 text-success border border-success/30">Dispensed</span>
+          </td>
+          <td class="px-5 py-3 text-default-400 text-xs">08:30 AM</td>
+          <td class="px-5 py-3"><button class="btn btn-icon size-7 hover:bg-default-100 rounded"><i
+                data-lucide="more-horizontal" class="text-base"></i></button></td>
+        </tr>
+        <tr class="hover:bg-default-50">
+          <td class="px-5 py-3 font-mono text-xs text-default-500">Rx-00280</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-2">
+              <div
+                class="size-7 rounded-full bg-danger/10 flex items-center justify-center text-danger text-xs font-bold flex-shrink-0">
+                EV</div>
+              <span class="font-medium text-default-800">Elena Villanueva</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-default-600">Dr. Garcia</td>
+          <td class="px-5 py-3 text-default-600">Amlodipine 5mg x30</td>
+          <td class="px-5 py-3 font-medium text-default-800">&#8369;460</td>
+          <td class="px-5 py-3"><span
+              class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-danger/10 text-danger border border-danger/30">Cancelled</span>
+          </td>
+          <td class="px-5 py-3 text-default-400 text-xs">08:15 AM</td>
+          <td class="px-5 py-3"><button class="btn btn-icon size-7 hover:bg-default-100 rounded"><i
+                data-lucide="more-horizontal" class="text-base"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div><!-- end recent prescriptions -->
+
+<!-- ===== ROW 4: Quick Actions ===== -->
+<div class="card p-5">
+  <h5 class="font-semibold text-default-800 mb-4">Quick Actions</h5>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+    <a href="#"
+      class="flex flex-col items-center gap-2 p-4 rounded-xl border border-default-200 hover:border-primary/40 hover:bg-primary/5 transition-colors text-center">
+      <span class="size-11 rounded-lg bg-primary/10 flex items-center justify-center">
+        <i data-lucide="shopping-cart" class="text-primary text-xl"></i>
+      </span>
+      <span class="text-xs font-medium text-default-700">New Sale</span>
+    </a>
+    <a href="#"
+      class="flex flex-col items-center gap-2 p-4 rounded-xl border border-default-200 hover:border-success/40 hover:bg-success/5 transition-colors text-center">
+      <span class="size-11 rounded-lg bg-success/10 flex items-center justify-center">
+        <i data-lucide="file-plus" class="text-success text-xl"></i>
+      </span>
+      <span class="text-xs font-medium text-default-700">Add Prescription</span>
+    </a>
+    <a href="{% url 'inventory_dashboard' %}"
+      class="flex flex-col items-center gap-2 p-4 rounded-xl border border-default-200 hover:border-info/30 hover:bg-info/5 transition-colors text-center">
+      <span class="size-11 rounded-lg bg-info/10 flex items-center justify-center">
+        <i data-lucide="package-plus" class="text-info text-xl"></i>
+      </span>
+      <span class="text-xs font-medium text-default-700">Add Stock</span>
+    </a>
+    <a href="{% url 'sales_dashboard' %}"
+      class="flex flex-col items-center gap-2 p-4 rounded-xl border border-default-200 hover:border-warning/30 hover:bg-warning/10 transition-colors text-center">
+      <span class="size-11 rounded-lg bg-warning/10 flex items-center justify-center">
+        <i data-lucide="bar-chart-2" class="text-warning text-xl"></i>
+      </span>
+      <span class="text-xs font-medium text-default-700">Sales Reports</span>
+    </a>
+  </div>
+</div><!-- end quick actions -->
+
+{% endblock %}
+
+<!-- ===== STAT CARDS ===== -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
+
+  <!-- Revenue -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-sm text-default-500 font-medium">Today's Revenue</span>
+      <span class="size-10 rounded-lg bg-primary/5 flex items-center justify-center">
+        <i data-lucide="banknote" class="text-primary text-xl"></i>
+      </span>
+    </div>
+    <h3 class="text-2xl font-bold text-default-900">&#8369;12,480</h3>
+    <div class="flex items-center gap-1 mt-1.5">
+      <i data-lucide="trending-up" class="text-success text-sm"></i>
+      <span class="text-xs text-success font-medium">+8.2%</span>
+      <span class="text-xs text-default-400">vs yesterday</span>
+    </div>
+  </div>
+
+  <!-- Prescriptions -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-sm text-default-500 font-medium">Prescriptions Today</span>
+      <span class="size-10 rounded-lg bg-success/5 flex items-center justify-center">
+        <i data-lucide="file-text" class="text-success text-xl"></i>
+      </span>
+    </div>
+    <h3 class="text-2xl font-bold text-default-900">284</h3>
+    <div class="flex items-center gap-1 mt-1.5">
+      <i data-lucide="trending-up" class="text-success text-sm"></i>
+      <span class="text-xs text-success font-medium">+14</span>
+      <span class="text-xs text-default-400">since yesterday</span>
+    </div>
+  </div>
+
+  <!-- Inventory -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-sm text-default-500 font-medium">Items in Stock</span>
+      <span class="size-10 rounded-lg bg-info/5 flex items-center justify-center">
+        <i data-lucide="package" class="text-info text-xl"></i>
+      </span>
+    </div>
+    <h3 class="text-2xl font-bold text-default-900">1,847</h3>
+    <div class="flex items-center gap-1 mt-1.5">
+      <i data-lucide="minus" class="text-default-400 text-sm"></i>
+      <span class="text-xs text-default-500 font-medium">3 SKUs</span>
+      <span class="text-xs text-default-400">added today</span>
+    </div>
+  </div>
+
+  <!-- Low Stock Alerts -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-sm text-default-500 font-medium">Low Stock Alerts</span>
+      <span class="size-10 rounded-lg bg-warning/10 flex items-center justify-center">
+        <i data-lucide="alert-triangle" class="text-warning text-xl"></i>
+      </span>
+    </div>
+    <h3 class="text-2xl font-bold text-default-900">12</h3>
+    <div class="flex items-center gap-1 mt-1.5">
+      <i data-lucide="trending-up" class="text-danger text-sm"></i>
+      <span class="text-xs text-danger font-medium">+3</span>
+      <span class="text-xs text-default-400">since yesterday</span>
+    </div>
+  </div>
+
+</div><!-- end stat cards -->
+
+<!-- ===== ROW 2: Sales Chart + Low Stock ===== -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-4 mb-6">
+
+  <!-- Sales Chart (2/3 width) -->
+  <div class="card p-5 xl:col-span-2">
+    <div class="flex items-center justify-between mb-5">
+      <div>
+        <h5 class="font-semibold text-default-800">Sales Overview</h5>
+        <p class="text-xs text-default-400 mt-0.5">Daily revenue for the past 7 days</p>
+      </div>
+      <div class="flex gap-1">
+        <button class="btn text-xs px-3 h-7 rounded-md bg-primary text-white">Week</button>
+        <button
+          class="btn text-xs px-3 h-7 rounded-md bg-default-100 hover:bg-default-200 text-default-600">Month</button>
+      </div>
+    </div>
+
+    <!-- Chart placeholder (ApexCharts would be initialised here) -->
+    <div id="sales-chart" class="w-full h-48 flex items-end gap-2 px-2">
+      {% for day, height, label in chart_data|default:"" %}{% empty %}
+      <!-- Static bar chart mockup -->
+      <div class="flex-1 flex flex-col items-center gap-1">
+        <div class="w-full rounded-t-sm bg-primary/30 hover:bg-primary/50 transition-colors" style="height:60%"></div>
+        <span class="text-xs text-default-400">Mon</span>
+      </div>
+      <div class="flex-1 flex flex-col items-center gap-1">
+        <div class="w-full rounded-t-sm bg-primary/50 hover:bg-primary/70 transition-colors" style="height:80%"></div>
+        <span class="text-xs text-default-400">Tue</span>
+      </div>
+      <div class="flex-1 flex flex-col items-center gap-1">
+        <div class="w-full rounded-t-sm bg-primary/40 hover:bg-primary/60 transition-colors" style="height:65%"></div>
+        <span class="text-xs text-default-400">Wed</span>
+      </div>
+      <div class="flex-1 flex flex-col items-center gap-1">
+        <div class="w-full rounded-t-sm bg-primary/70 hover:bg-primary/90 transition-colors" style="height:90%"></div>
+        <span class="text-xs text-default-400">Thu</span>
+      </div>
+      <div class="flex-1 flex flex-col items-center gap-1">
+        <div class="w-full rounded-t-sm bg-primary/30 hover:bg-primary/50 transition-colors" style="height:50%"></div>
+        <span class="text-xs text-default-400">Fri</span>
+      </div>
+      <div class="flex-1 flex flex-col items-center gap-1">
+        <div class="w-full rounded-t-sm bg-primary/50 hover:bg-primary/70 transition-colors" style="height:75%"></div>
+        <span class="text-xs text-default-400">Sat</span>
+      </div>
+      <div class="flex-1 flex flex-col items-center gap-1">
+        <div class="w-full rounded-t-sm bg-primary" style="height:100%"></div>
+        <span class="text-xs text-default-900 font-semibold">Today</span>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="mt-4 pt-4 border-t border-default-200 grid grid-cols-3 gap-4 text-center">
+      <div>
+        <p class="text-xs text-default-400">Weekly Revenue</p>
+        <p class="font-semibold text-default-900 mt-0.5">&#8369;74,320</p>
+      </div>
+      <div>
+        <p class="text-xs text-default-400">Total Orders</p>
+        <p class="font-semibold text-default-900 mt-0.5">1,429</p>
+      </div>
+      <div>
+        <p class="text-xs text-default-400">Avg. Order Value</p>
+        <p class="font-semibold text-default-900 mt-0.5">&#8369;520</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Low Stock Alerts (1/3 width) -->
+  <div class="card p-5">
+    <div class="flex items-center justify-between mb-4">
+      <h5 class="font-semibold text-default-800">Low Stock</h5>
+      <a href="#" class="text-xs text-primary hover:underline font-medium">View All</a>
+    </div>
+    <div class="space-y-3">
+      {% for item in low_stock_items|default:"" %}{% empty %}
+      <div class="flex items-center justify-between py-2 border-b border-default-100 last:border-0">
+        <div>
+          <p class="text-sm font-medium text-default-800">Amoxicillin 500mg</p>
+          <p class="text-xs text-default-400">Reorder at: 20 units</p>
+        </div>
+        <span
+          class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-danger/10 text-danger border border-danger/30">3
+          left</span>
+      </div>
+      <div class="flex items-center justify-between py-2 border-b border-default-100 last:border-0">
+        <div>
+          <p class="text-sm font-medium text-default-800">Metformin 850mg</p>
+          <p class="text-xs text-default-400">Reorder at: 50 units</p>
+        </div>
+        <span
+          class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-warning/10 text-warning border border-warning/30">8
+          left</span>
+      </div>
+      <div class="flex items-center justify-between py-2 border-b border-default-100 last:border-0">
+        <div>
+          <p class="text-sm font-medium text-default-800">Losartan 50mg</p>
+          <p class="text-xs text-default-400">Reorder at: 30 units</p>
+        </div>
+        <span
+          class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-warning/10 text-warning border border-warning/30">11
+          left</span>
+      </div>
+      <div class="flex items-center justify-between py-2 border-b border-default-100 last:border-0">
+        <div>
+          <p class="text-sm font-medium text-default-800">Atorvastatin 20mg</p>
+          <p class="text-xs text-default-400">Reorder at: 25 units</p>
+        </div>
+        <span
+          class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-danger/10 text-danger border border-danger/30">5
+          left</span>
+      </div>
+      <div class="flex items-center justify-between py-2 last:border-0">
+        <div>
+          <p class="text-sm font-medium text-default-800">Amlodipine 5mg</p>
+          <p class="text-xs text-default-400">Reorder at: 40 units</p>
+        </div>
+        <span
+          class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-warning/10 text-warning border border-warning/30">14
+          left</span>
+      </div>
+      {% endfor %}
+    </div>
+    <button class="btn w-full mt-4 text-sm bg-warning/10 hover:bg-warning/10 text-warning rounded-lg h-9">
+      <i data-lucide="truck" class="text-base me-1.5"></i> Create Purchase Order
+    </button>
+  </div>
+
+</div><!-- end row 2 -->
+
+<!-- ===== ROW 3: Recent Prescriptions ===== -->
+<div class="card mb-6">
+  <div class="flex items-center justify-between px-5 py-4 border-b border-default-200">
+    <div>
+      <h5 class="font-semibold text-default-800">Recent Prescriptions</h5>
+      <p class="text-xs text-default-400 mt-0.5">Last 10 prescriptions processed today</p>
+    </div>
+    <a href="#" class="btn text-sm bg-default-100 hover:bg-default-200 text-default-700 px-4 h-8 rounded-lg">
+      View All
+    </a>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="table w-full text-sm">
+      <thead>
+        <tr class="border-b border-default-200 text-default-500 text-xs">
+          <th class="text-start px-5 py-3 font-medium">Rx #</th>
+          <th class="text-start px-5 py-3 font-medium">Patient</th>
+          <th class="text-start px-5 py-3 font-medium">Doctor</th>
+          <th class="text-start px-5 py-3 font-medium">Medication</th>
+          <th class="text-start px-5 py-3 font-medium">Amount</th>
+          <th class="text-start px-5 py-3 font-medium">Status</th>
+          <th class="text-start px-5 py-3 font-medium">Time</th>
+          <th class="px-5 py-3"></th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-default-200">
+        <tr class="hover:bg-default-50">
+          <td class="px-5 py-3 font-mono text-xs text-default-500">Rx-00284</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-2">
+              <div
+                class="size-7 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">
+                MA</div>
+              <span class="font-medium text-default-800">Maria Abad</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-default-600">Dr. Santos</td>
+          <td class="px-5 py-3 text-default-600">Amoxicillin 500mg x30</td>
+          <td class="px-5 py-3 font-medium text-default-800">&#8369;285</td>
+          <td class="px-5 py-3"><span
+              class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-success/10 text-success border border-success/30">Dispensed</span>
+          </td>
+          <td class="px-5 py-3 text-default-400 text-xs">09:12 AM</td>
+          <td class="px-5 py-3"><button class="btn btn-icon size-7 hover:bg-default-100 rounded"><i
+                data-lucide="more-horizontal" class="text-base"></i></button></td>
+        </tr>
+        <tr class="hover:bg-default-50">
+          <td class="px-5 py-3 font-mono text-xs text-default-500">Rx-00283</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-2">
+              <div
+                class="size-7 rounded-full bg-success/10 flex items-center justify-center text-success text-xs font-bold flex-shrink-0">
+                JR</div>
+              <span class="font-medium text-default-800">Jose Reyes</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-default-600">Dr. Cruz</td>
+          <td class="px-5 py-3 text-default-600">Metformin 850mg x60</td>
+          <td class="px-5 py-3 font-medium text-default-800">&#8369;540</td>
+          <td class="px-5 py-3"><span
+              class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-success/10 text-success border border-success/30">Dispensed</span>
+          </td>
+          <td class="px-5 py-3 text-default-400 text-xs">08:58 AM</td>
+          <td class="px-5 py-3"><button class="btn btn-icon size-7 hover:bg-default-100 rounded"><i
+                data-lucide="more-horizontal" class="text-base"></i></button></td>
+        </tr>
+        <tr class="hover:bg-default-50">
+          <td class="px-5 py-3 font-mono text-xs text-default-500">Rx-00282</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-2">
+              <div
+                class="size-7 rounded-full bg-warning/10 flex items-center justify-center text-warning text-xs font-bold flex-shrink-0">
+                LC</div>
+              <span class="font-medium text-default-800">Lita Cabrera</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-default-600">Dr. Bautista</td>
+          <td class="px-5 py-3 text-default-600">Losartan 50mg x30</td>
+          <td class="px-5 py-3 font-medium text-default-800">&#8369;390</td>
+          <td class="px-5 py-3"><span
+              class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-warning/10 text-warning border border-warning/30">Pending</span>
+          </td>
+          <td class="px-5 py-3 text-default-400 text-xs">08:45 AM</td>
+          <td class="px-5 py-3"><button class="btn btn-icon size-7 hover:bg-default-100 rounded"><i
+                data-lucide="more-horizontal" class="text-base"></i></button></td>
+        </tr>
+        <tr class="hover:bg-default-50">
+          <td class="px-5 py-3 font-mono text-xs text-default-500">Rx-00281</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-2">
+              <div
+                class="size-7 rounded-full bg-info/10 flex items-center justify-center text-info text-xs font-bold flex-shrink-0">
+                RD</div>
+              <span class="font-medium text-default-800">Ramon Dela Cruz</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-default-600">Dr. Santos</td>
+          <td class="px-5 py-3 text-default-600">Atorvastatin 20mg x30</td>
+          <td class="px-5 py-3 font-medium text-default-800">&#8369;720</td>
+          <td class="px-5 py-3"><span
+              class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-success/10 text-success border border-success/30">Dispensed</span>
+          </td>
+          <td class="px-5 py-3 text-default-400 text-xs">08:30 AM</td>
+          <td class="px-5 py-3"><button class="btn btn-icon size-7 hover:bg-default-100 rounded"><i
+                data-lucide="more-horizontal" class="text-base"></i></button></td>
+        </tr>
+        <tr class="hover:bg-default-50">
+          <td class="px-5 py-3 font-mono text-xs text-default-500">Rx-00280</td>
+          <td class="px-5 py-3">
+            <div class="flex items-center gap-2">
+              <div
+                class="size-7 rounded-full bg-danger/10 flex items-center justify-center text-danger text-xs font-bold flex-shrink-0">
+                EV</div>
+              <span class="font-medium text-default-800">Elena Villanueva</span>
+            </div>
+          </td>
+          <td class="px-5 py-3 text-default-600">Dr. Garcia</td>
+          <td class="px-5 py-3 text-default-600">Amlodipine 5mg x30</td>
+          <td class="px-5 py-3 font-medium text-default-800">&#8369;460</td>
+          <td class="px-5 py-3"><span
+              class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-danger/10 text-danger border border-danger/30">Cancelled</span>
+          </td>
+          <td class="px-5 py-3 text-default-400 text-xs">08:15 AM</td>
+          <td class="px-5 py-3"><button class="btn btn-icon size-7 hover:bg-default-100 rounded"><i
+                data-lucide="more-horizontal" class="text-base"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div><!-- end recent prescriptions -->
+
+<!-- ===== ROW 4: Quick Actions + Expiring Soon ===== -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-4">
+
+  <!-- Quick Actions -->
+  <div class="card p-5">
+    <h5 class="font-semibold text-default-800 mb-4">Quick Actions</h5>
+    <div class="grid grid-cols-2 gap-3">
+      <a href="#"
+        class="flex flex-col items-center gap-2 p-3 rounded-xl border border-default-200 hover:border-primary/40 hover:bg-primary/5 transition-colors text-center">
+        <span class="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
+          <i data-lucide="shopping-cart" class="text-primary text-xl"></i>
+        </span>
+        <span class="text-xs font-medium text-default-700">New Sale</span>
+      </a>
+      <a href="#"
+        class="flex flex-col items-center gap-2 p-3 rounded-xl border border-default-200 hover:border-success/40 hover:bg-success/5 transition-colors text-center">
+        <span class="size-10 rounded-lg bg-success/10 flex items-center justify-center">
+          <i data-lucide="file-plus" class="text-success text-xl"></i>
+        </span>
+        <span class="text-xs font-medium text-default-700">Add Rx</span>
+      </a>
+      <a href="#"
+        class="flex flex-col items-center gap-2 p-3 rounded-xl border border-default-200 hover:border-info/30 hover:bg-info/5 transition-colors text-center">
+        <span class="size-10 rounded-lg bg-info/10 flex items-center justify-center">
+          <i data-lucide="package-plus" class="text-info text-xl"></i>
+        </span>
+        <span class="text-xs font-medium text-default-700">Add Stock</span>
+      </a>
+      <a href="#"
+        class="flex flex-col items-center gap-2 p-3 rounded-xl border border-default-200 hover:border-warning/30 hover:bg-warning/10 transition-colors text-center">
+        <span class="size-10 rounded-lg bg-warning/10 flex items-center justify-center">
+          <i data-lucide="bar-chart-2" class="text-warning text-xl"></i>
+        </span>
+        <span class="text-xs font-medium text-default-700">Reports</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Expiring Soon -->
+  <div class="card p-5 xl:col-span-2">
+    <div class="flex items-center justify-between mb-4">
+      <div>
+        <h5 class="font-semibold text-default-800">Expiring Soon</h5>
+        <p class="text-xs text-default-400 mt-0.5">Medicines expiring within 30 days</p>
+      </div>
+      <a href="#" class="text-xs text-primary hover:underline">View All</a>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="table w-full text-sm">
+        <thead>
+          <tr class="text-default-500 text-xs border-b border-default-200">
+            <th class="text-start py-2 font-medium">Medicine</th>
+            <th class="text-start py-2 font-medium">Batch</th>
+            <th class="text-start py-2 font-medium">Qty</th>
+            <th class="text-start py-2 font-medium">Expiry Date</th>
+            <th class="text-start py-2 font-medium">Days Left</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-default-200">
+          <tr class="hover:bg-default-50">
+            <td class="py-2.5 font-medium text-default-800">Metformin 850mg</td>
+            <td class="py-2.5 text-default-500 font-mono text-xs">B2024-112</td>
+            <td class="py-2.5 text-default-600">120 tabs</td>
+            <td class="py-2.5 text-default-600">Jan 15, 2025</td>
+            <td class="py-2.5"><span
+                class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-danger/10 text-danger border border-danger/30">7
+                days</span></td>
+          </tr>
+          <tr class="hover:bg-default-50">
+            <td class="py-2.5 font-medium text-default-800">Cefuroxime 500mg</td>
+            <td class="py-2.5 text-default-500 font-mono text-xs">B2024-098</td>
+            <td class="py-2.5 text-default-600">48 caps</td>
+            <td class="py-2.5 text-default-600">Jan 20, 2025</td>
+            <td class="py-2.5"><span
+                class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-danger/10 text-danger border border-danger/30">12
+                days</span></td>
+          </tr>
+          <tr class="hover:bg-default-50">
+            <td class="py-2.5 font-medium text-default-800">Salbutamol Inhaler</td>
+            <td class="py-2.5 text-default-500 font-mono text-xs">B2024-076</td>
+            <td class="py-2.5 text-default-600">6 units</td>
+            <td class="py-2.5 text-default-600">Jan 28, 2025</td>
+            <td class="py-2.5"><span
+                class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-warning/10 text-warning border border-warning/30">20
+                days</span></td>
+          </tr>
+          <tr class="hover:bg-default-50">
+            <td class="py-2.5 font-medium text-default-800">Omeprazole 20mg</td>
+            <td class="py-2.5 text-default-500 font-mono text-xs">B2024-054</td>
+            <td class="py-2.5 text-default-600">200 caps</td>
+            <td class="py-2.5 text-default-600">Feb 05, 2025</td>
+            <td class="py-2.5"><span
+                class="inline-flex items-center py-0.5 px-2.5 rounded text-xs font-medium bg-warning/10 text-warning border border-warning/30">28
+                days</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- end row 4 -->
+
 {% endblock %}

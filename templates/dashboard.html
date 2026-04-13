@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Dashboard - Pharmacy SaaS{% endblock %}
+
+{% block content %}
+<div class="group-data-[sidebar-size=sm]:min-h-sm group-data-[sidebar-size=sm]:relative">
+
+    <!-- Sidebar -->
+    {% include "partials/sidebar.html" %}
+
+    <!-- Topbar -->
+    {% include "partials/topbar.html" %}
+
+    <!-- Main Content -->
+    <div class="relative min-h-screen group-data-[sidebar-size=sm]:min-h-sm">
+        <div
+            class="group-data-[sidebar-size=lg]:ltr:md:ml-vertical-menu group-data-[sidebar-size=lg]:rtl:md:mr-vertical-menu group-data-[sidebar-size=md]:ltr:ml-vertical-menu-md group-data-[sidebar-size=md]:rtl:mr-vertical-menu-md group-data-[sidebar-size=sm]:ltr:ml-vertical-menu-sm group-data-[sidebar-size=sm]:rtl:mr-vertical-menu-sm pt-[calc(theme('spacing.header')_*_1)] pb-[calc(theme('spacing.header')_*_0.8)] px-4">
+
+            <div class="container-fluid group-data-[content=boxed]:max-w-boxed mx-auto">
+
+                <!-- Page Title -->
+                <div class="flex flex-col gap-2 py-4 md:flex-row md:items-center print:hidden">
+                    <div class="grow">
+                        <h5 class="text-16">{% block page_title %}Dashboard{% endblock %}</h5>
+                    </div>
+                    <ul class="flex items-center gap-2 text-sm font-normal shrink-0">
+                        {% block breadcrumb %}
+                        <li
+                            class="relative before:content-['\ea54'] before:font-remix ltr:before:-right-1 rtl:before:-left-1 before:absolute before:text-[18px] before:-top-[3px] ltr:pr-4 rtl:pl-4 before:text-slate-400 dark:text-zink-200">
+                            <a href="/" class="text-slate-400 dark:text-zink-200">Dashboard</a>
+                        </li>
+                        {% endblock %}
+                    </ul>
+                </div>
+
+                <!-- Page Content -->
+                {% block page_content %}
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="mb-3 text-15">Welcome to Pharmacy SaaS</h6>
+                        <p class="text-slate-500 dark:text-zink-200">
+                            Your multi-tenant pharmacy management platform is ready!
+                        </p>
+                    </div>
+                </div>
+                {% endblock %}
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        {% include "partials/footer.html" %}
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- Add dashboard-specific JavaScript here -->
+{% endblock %}
