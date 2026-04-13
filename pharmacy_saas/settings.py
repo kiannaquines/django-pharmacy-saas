@@ -1,16 +1,19 @@
 from pathlib import Path
+from decouple import config, Csv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = "django-insecure-^)df!qpcwc@5a()ez^192_%0j!q8v8io4#%i0a83cksn&(l+)@"
+SECRET_KEY = config("SECRET_KEY")
 
-DEBUG = True
+DEBUG = config("DEBUG", default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="localhost,127.0.0.1", cast=Csv())
 
 
 INSTALLED_APPS = [
+    "django_tenants",  # Must be first
+    "tenants",  # Tenant models app
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -52,12 +55,12 @@ WSGI_APPLICATION = "pharmacy_saas.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "inventory_db",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "127.0.0.1",
-        "PORT": "5432",
+        "ENGINE": "django_tenants.postgresql_backend",
+        "NAME": config("DB_NAME", default="inventory_db"),
+        "USER": config("DB_USER", default="postgres"),
+        "PASSWORD": config("DB_PASSWORD", default="postgres"),
+        "HOST": config("DB_HOST", default="127.0.0.1"),
+        "PORT": config("DB_PORT", default="5432"),
     }
 }
 
@@ -90,3 +93,31 @@ USE_TZ = True
 
 
 STATIC_URL = "static/"
+
+# Default primary key field type
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Django Tenants Configuration
+TENANT_MODEL = "tenants.Client"
+TENANT_DOMAIN_MODEL = "tenants.Domain"
+PUBLIC_SCHEMA_NAME = "public"
+
+# Shared apps (in public schema)
+SHARED_APPS = [
+    "django_tenants",
+    "tenants",
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+]
+
+# Tenant-specific apps (in each tenant schema)
+TENANT_APPS = [
+    "django.contrib.contenttypes",
+    "django.contrib.auth",
+    # Add your tenant-specific apps here when created
+    # Example: "inventory", "sales", "customers"
+]
