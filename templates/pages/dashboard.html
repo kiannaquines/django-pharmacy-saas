@@ -1,0 +1,75 @@
+{% extends "layouts/authenticated.html" %}
+
+{% block title %}Dashboard · Pharmacy SaaS{% endblock %}
+
+{% block page_content %}
+  <div class="flex items-start justify-between gap-4">
+    <div>
+      <h1 class="text-2xl font-semibold text-slate-900">Dashboard</h1>
+      <p class="mt-1 text-slate-600">Welcome back, {{ request.user.get_username }}.</p>
+    </div>
+    <a class="inline-flex items-center rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
+       href="{% url 'admin:index' %}">
+      Admin
+    </a>
+  </div>
+
+  <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    <div class="rounded-lg border border-slate-200 bg-white p-5">
+      <div class="text-sm font-medium text-slate-600">Tenants</div>
+      <div class="mt-2 text-3xl font-semibold text-slate-900">—</div>
+      <div class="mt-1 text-xs text-slate-500">Placeholder metric</div>
+    </div>
+    <div class="rounded-lg border border-slate-200 bg-white p-5">
+      <div class="text-sm font-medium text-slate-600">Inventory Items</div>
+      <div class="mt-2 text-3xl font-semibold text-slate-900">—</div>
+      <div class="mt-1 text-xs text-slate-500">Placeholder metric</div>
+    </div>
+    <div class="rounded-lg border border-slate-200 bg-white p-5">
+      <div class="text-sm font-medium text-slate-600">Low Stock</div>
+      <div class="mt-2 text-3xl font-semibold text-slate-900">—</div>
+      <div class="mt-1 text-xs text-slate-500">Placeholder metric</div>
+    </div>
+    <div class="rounded-lg border border-slate-200 bg-white p-5">
+      <div class="text-sm font-medium text-slate-600">Today’s Sales</div>
+      <div class="mt-2 text-3xl font-semibold text-slate-900">—</div>
+      <div class="mt-1 text-xs text-slate-500">Placeholder metric</div>
+    </div>
+  </div>
+
+  <div class="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
+    <div class="rounded-lg border border-slate-200 bg-white p-5 lg:col-span-2">
+      <h2 class="text-base font-semibold text-slate-900">Quick actions</h2>
+      <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <a class="rounded-md border border-slate-200 bg-slate-50 p-4 hover:bg-slate-100" href="{% url 'admin:index' %}">
+          <div class="text-sm font-medium text-slate-900">Open admin</div>
+          <div class="mt-1 text-xs text-slate-600">Manage users, tenants, and data</div>
+        </a>
+        <a class="rounded-md border border-slate-200 bg-slate-50 p-4 hover:bg-slate-100" href="{% url 'password_change' %}">
+          <div class="text-sm font-medium text-slate-900">Change password</div>
+          <div class="mt-1 text-xs text-slate-600">Update your credentials</div>
+        </a>
+      </div>
+    </div>
+    <div class="rounded-lg border border-slate-200 bg-white p-5">
+      <h2 class="text-base font-semibold text-slate-900">Account</h2>
+      <dl class="mt-4 space-y-3 text-sm">
+        <div class="flex items-center justify-between">
+          <dt class="text-slate-600">Username</dt>
+          <dd class="font-medium text-slate-900">{{ request.user.get_username }}</dd>
+        </div>
+        <div class="flex items-center justify-between">
+          <dt class="text-slate-600">Email</dt>
+          <dd class="font-medium text-slate-900">{{ request.user.email|default:"—" }}</dd>
+        </div>
+      </dl>
+      <form class="mt-6" method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button class="w-full rounded-md border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50"
+                type="submit">
+          Log out
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
